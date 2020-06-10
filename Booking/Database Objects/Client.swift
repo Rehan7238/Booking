@@ -18,18 +18,18 @@ class Client {
     
     func setName(_ newName: String) {
         self.name = newName
-                
-        let db = Firestore.firestore()
-        let client = db.collection("Clients").document(id)
-        client.setData(["name": newName], merge: true)
+       updateValue(fieldName: "name", newValue: newName)
     }
     
     func setRating(_ newRating: NSNumber) {
         self.rating = newRating
-                
+       updateValue(fieldName: "rating", newValue: newRating)
+    }
+    
+    private func updateValue(fieldName: String, newValue: Any) {
         let db = Firestore.firestore()
         let client = db.collection("Clients").document(id)
-        client.setData(["rating": newRating], merge: true)
+        client.setData([fieldName: newValue], merge: true)
     }
     
     static func fromID(id: String) -> Promise<Client> {

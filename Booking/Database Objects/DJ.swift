@@ -15,21 +15,33 @@ class DJ {
     var id: String = ""
     var name: String = "Name"
     var rating: NSNumber = 0.0
+    var city: String = "City"
+    var state: String = "State"
     
     func setName(_ newName: String) {
         self.name = newName
-                
-        let db = Firestore.firestore()
-        let client = db.collection("DJs").document(id)
-        client.setData( ["name": newName], merge: true)
+        updateValue(fieldName: "name", newValue: newName)
     }
     
     func setRating(_ newRating: NSNumber) {
         self.rating = newRating
-                
+        updateValue(fieldName: "rating", newValue: newRating)
+    }
+    
+    func setCity(_ newCity: String) {
+        self.city = newCity
+        updateValue(fieldName: "city", newValue: newCity)
+    }
+    
+    func setState(_ newState: String) {
+        self.state = newState
+        updateValue(fieldName: "state", newValue: newState)
+    }
+    
+    private func updateValue(fieldName: String, newValue: Any) {
         let db = Firestore.firestore()
         let client = db.collection("DJs").document(id)
-        client.setData( ["rating": newRating], merge: true)
+        client.setData( [fieldName: newValue], merge: true)
     }
     
     static func fromID(id: String) -> Promise<DJ> {
@@ -46,6 +58,8 @@ class DJ {
                     dj.id = document.documentID
                     dj.name = data["name"] as! String
                     dj.rating = data["rating"] as! NSNumber
+                    dj.city = data["city"] as! String
+                    dj.state = data["state"] as! String
                 }
             } else {
                 print("Document does not exist")

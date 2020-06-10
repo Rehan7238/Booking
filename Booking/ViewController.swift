@@ -10,18 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var djNameLabel: UILabel!
+    @IBOutlet weak var cityAndStateLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var upcomingShowsTable: UITableView!
+    @IBOutlet weak var previousShowsTable: UITableView!
+    @IBOutlet weak var highlightsView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ = Client.fromID(id: "fBJVqzKsT5Zv0mxC9IMv").done { client in
-            print(client.name)
-            print(client.rating)
-            client.setName("Alphebet Theta Pie")
-            print(client.name)
-        }
         
         _ = DJ.fromID(id: "aNCu8ijFlYKbtJhK6MR4").done { dj in
-            print(dj.name)
-            print(dj.rating)
+            self.djNameLabel.text = dj.name
+            self.cityAndStateLabel.text = dj.city + ", " + dj.state
+            self.ratingLabel.text = "\(dj.rating)"
         }
     }
 }
