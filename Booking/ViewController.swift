@@ -12,9 +12,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        _ = Client.fromID(id: "fBJVqzKsT5Zv0mxC9IMv").done { client in
+            print(client.name)
+            print(client.rating)
+            client.setName("Alphebet Theta Pie")
+            print(client.name)
+        }
+        
+        _ = DJ.fromID(id: "aNCu8ijFlYKbtJhK6MR4").done { dj in
+            print(dj.name)
+            print(dj.rating)
+        }
     }
-
-
 }
 
