@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Pf-Ke-X7c">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
@@ -7,6 +7,96 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Signup View Controller-->
+        <scene sceneID="WPr-oI-6K5">
+            <objects>
+                <viewController id="8Pf-Ke-X7c" customClass="SignupViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tWp-6l-pfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGt-Gj-uFp">
+                                <rect key="frame" x="20" y="215" width="374" height="100"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Tbs-Zc-nAI"/>
+                                </constraints>
+                                <state key="normal" title="DJ"/>
+                                <connections>
+                                    <action selector="DJButtonPressed:" destination="8Pf-Ke-X7c" eventType="touchUpInside" id="fs1-lL-EQE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1e-Bz-u0U">
+                                <rect key="frame" x="192" y="525" width="30" height="30"/>
+                                <state key="normal" title="Frat"/>
+                                <connections>
+                                    <action selector="fratButtonPressed:" destination="8Pf-Ke-X7c" eventType="touchUpInside" id="EBM-GT-X52"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xul-aQ-F17">
+                                <rect key="frame" x="42" y="101" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="R6E-tQ-Y71" firstAttribute="trailing" secondItem="LGt-Gj-uFp" secondAttribute="trailing" constant="20" id="1iG-Xh-L4C"/>
+                            <constraint firstItem="LGt-Gj-uFp" firstAttribute="leading" secondItem="R6E-tQ-Y71" secondAttribute="leading" constant="20" id="5Rg-to-fFz"/>
+                            <constraint firstItem="N1e-Bz-u0U" firstAttribute="centerX" secondItem="LGt-Gj-uFp" secondAttribute="centerX" id="7dP-s6-UsP"/>
+                            <constraint firstItem="N1e-Bz-u0U" firstAttribute="top" secondItem="LGt-Gj-uFp" secondAttribute="bottom" constant="210" id="9R7-oI-2EI"/>
+                            <constraint firstItem="xul-aQ-F17" firstAttribute="leading" secondItem="R6E-tQ-Y71" secondAttribute="leading" constant="42" id="VUO-7x-lI4"/>
+                            <constraint firstItem="LGt-Gj-uFp" firstAttribute="top" secondItem="R6E-tQ-Y71" secondAttribute="top" constant="171" id="Wxz-OE-Eqc"/>
+                            <constraint firstItem="xul-aQ-F17" firstAttribute="top" secondItem="R6E-tQ-Y71" secondAttribute="top" constant="57" id="mqB-U2-p36"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R6E-tQ-Y71"/>
+                    </view>
+                    <connections>
+                        <outlet property="DJButton" destination="LGt-Gj-uFp" id="aH2-U5-Eef"/>
+                        <outlet property="fratButton" destination="N1e-Bz-u0U" id="Rks-33-bBX"/>
+                        <segue destination="KaF-OY-m1B" kind="presentation" identifier="signupToDJ" modalPresentationStyle="fullScreen" id="SMs-kp-rYU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19R-ek-QXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-939" y="863"/>
+        </scene>
+        <!--Signup View Controller-->
+        <scene sceneID="r5v-cc-NLH">
+            <objects>
+                <viewController id="KaF-OY-m1B" customClass="DJSignupViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OLy-Ko-AeE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bq-si-9bb">
+                                <rect key="frame" x="88" y="144" width="92" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z1r-bD-9ok">
+                                <rect key="frame" x="88" y="199" width="92" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="z1r-bD-9ok" firstAttribute="top" secondItem="2bq-si-9bb" secondAttribute="bottom" constant="34.5" id="8Jd-2t-8DO"/>
+                            <constraint firstItem="z1r-bD-9ok" firstAttribute="trailing" secondItem="2bq-si-9bb" secondAttribute="trailing" id="cFc-tX-Td6"/>
+                            <constraint firstItem="z1r-bD-9ok" firstAttribute="leading" secondItem="2bq-si-9bb" secondAttribute="leading" id="gW4-dj-ERj"/>
+                            <constraint firstItem="2bq-si-9bb" firstAttribute="top" secondItem="Csc-wX-uhC" secondAttribute="top" constant="100" id="i8o-7Z-uEg"/>
+                            <constraint firstItem="2bq-si-9bb" firstAttribute="leading" secondItem="Csc-wX-uhC" secondAttribute="leading" constant="88" id="pFR-Np-tHf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Csc-wX-uhC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LXq-IC-qBS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63.768115942028992" y="1191.9642857142856"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
