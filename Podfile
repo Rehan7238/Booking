@@ -10,6 +10,10 @@ target 'Booking' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
   pod 'PromiseKit'
+  
+  # Pods for authentication
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 
   target 'BookingTests' do
     inherit! :search_paths
