@@ -16,7 +16,15 @@ class DJorGroupViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var DJButton: UIButton!
-    @IBOutlet weak var GroupButton: UIButton!
+    @IBOutlet weak var fratButton: UIButton!
+    
+    @IBOutlet weak var barButton: UIButton!
+    
+    @IBOutlet weak var clubButton: UIButton!
+    
+    @IBOutlet weak var userButton: UIButton!
+    
+    @IBOutlet weak var goBackButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

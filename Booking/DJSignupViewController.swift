@@ -36,6 +36,8 @@ class DJSignupViewController: UIViewController {
     
     @IBOutlet weak var signupButton: UIButton!
     
+    @IBOutlet weak var goBackButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

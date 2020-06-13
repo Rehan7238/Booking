@@ -14,6 +14,12 @@ class StartViewController: UIViewController {
     
     //Mark: Properties
     
+    @IBOutlet weak var x2Label: UILabel!
+    
+    @IBOutlet weak var x1Label: UILabel!
+    
+    @IBOutlet weak var o2Lbel: UILabel!
+    @IBOutlet weak var o1Label: UILabel!
     @IBAction func loginButton(_ sender: Any) {
     }
     @IBAction func signupButton(_ sender: Any) {

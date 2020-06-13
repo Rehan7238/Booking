@@ -18,6 +18,8 @@ class GroupSignUpViewController: UIViewController {
     @IBOutlet weak var groupNameTextField: UITextField!
     @IBOutlet weak var schoolTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var goBackButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
