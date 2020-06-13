@@ -44,8 +44,8 @@ class DJ {
         client.setData( [fieldName: newValue], merge: true)
     }
     
-    static func fromID(id: String) -> Promise<DJ> {
-        let (promise, resolver) = Promise<DJ>.pending()
+    static func fromID(id: String) -> Promise<DJ?> {
+        let (promise, resolver) = Promise<DJ?>.pending()
         
         let db = Firestore.firestore()
         let djs = db.collection("DJs").document(id)
@@ -61,12 +61,30 @@ class DJ {
                     dj.city = data["city"] as! String
                     dj.state = data["state"] as! String
                 }
+                
+                resolver.fulfill(dj)
             } else {
                 print("Document does not exist")
+                resolver.fulfill(nil)
             }
-            
-            resolver.fulfill(dj)
         }
         return promise
+    }
+    
+    static func createNew(withID DJID: String) -> DJ {
+        let db = Firestore.firestore()
+        let djs = db.collection("DJs")
+
+        let newDJ = DJ()
+        newDJ.id = DJID
+        
+        djs.document(DJID).setData([
+            "name": newDJ.name,
+            "rating": newDJ.rating,
+            "city": newDJ.city,
+            "state": newDJ.state
+        ])
+        
+        return newDJ
     }
 }

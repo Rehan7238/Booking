@@ -40,7 +40,6 @@ class DJSignupViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    
     @IBAction func signUpAction(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
             let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
@@ -48,19 +47,33 @@ class DJSignupViewController: UIViewController {
             
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
-        }
-        else {
-            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!){ (user, error) in
-                if error == nil {
-                    self.performSegue(withIdentifier: "signupToHome", sender: self)
+        } else if playingFeeTextLabel.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true || stateTextField.text?.isEmpty ?? true {
+            let alertController = UIAlertController(title: "Information Empty", message: "Please enter all information", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+        } else {
+            
+            if let emailText = emailTextField.text, let passwordText = passwordTextField.text {
+                Auth.auth().createUser(withEmail: emailText, password: passwordText) { (result, error) in
+                    if error == nil {
+                        let dj = DJ.createNew(withID: (result?.user.uid)!)
+                        dj.setName(self.playingFeeTextLabel.text!)
+                        dj.setCity(self.cityTextField.text!)
+                        dj.setState(self.stateTextField.text!)
+                        self.performSegue(withIdentifier: "signupToHome", sender: self)
+                    }
+                    else {
+                        let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        
+                        alertController.addAction(defaultAction)
+                        self.present(alertController, animated: true, completion: nil)
+                    }
                 }
-                else {
-                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    
-                    alertController.addAction(defaultAction)
-                    self.present(alertController, animated: true, completion: nil)
-                }
+            } else {
+                //either emailTextField.text or passwordTextField.text was nil
             }
         }
     }

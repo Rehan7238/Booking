@@ -6,7 +6,6 @@ target 'Booking' do
   use_frameworks!
 
   # Pods for Booking
-
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
   pod 'PromiseKit'

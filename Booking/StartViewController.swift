@@ -12,22 +12,22 @@ import UIKit
 
 class StartViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    
     //Mark: Properties
+    
     @IBAction func loginButton(_ sender: Any) {
     }
     @IBAction func signupButton(_ sender: Any) {
     }
     
-    override func viewDidAppear(_ animated: Bool){
-     super.viewDidAppear(animated)
-     if Auth.auth().currentUser != nil {
-       self.performSegue(withIdentifier: "alreadyLoggedIn", sender: nil)
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
+    
+    override func viewDidAppear(_ animated: Bool){
+        super.viewDidAppear(animated)
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "alreadyLoggedIn", sender: nil)
+        }
     }
     
 }

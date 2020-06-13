@@ -12,15 +12,14 @@
 		245FEF0224940365003267CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0124940365003267CE /* LoginViewController.swift */; };
 		245FEF0424940381003267CE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0324940381003267CE /* StartViewController.swift */; };
 		245FEF0624941ABB003267CE /* DJorGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0524941ABB003267CE /* DJorGroupViewController.swift */; };
-		245FEF0A2494498A003267CE /* GroupSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF092494498A003267CE /* GroupSignUpViewController.swift */; };
 		2ADD8B9EB35FE3B4FE09BE4D /* Pods_Booking_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56849ADFDFC5A5FE0A14DC87 /* Pods_Booking_BookingUITests.framework */; };
+		5D87BD8624949D1800F4CA6C /* GroupSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */; };
 		5DA31BE824919B4B00C18F55 /* DJSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA31BE724919B4B00C18F55 /* DJSignupViewController.swift */; };
 		5DDF6B352491585000B76C14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DDF6B342491585000B76C14 /* GoogleService-Info.plist */; };
 		5DDF6B3824915BFF00B76C14 /* DJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF6B3724915BFF00B76C14 /* DJ.swift */; };
 		5DDF6B3A24915C0E00B76C14 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF6B3924915C0E00B76C14 /* Client.swift */; };
 		5DE698E1248DB92600301B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE698E0248DB92600301B39 /* AppDelegate.swift */; };
 		5DE698E3248DB92600301B39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE698E2248DB92600301B39 /* SceneDelegate.swift */; };
-		5DE698E5248DB92600301B39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE698E4248DB92600301B39 /* ViewController.swift */; };
 		5DE698E8248DB92600301B39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE698E6248DB92600301B39 /* Main.storyboard */; };
 		5DE698EA248DB92F00301B39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DE698E9248DB92F00301B39 /* Assets.xcassets */; };
 		5DE698ED248DB92F00301B39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE698EB248DB92F00301B39 /* LaunchScreen.storyboard */; };
@@ -52,9 +51,9 @@
 		245FEF0124940365003267CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		245FEF0324940381003267CE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		245FEF0524941ABB003267CE /* DJorGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJorGroupViewController.swift; sourceTree = "<group>"; };
-		245FEF092494498A003267CE /* GroupSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSignUpViewController.swift; sourceTree = "<group>"; };
 		48D32E22A2F6A56064983E48 /* Pods-BookingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookingTests.release.xcconfig"; path = "Target Support Files/Pods-BookingTests/Pods-BookingTests.release.xcconfig"; sourceTree = "<group>"; };
 		56849ADFDFC5A5FE0A14DC87 /* Pods_Booking_BookingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booking_BookingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSignUpViewController.swift; sourceTree = "<group>"; };
 		5DA31BE724919B4B00C18F55 /* DJSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJSignupViewController.swift; sourceTree = "<group>"; };
 		5DDF6B342491585000B76C14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DDF6B3724915BFF00B76C14 /* DJ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJ.swift; sourceTree = "<group>"; };
@@ -62,7 +61,6 @@
 		5DE698DD248DB92600301B39 /* Booking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE698E0248DB92600301B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DE698E2248DB92600301B39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5DE698E4248DB92600301B39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5DE698E7248DB92600301B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DE698E9248DB92F00301B39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DE698EC248DB92F00301B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -159,13 +157,12 @@
 				5DDF6B3624915BDF00B76C14 /* Database Objects */,
 				5DE698E0248DB92600301B39 /* AppDelegate.swift */,
 				5DE698E2248DB92600301B39 /* SceneDelegate.swift */,
-				5DE698E4248DB92600301B39 /* ViewController.swift */,
 				245FEF0324940381003267CE /* StartViewController.swift */,
 				245FEF0124940365003267CE /* LoginViewController.swift */,
 				245FEF0524941ABB003267CE /* DJorGroupViewController.swift */,
 				245FEEFF24940319003267CE /* HomeViewController.swift */,
 				5DA31BE724919B4B00C18F55 /* DJSignupViewController.swift */,
-				245FEF092494498A003267CE /* GroupSignUpViewController.swift */,
+				5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */,
 				5DE698E9248DB92F00301B39 /* Assets.xcassets */,
 				5DE698E6248DB92600301B39 /* Main.storyboard */,
 				5DE698EB248DB92F00301B39 /* LaunchScreen.storyboard */,
@@ -445,15 +442,14 @@
 			files = (
 				245FEF0224940365003267CE /* LoginViewController.swift in Sources */,
 				5DA31BE824919B4B00C18F55 /* DJSignupViewController.swift in Sources */,
-				5DE698E5248DB92600301B39 /* ViewController.swift in Sources */,
 				245FEF0624941ABB003267CE /* DJorGroupViewController.swift in Sources */,
 				5DDF6B3824915BFF00B76C14 /* DJ.swift in Sources */,
+				5D87BD8624949D1800F4CA6C /* GroupSignUpViewController.swift in Sources */,
 				245FEF0024940319003267CE /* HomeViewController.swift in Sources */,
 				245FEF0424940381003267CE /* StartViewController.swift in Sources */,
 				5DE698E1248DB92600301B39 /* AppDelegate.swift in Sources */,
 				5DDF6B3A24915C0E00B76C14 /* Client.swift in Sources */,
 				5DE698E3248DB92600301B39 /* SceneDelegate.swift in Sources */,
-				245FEF0A2494498A003267CE /* GroupSignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
