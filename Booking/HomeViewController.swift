@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var eventLabel: UILabel!
     
     var uid: String = ""
     var isGroup: Bool = false
@@ -58,6 +59,7 @@ class HomeViewController: UIViewController {
         nameLabel.text = dj.name
         locationLabel.text = dj.city + ", " + dj.state
         ratingLabel.text = "\(dj.rating)"
+        
     }
     
     @IBAction func logoutButtonPressed(_ sender: Any) {

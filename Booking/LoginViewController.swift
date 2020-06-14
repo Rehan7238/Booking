@@ -15,8 +15,17 @@ class LoginViewController: UIViewController {
     //MARK: Properties
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var makeAnAccountLabel: UIButton!
+    
+    @IBOutlet weak var x1Label: UILabel!
+    
+    @IBOutlet weak var o1Label: UILabel!
+    
+    @IBOutlet weak var x2Label: UILabel!
+    
+    @IBOutlet weak var o2Label: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
