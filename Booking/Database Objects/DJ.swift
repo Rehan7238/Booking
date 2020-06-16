@@ -14,34 +14,95 @@ class DJ {
     
     var id: String = ""
     var name: String = "Name"
-    var rating: NSNumber = 0.0
-    var city: String = "City"
-    var state: String = "State"
+    var equipment: [String] = []
+    var hostRating: NSNumber = 0.0
+    var litness: NSNumber = 0.0
+    var locality: [String: String] = [:]
+    var location: String = ""
+    var monthsOfExperience: NSNumber = 0.0
+    var musicStyle: [String] = []
+    var numberOfGigs: NSNumber = 0.0
+    var playingFee: NSNumber = 0.0
+    var playlist: String = ""
+    var previousEvents: [String] = []
+    var profilePic: String = ""
+    var upcomingEvents: [String] = []
+    
     
     func setName(_ newName: String) {
         self.name = newName
         updateValue(fieldName: "name", newValue: newName)
     }
     
-    func setRating(_ newRating: NSNumber) {
-        self.rating = newRating
-        updateValue(fieldName: "rating", newValue: newRating)
+    func setEquipment(_ newEquipment: [String]) {
+        self.equipment = newEquipment
+        updateValue(fieldName: "equipment", newValue: newEquipment)
     }
     
-    func setCity(_ newCity: String) {
-        self.city = newCity
-        updateValue(fieldName: "city", newValue: newCity)
+    func setHostRating(_ newHostRating: NSNumber) {
+        self.hostRating = newHostRating
+        updateValue(fieldName: "hostRating", newValue: newHostRating)
     }
     
-    func setState(_ newState: String) {
-        self.state = newState
-        updateValue(fieldName: "state", newValue: newState)
+    func setLitness(_ newLitness: NSNumber) {
+        self.litness = newLitness
+        updateValue(fieldName: "litness", newValue: newLitness)
+    }
+    
+    func setLocality(_ newLocality: [String: String]) {
+        self.locality = newLocality
+        updateValue(fieldName: "locality", newValue: newLocality)
+    }
+    
+    func setLocation(_ newName: String) {
+        self.name = newName
+        updateValue(fieldName: "location", newValue: newName)
+    }
+    
+    func setMonthsOfExperience(_ newMonthsOfExperience: NSNumber) {
+        self.monthsOfExperience = newMonthsOfExperience
+        updateValue(fieldName: "monthsOfExperience", newValue: newMonthsOfExperience)
+    }
+    
+    func setMusicStyle(_ newMusicStyle: [String]) {
+        self.musicStyle = newMusicStyle
+        updateValue(fieldName: "musicStyle", newValue: newMusicStyle)
+    }
+    
+    func setNumberOfGigs(_ newNumberOfGigs: NSNumber) {
+        self.numberOfGigs = newNumberOfGigs
+        updateValue(fieldName: "numberOfGigs", newValue: newNumberOfGigs)
+    }
+    
+    func setPlayingFee(_ newPlayingFee: NSNumber) {
+        self.playingFee = newPlayingFee
+        updateValue(fieldName: "playingFee", newValue: newPlayingFee)
+    }
+    
+    func setPlaylist(_ newPlaylist: String) {
+        self.playlist = newPlaylist
+        updateValue(fieldName: "name", newValue: newPlaylist)
+    }
+    
+    func setPreviousEvents(_ newPreviousEvents: [String]) {
+        self.previousEvents = newPreviousEvents
+        updateValue(fieldName: "previousEvents", newValue: newPreviousEvents)
+    }
+    
+    func setProfilepic(_ newProfilePic: String) {
+        self.profilePic = newProfilePic
+        updateValue(fieldName: "profilePic", newValue: newProfilePic)
+    }
+    
+    func setUpcomingEvents(_ newUpcomingEvents: [String]) {
+        self.upcomingEvents = newUpcomingEvents
+        updateValue(fieldName: "upcomingEvents", newValue: newUpcomingEvents)
     }
     
     private func updateValue(fieldName: String, newValue: Any) {
         let db = Firestore.firestore()
-        let client = db.collection("DJs").document(id)
-        client.setData( [fieldName: newValue], merge: true)
+        let dj = db.collection("DJs").document(id)
+        dj.setData( [fieldName: newValue], merge: true)
     }
     
     static func fromID(id: String) -> Promise<DJ?> {
@@ -57,9 +118,19 @@ class DJ {
                 if let data = document.data() {
                     dj.id = document.documentID
                     dj.name = data["name"] as! String
-                    dj.rating = data["rating"] as! NSNumber
-                    dj.city = data["city"] as! String
-                    dj.state = data["state"] as! String
+                    dj.equipment = data["equipment"] as! [String]
+                    dj.hostRating = data["hostRating"] as! NSNumber
+                    dj.litness = data["litness"] as! NSNumber
+                    dj.locality = data["locality"] as! [String: String]
+                    dj.location = data["location"] as! String
+                    dj.monthsOfExperience = data["monthsOfExperience"] as! NSNumber
+                    dj.musicStyle = data["musicStyle"] as! [String]
+                    dj.numberOfGigs = data["numberOfGigs"] as! NSNumber
+                    dj.playingFee = data["playingFee"] as! NSNumber
+                    dj.playlist = data["playlist"] as! String
+                    dj.previousEvents = data["previousEvents"] as! [String]
+                    dj.profilePic = data["profilePic"] as! String
+                    dj.upcomingEvents = data["upcomingEvents"] as! [String]
                 }
                 
                 resolver.fulfill(dj)
@@ -80,9 +151,19 @@ class DJ {
         
         djs.document(DJID).setData([
             "name": newDJ.name,
-            "rating": newDJ.rating,
-            "city": newDJ.city,
-            "state": newDJ.state
+            "equipment": newDJ.equipment,
+            "hostRating": newDJ.hostRating,
+            "litness": newDJ.litness,
+            "locality": newDJ.locality,
+            "location": newDJ.location,
+            "monthsOfExperience": newDJ.monthsOfExperience,
+            "musicStyle": newDJ.musicStyle,
+            "numberOfGigs": newDJ.numberOfGigs,
+            "playingFee": newDJ.playingFee,
+            "playlist": newDJ.playlist,
+            "previousEvents": newDJ.previousEvents,
+            "profilePic": newDJ.profilePic,
+            "upcomingEvents": newDJ.upcomingEvents
         ])
         
         return newDJ

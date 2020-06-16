@@ -62,8 +62,6 @@ class DJSignupViewController: UIViewController {
                     if error == nil {
                         let dj = DJ.createNew(withID: (result?.user.uid)!)
                         dj.setName(self.playingFeeTextLabel.text!)
-                        dj.setCity(self.cityTextField.text!)
-                        dj.setState(self.stateTextField.text!)
                         self.performSegue(withIdentifier: "signupToHome", sender: self)
                     }
                     else {

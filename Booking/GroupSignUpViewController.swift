@@ -42,8 +42,6 @@ class GroupSignUpViewController: UIViewController {
             if let emailText = emailTextField.text, let passwordText = passwordTextField.text {
                 Auth.auth().createUser(withEmail: emailText, password: passwordText) { (result, error) in
                     if error == nil {
-                        let client = Client.createNew(withID: (result?.user.uid)!)
-                        client.setName(self.groupNameTextField.text!)
                         self.performSegue(withIdentifier: "signupToHome", sender: self)
                     } else {
                         let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)

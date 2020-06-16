@@ -21,7 +21,6 @@ class HomeViewController: UIViewController {
     var uid: String = ""
     var isGroup: Bool = false
     var dj: DJ! //will only exist if logged in as a DJ
-    var client: Client! //will only exist if logged in as a group
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,26 +38,13 @@ class HomeViewController: UIViewController {
             }
         }
         
-        _ = Client.fromID(id: uid).done { client in
-            if client != nil {
-                self.loggedInLabel.text = "Logged in as a group"
-                self.isGroup = true
-                self.client = client
-                self.loadClientInfo()
-            }
-        }
     }
     
     func loadClientInfo() {
-        nameLabel.text = client.name
-        locationLabel.text = client.address
-        ratingLabel.text = "\(client.rating)"
+        
     }
     
     func loadDJInfo() {
-        nameLabel.text = dj.name
-        locationLabel.text = dj.city + ", " + dj.state
-        ratingLabel.text = "\(dj.rating)"
         
     }
     
