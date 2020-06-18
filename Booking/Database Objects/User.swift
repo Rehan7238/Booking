@@ -18,7 +18,9 @@ class User {
     var favoriteVenues: [String] = []
     var friends: [String] = []
     var futureEvents: [String] = []
+    var previousEvents: [String] = []
     var groups: [String: [String]] = [:]
+    var profilePic: String = ""
     
     func setName(_ newValue: String) {
         self.name = newValue
@@ -45,9 +47,19 @@ class User {
         updateValue(fieldName: "futureEvents", newValue: newValue)
     }
     
+    func setPreviousEvents(_ newValue: [String]) {
+        self.previousEvents = newValue
+        updateValue(fieldName: "previousEvents", newValue: newValue)
+    }
+    
     func setGroups(_ newValue: [String: [String]]) {
         self.groups = newValue
         updateValue(fieldName: "groups", newValue: newValue)
+    }
+    
+    func setProfilePic(_ newValue: String) {
+        self.profilePic = newValue
+        updateValue(fieldName: "profilePic", newValue: newValue)
     }
     
     private func updateValue(fieldName: String, newValue: Any) {
@@ -73,7 +85,9 @@ class User {
                     user.favoriteVenues = data["favoriteVenues"] as! [String]
                     user.friends = data["friends"] as! [String]
                     user.futureEvents = data["futureEvents"] as! [String]
+                    user.previousEvents = data["previousEvents"] as! [String]
                     user.groups = data["groups"] as! [String: [String]]
+                    user.profilePic = data["profilePic"] as! String
 
                 }
                 resolver.fulfill(user)
@@ -100,7 +114,9 @@ class User {
             "favoriteVenues": newUser.favoriteVenues,
             "friends": newUser.friends,
             "futureEvents": newUser.futureEvents,
-            "groups": newUser.groups
+            "previousEvents": newUser.previousEvents,
+            "groups": newUser.groups,
+            "profilePic": newUser.profilePic
         ])
         
         return newUser
