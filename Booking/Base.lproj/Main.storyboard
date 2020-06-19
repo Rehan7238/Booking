@@ -382,7 +382,7 @@
             <objects>
                 <viewController id="ISF-K5-EwU" customClass="GroupSignUpViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Vp-RA-oxS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJ1-Dy-sEX">
@@ -664,7 +664,7 @@
                                     <color key="titleColor" red="0.0" green="0.77904387949999998" blue="0.74140857100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ISF-K5-EwU" kind="presentation" id="wZJ-Rb-e3Z"/>
+                                    <segue destination="ISF-K5-EwU" kind="presentation" modalPresentationStyle="fullScreen" id="wZJ-Rb-e3Z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yt-Qw-qeZ">
@@ -703,7 +703,7 @@
                                     <color key="titleColor" red="0.0" green="0.77904387949999998" blue="0.74140857100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ISF-K5-EwU" kind="presentation" id="PfS-yB-oM9"/>
+                                    <segue destination="ISF-K5-EwU" kind="presentation" modalPresentationStyle="fullScreen" id="PfS-yB-oM9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1046,7 +1046,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="n7d-be-D0D"/>
         <segue reference="tZe-9J-jHr"/>
-        <segue reference="wZJ-Rb-e3Z"/>
+        <segue reference="u2I-in-cdN"/>
         <segue reference="Hf9-ed-xR6"/>
     </inferredMetricsTieBreakers>
     <resources>
