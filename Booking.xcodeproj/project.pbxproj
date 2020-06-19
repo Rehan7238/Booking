@@ -146,7 +146,6 @@
 		5DE698D4248DB92600301B39 = {
 			isa = PBXGroup;
 			children = (
-				245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */,
 				5DE698DF248DB92600301B39 /* Booking */,
 				5DE698F6248DB93000301B39 /* BookingTests */,
 				5DE69901248DB93000301B39 /* BookingUITests */,
@@ -183,6 +182,7 @@
 				5DE698E6248DB92600301B39 /* Main.storyboard */,
 				245FEF0F249C48E4003267CE /* ShareContactsPermissionViewController.swift */,
 				245FEF0D249C4410003267CE /* SocializerAdditionalInfoViewController.swift */,
+				245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */,
 				5DE698EB248DB92F00301B39 /* LaunchScreen.storyboard */,
 				5DE698EE248DB92F00301B39 /* Info.plist */,
 				5DDF6B342491585000B76C14 /* GoogleService-Info.plist */,
