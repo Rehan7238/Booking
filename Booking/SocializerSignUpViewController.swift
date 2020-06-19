@@ -16,25 +16,13 @@ class SocializerSignUpViewController: UIViewController {
     
     //Mark: Properties
     
-    @IBOutlet weak var personalInformationTitleLabel: UILabel!
-    
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var emailTextField: UITextField!
-    
-    @IBOutlet weak var passwordLabel: UILabel!
-    @IBOutlet weak var passwordTextField: UITextField!
-    
-    @IBOutlet weak var retypePasswordLabel: UILabel!
-    @IBOutlet weak var retypePasswordTextField: UITextField!
-    
-    @IBOutlet weak var playingFeeLabel: UILabel!
-    @IBOutlet weak var playingFeeTextLabel: UITextField!
-    
-    @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var cityTextField: UITextField!
-    
-    @IBOutlet weak var stateLabel: UILabel!
-    @IBOutlet weak var stateTextField: UITextField!
+    @IBOutlet var personalInformationTitleLabel: UILabel!
+    @IBOutlet var emailTextField: UITextField! = UITextField()
+    @IBOutlet var passwordTextField: UITextField! = UITextField()
+    @IBOutlet var retypePasswordTextField: UITextField! = UITextField()
+    @IBOutlet var playingFeeTextLabel: UITextField! = UITextField()
+    @IBOutlet var cityTextField: UITextField! = UITextField()
+    @IBOutlet var stateTextField: UITextField! = UITextField()
     
     @IBOutlet weak var signupButton: UIButton!
     
@@ -62,9 +50,9 @@ class SocializerSignUpViewController: UIViewController {
             if let emailText = emailTextField.text, let passwordText = passwordTextField.text {
                 Auth.auth().createUser(withEmail: emailText, password: passwordText) { (result, error) in
                     if error == nil {
-                        let dj = DJ.createNew(withID: (result?.user.uid)!)
-                        dj.setName(self.playingFeeTextLabel.text!)
-                        self.performSegue(withIdentifier: "signupToHome", sender: self)
+                        let user = User.createNew(withID: (result?.user.uid)!)
+                        user.setName(self.playingFeeTextLabel.text!)
+                        self.performSegue(withIdentifier: "signupToProfile", sender: self)
                     }
                     else {
                         let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)

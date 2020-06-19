@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nfv-Ya-vFd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -204,8 +204,8 @@
                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="signUpAction:" destination="bpT-mN-cbL" eventType="touchUpInside" id="AJG-cg-6hF"/>
                                     <action selector="signupButtonPressed:" destination="ISF-K5-EwU" eventType="touchUpInside" id="twh-xz-4TN"/>
-                                    <segue destination="iaV-8S-QCJ" kind="presentation" modalPresentationStyle="fullScreen" id="txy-HD-ulr"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0mn-RR-Rip">
@@ -311,6 +311,18 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IiF-be-7rJ"/>
                     </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="1gd-Ef-uPb" id="bqF-5N-9PX"/>
+                        <outlet property="emailTextField" destination="0mn-RR-Rip" id="uCF-UT-9Uj"/>
+                        <outlet property="goBackButton" destination="K08-wD-b8l" id="Npl-gh-mMS"/>
+                        <outlet property="passwordTextField" destination="uzp-Vd-bPW" id="gDP-TJ-BLP"/>
+                        <outlet property="personalInformationTitleLabel" destination="Lsh-Wg-yjf" id="562-vi-N3y"/>
+                        <outlet property="playingFeeTextLabel" destination="QAw-gE-bWZ" id="zT6-PS-dIZ"/>
+                        <outlet property="retypePasswordTextField" destination="oGA-bj-l44" id="AT6-RY-dr0"/>
+                        <outlet property="signupButton" destination="GXw-hz-diJ" id="jOs-tQ-Pbo"/>
+                        <outlet property="stateTextField" destination="ddE-Pc-KgO" id="AQi-Pp-NPX"/>
+                        <segue destination="iaV-8S-QCJ" kind="presentation" identifier="signupToProfile" modalPresentationStyle="fullScreen" id="0zn-42-SdK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Uj-3h-5eN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -483,7 +495,7 @@
                                     <color key="titleColor" red="0.72420182089999996" green="0.89172771090000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yfX-Gh-TGB" kind="presentation" id="s1H-Zt-ExR"/>
+                                    <segue destination="yfX-Gh-TGB" kind="presentation" modalPresentationStyle="fullScreen" id="s1H-Zt-ExR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -612,7 +624,7 @@
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="yfX-Gh-TGB" customClass="DJorGroupViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5fn-CV-TKU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I am a:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEd-9Z-vAj">
@@ -824,7 +836,7 @@
                                     <color key="titleColor" red="0.72420182089999996" green="0.89172771090000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yfX-Gh-TGB" kind="presentation" id="n7d-be-D0D"/>
+                                    <segue destination="yfX-Gh-TGB" kind="presentation" modalPresentationStyle="fullScreen" id="n7d-be-D0D"/>
                                 </connections>
                             </button>
                         </subviews>

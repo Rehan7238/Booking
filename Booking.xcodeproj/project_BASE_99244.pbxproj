@@ -13,13 +13,9 @@
 		245FEF0424940381003267CE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0324940381003267CE /* StartViewController.swift */; };
 		245FEF0624941ABB003267CE /* DJorGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0524941ABB003267CE /* DJorGroupViewController.swift */; };
 		245FEF0C249C19D5003267CE /* SocializerSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0B249C19D5003267CE /* SocializerSignUpViewController.swift */; };
+		245FEF0E249C4410003267CE /* SocializerAdditionalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0D249C4410003267CE /* SocializerAdditionalInfoViewController.swift */; };
 		245FEF10249C48E4003267CE /* ShareContactsPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0F249C48E4003267CE /* ShareContactsPermissionViewController.swift */; };
 		245FEF12249C63FD003267CE /* SocializerProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */; };
-		245FEF26249C7566003267CE /* CollectDJProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF25249C7566003267CE /* CollectDJProfilePicViewController.swift */; };
-		245FEF28249C759B003267CE /* CollectDJPlayingFeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF27249C759B003267CE /* CollectDJPlayingFeeViewController.swift */; };
-		245FEF2A249C7608003267CE /* CollectDJGenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF29249C7608003267CE /* CollectDJGenresViewController.swift */; };
-		245FEF2C249C7625003267CE /* CollectDJLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF2B249C7625003267CE /* CollectDJLinkViewController.swift */; };
-		245FEF2E249C76E4003267CE /* CollectDJEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF2D249C76E4003267CE /* CollectDJEquipmentViewController.swift */; };
 		2ADD8B9EB35FE3B4FE09BE4D /* Pods_Booking_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56849ADFDFC5A5FE0A14DC87 /* Pods_Booking_BookingUITests.framework */; };
 		5D12207C249957C2006D2517 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207B249957C2006D2517 /* Event.swift */; };
 		5D12207E249957CB006D2517 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207D249957CB006D2517 /* User.swift */; };
@@ -62,13 +58,9 @@
 		245FEF0324940381003267CE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		245FEF0524941ABB003267CE /* DJorGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJorGroupViewController.swift; sourceTree = "<group>"; };
 		245FEF0B249C19D5003267CE /* SocializerSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocializerSignUpViewController.swift; sourceTree = "<group>"; };
+		245FEF0D249C4410003267CE /* SocializerAdditionalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocializerAdditionalInfoViewController.swift; sourceTree = "<group>"; };
 		245FEF0F249C48E4003267CE /* ShareContactsPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareContactsPermissionViewController.swift; sourceTree = "<group>"; };
 		245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocializerProfilePictureViewController.swift; sourceTree = "<group>"; };
-		245FEF25249C7566003267CE /* CollectDJProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectDJProfilePicViewController.swift; sourceTree = "<group>"; };
-		245FEF27249C759B003267CE /* CollectDJPlayingFeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectDJPlayingFeeViewController.swift; sourceTree = "<group>"; };
-		245FEF29249C7608003267CE /* CollectDJGenresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectDJGenresViewController.swift; sourceTree = "<group>"; };
-		245FEF2B249C7625003267CE /* CollectDJLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectDJLinkViewController.swift; sourceTree = "<group>"; };
-		245FEF2D249C76E4003267CE /* CollectDJEquipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectDJEquipmentViewController.swift; sourceTree = "<group>"; };
 		48D32E22A2F6A56064983E48 /* Pods-BookingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookingTests.release.xcconfig"; path = "Target Support Files/Pods-BookingTests/Pods-BookingTests.release.xcconfig"; sourceTree = "<group>"; };
 		56849ADFDFC5A5FE0A14DC87 /* Pods_Booking_BookingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booking_BookingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D12207B249957C2006D2517 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -154,6 +146,7 @@
 		5DE698D4248DB92600301B39 = {
 			isa = PBXGroup;
 			children = (
+				245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */,
 				5DE698DF248DB92600301B39 /* Booking */,
 				5DE698F6248DB93000301B39 /* BookingTests */,
 				5DE69901248DB93000301B39 /* BookingUITests */,
@@ -179,17 +172,10 @@
 				5DDF6B3624915BDF00B76C14 /* Database Objects */,
 				5DE698E0248DB92600301B39 /* AppDelegate.swift */,
 				5DE698E2248DB92600301B39 /* SceneDelegate.swift */,
-				245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */,
 				245FEF0324940381003267CE /* StartViewController.swift */,
-				245FEF25249C7566003267CE /* CollectDJProfilePicViewController.swift */,
-				245FEF2D249C76E4003267CE /* CollectDJEquipmentViewController.swift */,
-				245FEF27249C759B003267CE /* CollectDJPlayingFeeViewController.swift */,
-				245FEF29249C7608003267CE /* CollectDJGenresViewController.swift */,
-				245FEF2B249C7625003267CE /* CollectDJLinkViewController.swift */,
 				245FEF0124940365003267CE /* LoginViewController.swift */,
 				245FEF0524941ABB003267CE /* DJorGroupViewController.swift */,
 				245FEF0B249C19D5003267CE /* SocializerSignUpViewController.swift */,
-				245FEF0F249C48E4003267CE /* ShareContactsPermissionViewController.swift */,
 				245FEEFF24940319003267CE /* HomeViewController.swift */,
 				5DA31BE724919B4B00C18F55 /* DJSignupViewController.swift */,
 				5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */,
@@ -197,7 +183,6 @@
 				5DE698E6248DB92600301B39 /* Main.storyboard */,
 				245FEF0F249C48E4003267CE /* ShareContactsPermissionViewController.swift */,
 				245FEF0D249C4410003267CE /* SocializerAdditionalInfoViewController.swift */,
-				245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */,
 				5DE698EB248DB92F00301B39 /* LaunchScreen.storyboard */,
 				5DE698EE248DB92F00301B39 /* Info.plist */,
 				5DDF6B342491585000B76C14 /* GoogleService-Info.plist */,
@@ -474,25 +459,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				245FEF10249C48E4003267CE /* ShareContactsPermissionViewController.swift in Sources */,
-				245FEF2C249C7625003267CE /* CollectDJLinkViewController.swift in Sources */,
 				245FEF0224940365003267CE /* LoginViewController.swift in Sources */,
-				245FEF26249C7566003267CE /* CollectDJProfilePicViewController.swift in Sources */,
 				5DA31BE824919B4B00C18F55 /* DJSignupViewController.swift in Sources */,
 				245FEF0624941ABB003267CE /* DJorGroupViewController.swift in Sources */,
 				5DDF6B3824915BFF00B76C14 /* DJ.swift in Sources */,
+				245FEF0E249C4410003267CE /* SocializerAdditionalInfoViewController.swift in Sources */,
 				5D12207C249957C2006D2517 /* Event.swift in Sources */,
-				245FEF2E249C76E4003267CE /* CollectDJEquipmentViewController.swift in Sources */,
 				5D87BD8624949D1800F4CA6C /* GroupSignUpViewController.swift in Sources */,
 				245FEF12249C63FD003267CE /* SocializerProfilePictureViewController.swift in Sources */,
 				245FEF0024940319003267CE /* HomeViewController.swift in Sources */,
 				245FEF0424940381003267CE /* StartViewController.swift in Sources */,
 				245FEF0C249C19D5003267CE /* SocializerSignUpViewController.swift in Sources */,
 				5D12207E249957CB006D2517 /* User.swift in Sources */,
-				245FEF2A249C7608003267CE /* CollectDJGenresViewController.swift in Sources */,
 				5DE698E1248DB92600301B39 /* AppDelegate.swift in Sources */,
 				5DDF6B3A24915C0E00B76C14 /* Group.swift in Sources */,
 				5DE698E3248DB92600301B39 /* SceneDelegate.swift in Sources */,
-				245FEF28249C759B003267CE /* CollectDJPlayingFeeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
