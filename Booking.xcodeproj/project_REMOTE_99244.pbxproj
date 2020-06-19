@@ -195,12 +195,6 @@
 				5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */,
 				5DE698E9248DB92F00301B39 /* Assets.xcassets */,
 				5DE698E6248DB92600301B39 /* Main.storyboard */,
-<<<<<<< HEAD
-				245FEF0F249C48E4003267CE /* ShareContactsPermissionViewController.swift */,
-				245FEF0D249C4410003267CE /* SocializerAdditionalInfoViewController.swift */,
-				245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */,
-=======
->>>>>>> 2eb26d1a39a5ffd93f146c5b1151c9b760e86731
 				5DE698EB248DB92F00301B39 /* LaunchScreen.storyboard */,
 				5DE698EE248DB92F00301B39 /* Info.plist */,
 				5DDF6B342491585000B76C14 /* GoogleService-Info.plist */,

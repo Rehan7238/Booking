@@ -25,9 +25,8 @@ class DJSignupViewController: UIViewController {
     @IBOutlet weak var retypePasswordLabel: UILabel!
     @IBOutlet weak var retypePasswordTextField: UITextField!
     
-    @IBOutlet weak var playingFeeLabel: UILabel!
-    @IBOutlet weak var playingFeeTextLabel: UITextField!
     
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var cityTextField: UITextField!
     
@@ -49,7 +48,7 @@ class DJSignupViewController: UIViewController {
             
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
-        } else if playingFeeTextLabel.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true || stateTextField.text?.isEmpty ?? true {
+        } else if nameLabel.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true || stateTextField.text?.isEmpty ?? true {
             let alertController = UIAlertController(title: "Information Empty", message: "Please enter all information", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             
@@ -61,7 +60,7 @@ class DJSignupViewController: UIViewController {
                 Auth.auth().createUser(withEmail: emailText, password: passwordText) { (result, error) in
                     if error == nil {
                         let dj = DJ.createNew(withID: (result?.user.uid)!)
-                        dj.setName(self.playingFeeTextLabel.text!)
+                        dj.setName(self.nameLabel.text!)
                         self.performSegue(withIdentifier: "signupToHome", sender: self)
                     }
                     else {
