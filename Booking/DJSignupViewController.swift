@@ -63,7 +63,7 @@ class DJSignupViewController: UIViewController {
                     if error == nil {
                         let dj = DJ.createNew(withID: (result?.user.uid)!)
                         dj.setName(self.nameLabel.text!)
-                        self.performSegue(withIdentifier: "signupToHome", sender: self)
+                        self.performSegue(withIdentifier: "signupToQuestions", sender: self)
                     }
                     else {
                         let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
