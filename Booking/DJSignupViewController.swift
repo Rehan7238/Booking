@@ -62,7 +62,8 @@ class DJSignupViewController: UIViewController {
                 Auth.auth().createUser(withEmail: emailText, password: passwordText) { (result, error) in
                     if error == nil {
                         let dj = DJ.createNew(withID: (result?.user.uid)!)
-                        dj.setName(self.nameLabel.text!)
+                        dj.setName(self.nameTextField.text!)
+                        dj.setLocality([self.cityTextField.text!: self.stateTextField.text!])
                         self.performSegue(withIdentifier: "signupToQuestions", sender: self)
                     }
                     else {

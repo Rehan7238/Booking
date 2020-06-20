@@ -20,7 +20,9 @@ class SocializerSignUpViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField! = UITextField()
     @IBOutlet var passwordTextField: UITextField! = UITextField()
     @IBOutlet var retypePasswordTextField: UITextField! = UITextField()
-    @IBOutlet var playingFeeTextLabel: UITextField! = UITextField()
+ 
+    @IBOutlet weak var nameTextLabel: UITextField!
+    
     @IBOutlet var cityTextField: UITextField! = UITextField()
     @IBOutlet var stateTextField: UITextField! = UITextField()
     
@@ -39,7 +41,7 @@ class SocializerSignUpViewController: UIViewController {
             
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
-        } else if playingFeeTextLabel.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true || stateTextField.text?.isEmpty ?? true {
+        } else if nameTextLabel.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true || stateTextField.text?.isEmpty ?? true {
             let alertController = UIAlertController(title: "Information Empty", message: "Please enter all information", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             
@@ -51,7 +53,7 @@ class SocializerSignUpViewController: UIViewController {
                 Auth.auth().createUser(withEmail: emailText, password: passwordText) { (result, error) in
                     if error == nil {
                         let user = User.createNew(withID: (result?.user.uid)!)
-                        user.setName(self.playingFeeTextLabel.text!)
+                        user.setName(self.nameTextLabel.text!)
                         self.performSegue(withIdentifier: "signupToProfile", sender: self)
                     }
                     else {
