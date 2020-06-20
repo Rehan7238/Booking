@@ -18,13 +18,25 @@ class CollectDJPlayingFeeViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var playingFeeText: UITextField!
+    @IBOutlet var playingFeeText: UITextField! = UITextField()
+    
+    var dj: DJ?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let userID = Auth.auth().currentUser?.uid else { return}
-        _ = User.fromID(id: userID)
+        guard let uid = Auth.auth().currentUser?.uid else { return}
+        _ = DJ.fromID(id: uid).done { djThatItLoaded in
+            self.dj = djThatItLoaded
+        }
         
+    }
+    
+    @IBAction func pressedNext (_ sender: Any) {
+        
+        self.dj?.setPlayingFee(NSNumber.init( value: Int32(playingFeeText.text!)!))
+        
+        // Go to the next screen
+        self.performSegue(withIdentifier: "toEquipmentQuestion", sender: self)
     }
 
     

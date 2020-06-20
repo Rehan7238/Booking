@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i3z-vP-WSh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i3z-vP-WSh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -318,9 +318,9 @@
                         <outlet property="cityTextField" destination="1gd-Ef-uPb" id="bqF-5N-9PX"/>
                         <outlet property="emailTextField" destination="0mn-RR-Rip" id="uCF-UT-9Uj"/>
                         <outlet property="goBackButton" destination="K08-wD-b8l" id="Npl-gh-mMS"/>
+                        <outlet property="nameTextLabel" destination="QAw-gE-bWZ" id="gGU-OI-1pg"/>
                         <outlet property="passwordTextField" destination="uzp-Vd-bPW" id="gDP-TJ-BLP"/>
                         <outlet property="personalInformationTitleLabel" destination="Lsh-Wg-yjf" id="562-vi-N3y"/>
-                        <outlet property="playingFeeTextLabel" destination="QAw-gE-bWZ" id="zT6-PS-dIZ"/>
                         <outlet property="retypePasswordTextField" destination="oGA-bj-l44" id="AT6-RY-dr0"/>
                         <outlet property="signupButton" destination="GXw-hz-diJ" id="jOs-tQ-Pbo"/>
                         <outlet property="stateTextField" destination="ddE-Pc-KgO" id="AQi-Pp-NPX"/>
@@ -916,7 +916,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ids-zC-ly1" kind="presentation" modalPresentationStyle="fullScreen" id="3tY-MX-sSZ"/>
+                                    <action selector="pressedNext:" destination="wlP-pv-0sv" eventType="touchUpInside" id="XZN-XO-wxt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -927,6 +927,7 @@
                         <outlet property="nextButton" destination="SjL-sa-zuw" id="9WD-6g-Wkv"/>
                         <outlet property="playingFeeText" destination="M0O-Ll-moP" id="95O-iB-eip"/>
                         <outlet property="questionLabel" destination="6tj-g0-oqz" id="JAd-y2-hP7"/>
+                        <segue destination="ids-zC-ly1" kind="presentation" identifier="toEquipmentQuestion" modalPresentationStyle="fullScreen" id="up2-f4-JWw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i25-9e-cyG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1007,26 +1008,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preview Playlist Link- showcase some songs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21h-cP-qEK">
-                                <rect key="frame" x="38" y="113" width="339" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.72420182089999996" green="0.89172771090000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRL-Uy-0gv">
-                                <rect key="frame" x="188" y="793" width="39" height="30"/>
+                                <rect key="frame" x="189" y="794" width="42" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="NEXT"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="pressedSubmitWith_sender:" destination="wlP-pv-0sv" eventType="touchUpInside" id="Sry-XF-BKK"/>
-                                    <segue destination="hIO-is-s3t" kind="presentation" modalPresentationStyle="fullScreen" id="Uk6-Pe-nX1"/>
+                                    <segue destination="hIO-is-s3t" kind="presentation" identifier="toDJProfilePicture" modalPresentationStyle="fullScreen" id="Uk6-Pe-nX1"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPF-oA-oCF">
+                                <rect key="frame" x="159" y="431" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preview Playlist Link- showcase some songs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21h-cP-qEK">
+                                <rect key="frame" x="42" y="386" width="337" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xwM-9q-EJg"/>
                     </view>
+                    <connections>
+                        <outlet property="linkTextField" destination="YPF-oA-oCF" id="2Q5-fN-hpk"/>
+                        <outlet property="nextButton" destination="JRL-Uy-0gv" id="GRu-fn-eX3"/>
+                        <outlet property="questionLabel" destination="21h-cP-qEK" id="sZP-Rv-aXT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNE-kS-Jc3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1040,26 +1055,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile pic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2S-Dh-6cU">
-                                <rect key="frame" x="169" y="103" width="76" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y3I-f0-y5y">
+                                <rect key="frame" x="144" y="182" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.21276003869999999" green="0.90307718739999998" blue="1" alpha="0.33370928700000002" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap the blank image above to choose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWR-SV-OYi">
+                                <rect key="frame" x="73" y="361" width="285" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.72420182089999996" green="0.89172771090000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYX-AI-YL7">
-                                <rect key="frame" x="180" y="800" width="56" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="a profile picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckS-k6-rgo">
+                                <rect key="frame" x="144" y="390" width="120" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SUBMIT"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fM-0B-hci">
+                                <rect key="frame" x="160" y="728" width="94" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="pressedSubmitWith_sender:" destination="wlP-pv-0sv" eventType="touchUpInside" id="3C3-b7-ZeH"/>
-                                    <segue destination="cQc-Pu-H1a" kind="presentation" modalPresentationStyle="fullScreen" id="tZe-9J-jHr"/>
+                                    <action selector="pressedNextButtonWith_sender:" destination="iaV-8S-QCJ" eventType="touchUpInside" id="rhQ-lq-3QV"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="t6a-AT-Hmn"/>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="1fM-0B-hci" id="YPt-GP-S5c"/>
+                        <outlet property="profilePic" destination="Y3I-f0-y5y" id="Ncd-DQ-cr5"/>
+                        <outlet property="questionLabel" destination="SWR-SV-OYi" id="cPZ-xf-FwP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P6O-vl-HSf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1067,7 +1102,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="n7d-be-D0D"/>
+        <segue reference="JaA-dH-ZUv"/>
         <segue reference="CYo-v5-pmX"/>
         <segue reference="u2I-in-cdN"/>
         <segue reference="Hf9-ed-xR6"/>
