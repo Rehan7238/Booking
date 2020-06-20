@@ -17,6 +17,7 @@ class CollectDJPlayingFeeViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet var playingFeeText: UITextField! = UITextField()
     

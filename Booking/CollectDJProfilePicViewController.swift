@@ -53,6 +53,8 @@ class CollectDJProfilePicViewController: UIViewController, UIImagePickerControll
                   }
                 }
             }
+        // Go to the next screen
+        self.performSegue(withIdentifier: "DjtoHomeView", sender: self)
         }
                 
         override func viewDidLoad() {
@@ -61,15 +63,14 @@ class CollectDJProfilePicViewController: UIViewController, UIImagePickerControll
             _ = DJ.fromID(id: uid).done { djThatItLoaded in
                 self.dj = djThatItLoaded
             }
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SocializerProfilePictureViewController.handleSelectProfile))
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CollectDJProfilePicViewController.handleSelectProfile))
             profilePic.layer.cornerRadius = profilePic.frame.size.height/2;
             profilePic.clipsToBounds = true;
             profilePic.layer.borderWidth = 0;
             profilePic.addGestureRecognizer(tapGesture)
             profilePic.isUserInteractionEnabled = true
             
-            // Go to the next screen
-                   self.performSegue(withIdentifier: "DjtoHomeView", sender: self)
+            
         }
         
         @objc func handleSelectProfile () {
@@ -80,6 +81,19 @@ class CollectDJProfilePicViewController: UIViewController, UIImagePickerControll
        
         
     }
+
+extension CollectDJProfilePicViewController {
+    
+     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerOriginalImage")] as? UIImage {
+            selectedImage = image
+            profilePic.image = image
+            
+        }
+        dismiss(animated: true, completion: nil)
+    }
+}
+
 
  
 
