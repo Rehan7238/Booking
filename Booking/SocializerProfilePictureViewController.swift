@@ -19,6 +19,7 @@ class SocializerProfilePictureViewController: UIViewController {
     var selectedImage: UIImage?
     var uid: String = ""
 
+    
     @IBAction func pressedNextButton(_sender: Any){
         if let uid = Auth.auth().currentUser?.uid {
             self.uid = uid
@@ -49,8 +50,9 @@ class SocializerProfilePictureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SocializerProfilePictureViewController.handleSelectProfile))
-        profilePic.layer.cornerRadius = 40;
+        profilePic.layer.cornerRadius = profilePic.frame.size.height/2;
         profilePic.clipsToBounds = true;
+        profilePic.layer.borderWidth = 0;
         profilePic.addGestureRecognizer(tapGesture)
         profilePic.isUserInteractionEnabled = true
     }

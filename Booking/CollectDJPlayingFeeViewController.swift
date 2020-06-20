@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import UIKit
+import FirebaseAuth
+import FirebaseStorage
+
+class CollectDJPlayingFeeViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    
+ 
+    
+}
