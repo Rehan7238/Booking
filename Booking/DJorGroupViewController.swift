@@ -12,6 +12,7 @@ import UIKit
 class DJorGroupViewController: UIViewController {
     
     //Mark: Properties
+
     
     @IBOutlet weak var titleLabel: UILabel!
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nfv-Ya-vFd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i3z-vP-WSh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -306,6 +306,9 @@
                                 <state key="normal" title="GO BACK">
                                     <color key="titleColor" red="0.72420182089999996" green="0.89172771090000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="yfX-Gh-TGB" kind="presentation" modalPresentationStyle="fullScreen" id="JaA-dH-ZUv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -686,7 +689,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yt-Qw-qeZ">
-                                <rect key="frame" x="174" y="709" width="66" height="30"/>
+                                <rect key="frame" x="174" y="757" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="GO BACK">
                                     <color key="titleColor" red="0.72420182089999996" green="0.89172771090000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -869,13 +872,13 @@
                         <outlet property="emailTextField" destination="qiL-uF-ObT" id="zSe-iY-8GF"/>
                         <outlet property="goBackButton" destination="Ksp-Wm-6Lo" id="TlR-VE-VdP"/>
                         <outlet property="nameLabel" destination="9BR-34-8NZ" id="J0u-rQ-d9d"/>
+                        <outlet property="nameTextField" destination="PT8-z3-mLz" id="n8v-nE-Dop"/>
                         <outlet property="passwordLabel" destination="I4r-X4-e32" id="eDs-Ea-DYm"/>
                         <outlet property="passwordTextField" destination="H42-bX-ba4" id="lDY-0H-KAe"/>
                         <outlet property="personalInformationTitleLabel" destination="YD3-8y-q8I" id="tNR-fA-3zK"/>
-                        <outlet property="playingFeeTextLabel" destination="PT8-z3-mLz" id="Le6-5w-PwU"/>
                         <outlet property="retypePasswordLabel" destination="6Y7-pQ-61n" id="rY6-HB-XaY"/>
                         <outlet property="retypePasswordTextField" destination="x2N-PU-R3N" id="f9l-cZ-VCu"/>
-                        <outlet property="signupButton" destination="KGO-ST-lJq" id="4QP-pO-jKc"/>
+                        <outlet property="signupButton" destination="KGO-ST-lJq" id="OnF-mv-HvW"/>
                         <outlet property="stateLabel" destination="InY-JA-8an" id="4lB-nG-Szr"/>
                         <outlet property="stateTextField" destination="g2f-7Z-Kj8" id="SGy-od-JEH"/>
                     </connections>
@@ -893,35 +896,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is your typical playing fee for a 3 hour event?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tj-g0-oqz">
-                                <rect key="frame" x="14" y="104" width="386" height="21"/>
+                                <rect key="frame" x="20" y="377" width="386" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.72420182089999996" green="0.89172771090000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M0O-Ll-moP">
-                                <rect key="frame" x="159" y="173" width="97" height="34"/>
+                                <rect key="frame" x="159" y="431" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjL-sa-zuw">
-                                <rect key="frame" x="188" y="810" width="39" height="30"/>
+                                <rect key="frame" x="176" y="761" width="69" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="NEXT"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="pressedSubmitWith_sender:" destination="wlP-pv-0sv" eventType="touchUpInside" id="c8p-c0-pn4"/>
                                     <segue destination="ids-zC-ly1" kind="presentation" modalPresentationStyle="fullScreen" id="3tY-MX-sSZ"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RpE-Y4-k08"/>
                     </view>
                     <connections>
-                        <outlet property="playingFee" destination="M0O-Ll-moP" id="tkB-RG-wBV"/>
-                        <outlet property="questionLabel" destination="6tj-g0-oqz" id="jmf-eH-Knf"/>
-                        <outlet property="submitButton" destination="SjL-sa-zuw" id="omu-WU-gbz"/>
+                        <outlet property="nextButton" destination="SjL-sa-zuw" id="9WD-6g-Wkv"/>
+                        <outlet property="playingFeeText" destination="M0O-Ll-moP" id="95O-iB-eip"/>
+                        <outlet property="questionLabel" destination="6tj-g0-oqz" id="JAd-y2-hP7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i25-9e-cyG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1063,9 +1068,9 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="n7d-be-D0D"/>
-        <segue reference="tZe-9J-jHr"/>
+        <segue reference="EAz-3g-KBd"/>
         <segue reference="u2I-in-cdN"/>
-        <segue reference="Hf9-ed-xR6"/>
+        <segue reference="b5m-HL-zLT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person.crop.square" catalog="system" width="128" height="114"/>
