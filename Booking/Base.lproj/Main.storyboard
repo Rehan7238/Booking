@@ -621,7 +621,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmW-Dl-R7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5929" y="1507"/>
+            <point key="canvasLocation" x="4157" y="3717"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q2S-cc-5Z2">
@@ -908,12 +908,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ank-0w-yvt">
+                                <rect key="frame" x="50" y="754" width="66" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="26"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fdy-Zz-KLN" kind="presentation" modalPresentationStyle="fullScreen" id="gPg-LU-NxQ"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjL-sa-zuw">
-                                <rect key="frame" x="176" y="761" width="69" height="45"/>
+                                <rect key="frame" x="292" y="757" width="69" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="NEXT">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pressedNext:" destination="wlP-pv-0sv" eventType="touchUpInside" id="XZN-XO-wxt"/>
@@ -924,6 +935,7 @@
                         <viewLayoutGuide key="safeArea" id="RpE-Y4-k08"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="ank-0w-yvt" id="hzg-Zq-M5Y"/>
                         <outlet property="nextButton" destination="SjL-sa-zuw" id="9WD-6g-Wkv"/>
                         <outlet property="playingFeeText" destination="M0O-Ll-moP" id="95O-iB-eip"/>
                         <outlet property="questionLabel" destination="6tj-g0-oqz" id="JAd-y2-hP7"/>
@@ -958,6 +970,14 @@
                                     <segue destination="aK5-gW-l6C" kind="presentation" modalPresentationStyle="fullScreen" id="zeD-Rd-KHV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2h1-cw-bnK">
+                                <rect key="frame" x="56" y="785" width="66" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="26"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="s9U-1J-QtE"/>
@@ -982,9 +1002,18 @@
                                 <color key="textColor" red="0.72420182089999996" green="0.89172771090000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQx-j2-cOn">
-                                <rect key="frame" x="188" y="802" width="39" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEV-ru-mzr">
+                                <rect key="frame" x="46" y="785" width="66" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="26"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQx-j2-cOn">
+                                <rect key="frame" x="297" y="780" width="74" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="30"/>
                                 <state key="normal" title="NEXT"/>
                                 <connections>
                                     <action selector="pressedSubmitWith_sender:" destination="wlP-pv-0sv" eventType="touchUpInside" id="UZh-Md-TW5"/>
@@ -1008,23 +1037,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRL-Uy-0gv">
-                                <rect key="frame" x="189" y="794" width="42" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
-                                <state key="normal" title="NEXT">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedNext:" destination="zjC-T9-lJi" eventType="touchUpInside" id="gfR-zz-okf"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPF-oA-oCF">
-                                <rect key="frame" x="159" y="431" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preview Playlist Link- showcase some songs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21h-cP-qEK">
                                 <rect key="frame" x="42" y="386" width="337" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1032,11 +1044,40 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPF-oA-oCF">
+                                <rect key="frame" x="159" y="431" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgb-6X-A2U">
+                                <rect key="frame" x="54" y="774" width="66" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="26"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aK5-gW-l6C" kind="presentation" modalPresentationStyle="fullScreen" id="0wN-b7-8Gs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRL-Uy-0gv">
+                                <rect key="frame" x="299" y="774" width="64" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="26"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedNext:" destination="zjC-T9-lJi" eventType="touchUpInside" id="gfR-zz-okf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xwM-9q-EJg"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="hgb-6X-A2U" id="4c7-TK-Afz"/>
                         <outlet property="linkTextField" destination="YPF-oA-oCF" id="2Q5-fN-hpk"/>
                         <outlet property="nextButton" destination="JRL-Uy-0gv" id="GRu-fn-eX3"/>
                         <outlet property="questionLabel" destination="21h-cP-qEK" id="sZP-Rv-aXT"/>
@@ -1045,7 +1086,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNE-kS-Jc3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3422" y="4586"/>
+            <point key="canvasLocation" x="3421.739130434783" y="4585.7142857142853"/>
         </scene>
         <!--CollectDJ Profile Pic View Controller-->
         <scene sceneID="uSp-eS-DsD">
@@ -1074,8 +1115,19 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnj-lh-eRc">
+                                <rect key="frame" x="55" y="776" width="66" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="26"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zjC-T9-lJi" kind="presentation" modalPresentationStyle="fullScreen" id="s1P-pj-7cP"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fM-0B-hci">
-                                <rect key="frame" x="160" y="728" width="94" height="50"/>
+                                <rect key="frame" x="277" y="776" width="94" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="SUBMIT">
@@ -1083,7 +1135,7 @@
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressedNextButtonWith_sender:" destination="iaV-8S-QCJ" eventType="touchUpInside" id="rhQ-lq-3QV"/>
+                                    <action selector="pressedNextButtonWith_sender:" destination="hIO-is-s3t" eventType="touchUpInside" id="S4e-r0-4c8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1091,19 +1143,24 @@
                         <viewLayoutGuide key="safeArea" id="t6a-AT-Hmn"/>
                     </view>
                     <connections>
-                        <outlet property="nextButton" destination="1fM-0B-hci" id="YPt-GP-S5c"/>
+                        <outlet property="backButton" destination="hnj-lh-eRc" id="83r-3s-DPo"/>
                         <outlet property="profilePic" destination="Y3I-f0-y5y" id="Ncd-DQ-cr5"/>
                         <outlet property="questionLabel" destination="SWR-SV-OYi" id="cPZ-xf-FwP"/>
+                        <outlet property="submitButton" destination="1fM-0B-hci" id="doV-b0-3O0"/>
+                        <segue destination="cQc-Pu-H1a" kind="presentation" identifier="DjtoHomeView" modalPresentationStyle="fullScreen" id="RBY-Vj-bJB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P6O-vl-HSf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4156.521739130435" y="4585.7142857142853"/>
+            <point key="canvasLocation" x="4157" y="4586"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="bQu-PX-J1D"/>
+        <segue reference="zeD-Rd-KHV"/>
+        <segue reference="gPg-LU-NxQ"/>
         <segue reference="JaA-dH-ZUv"/>
-        <segue reference="CYo-v5-pmX"/>
+        <segue reference="RBY-Vj-bJB"/>
         <segue reference="u2I-in-cdN"/>
         <segue reference="Hf9-ed-xR6"/>
     </inferredMetricsTieBreakers>

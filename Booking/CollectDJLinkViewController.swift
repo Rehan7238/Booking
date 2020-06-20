@@ -23,7 +23,8 @@ class CollectDJLinkViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
-   
+    @IBOutlet weak var backButton: UIButton!
+    
     var dj: DJ?
        
        override func viewDidLoad() {

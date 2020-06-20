@@ -16,9 +16,10 @@ class CollectDJProfilePicViewController: UIViewController, UIImagePickerControll
     
     //MARK: Properties
     @IBOutlet weak var profilePic: UIImageView!
-    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var questionLabel: UILabel!
     
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var submitButton: UIButton!
     
     var selectedImage: UIImage?
     var uid: String = ""
@@ -66,6 +67,9 @@ class CollectDJProfilePicViewController: UIViewController, UIImagePickerControll
             profilePic.layer.borderWidth = 0;
             profilePic.addGestureRecognizer(tapGesture)
             profilePic.isUserInteractionEnabled = true
+            
+            // Go to the next screen
+                   self.performSegue(withIdentifier: "DjtoHomeView", sender: self)
         }
         
         @objc func handleSelectProfile () {

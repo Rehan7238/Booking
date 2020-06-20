@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import UIKit
+import FirebaseAuth
+
+
+class CollectDJGenresViewController: UIViewController {
+    
+    //MARK: Properties
+    
+    
+}
