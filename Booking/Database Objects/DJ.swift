@@ -81,7 +81,7 @@ class DJ {
     
     func setPlaylist(_ newPlaylist: String) {
         self.playlist = newPlaylist
-        updateValue(fieldName: "name", newValue: newPlaylist)
+        updateValue(fieldName: "playlist", newValue: newPlaylist)
     }
     
     func setPreviousEvents(_ newPreviousEvents: [String]) {

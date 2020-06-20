@@ -1016,8 +1016,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressedSubmitWith_sender:" destination="wlP-pv-0sv" eventType="touchUpInside" id="Sry-XF-BKK"/>
-                                    <segue destination="hIO-is-s3t" kind="presentation" identifier="toDJProfilePicture" modalPresentationStyle="fullScreen" id="Uk6-Pe-nX1"/>
+                                    <action selector="pressedNext:" destination="zjC-T9-lJi" eventType="touchUpInside" id="gfR-zz-okf"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPF-oA-oCF">
@@ -1041,6 +1040,7 @@
                         <outlet property="linkTextField" destination="YPF-oA-oCF" id="2Q5-fN-hpk"/>
                         <outlet property="nextButton" destination="JRL-Uy-0gv" id="GRu-fn-eX3"/>
                         <outlet property="questionLabel" destination="21h-cP-qEK" id="sZP-Rv-aXT"/>
+                        <segue destination="hIO-is-s3t" kind="presentation" identifier="toDJProfilePic" modalPresentationStyle="fullScreen" id="UQf-iE-wTr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNE-kS-Jc3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

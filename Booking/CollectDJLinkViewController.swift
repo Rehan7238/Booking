@@ -23,16 +23,28 @@ class CollectDJLinkViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
-    override func viewDidLoad() {
-       super.viewDidLoad()
-   }
+   
+    var dj: DJ?
+       
+       override func viewDidLoad() {
+           super.viewDidLoad()
+           guard let uid = Auth.auth().currentUser?.uid else { return}
+           _ = DJ.fromID(id: uid).done { djThatItLoaded in
+               self.dj = djThatItLoaded
+           }
+           
+       }
+       
+       @IBAction func pressedNext (_ sender: Any) {
+           
+           self.dj?.setPlaylist(linkTextField.text!)
+           // Go to the next screen
+           self.performSegue(withIdentifier: "toDJProfilePic", sender: self)
+       }
+
+       
     
-    @IBAction func nextPressed (_ sender: Any) {
-        // assign the link to the DJ's link
-        
-        // go to next screen
-         self.performSegue(withIdentifier: "toDJProfilePicture", sender: self)
-        
-    }
+       
+   
 
 }

@@ -22,6 +22,8 @@ class CollectDJProfilePicViewController: UIViewController, UIImagePickerControll
     
     var selectedImage: UIImage?
     var uid: String = ""
+    var dj: DJ?
+
     
     @IBAction func pressedNextButton(_sender: Any){
             if let uid = Auth.auth().currentUser?.uid {
@@ -45,6 +47,8 @@ class CollectDJProfilePicViewController: UIViewController, UIImagePickerControll
                       // Uh-oh, an error occurred!
                       return
                     }
+                    let pathString = downloadURL.path // String
+                    self.dj?.setProfilepic(pathString)
                   }
                 }
             }
@@ -52,6 +56,10 @@ class CollectDJProfilePicViewController: UIViewController, UIImagePickerControll
                 
         override func viewDidLoad() {
             super.viewDidLoad()
+            guard let uid = Auth.auth().currentUser?.uid else { return}
+            _ = DJ.fromID(id: uid).done { djThatItLoaded in
+                self.dj = djThatItLoaded
+            }
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SocializerProfilePictureViewController.handleSelectProfile))
             profilePic.layer.cornerRadius = profilePic.frame.size.height/2;
             profilePic.clipsToBounds = true;
