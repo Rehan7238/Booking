@@ -16,12 +16,22 @@ class CollectDJGenresViewController: UIViewController, UITableViewDelegate, UITa
     //MARK: Properties
     
     @IBOutlet weak var optionsTable: UITableView!
+    @IBOutlet weak var nextButton: UIButton!
     
     let options: [String] = ["EDM", "Alternate", "Rap", "Hip-Hop", "Classical :)", "Swag", "Test", "Something else"]
-    var numberOfSelected = 0
+    var genreList: [String] = []
+    var dj: DJ?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let uid = Auth.auth().currentUser?.uid {
+            _ = DJ.fromID(id: uid).done { dj in
+                if dj != nil {
+                    self.dj = dj
+                }
+            }
+        }
         
         optionsTable.dataSource = self
         optionsTable.delegate = self
@@ -43,12 +53,19 @@ class CollectDJGenresViewController: UIViewController, UITableViewDelegate, UITa
         
         if let selectedChatCell = tableView.cellForRow(at: indexPath) as? OptionToSelect {
             if selectedChatCell.isOptionSelected {
-                numberOfSelected -= 1
+                if let index = genreList.firstIndex(of: selectedChatCell.optionNameLabel.text!) {
+                    genreList.remove(at: index)
+                }
             } else {
-                numberOfSelected += 1
+                genreList.append(selectedChatCell.optionNameLabel.text!)
             }
+            
             
             selectedChatCell.setSelected(!selectedChatCell.isOptionSelected)
         }
+    }
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        self.dj?.setMusicStyle(genreList)
+        self.performSegue(withIdentifier: "proceed", sender: self)
     }
 }

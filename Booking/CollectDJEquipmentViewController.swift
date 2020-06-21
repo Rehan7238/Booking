@@ -15,13 +15,21 @@ class CollectDJEquipmentViewController: UIViewController, UITableViewDelegate, U
     //MARK: Properties
     
     @IBOutlet weak var optionsTable: UITableView!
-    
+    @IBOutlet weak var nextButton: UIButton!
     let options: [String] = ["Stereos", "Speakers", "Microphone", "Lights", "Magic Potion", "Something else idk"]
-    var numberOfSelected = 0
+    var equipmentList: [String] = []
     var dj: DJ?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let uid = Auth.auth().currentUser?.uid {
+            _ = DJ.fromID(id: uid).done { dj in
+                if dj != nil {
+                    self.dj = dj
+                }
+            }
+        }
         
         optionsTable.dataSource = self
         optionsTable.delegate = self
@@ -37,20 +45,24 @@ class CollectDJEquipmentViewController: UIViewController, UITableViewDelegate, U
         return cell
     }
     
-    func tableView(_ tableView: UITableView,
-                   didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        var equipmentList = [String]()
         
         if let selectedChatCell = tableView.cellForRow(at: indexPath) as? OptionToSelect {
             if selectedChatCell.isOptionSelected {
-                numberOfSelected -= 1
-                equipmentList.append(selectedChatCell.optionNameLabel.text!)
+                if let index = equipmentList.firstIndex(of: selectedChatCell.optionNameLabel.text!) {
+                    equipmentList.remove(at: index)
+                }
             } else {
-                numberOfSelected += 1
+                equipmentList.append(selectedChatCell.optionNameLabel.text!)
             }
             
             selectedChatCell.setSelected(!selectedChatCell.isOptionSelected)
         }
+    }
+    
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        self.dj?.setEquipment(equipmentList)
+        self.performSegue(withIdentifier: "proceed", sender: self)
     }
 }
