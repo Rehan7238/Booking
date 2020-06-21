@@ -54,6 +54,8 @@ class GroupSignUpViewController: UIViewController {
             } else {
                 //either emailTextField.text or passwordTextField.text was nil
             }
+            self.performSegue(withIdentifier: "toGroupEquipmentQuestion", sender: self)
+
         }
     }
 }

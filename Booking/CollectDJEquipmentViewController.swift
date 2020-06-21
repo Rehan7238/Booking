@@ -18,7 +18,8 @@ class CollectDJEquipmentViewController: UIViewController, UITableViewDelegate, U
     
     let options: [String] = ["Stereos", "Speakers", "Microphone", "Lights", "Magic Potion", "Something else idk"]
     var numberOfSelected = 0
-    
+    var dj: DJ?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,15 +40,18 @@ class CollectDJEquipmentViewController: UIViewController, UITableViewDelegate, U
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        var equipmentList = [String]()
         
         if let selectedChatCell = tableView.cellForRow(at: indexPath) as? OptionToSelect {
             if selectedChatCell.isOptionSelected {
                 numberOfSelected -= 1
+                equipmentList.append(selectedChatCell.optionNameLabel.text!)
             } else {
                 numberOfSelected += 1
             }
             
             selectedChatCell.setSelected(!selectedChatCell.isOptionSelected)
         }
+        self.dj?.setEquipment(equipmentList)
     }
 }
