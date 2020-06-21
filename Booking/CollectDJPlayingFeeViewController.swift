@@ -29,18 +29,14 @@ class CollectDJPlayingFeeViewController: UIViewController {
         _ = DJ.fromID(id: uid).done { djThatItLoaded in
             self.dj = djThatItLoaded
         }
-        
     }
     
     @IBAction func pressedNext (_ sender: Any) {
-        
-        self.dj?.setPlayingFee(NSNumber.init( value: Int32(playingFeeText.text!)!))
+        if let value = playingFeeText.text, !value.isEmpty {
+            self.dj?.setPlayingFee(NSNumber.init( value: Int32(value)!))
+        }
         
         // Go to the next screen
         self.performSegue(withIdentifier: "toEquipmentQuestion", sender: self)
     }
-
-    
- 
-    
 }

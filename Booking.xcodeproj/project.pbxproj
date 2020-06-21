@@ -25,6 +25,7 @@
 		5D12207E249957CB006D2517 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207D249957CB006D2517 /* User.swift */; };
 		5D87BD8624949D1800F4CA6C /* GroupSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */; };
 		5DA31BE824919B4B00C18F55 /* DJSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA31BE724919B4B00C18F55 /* DJSignupViewController.swift */; };
+		5DB17EB2249F639900237276 /* OptionToSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB17EB1249F639900237276 /* OptionToSelect.swift */; };
 		5DDF6B352491585000B76C14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DDF6B342491585000B76C14 /* GoogleService-Info.plist */; };
 		5DDF6B3824915BFF00B76C14 /* DJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF6B3724915BFF00B76C14 /* DJ.swift */; };
 		5DDF6B3A24915C0E00B76C14 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF6B3924915C0E00B76C14 /* Group.swift */; };
@@ -75,6 +76,7 @@
 		5D12207D249957CB006D2517 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSignUpViewController.swift; sourceTree = "<group>"; };
 		5DA31BE724919B4B00C18F55 /* DJSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJSignupViewController.swift; sourceTree = "<group>"; };
+		5DB17EB1249F639900237276 /* OptionToSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionToSelect.swift; sourceTree = "<group>"; };
 		5DDF6B342491585000B76C14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DDF6B3724915BFF00B76C14 /* DJ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJ.swift; sourceTree = "<group>"; };
 		5DDF6B3924915C0E00B76C14 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
@@ -179,7 +181,6 @@
 				5DDF6B3624915BDF00B76C14 /* Database Objects */,
 				5DE698E0248DB92600301B39 /* AppDelegate.swift */,
 				5DE698E2248DB92600301B39 /* SceneDelegate.swift */,
-				245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */,
 				245FEF0324940381003267CE /* StartViewController.swift */,
 				245FEF25249C7566003267CE /* CollectDJProfilePicViewController.swift */,
 				245FEF2D249C76E4003267CE /* CollectDJEquipmentViewController.swift */,
@@ -189,14 +190,13 @@
 				245FEF0124940365003267CE /* LoginViewController.swift */,
 				245FEF0524941ABB003267CE /* DJorGroupViewController.swift */,
 				245FEF0B249C19D5003267CE /* SocializerSignUpViewController.swift */,
-				245FEF0F249C48E4003267CE /* ShareContactsPermissionViewController.swift */,
 				245FEEFF24940319003267CE /* HomeViewController.swift */,
 				5DA31BE724919B4B00C18F55 /* DJSignupViewController.swift */,
 				5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */,
+				5DB17EB1249F639900237276 /* OptionToSelect.swift */,
 				5DE698E9248DB92F00301B39 /* Assets.xcassets */,
 				5DE698E6248DB92600301B39 /* Main.storyboard */,
 				245FEF0F249C48E4003267CE /* ShareContactsPermissionViewController.swift */,
-				245FEF0D249C4410003267CE /* SocializerAdditionalInfoViewController.swift */,
 				245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */,
 				5DE698EB248DB92F00301B39 /* LaunchScreen.storyboard */,
 				5DE698EE248DB92F00301B39 /* Info.plist */,
@@ -478,6 +478,7 @@
 				245FEF0224940365003267CE /* LoginViewController.swift in Sources */,
 				245FEF26249C7566003267CE /* CollectDJProfilePicViewController.swift in Sources */,
 				5DA31BE824919B4B00C18F55 /* DJSignupViewController.swift in Sources */,
+				5DB17EB2249F639900237276 /* OptionToSelect.swift in Sources */,
 				245FEF0624941ABB003267CE /* DJorGroupViewController.swift in Sources */,
 				5DDF6B3824915BFF00B76C14 /* DJ.swift in Sources */,
 				5D12207C249957C2006D2517 /* Event.swift in Sources */,
