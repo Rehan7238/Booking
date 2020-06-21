@@ -27,6 +27,7 @@ class DJ {
     var previousEvents: [String] = []
     var profilePic: String = ""
     var upcomingEvents: [String] = []
+    var univerisity: String = ""
     
     
     func setName(_ newName: String) {
@@ -57,6 +58,11 @@ class DJ {
     func setLocation(_ newName: String) {
         self.name = newName
         updateValue(fieldName: "location", newValue: newName)
+    }
+    
+    func setUniversity(_ inputUni: String) {
+        self.univerisity = inputUni
+        updateValue(fieldName: "university", newValue: inputUni)
     }
     
     func setMonthsOfExperience(_ newMonthsOfExperience: NSNumber) {

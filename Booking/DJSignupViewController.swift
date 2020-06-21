@@ -25,6 +25,8 @@ class DJSignupViewController: UIViewController {
     @IBOutlet weak var retypePasswordLabel: UILabel!
     @IBOutlet weak var retypePasswordTextField: UITextField!
     
+    @IBOutlet weak var universityAffiliationLabel: UILabel!
+    @IBOutlet weak var uniAffiliationTextField: UITextField!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
@@ -64,6 +66,7 @@ class DJSignupViewController: UIViewController {
                         let dj = DJ.createNew(withID: (result?.user.uid)!)
                         dj.setName(self.nameTextField.text!)
                         dj.setLocality([self.cityTextField.text!: self.stateTextField.text!])
+                        dj.setUniversity(self.uniAffiliationTextField.text!)
                         self.performSegue(withIdentifier: "signupToQuestions", sender: self)
                     }
                     else {
