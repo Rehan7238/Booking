@@ -58,8 +58,8 @@
                                     <action selector="passwordTextField:" destination="i3z-vP-WSh" eventType="editingDidEnd" id="Q02-ut-8x3"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="P  R  I  S  M" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTV-Bm-yZp">
-                                <rect key="frame" x="53" y="103" width="309" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X  O  X  O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTV-Bm-yZp">
+                                <rect key="frame" x="73" y="100" width="309" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -618,13 +618,90 @@
                     <view key="view" contentMode="scaleToFill" id="B7d-zq-LtH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What equipment do you have available ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzF-GK-bQp">
+                                <rect key="frame" x="54" y="133" width="307" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xfG-hz-hhe">
+                                <rect key="frame" x="58" y="193" width="303" height="584"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="optionCell" id="UIm-zs-Km1" customClass="OptionToSelect" customModule="Booking" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="303" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UIm-zs-Km1" id="QC4-79-KQc">
+                                            <rect key="frame" x="0.0" y="0.0" width="303" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPb-6v-F0t">
+                                                    <rect key="frame" x="70" y="32.5" width="117.5" height="25.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YWU-fh-cLt">
+                                                    <rect key="frame" x="20" y="30.5" width="30" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="NpY-5w-ju7"/>
+                                                        <constraint firstAttribute="width" constant="30" id="yB8-I9-8tE"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZo-he-WXy">
+                                                    <rect key="frame" x="10" y="15" width="283" height="60"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="47A-Or-cVk"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="iPb-6v-F0t" firstAttribute="leading" secondItem="YWU-fh-cLt" secondAttribute="trailing" constant="20" id="21b-Dd-4lp"/>
+                                                <constraint firstItem="YWU-fh-cLt" firstAttribute="centerY" secondItem="QC4-79-KQc" secondAttribute="centerY" id="6Og-By-a5n"/>
+                                                <constraint firstItem="hZo-he-WXy" firstAttribute="leading" secondItem="QC4-79-KQc" secondAttribute="leading" constant="10" id="Ex0-k4-aqe"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iPb-6v-F0t" secondAttribute="trailing" constant="20" symbolic="YES" id="IAQ-nS-1qT"/>
+                                                <constraint firstItem="iPb-6v-F0t" firstAttribute="centerY" secondItem="QC4-79-KQc" secondAttribute="centerY" id="R27-g0-akW"/>
+                                                <constraint firstAttribute="bottom" secondItem="hZo-he-WXy" secondAttribute="bottom" constant="15" id="lBl-gs-WjC"/>
+                                                <constraint firstAttribute="trailing" secondItem="hZo-he-WXy" secondAttribute="trailing" constant="10" id="t0l-12-cn6"/>
+                                                <constraint firstItem="YWU-fh-cLt" firstAttribute="leading" secondItem="QC4-79-KQc" secondAttribute="leading" constant="20" id="tB7-wk-EbE"/>
+                                                <constraint firstItem="hZo-he-WXy" firstAttribute="top" secondItem="QC4-79-KQc" secondAttribute="top" constant="15" id="vVv-tf-wQu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cellView" destination="hZo-he-WXy" id="aZv-q9-Wai"/>
+                                            <outlet property="checkMarkImageView" destination="YWU-fh-cLt" id="hSy-Mo-2aL"/>
+                                            <outlet property="optionNameLabel" destination="iPb-6v-F0t" id="Jr5-75-nAm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWv-lc-OlI">
+                                <rect key="frame" x="271" y="799" width="74" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="S3W-DH-aNq"/>
                     </view>
+                    <connections>
+                        <outlet property="optionsTable" destination="xfG-hz-hhe" id="GB8-W9-J7r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zq0-RR-wSd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1899" y="3771"/>
+            <point key="canvasLocation" x="1898.5507246376812" y="3770.7589285714284"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="UZG-W9-Pkw">
@@ -1390,8 +1467,8 @@
         <segue reference="bQu-PX-J1D"/>
         <segue reference="zeD-Rd-KHV"/>
         <segue reference="gPg-LU-NxQ"/>
-        <segue reference="25T-O7-Ilv"/>
-        <segue reference="GFl-9O-KAA"/>
+        <segue reference="mJJ-Tu-w3f"/>
+        <segue reference="5dC-Mi-PQp"/>
         <segue reference="wZJ-Rb-e3Z"/>
         <segue reference="b5m-HL-zLT"/>
     </inferredMetricsTieBreakers>

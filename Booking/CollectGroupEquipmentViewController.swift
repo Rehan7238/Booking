@@ -1,25 +1,28 @@
 //
-//  CollectDJEquipmentViewController.swift
+//  CollectGroupEquipmentViewController.swift
 //  Booking
 //
-//  Created by Eimara Mirza on 6/19/20.
+//  Created by Eimara Mirza on 6/21/20.
 //  Copyright © 2020 Rehan. All rights reserved.
 //
 
 import Foundation
 import UIKit
+import FirebaseStorage
 import FirebaseAuth
 
-class CollectDJEquipmentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CollectGroupEquipmentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    //MARK: Properties
     
-    @IBOutlet weak var optionsTable: UITableView!
+    //Mark: Properties
+    
+    @IBOutlet weak var optionsTable:
+    UITableView!
     
     let options: [String] = ["Stereos", "Speakers", "Microphone", "Lights", "Magic Potion", "Something else idk"]
     var numberOfSelected = 0
-    var dj: DJ?
-
+    var group: Group?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +40,7 @@ class CollectDJEquipmentViewController: UIViewController, UITableViewDelegate, U
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
@@ -53,4 +57,5 @@ class CollectDJEquipmentViewController: UIViewController, UITableViewDelegate, U
             selectedChatCell.setSelected(!selectedChatCell.isOptionSelected)
         }
     }
+    
 }

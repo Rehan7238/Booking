@@ -160,7 +160,6 @@
 		5DE698D4248DB92600301B39 = {
 			isa = PBXGroup;
 			children = (
-				249275FA249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift */,
 				5DE698DF248DB92600301B39 /* Booking */,
 				5DE698F6248DB93000301B39 /* BookingTests */,
 				5DE69901248DB93000301B39 /* BookingUITests */,
@@ -183,27 +182,28 @@
 		5DE698DF248DB92600301B39 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
-				249275F8249FDD610048C54A /* CollectGroupPlayingFeeViewController.swift */,
 				5DDF6B3624915BDF00B76C14 /* Database Objects */,
 				5DE698E0248DB92600301B39 /* AppDelegate.swift */,
 				5DE698E2248DB92600301B39 /* SceneDelegate.swift */,
 				245FEF0324940381003267CE /* StartViewController.swift */,
 				245FEF25249C7566003267CE /* CollectDJProfilePicViewController.swift */,
 				245FEF2D249C76E4003267CE /* CollectDJEquipmentViewController.swift */,
+				249275F8249FDD610048C54A /* CollectGroupPlayingFeeViewController.swift */,
+				249275FA249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift */,
 				245FEF27249C759B003267CE /* CollectDJPlayingFeeViewController.swift */,
 				245FEF29249C7608003267CE /* CollectDJGenresViewController.swift */,
 				245FEF2B249C7625003267CE /* CollectDJLinkViewController.swift */,
 				245FEF0124940365003267CE /* LoginViewController.swift */,
+				245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */,
 				245FEF0524941ABB003267CE /* DJorGroupViewController.swift */,
 				245FEF0B249C19D5003267CE /* SocializerSignUpViewController.swift */,
+				245FEF0F249C48E4003267CE /* ShareContactsPermissionViewController.swift */,
 				245FEEFF24940319003267CE /* HomeViewController.swift */,
 				5DA31BE724919B4B00C18F55 /* DJSignupViewController.swift */,
 				5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */,
 				5DB17EB1249F639900237276 /* OptionToSelect.swift */,
 				5DE698E9248DB92F00301B39 /* Assets.xcassets */,
 				5DE698E6248DB92600301B39 /* Main.storyboard */,
-				245FEF0F249C48E4003267CE /* ShareContactsPermissionViewController.swift */,
-				245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */,
 				5DE698EB248DB92F00301B39 /* LaunchScreen.storyboard */,
 				5DE698EE248DB92F00301B39 /* Info.plist */,
 				5DDF6B342491585000B76C14 /* GoogleService-Info.plist */,
