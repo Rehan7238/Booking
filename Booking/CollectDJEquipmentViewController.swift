@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import UIKit
+import FirebaseAuth
+
+
+
+class CollectDJEquipmentViewController: UIViewController {
+    //MARK: Properties
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
