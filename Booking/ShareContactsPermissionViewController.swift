@@ -7,3 +7,23 @@
 //
 
 import Foundation
+import UIKit
+import FirebaseAuth
+
+
+class ShareContactsPermissionViewController: UIViewController {
+    
+    //MARK: Properties
+    
+    @IBOutlet weak var nextButton: UIButton!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func nextButtonPressed () {
+        
+        self.performSegue(withIdentifier: "toSocializerFinalNotes", sender: self)
+        
+    }
+}

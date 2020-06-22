@@ -54,7 +54,7 @@ class CollectDJProfilePicViewController: UIViewController, UIImagePickerControll
                 }
             }
         // Go to the next screen
-        self.performSegue(withIdentifier: "DjtoHomeView", sender: self)
+        self.performSegue(withIdentifier: "toDJFinalNotes", sender: self)
         }
                 
         override func viewDidLoad() {
