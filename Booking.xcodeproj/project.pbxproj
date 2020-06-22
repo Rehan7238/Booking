@@ -22,6 +22,8 @@
 		245FEF2E249C76E4003267CE /* CollectDJEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF2D249C76E4003267CE /* CollectDJEquipmentViewController.swift */; };
 		249275F9249FDD610048C54A /* CollectGroupPlayingFeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249275F8249FDD610048C54A /* CollectGroupPlayingFeeViewController.swift */; };
 		249275FB249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249275FA249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift */; };
+		249275FD24A03C080048C54A /* CollectGroupProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249275FC24A03C080048C54A /* CollectGroupProfilePicViewController.swift */; };
+		249275FF24A041590048C54A /* GroupFinalNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249275FE24A041590048C54A /* GroupFinalNotesViewController.swift */; };
 		2ADD8B9EB35FE3B4FE09BE4D /* Pods_Booking_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56849ADFDFC5A5FE0A14DC87 /* Pods_Booking_BookingUITests.framework */; };
 		5D12207C249957C2006D2517 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207B249957C2006D2517 /* Event.swift */; };
 		5D12207E249957CB006D2517 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207D249957CB006D2517 /* User.swift */; };
@@ -74,6 +76,8 @@
 		245FEF2D249C76E4003267CE /* CollectDJEquipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectDJEquipmentViewController.swift; sourceTree = "<group>"; };
 		249275F8249FDD610048C54A /* CollectGroupPlayingFeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectGroupPlayingFeeViewController.swift; sourceTree = "<group>"; };
 		249275FA249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectGroupEquipmentViewController.swift; sourceTree = "<group>"; };
+		249275FC24A03C080048C54A /* CollectGroupProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectGroupProfilePicViewController.swift; sourceTree = "<group>"; };
+		249275FE24A041590048C54A /* GroupFinalNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFinalNotesViewController.swift; sourceTree = "<group>"; };
 		48D32E22A2F6A56064983E48 /* Pods-BookingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookingTests.release.xcconfig"; path = "Target Support Files/Pods-BookingTests/Pods-BookingTests.release.xcconfig"; sourceTree = "<group>"; };
 		56849ADFDFC5A5FE0A14DC87 /* Pods_Booking_BookingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booking_BookingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D12207B249957C2006D2517 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 				245FEF0124940365003267CE /* LoginViewController.swift */,
 				245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */,
 				245FEF0524941ABB003267CE /* DJorGroupViewController.swift */,
+				249275FE24A041590048C54A /* GroupFinalNotesViewController.swift */,
+				249275FC24A03C080048C54A /* CollectGroupProfilePicViewController.swift */,
 				245FEF0B249C19D5003267CE /* SocializerSignUpViewController.swift */,
 				245FEF0F249C48E4003267CE /* ShareContactsPermissionViewController.swift */,
 				245FEEFF24940319003267CE /* HomeViewController.swift */,
@@ -484,6 +490,7 @@
 				245FEF0224940365003267CE /* LoginViewController.swift in Sources */,
 				245FEF26249C7566003267CE /* CollectDJProfilePicViewController.swift in Sources */,
 				5DA31BE824919B4B00C18F55 /* DJSignupViewController.swift in Sources */,
+				249275FD24A03C080048C54A /* CollectGroupProfilePicViewController.swift in Sources */,
 				249275FB249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift in Sources */,
 				5DB17EB2249F639900237276 /* OptionToSelect.swift in Sources */,
 				245FEF0624941ABB003267CE /* DJorGroupViewController.swift in Sources */,
@@ -496,6 +503,7 @@
 				245FEF0024940319003267CE /* HomeViewController.swift in Sources */,
 				245FEF0424940381003267CE /* StartViewController.swift in Sources */,
 				245FEF0C249C19D5003267CE /* SocializerSignUpViewController.swift in Sources */,
+				249275FF24A041590048C54A /* GroupFinalNotesViewController.swift in Sources */,
 				5D12207E249957CB006D2517 /* User.swift in Sources */,
 				245FEF2A249C7608003267CE /* CollectDJGenresViewController.swift in Sources */,
 				5DE698E1248DB92600301B39 /* AppDelegate.swift in Sources */,

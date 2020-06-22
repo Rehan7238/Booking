@@ -21,10 +21,22 @@ class CollectGroupEquipmentViewController: UIViewController, UITableViewDelegate
     
     let options: [String] = ["Stereos", "Speakers", "Microphone", "Lights", "Magic Potion", "Something else idk"]
     var numberOfSelected = 0
+    var equipmentList: [String] = []
     var group: Group?
-    
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let uid = Auth.auth().currentUser?.uid {
+                   _ = Group.fromID(id: uid).done { group in
+                       if group != nil {
+                           self.group = group
+                       }
+                   }
+               }
         
         optionsTable.dataSource = self
         optionsTable.delegate = self
@@ -44,18 +56,22 @@ class CollectGroupEquipmentViewController: UIViewController, UITableViewDelegate
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        var equipmentList = [String]()
         
         if let selectedChatCell = tableView.cellForRow(at: indexPath) as? OptionToSelect {
             if selectedChatCell.isOptionSelected {
-                numberOfSelected -= 1
-                equipmentList.append(selectedChatCell.optionNameLabel.text!)
+                if let index = equipmentList.firstIndex(of: selectedChatCell.optionNameLabel.text!) {
+                equipmentList.remove(at: index)
             } else {
-                numberOfSelected += 1
-            }
+                    equipmentList.append(selectedChatCell.optionNameLabel.text!)            }
             
             selectedChatCell.setSelected(!selectedChatCell.isOptionSelected)
         }
     }
     
+}
+    
+    @IBAction func nextButtonPressed(_ sender: Any) {
+           self.group?.setEquipment(equipmentList)
+           self.performSegue(withIdentifier: "toGroupProfilePic", sender: self)
+       }
 }

@@ -18,7 +18,7 @@ class SocializerProfilePictureViewController: UIViewController {
     
     var selectedImage: UIImage?
     var uid: String = ""
-    var dj: DJ?
+    var user: User?
 
     
     @IBAction func pressedNextButton(_sender: Any){
@@ -44,7 +44,7 @@ class SocializerProfilePictureViewController: UIViewController {
                   return
                 }
                 let pathString = downloadURL.path // String
-                self.dj?.setProfilepic(pathString)
+                self.user?.setProfilePic(pathString)
               }
             }
         }
