@@ -13,15 +13,11 @@ import FirebaseStorage
 class CollectGroupPlayingFeeViewController: UIViewController {
     
     // MARK: Properties
-    @IBOutlet weak var questionLabel: UIView!
-    @IBAction func nextButton(_ sender: Any) {}
     
-    @IBAction func backButton(_ sender: Any) {}
-    
-    
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet var higherFeeTextField: UITextField! = UITextField()
-    
-    @IBOutlet var  lowFeeTextField: UITextField! = UITextField()
+    @IBOutlet var lowFeeTextField: UITextField! = UITextField()
     
     var group: Group?
     

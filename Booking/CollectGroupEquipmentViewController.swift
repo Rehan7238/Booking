@@ -18,25 +18,25 @@ class CollectGroupEquipmentViewController: UIViewController, UITableViewDelegate
     
     @IBOutlet weak var optionsTable:
     UITableView!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     let options: [String] = ["Stereos", "Speakers", "Microphone", "Lights", "Magic Potion", "Something else idk"]
     var numberOfSelected = 0
     var equipmentList: [String] = []
     var group: Group?
-    @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var backButton: UIButton!
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let uid = Auth.auth().currentUser?.uid {
-                   _ = Group.fromID(id: uid).done { group in
-                       if group != nil {
-                           self.group = group
-                       }
-                   }
-               }
+            _ = Group.fromID(id: uid).done { group in
+                if group != nil {
+                    self.group = group
+                }
+            }
+        }
         
         optionsTable.dataSource = self
         optionsTable.delegate = self
@@ -52,7 +52,6 @@ class CollectGroupEquipmentViewController: UIViewController, UITableViewDelegate
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
@@ -60,18 +59,18 @@ class CollectGroupEquipmentViewController: UIViewController, UITableViewDelegate
         if let selectedChatCell = tableView.cellForRow(at: indexPath) as? OptionToSelect {
             if selectedChatCell.isOptionSelected {
                 if let index = equipmentList.firstIndex(of: selectedChatCell.optionNameLabel.text!) {
-                equipmentList.remove(at: index)
+                    equipmentList.remove(at: index)
+                }
             } else {
-                    equipmentList.append(selectedChatCell.optionNameLabel.text!)            }
-            
+                equipmentList.append(selectedChatCell.optionNameLabel.text!)
+            }
             selectedChatCell.setSelected(!selectedChatCell.isOptionSelected)
         }
+        
     }
     
-}
-    
     @IBAction func nextButtonPressed(_ sender: Any) {
-           self.group?.setEquipment(equipmentList)
-           self.performSegue(withIdentifier: "toGroupProfilePic", sender: self)
-       }
+        self.group?.setEquipment(equipmentList)
+        self.performSegue(withIdentifier: "toGroupProfilePic", sender: self)
+    }
 }

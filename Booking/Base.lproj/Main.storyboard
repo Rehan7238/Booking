@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i3z-vP-WSh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i3z-vP-WSh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -539,7 +539,7 @@
         <!--Collect Group Playing Fee View Controller-->
         <scene sceneID="qri-SD-aJs">
             <objects>
-                <viewController id="811-24-jsZ" customClass="CollectGroupPlayingFeeViewController" sceneMemberID="viewController">
+                <viewController id="811-24-jsZ" customClass="CollectGroupPlayingFeeViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AJA-fr-jQX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -558,8 +558,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextButton:" destination="811-24-jsZ" eventType="touchUpInside" id="1xI-YE-MuJ"/>
-                                    <action selector="pressedNext:" destination="811-24-jsZ" eventType="touchUpInside" id="dCY-kY-b5i"/>
+                                    <action selector="pressedNext:" destination="811-24-jsZ" eventType="touchUpInside" id="5UU-Ix-TaQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's the lowest playing fee you'd like to pay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXv-FO-UlD">
@@ -584,7 +583,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButton:" destination="811-24-jsZ" eventType="touchUpInside" id="MXC-Gw-l4s"/>
+                                    <segue destination="ISF-K5-EwU" kind="presentation" modalPresentationStyle="fullScreen" id="5l6-nM-6SV"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="882-LJ-aCb">
@@ -592,18 +591,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="higherFeeTextField:" destination="811-24-jsZ" eventType="editingDidEnd" id="zkR-mw-5D8"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="J4M-Tw-zr6"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="6XC-JY-9lL" id="Et8-k4-UcW"/>
+                        <outlet property="higherFeeTextField" destination="882-LJ-aCb" id="ku1-hx-Amc"/>
                         <outlet property="lowFeeTextField" destination="WTh-Cg-kyP" id="cVn-Hb-DFD"/>
-                        <outlet property="nextButton" destination="0dC-pj-gb5" id="V0I-cH-EWD"/>
-                        <outlet property="questionLabel" destination="yXv-FO-UlD" id="K9M-5G-LlF"/>
+                        <outlet property="nextButton" destination="0dC-pj-gb5" id="Vqa-ks-x9O"/>
                         <segue destination="Cb7-RA-2zI" kind="presentation" identifier="toGroupEquipmentQuestion" modalPresentationStyle="fullScreen" id="oUF-k7-4O1"/>
                     </connections>
                 </viewController>
@@ -643,7 +640,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPb-6v-F0t">
                                                     <rect key="frame" x="70" y="32.5" width="117.5" height="25.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YWU-fh-cLt">
@@ -710,7 +707,7 @@
                         <viewLayoutGuide key="safeArea" id="S3W-DH-aNq"/>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="pRn-sI-yq5" id="Ifz-vW-XDw"/>
+                        <outlet property="backButton" destination="pRn-sI-yq5" id="P05-P6-Xvu"/>
                         <outlet property="nextButton" destination="wWv-lc-OlI" id="gCM-5G-akf"/>
                         <outlet property="optionsTable" destination="xfG-hz-hhe" id="GB8-W9-J7r"/>
                         <segue destination="8CM-Dt-qzl" kind="presentation" identifier="toGroupProfilePic" modalPresentationStyle="fullScreen" id="eA0-nD-DzA"/>
@@ -754,6 +751,9 @@
                                 <state key="normal" title="BACK">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Cb7-RA-2zI" kind="presentation" modalPresentationStyle="fullScreen" id="coB-KU-7bX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLJ-T5-72J">
                                 <rect key="frame" x="271" y="775" width="94" height="50"/>
@@ -920,7 +920,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmW-Dl-R7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3354" y="3098"/>
+            <point key="canvasLocation" x="4045" y="3026"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q2S-cc-5Z2">
@@ -1605,10 +1605,11 @@
         <segue reference="s1P-pj-7cP"/>
         <segue reference="IUn-IV-m2r"/>
         <segue reference="gPg-LU-NxQ"/>
-        <segue reference="mJJ-Tu-w3f"/>
-        <segue reference="VhR-7o-DGz"/>
+        <segue reference="s1H-Zt-ExR"/>
+        <segue reference="CYo-v5-pmX"/>
+        <segue reference="oUF-k7-4O1"/>
         <segue reference="ffO-3b-P5w"/>
-        <segue reference="wZJ-Rb-e3Z"/>
+        <segue reference="5l6-nM-6SV"/>
         <segue reference="b5m-HL-zLT"/>
     </inferredMetricsTieBreakers>
     <resources>
