@@ -39,7 +39,7 @@ class GroupSignUpViewController: UIViewController {
             
             //alertController.addAction(defaultAction)
             //self.present(alertController, animated: true, completion: nil)
-        /AlertView.instance.showAlert(message: "Please enter all information")
+            AlertView.instance.showAlert(message: "Please enter all information")
 
         } else {
             if let emailText = emailTextField.text, let passwordText = passwordTextField.text {
@@ -51,22 +51,20 @@ class GroupSignUpViewController: UIViewController {
                         
                         group.setSchool(self.schoolTextField.text!)
                         
-                        self.performSegue(withIdentifier: "signupToHome", sender: self)
+                        self.performSegue(withIdentifier: "toGroupEquipmentQuestion", sender: self)
                     } else {
                         //let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                         //let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                         
                         //alertController.addAction(defaultAction)
                         //self.present(alertController, animated: true, completion: nil)
-                        AlertView.instance.showAlert(message: "Try again later")
+                        AlertView.instance.showAlert(message: "Error signing up with that email and password")
 
                     }
                 }
             } else {
                 //either emailTextField.text or passwordTextField.text was nil
             }
-            self.performSegue(withIdentifier: "toGroupEquipmentQuestion", sender: self)
-
         }
     }
 }

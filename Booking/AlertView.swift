@@ -13,9 +13,9 @@ import UIKit
     
     static let instance = AlertView()
     
-    @IBOutlet weak var alertView: UIView!
-    @IBOutlet weak var parentView: UIView!
-    @IBOutlet weak var message: UILabel!
+    @IBOutlet var alertView: UIView!
+    @IBOutlet var parentView: UIView!
+    @IBOutlet var message: UILabel! = UILabel()
     
     @IBOutlet weak var doneButton: UIButton!
     
