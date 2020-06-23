@@ -1,29 +1,33 @@
 //
-//  GroupSignUpViewController.swift
+//  VendorSignUpViewController.swift
 //  Booking
 //
-//  Created by Rehan Chaudhry on 6/13/20.
+//  Created by Eimara Mirza on 6/22/20.
 //  Copyright © 2020 Rehan. All rights reserved.
 //
+
 
 import Foundation
 import UIKit
 import FirebaseAuth
 
-class GroupSignUpViewController: UIViewController {
-    
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var retypePasswordTextField: UITextField!
-    @IBOutlet weak var groupNameTextField: UITextField!
-    @IBOutlet weak var schoolTextField: UITextField!
-    @IBOutlet weak var addressTextField: UITextField!
-    @IBOutlet weak var goBackButton: UIButton!
-    
+class VendorSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var retypePasswordTextField: UITextField!
+    @IBOutlet weak var groupAddressTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var stateTextField: UITextField!
+    @IBOutlet weak var groupNameTextField: UITextField!
+    
+    
     
     @IBAction func signupButtonPressed(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
@@ -32,7 +36,7 @@ class GroupSignUpViewController: UIViewController {
             
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
-        } else if groupNameTextField.text?.isEmpty ?? true || schoolTextField.text?.isEmpty ?? true || addressTextField.text?.isEmpty ?? true {
+        } else if groupNameTextField.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true || stateTextField.text?.isEmpty ?? true || groupAddressTextField.text?.isEmpty ?? true {
             let alertController = UIAlertController(title: "Information Empty", message: "Please enter all information", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             
@@ -42,13 +46,12 @@ class GroupSignUpViewController: UIViewController {
             if let emailText = emailTextField.text, let passwordText = passwordTextField.text {
                 Auth.auth().createUser(withEmail: emailText, password: passwordText) { (result, error) in
                     if error == nil {
-                        let group = Group.createNew(withID: (result?.user.uid)!)
-                        group.setName(self.groupNameTextField.text!)
-                        group.setAddress(self.addressTextField.text!)
-                        
-                        group.setSchool(self.schoolTextField.text!)
-                        
-                        self.performSegue(withIdentifier: "signupToHome", sender: self)
+                        let vendor = Vendor.createNew(withID: (result?.user.uid)!)
+                        vendor.setName(self.groupNameTextField.text!)
+                        vendor.setAddress(self.groupAddressTextField.text!)
+                        vendor.setCity(self.cityTextField.text!)
+                        vendor.setState(self.stateTextField.text!)
+                        self.performSegue(withIdentifier: "toVendorPlayingFee", sender: self)
                     } else {
                         let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)

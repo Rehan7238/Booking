@@ -13,8 +13,11 @@ import PromiseKit
 class Group {
     
     var id: String = ""
+    var school: String = ""
     var name: String = "Name"
-    var address: [String: String] = [:]
+    var address: String = ""
+    var city: String = " "
+    var state: String =  " "
     var equipment: [String] = []
     var futureEvents: [String] = []
     var higherPrice: NSNumber = 0.0
@@ -27,9 +30,23 @@ class Group {
         updateValue(fieldName: "name", newValue: newName)
     }
     
-    func setAddress(_ newAddress: [String: String]) {
+    func setAddress(_ newAddress: String) {
         self.address = newAddress
         updateValue(fieldName: "address", newValue: newAddress)
+    }
+    
+    func setCity(_ newCity: String) {
+            self.city = newCity
+            updateValue(fieldName: "city", newValue: newCity)
+        }
+    func setState(_ newState: String) {
+            self.state = newState
+            updateValue(fieldName: "state", newValue: newState)
+        }
+    
+    func setSchool(_ newSchool: String) {
+        self.school = newSchool
+        updateValue(fieldName: "school", newValue: newSchool)
     }
     
     func setEquipment(_ newEquipment: [String]) {
@@ -81,7 +98,7 @@ class Group {
                 if let data = document.data() {
                     group.id = document.documentID
                     group.name = data["name"] as! String
-                    group.address = data["address"] as! [String: String]
+                    group.address = data["address"] as! String
                     group.equipment = data["equipment"] as! [String]
                     group.futureEvents = data["futureEvents"] as! [String]
                     group.higherPrice = data["higherPrice"] as! NSNumber
@@ -110,12 +127,15 @@ class Group {
         groups.document(groupID).setData([
             "name": newGroup.name,
             "address": newGroup.address,
+            "state": newGroup.state,
+            "city": newGroup.city,
             "equipment": newGroup.equipment,
             "futureEvents": newGroup.futureEvents,
             "higherPrice": newGroup.higherPrice,
             "lowerPrice": newGroup.lowerPrice,
             "previousEvents": newGroup.previousEvents,
             "profilePic": newGroup.profilePic
+
         ])
         
         return newGroup

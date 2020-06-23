@@ -26,6 +26,12 @@
 		249275FF24A041590048C54A /* GroupFinalNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249275FE24A041590048C54A /* GroupFinalNotesViewController.swift */; };
 		2492760124A130AA0048C54A /* DJFinalNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760024A130A90048C54A /* DJFinalNotesViewController.swift */; };
 		2492760324A1346B0048C54A /* SocializerFinalNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760224A1346A0048C54A /* SocializerFinalNotesViewController.swift */; };
+		2492760524A138110048C54A /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760424A138110048C54A /* Vendor.swift */; };
+		2492760724A13FD10048C54A /* VendorSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760624A13FD10048C54A /* VendorSignUpViewController.swift */; };
+		2492760924A14C0D0048C54A /* VendorPlayingFeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760824A14C0D0048C54A /* VendorPlayingFeeViewController.swift */; };
+		2492760B24A1776C0048C54A /* CollectVendorEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760A24A1776C0048C54A /* CollectVendorEquipmentViewController.swift */; };
+		2492760D24A179BE0048C54A /* CollectVendorProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760C24A179BE0048C54A /* CollectVendorProfilePicViewController.swift */; };
+		2492760F24A17B810048C54A /* VendorFinalNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760E24A17B810048C54A /* VendorFinalNotesViewController.swift */; };
 		2ADD8B9EB35FE3B4FE09BE4D /* Pods_Booking_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56849ADFDFC5A5FE0A14DC87 /* Pods_Booking_BookingUITests.framework */; };
 		5D12207C249957C2006D2517 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207B249957C2006D2517 /* Event.swift */; };
 		5D12207E249957CB006D2517 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207D249957CB006D2517 /* User.swift */; };
@@ -82,6 +88,12 @@
 		249275FE24A041590048C54A /* GroupFinalNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFinalNotesViewController.swift; sourceTree = "<group>"; };
 		2492760024A130A90048C54A /* DJFinalNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJFinalNotesViewController.swift; sourceTree = "<group>"; };
 		2492760224A1346A0048C54A /* SocializerFinalNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocializerFinalNotesViewController.swift; sourceTree = "<group>"; };
+		2492760424A138110048C54A /* Vendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
+		2492760624A13FD10048C54A /* VendorSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorSignUpViewController.swift; sourceTree = "<group>"; };
+		2492760824A14C0D0048C54A /* VendorPlayingFeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorPlayingFeeViewController.swift; sourceTree = "<group>"; };
+		2492760A24A1776C0048C54A /* CollectVendorEquipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectVendorEquipmentViewController.swift; sourceTree = "<group>"; };
+		2492760C24A179BE0048C54A /* CollectVendorProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectVendorProfilePicViewController.swift; sourceTree = "<group>"; };
+		2492760E24A17B810048C54A /* VendorFinalNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorFinalNotesViewController.swift; sourceTree = "<group>"; };
 		48D32E22A2F6A56064983E48 /* Pods-BookingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookingTests.release.xcconfig"; path = "Target Support Files/Pods-BookingTests/Pods-BookingTests.release.xcconfig"; sourceTree = "<group>"; };
 		56849ADFDFC5A5FE0A14DC87 /* Pods_Booking_BookingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booking_BookingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D12207B249957C2006D2517 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -159,6 +171,7 @@
 			children = (
 				5DDF6B3724915BFF00B76C14 /* DJ.swift */,
 				5DDF6B3924915C0E00B76C14 /* Group.swift */,
+				2492760424A138110048C54A /* Vendor.swift */,
 				5D12207B249957C2006D2517 /* Event.swift */,
 				5D12207D249957CB006D2517 /* User.swift */,
 			);
@@ -193,29 +206,34 @@
 				5DDF6B3624915BDF00B76C14 /* Database Objects */,
 				5DE698E0248DB92600301B39 /* AppDelegate.swift */,
 				5DE698E2248DB92600301B39 /* SceneDelegate.swift */,
+				245FEEFF24940319003267CE /* HomeViewController.swift */,
+				245FEF0124940365003267CE /* LoginViewController.swift */,
 				245FEF0324940381003267CE /* StartViewController.swift */,
-				2492760024A130A90048C54A /* DJFinalNotesViewController.swift */,
-				245FEF25249C7566003267CE /* CollectDJProfilePicViewController.swift */,
-				245FEF2D249C76E4003267CE /* CollectDJEquipmentViewController.swift */,
 				249275F8249FDD610048C54A /* CollectGroupPlayingFeeViewController.swift */,
 				249275FA249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift */,
+				249275FC24A03C080048C54A /* CollectGroupProfilePicViewController.swift */,
+				5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */,
+				249275FE24A041590048C54A /* GroupFinalNotesViewController.swift */,
 				245FEF27249C759B003267CE /* CollectDJPlayingFeeViewController.swift */,
 				245FEF29249C7608003267CE /* CollectDJGenresViewController.swift */,
+				245FEF2D249C76E4003267CE /* CollectDJEquipmentViewController.swift */,
 				245FEF2B249C7625003267CE /* CollectDJLinkViewController.swift */,
-				245FEF0124940365003267CE /* LoginViewController.swift */,
-				245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */,
+				2492760024A130A90048C54A /* DJFinalNotesViewController.swift */,
+				5DA31BE724919B4B00C18F55 /* DJSignupViewController.swift */,
+				245FEF25249C7566003267CE /* CollectDJProfilePicViewController.swift */,
 				245FEF0524941ABB003267CE /* DJorGroupViewController.swift */,
-				249275FE24A041590048C54A /* GroupFinalNotesViewController.swift */,
-				249275FC24A03C080048C54A /* CollectGroupProfilePicViewController.swift */,
+				2492760A24A1776C0048C54A /* CollectVendorEquipmentViewController.swift */,
+				2492760624A13FD10048C54A /* VendorSignUpViewController.swift */,
+				2492760824A14C0D0048C54A /* VendorPlayingFeeViewController.swift */,
+				2492760C24A179BE0048C54A /* CollectVendorProfilePicViewController.swift */,
 				245FEF0B249C19D5003267CE /* SocializerSignUpViewController.swift */,
 				245FEF0F249C48E4003267CE /* ShareContactsPermissionViewController.swift */,
+				245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */,
 				2492760224A1346A0048C54A /* SocializerFinalNotesViewController.swift */,
-				245FEEFF24940319003267CE /* HomeViewController.swift */,
-				5DA31BE724919B4B00C18F55 /* DJSignupViewController.swift */,
-				5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */,
 				5DB17EB1249F639900237276 /* OptionToSelect.swift */,
 				5DE698E9248DB92F00301B39 /* Assets.xcassets */,
 				5DE698E6248DB92600301B39 /* Main.storyboard */,
+				2492760E24A17B810048C54A /* VendorFinalNotesViewController.swift */,
 				5DE698EB248DB92F00301B39 /* LaunchScreen.storyboard */,
 				5DE698EE248DB92F00301B39 /* Info.plist */,
 				5DDF6B342491585000B76C14 /* GoogleService-Info.plist */,
@@ -492,10 +510,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				245FEF10249C48E4003267CE /* ShareContactsPermissionViewController.swift in Sources */,
+				2492760524A138110048C54A /* Vendor.swift in Sources */,
 				245FEF2C249C7625003267CE /* CollectDJLinkViewController.swift in Sources */,
 				245FEF0224940365003267CE /* LoginViewController.swift in Sources */,
 				245FEF26249C7566003267CE /* CollectDJProfilePicViewController.swift in Sources */,
 				5DA31BE824919B4B00C18F55 /* DJSignupViewController.swift in Sources */,
+				2492760D24A179BE0048C54A /* CollectVendorProfilePicViewController.swift in Sources */,
 				249275FD24A03C080048C54A /* CollectGroupProfilePicViewController.swift in Sources */,
 				249275FB249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift in Sources */,
 				5DB17EB2249F639900237276 /* OptionToSelect.swift in Sources */,
@@ -510,13 +530,17 @@
 				245FEF0424940381003267CE /* StartViewController.swift in Sources */,
 				245FEF0C249C19D5003267CE /* SocializerSignUpViewController.swift in Sources */,
 				2492760124A130AA0048C54A /* DJFinalNotesViewController.swift in Sources */,
+				2492760724A13FD10048C54A /* VendorSignUpViewController.swift in Sources */,
 				249275FF24A041590048C54A /* GroupFinalNotesViewController.swift in Sources */,
 				5D12207E249957CB006D2517 /* User.swift in Sources */,
 				2492760324A1346B0048C54A /* SocializerFinalNotesViewController.swift in Sources */,
 				245FEF2A249C7608003267CE /* CollectDJGenresViewController.swift in Sources */,
 				5DE698E1248DB92600301B39 /* AppDelegate.swift in Sources */,
+				2492760F24A17B810048C54A /* VendorFinalNotesViewController.swift in Sources */,
 				5DDF6B3A24915C0E00B76C14 /* Group.swift in Sources */,
+				2492760B24A1776C0048C54A /* CollectVendorEquipmentViewController.swift in Sources */,
 				5DE698E3248DB92600301B39 /* SceneDelegate.swift in Sources */,
+				2492760924A14C0D0048C54A /* VendorPlayingFeeViewController.swift in Sources */,
 				245FEF28249C759B003267CE /* CollectDJPlayingFeeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
