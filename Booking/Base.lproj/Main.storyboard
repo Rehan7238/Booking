@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqA-f9-iG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239.13043478260872" y="1506.6964285714284"/>
+            <point key="canvasLocation" x="2041" y="1507"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="jMf-XH-inB">
@@ -183,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhU-2q-IlW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="867" y="866"/>
+            <point key="canvasLocation" x="209" y="851"/>
         </scene>
         <!--Socializer Sign Up View Controller-->
         <scene sceneID="gxJ-MY-OAr">
@@ -1012,7 +1012,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TX4-gm-itk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1097.1014492753625" y="1506.6964285714284"/>
+            <point key="canvasLocation" x="1103" y="1507"/>
         </scene>
         <!--Jor Group View Controller-->
         <scene sceneID="5BB-cm-vd8">
@@ -1105,7 +1105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dH-Ee-tmv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="2251"/>
+            <point key="canvasLocation" x="1610" y="2257"/>
         </scene>
         <!--Vendor Sign Up View Controller-->
         <scene sceneID="4aU-PG-poQ">
@@ -2181,13 +2181,13 @@
         <segue reference="7ud-0k-mNA"/>
         <segue reference="1wV-Uy-7fX"/>
         <segue reference="05L-9g-lk7"/>
-        <segue reference="Zkx-mS-Ywi"/>
-        <segue reference="4QN-g2-asO"/>
+        <segue reference="075-nm-lCj"/>
+        <segue reference="mJJ-Tu-w3f"/>
         <segue reference="rIn-kb-Uji"/>
         <segue reference="coB-KU-7bX"/>
         <segue reference="ffO-3b-P5w"/>
-        <segue reference="5l6-nM-6SV"/>
-        <segue reference="Hf9-ed-xR6"/>
+        <segue reference="u2I-in-cdN"/>
+        <segue reference="b5m-HL-zLT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>

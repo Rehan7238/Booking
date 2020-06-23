@@ -32,6 +32,8 @@
 		2492760B24A1776C0048C54A /* CollectVendorEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760A24A1776C0048C54A /* CollectVendorEquipmentViewController.swift */; };
 		2492760D24A179BE0048C54A /* CollectVendorProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760C24A179BE0048C54A /* CollectVendorProfilePicViewController.swift */; };
 		2492760F24A17B810048C54A /* VendorFinalNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760E24A17B810048C54A /* VendorFinalNotesViewController.swift */; };
+		2492761124A299770048C54A /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2492761024A299770048C54A /* AlertView.xib */; };
+		2492761324A2A25D0048C54A /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492761224A2A25C0048C54A /* AlertView.swift */; };
 		2ADD8B9EB35FE3B4FE09BE4D /* Pods_Booking_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56849ADFDFC5A5FE0A14DC87 /* Pods_Booking_BookingUITests.framework */; };
 		5D12207C249957C2006D2517 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207B249957C2006D2517 /* Event.swift */; };
 		5D12207E249957CB006D2517 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207D249957CB006D2517 /* User.swift */; };
@@ -94,6 +96,8 @@
 		2492760A24A1776C0048C54A /* CollectVendorEquipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectVendorEquipmentViewController.swift; sourceTree = "<group>"; };
 		2492760C24A179BE0048C54A /* CollectVendorProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectVendorProfilePicViewController.swift; sourceTree = "<group>"; };
 		2492760E24A17B810048C54A /* VendorFinalNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorFinalNotesViewController.swift; sourceTree = "<group>"; };
+		2492761024A299770048C54A /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		2492761224A2A25C0048C54A /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		48D32E22A2F6A56064983E48 /* Pods-BookingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookingTests.release.xcconfig"; path = "Target Support Files/Pods-BookingTests/Pods-BookingTests.release.xcconfig"; sourceTree = "<group>"; };
 		56849ADFDFC5A5FE0A14DC87 /* Pods_Booking_BookingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booking_BookingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D12207B249957C2006D2517 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -224,6 +228,8 @@
 				245FEF0524941ABB003267CE /* DJorGroupViewController.swift */,
 				2492760A24A1776C0048C54A /* CollectVendorEquipmentViewController.swift */,
 				2492760624A13FD10048C54A /* VendorSignUpViewController.swift */,
+				2492761024A299770048C54A /* AlertView.xib */,
+				2492761224A2A25C0048C54A /* AlertView.swift */,
 				2492760824A14C0D0048C54A /* VendorPlayingFeeViewController.swift */,
 				2492760C24A179BE0048C54A /* CollectVendorProfilePicViewController.swift */,
 				245FEF0B249C19D5003267CE /* SocializerSignUpViewController.swift */,
@@ -380,6 +386,7 @@
 			files = (
 				5DE698ED248DB92F00301B39 /* LaunchScreen.storyboard in Resources */,
 				5DDF6B352491585000B76C14 /* GoogleService-Info.plist in Resources */,
+				2492761124A299770048C54A /* AlertView.xib in Resources */,
 				5DE698EA248DB92F00301B39 /* Assets.xcassets in Resources */,
 				5DE698E8248DB92600301B39 /* Main.storyboard in Resources */,
 			);
@@ -542,6 +549,7 @@
 				5DE698E3248DB92600301B39 /* SceneDelegate.swift in Sources */,
 				2492760924A14C0D0048C54A /* VendorPlayingFeeViewController.swift in Sources */,
 				245FEF28249C759B003267CE /* CollectDJPlayingFeeViewController.swift in Sources */,
+				2492761324A2A25D0048C54A /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

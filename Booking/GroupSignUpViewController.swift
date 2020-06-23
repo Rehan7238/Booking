@@ -27,17 +27,20 @@ class GroupSignUpViewController: UIViewController {
     
     @IBAction func signupButtonPressed(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
-            let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            //let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
+            //let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            AlertView.instance.showAlert(message: "Please re-type password")
             
-            alertController.addAction(defaultAction)
-            self.present(alertController, animated: true, completion: nil)
+            //alertController.addAction(defaultAction)
+            //self.present(alertController, animated: true, completion: nil)
         } else if groupNameTextField.text?.isEmpty ?? true || schoolTextField.text?.isEmpty ?? true || addressTextField.text?.isEmpty ?? true {
-            let alertController = UIAlertController(title: "Information Empty", message: "Please enter all information", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            //let alertController = UIAlertController(title: "Information Empty", message: "Please enter all information", preferredStyle: .alert)
+            //let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             
-            alertController.addAction(defaultAction)
-            self.present(alertController, animated: true, completion: nil)
+            //alertController.addAction(defaultAction)
+            //self.present(alertController, animated: true, completion: nil)
+        /AlertView.instance.showAlert(message: "Please enter all information")
+
         } else {
             if let emailText = emailTextField.text, let passwordText = passwordTextField.text {
                 Auth.auth().createUser(withEmail: emailText, password: passwordText) { (result, error) in
@@ -50,11 +53,13 @@ class GroupSignUpViewController: UIViewController {
                         
                         self.performSegue(withIdentifier: "signupToHome", sender: self)
                     } else {
-                        let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        //let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                        //let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                         
-                        alertController.addAction(defaultAction)
-                        self.present(alertController, animated: true, completion: nil)
+                        //alertController.addAction(defaultAction)
+                        //self.present(alertController, animated: true, completion: nil)
+                        AlertView.instance.showAlert(message: "Try again later")
+
                     }
                 }
             } else {
