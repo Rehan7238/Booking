@@ -19,8 +19,6 @@ class StartViewController: UIViewController {
     }
     @IBAction func signupButton(_ sender: Any) {
     }
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +27,6 @@ class StartViewController: UIViewController {
         backgroundImage.image = UIImage(named: "/Users/Eimara/Documents/Booking/Booking/Background2.png")
         backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
-      
-
 
 
     }
@@ -41,22 +37,4 @@ class StartViewController: UIViewController {
             self.performSegue(withIdentifier: "alreadyLoggedIn", sender: nil)
         }
     }
-    
-    @IBAction func loginButtonPressed(_ sender: Any) {
-           Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
-               if error == nil{
-                   self.performSegue(withIdentifier: "loginToHome", sender: self)
-               } else {
-                   let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                   let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                   
-                   alertController.addAction(defaultAction)
-                   self.present(alertController, animated: true, completion: nil)
-               }
-           }
-        
-        self.performSegue(withIdentifier: "straightToLogin", sender: self)
-
-       }
-    
 }

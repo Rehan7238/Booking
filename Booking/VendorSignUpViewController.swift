@@ -31,17 +31,11 @@ class VendorSignUpViewController: UIViewController {
     
     @IBAction func signupButtonPressed(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
-            let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            
-            alertController.addAction(defaultAction)
-            self.present(alertController, animated: true, completion: nil)
+                       AlertView.instance.showAlert(message: "Please re-type password")
+
         } else if groupNameTextField.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true || stateTextField.text?.isEmpty ?? true || groupAddressTextField.text?.isEmpty ?? true {
-            let alertController = UIAlertController(title: "Information Empty", message: "Please enter all information", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            
-            alertController.addAction(defaultAction)
-            self.present(alertController, animated: true, completion: nil)
+                        AlertView.instance.showAlert(message: "Please enter all information")
+
         } else {
             if let emailText = emailTextField.text, let passwordText = passwordTextField.text {
                 Auth.auth().createUser(withEmail: emailText, password: passwordText) { (result, error) in

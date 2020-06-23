@@ -47,22 +47,17 @@ class DJSignupViewController: UIViewController {
     
     @IBAction func signUpAction(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
-            let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            
-            alertController.addAction(defaultAction)
-            self.present(alertController, animated: true, completion: nil)
+            AlertView.instance.showAlert(message: "Please re-type password")
+
         } else if nameTextField.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true || stateTextField.text?.isEmpty ?? true {
-            let alertController = UIAlertController(title: "Information Empty", message: "Please enter all information", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            
-            alertController.addAction(defaultAction)
-            self.present(alertController, animated: true, completion: nil)
+                       AlertView.instance.showAlert(message: "Please enter all information")
+
         } else {
             
             if let emailText = emailTextField.text, let passwordText = passwordTextField.text {
                 Auth.auth().createUser(withEmail: emailText, password: passwordText) { (result, error) in
                     if error == nil {
+                        
                         let dj = DJ.createNew(withID: (result?.user.uid)!)
                         dj.setName(self.nameTextField.text!)
                         dj.setLocality([self.cityTextField.text!: self.stateTextField.text!])
