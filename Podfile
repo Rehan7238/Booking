@@ -18,6 +18,10 @@ target 'Booking' do
   
   # For Sign Up
   pod 'SkyFloatingLabelTextField', '~> 3.0'
+  
+  # Map
+  pod 'GooglePlaces'
+
 
 
 

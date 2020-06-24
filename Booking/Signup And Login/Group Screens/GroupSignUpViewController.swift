@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import SkyFloatingLabelTextField;
+import GooglePlaces
+
 
 
 class GroupSignUpViewController: UIViewController {
@@ -48,6 +50,17 @@ class GroupSignUpViewController: UIViewController {
         }
     }
     
+    @IBAction func textFieldTapped(_ sender: Any) {
+        self.addressTextField.resignFirstResponder()
+        self.addressTextField.selectedTextRange = nil
+        let acController = GMSAutocompleteViewController()
+        acController.delegate = self
+        present(acController, animated: true, completion: nil)
+      }
+    
+    
+    
+    
     @IBAction func signupButtonPressed(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
             AlertView.instance.showAlert(message: "Please re-type password")
@@ -75,4 +88,24 @@ class GroupSignUpViewController: UIViewController {
             }
         }
     }
+}
+
+extension GroupSignUpViewController: GMSAutocompleteViewControllerDelegate {
+  func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+    // Get the place name from 'GMSAutocompleteViewController'
+    // Then display the name in textField
+    self.addressTextField.text = place.formattedAddress
+    print (place)
+// Dismiss the GMSAutocompleteViewController when something is selected
+    dismiss(animated: true, completion: nil)
+  }
+
+func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+    // Handle the error
+    print("Error: ", error.localizedDescription)
+  }
+func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+    // Dismiss when the user canceled the action
+    dismiss(animated: true, completion: nil)
+  }
 }

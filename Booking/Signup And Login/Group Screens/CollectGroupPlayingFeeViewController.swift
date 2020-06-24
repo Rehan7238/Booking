@@ -40,4 +40,6 @@ class CollectGroupPlayingFeeViewController: UIViewController {
         // Go to the next screen
         self.performSegue(withIdentifier: "toGroupEquipmentQuestion", sender: self)
     }
+    
+    
 }
