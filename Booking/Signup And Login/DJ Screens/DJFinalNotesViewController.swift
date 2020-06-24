@@ -16,8 +16,17 @@ class DJFinalNotesViewController: UIViewController {
     //MARK: Properties
     @IBOutlet weak var nextButton: UIButton!
 
+    @IBOutlet weak var infoVersion: UILabel!
+    @IBOutlet weak var greekLifeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        infoVersion.isHidden = !infoVersion.isHidden
+
     }
+    
+    @IBAction func pressedNext (_ sender: Any) {
+          infoVersion.isHidden = !infoVersion.isHidden;
+
+      }
 }

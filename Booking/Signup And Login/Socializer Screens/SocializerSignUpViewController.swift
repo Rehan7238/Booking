@@ -34,6 +34,8 @@ class SocializerSignUpViewController: UIViewController {
         super.viewDidLoad()
     }
     
+  
+    
     @IBAction func citytextFieldTapped(_ sender: Any) {
           self.cityTextField.resignFirstResponder()
           self.cityTextField.selectedTextRange = nil
@@ -41,7 +43,6 @@ class SocializerSignUpViewController: UIViewController {
           acController.delegate = self
           present(acController, animated: true, completion: nil)
         }
-    
  
     @IBAction func signUpAction(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {

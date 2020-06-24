@@ -17,7 +17,7 @@ class DJ {
     var equipment: [String] = []
     var hostRating: NSNumber = 0.0
     var litness: NSNumber = 0.0
-    var locality: [String: String] = [:]
+    var locality: String = " "
     var location: String = ""
     var monthsOfExperience: NSNumber = 0.0
     var musicStyle: [String] = []
@@ -50,7 +50,7 @@ class DJ {
         updateValue(fieldName: "litness", newValue: newLitness)
     }
     
-    func setLocality(_ newLocality: [String: String]) {
+    func setLocality(_ newLocality: String) {
         self.locality = newLocality
         updateValue(fieldName: "locality", newValue: newLocality)
     }
@@ -127,7 +127,7 @@ class DJ {
                     dj.equipment = data["equipment"] as! [String]
                     dj.hostRating = data["hostRating"] as! NSNumber
                     dj.litness = data["litness"] as! NSNumber
-                    dj.locality = data["locality"] as! [String: String]
+                    dj.locality = data["locality"] as! String
                     dj.location = data["location"] as! String
                     dj.monthsOfExperience = data["monthsOfExperience"] as! NSNumber
                     dj.musicStyle = data["musicStyle"] as! [String]
