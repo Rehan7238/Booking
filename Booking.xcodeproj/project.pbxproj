@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E3668AD1B42E0DD4462C5E0 /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E10755E1FBEBB307F3DC49 /* Pods_Booking.framework */; };
 		244CB76024A3BFF300EEADBB /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 244CB75F24A3BFF300EEADBB /* Background.png */; };
+		244CB76224A3DC5D00EEADBB /* Booking in Resources */ = {isa = PBXBuildFile; fileRef = 244CB76124A3DC5C00EEADBB /* Booking */; };
 		245FEF0024940319003267CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEEFF24940319003267CE /* HomeViewController.swift */; };
 		245FEF0224940365003267CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0124940365003267CE /* LoginViewController.swift */; };
 		245FEF0424940381003267CE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0324940381003267CE /* StartViewController.swift */; };
@@ -76,6 +77,7 @@
 /* Begin PBXFileReference section */
 		189E7B2435744BE38DF4D49F /* Pods-Booking-BookingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking-BookingUITests.release.xcconfig"; path = "Target Support Files/Pods-Booking-BookingUITests/Pods-Booking-BookingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		244CB75F24A3BFF300EEADBB /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		244CB76124A3DC5C00EEADBB /* Booking */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Booking; sourceTree = "<group>"; };
 		245FEEFF24940319003267CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		245FEF0124940365003267CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		245FEF0324940381003267CE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				244CB75F24A3BFF300EEADBB /* Background.png */,
+				244CB76124A3DC5C00EEADBB /* Booking */,
 				5DE698E0248DB92600301B39 /* AppDelegate.swift */,
 				5DE698E2248DB92600301B39 /* SceneDelegate.swift */,
 				5DE698E6248DB92600301B39 /* Main.storyboard */,
@@ -436,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DE698ED248DB92F00301B39 /* LaunchScreen.storyboard in Resources */,
+				244CB76224A3DC5D00EEADBB /* Booking in Resources */,
 				5DDF6B352491585000B76C14 /* GoogleService-Info.plist in Resources */,
 				2492761124A299770048C54A /* AlertView.xib in Resources */,
 				244CB76024A3BFF300EEADBB /* Background.png in Resources */,
