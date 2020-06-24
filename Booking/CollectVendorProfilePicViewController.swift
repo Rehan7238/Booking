@@ -14,16 +14,18 @@ import FirebaseStorage
 class CollectVendorProfilePicViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     //MARK: Properties
-    
-    @IBOutlet weak var profilePic: UIImageView!
-    
-    @IBOutlet weak var submitButton: UIButton!
-    
-    @IBOutlet weak var backButton: UIButton!
-
     var selectedImage: UIImage?
     var uid: String = ""
     var vendor: Vendor?
+    
+    
+    @IBOutlet weak var profilePic: UIImageView!
+    
+    @IBOutlet weak var backButton: UIButton!
+    
+    
+    @IBOutlet weak var nextButton: UIButton!
+    
     
     @IBAction func pressedNextButton(_sender: Any){
     if let uid = Auth.auth().currentUser?.uid {

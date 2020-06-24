@@ -13,17 +13,15 @@ import UIKit
 class LoginViewController: UIViewController {
     
     //MARK: Properties
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField! //{
+       // didSet {
+      //     iconTextField.tintColor = UIColor.lightGray
+          // iconTextField.setIcon(imageLiteral(resourceName: "icon-user"))
+       // } https://medium.com/nyc-design/swift-4-add-icon-to-uitextfield-48f5ebf60aa1
+    //}
+   
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var makeAnAccountLabel: UIButton!
-    
-    @IBOutlet weak var x1Label: UILabel!
-    
-    @IBOutlet weak var o1Label: UILabel!
-    
-    @IBOutlet weak var x2Label: UILabel!
-    
-    @IBOutlet weak var o2Label: UILabel!
     
     
     override func viewDidLoad() {
@@ -49,5 +47,19 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+}
+
+extension UITextField {
+func setIcon(_ image: UIImage) {
+   let iconView = UIImageView(frame:
+                  CGRect(x: 10, y: 5, width: 20, height: 20))
+   iconView.image = image
+   let iconContainerView: UIView = UIView(frame:
+                  CGRect(x: 20, y: 0, width: 30, height: 30))
+   iconContainerView.addSubview(iconView)
+   leftView = iconContainerView
+   leftViewMode = .always
+}
 }
 

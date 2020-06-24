@@ -15,6 +15,10 @@ target 'Booking' do
   pod 'Firebase/Auth'
   
   pod 'Firebase/Storage'
+  
+  # For Sign Up
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
+
 
 
   target 'BookingTests' do

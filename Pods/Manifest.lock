@@ -292,6 +292,7 @@ PODS:
   - PromiseKit/UIKit (6.13.1):
     - PromiseKit/CorePromise
   - PromisesObjC (1.2.8)
+  - SkyFloatingLabelTextField (3.8.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -300,6 +301,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - PromiseKit
+  - SkyFloatingLabelTextField (~> 3.0)
 
 SPEC REPOS:
   trunk:
@@ -326,6 +328,7 @@ SPEC REPOS:
     - nanopb
     - PromiseKit
     - PromisesObjC
+    - SkyFloatingLabelTextField
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -351,7 +354,8 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
 
-PODFILE CHECKSUM: 95ac5d8bb39385a883262e571ef4f001c8f9b7b3
+PODFILE CHECKSUM: a18e301082a62d3ad0b355b2fbd02026084b8c08
 
 COCOAPODS: 1.9.3
