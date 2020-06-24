@@ -16,6 +16,10 @@ class GroupSignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var retypePasswordTextField: UITextField!
     @IBOutlet weak var groupNameTextField: UITextField!
+    
+    @IBOutlet weak var cityTextField: UITextField!
+    
+    @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var schoolTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var goBackButton: UIButton!
@@ -27,18 +31,8 @@ class GroupSignUpViewController: UIViewController {
     
     @IBAction func signupButtonPressed(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
-            //let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
-            //let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             AlertView.instance.showAlert(message: "Please re-type password")
-            
-            //alertController.addAction(defaultAction)
-            //self.present(alertController, animated: true, completion: nil)
-        } else if groupNameTextField.text?.isEmpty ?? true || schoolTextField.text?.isEmpty ?? true || addressTextField.text?.isEmpty ?? true {
-            //let alertController = UIAlertController(title: "Information Empty", message: "Please enter all information", preferredStyle: .alert)
-            //let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            
-            //alertController.addAction(defaultAction)
-            //self.present(alertController, animated: true, completion: nil)
+        } else if groupNameTextField.text?.isEmpty ?? true || schoolTextField.text?.isEmpty ?? true || addressTextField.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true || stateTextField.text?.isEmpty ?? true {
             AlertView.instance.showAlert(message: "Please enter all information")
 
         } else {
@@ -48,16 +42,11 @@ class GroupSignUpViewController: UIViewController {
                         let group = Group.createNew(withID: (result?.user.uid)!)
                         group.setName(self.groupNameTextField.text!)
                         group.setAddress(self.addressTextField.text!)
-                        
                         group.setSchool(self.schoolTextField.text!)
-                        
+                        group.setCity(self.cityTextField.text!)
+                        group.setState(self.stateTextField.text!)
                         self.performSegue(withIdentifier: "toGroupEquipmentQuestion", sender: self)
                     } else {
-                        //let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                        //let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                        
-                        //alertController.addAction(defaultAction)
-                        //self.present(alertController, animated: true, completion: nil)
                         AlertView.instance.showAlert(message: "Error signing up with that email and password")
 
                     }

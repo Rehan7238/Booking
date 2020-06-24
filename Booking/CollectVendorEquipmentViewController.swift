@@ -62,6 +62,7 @@ class CollectVendorEquipmentViewController: UIViewController, UITableViewDelegat
         }
     }
     
+    
     @IBAction func nextButtonPressed(_ sender: Any) {
         self.vendor?.setEquipment(equipmentList)
         self.performSegue(withIdentifier: "toVendorProfilePic", sender: self)

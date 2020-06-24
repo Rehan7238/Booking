@@ -14,10 +14,11 @@ import FirebaseStorage
 class CollectVendorProfilePicViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     //MARK: Properties
-
+    
     @IBOutlet weak var profilePic: UIImageView!
     
     @IBOutlet weak var submitButton: UIButton!
+    
     @IBOutlet weak var backButton: UIButton!
 
     var selectedImage: UIImage?

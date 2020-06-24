@@ -57,7 +57,7 @@ class VendorSignUpViewController: UIViewController {
             } else {
                 //either emailTextField.text or passwordTextField.text was nil
             }
-            self.performSegue(withIdentifier: "toGroupEquipmentQuestion", sender: self)
+            self.performSegue(withIdentifier: "toVendorPlayingFee", sender: self)
 
         }
     }
