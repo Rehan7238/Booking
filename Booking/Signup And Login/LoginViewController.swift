@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "/Users/Eimara/Documents/Booking/Booking/Background.png")
+        backgroundImage.image = UIImage(named: "Background")
         backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
 
