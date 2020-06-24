@@ -11,11 +11,14 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import GooglePlaces
+import SkyFloatingLabelTextField
 
 class VendorSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+
     }
     
     @IBOutlet weak var signUpButton: UIButton!
@@ -33,6 +36,20 @@ class VendorSignUpViewController: UIViewController {
           acController.delegate = self
           present(acController, animated: true, completion: nil)
         }
+    
+    @objc func textFieldDidChange(_ textfield: UITextField) {
+           if let text = textfield.text {
+               if let floatingLabelTextField = textfield as? SkyFloatingLabelTextField {
+               if(text.count < 3 || !text.contains("@")) {
+                       floatingLabelTextField.errorMessage = "Invalid email"
+                   }
+                   else {
+                       // The error message will only disappear when we reset it to nil or empty string
+                       floatingLabelTextField.errorMessage = ""
+                   }
+               }
+           }
+       }
     
     
     @IBAction func signupButtonPressed(_ sender: Any) {
