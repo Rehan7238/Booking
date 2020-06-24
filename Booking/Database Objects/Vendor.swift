@@ -94,8 +94,8 @@ func setState(_ newState: String) {
                     vendor.id = document.documentID
                     vendor.name = data["name"] as! String
                     vendor.address = data["address"] as!String
-                    vendor.city = data["city"] as!String
-                    vendor.state = data["state"] as!String
+                    //vendor.city = data["city"] as!String
+                    //vendor.state = data["state"] as!String
                     vendor.equipment = data["equipment"] as! [String]
                     vendor.futureEvents = data["futureEvents"] as! [String]
                     vendor.higherPrice = data["higherPrice"] as! NSNumber
