@@ -187,20 +187,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXw-hz-diJ">
-                                <rect key="frame" x="160" y="760" width="90" height="46"/>
+                                <rect key="frame" x="161" y="723" width="88" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="27"/>
                                 <state key="normal" title="SignUp">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="signUpAction:" destination="bpT-mN-cbL" eventType="touchUpInside" id="AJG-cg-6hF"/>
                                     <action selector="signupButtonPressed:" destination="ISF-K5-EwU" eventType="touchUpInside" id="twh-xz-4TN"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0mn-RR-Rip" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0mn-RR-Rip" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="71" y="218" width="277" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -227,6 +226,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
                                         <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uzp-Vd-bPW" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
@@ -245,6 +247,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconMarginBottom">
                                         <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
@@ -268,6 +273,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconMarginBottom">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAw-gE-bWZ" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
@@ -287,6 +295,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconMarginBottom">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gd-Ef-uPb" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
@@ -295,47 +306,53 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="city: ex; New York"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="city"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddE-Pc-KgO" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="67" y="678" width="277" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="state: ex; New York "/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K08-wD-b8l">
-                                <rect key="frame" x="172" y="802" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="GO BACK">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
                                 <connections>
-                                    <segue destination="yfX-Gh-TGB" kind="presentation" modalPresentationStyle="fullScreen" id="JaA-dH-ZUv"/>
+                                    <action selector="citytextFieldTapped:" destination="bpT-mN-cbL" eventType="editingDidBegin" id="Oqf-FG-032"/>
                                 </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ACCOUNT INFORMATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kho-WS-YNt">
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCOUNT INFORMATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kho-WS-YNt">
                                 <rect key="frame" x="84" y="124" width="260" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PERSONAL INFO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0c-s6-nKX">
                                 <rect key="frame" x="125" y="449" width="169" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K08-wD-b8l">
+                                <rect key="frame" x="172" y="779" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="GO BACK">
+                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="yfX-Gh-TGB" kind="presentation" modalPresentationStyle="fullScreen" id="JaA-dH-ZUv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kho-WS-YNt" firstAttribute="top" secondItem="IiF-be-7rJ" secondAttribute="top" constant="80" id="JHn-pd-7vL"/>
+                            <constraint firstItem="IiF-be-7rJ" firstAttribute="bottom" secondItem="Kho-WS-YNt" secondAttribute="bottom" constant="708" id="LDB-Cd-Ksi"/>
+                            <constraint firstItem="0mn-RR-Rip" firstAttribute="top" secondItem="IiF-be-7rJ" secondAttribute="top" constant="174" id="ObI-JQ-IN3"/>
+                            <constraint firstItem="IiF-be-7rJ" firstAttribute="trailing" secondItem="Kho-WS-YNt" secondAttribute="trailing" constant="70" id="b4r-ca-aZJ"/>
+                            <constraint firstItem="IiF-be-7rJ" firstAttribute="bottom" secondItem="0mn-RR-Rip" secondAttribute="bottom" constant="610" id="bU3-EW-fO1"/>
+                            <constraint firstItem="IiF-be-7rJ" firstAttribute="trailing" secondItem="0mn-RR-Rip" secondAttribute="trailing" constant="66" id="mWg-eY-AwN"/>
+                            <constraint firstItem="Kho-WS-YNt" firstAttribute="leading" secondItem="IiF-be-7rJ" secondAttribute="leading" constant="84" id="u1j-Hd-Cht"/>
+                            <constraint firstItem="0mn-RR-Rip" firstAttribute="leading" secondItem="IiF-be-7rJ" secondAttribute="leading" constant="71" id="vZ7-r3-PD2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IiF-be-7rJ"/>
                     </view>
                     <connections>
@@ -346,7 +363,6 @@
                         <outlet property="passwordTextField" destination="uzp-Vd-bPW" id="gDP-TJ-BLP"/>
                         <outlet property="retypePasswordTextField" destination="oGA-bj-l44" id="AT6-RY-dr0"/>
                         <outlet property="signupButton" destination="GXw-hz-diJ" id="jOs-tQ-Pbo"/>
-                        <outlet property="stateTextField" destination="ddE-Pc-KgO" id="AQi-Pp-NPX"/>
                         <segue destination="iaV-8S-QCJ" kind="presentation" identifier="signupToProfile" modalPresentationStyle="fullScreen" id="0zn-42-SdK"/>
                     </connections>
                 </viewController>
@@ -362,28 +378,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jbs-NS-HxB">
-                                <rect key="frame" x="138" y="175" width="125" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.21276003873114191" green="0.90307718741188048" blue="1" alpha="0.333709286971831" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap the blank image above to choose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FH8-sj-0nS">
-                                <rect key="frame" x="67" y="354" width="285" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="a profile picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cg4-as-4mX">
-                                <rect key="frame" x="138" y="383" width="120" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvS-ef-c7H">
-                                <rect key="frame" x="161" y="800" width="92" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvS-ef-c7H">
+                                <rect key="frame" x="161" y="800" width="92" height="48"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="27"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -393,65 +389,63 @@
                                     <action selector="pressedNextButtonWith_sender:" destination="iaV-8S-QCJ" eventType="touchUpInside" id="9e4-XG-kX6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PROFILE PICTURE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVC-Wh-8FR">
-                                <rect key="frame" x="119" y="90" width="180" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFILE PICTURE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVC-Wh-8FR">
+                                <rect key="frame" x="117" y="115" width="180" height="30"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="22"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="________________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntb-6s-a1Q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="________________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntb-6s-a1Q">
                                 <rect key="frame" x="36" y="771" width="347" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the circle above to choose a profile picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FH8-sj-0nS">
+                                <rect key="frame" x="34" y="425" width="351" height="20"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jbs-NS-HxB">
+                                <rect key="frame" x="145" y="220" width="125" height="125"/>
+                                <color key="backgroundColor" red="0.21276003873114191" green="0.90307718741188048" blue="1" alpha="0.333709286971831" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jbs-NS-HxB" firstAttribute="top" secondItem="bxq-0x-1xc" secondAttribute="top" constant="176" id="3K2-zl-R3S"/>
+                            <constraint firstItem="FH8-sj-0nS" firstAttribute="top" secondItem="bxq-0x-1xc" secondAttribute="top" constant="381" id="5It-aq-JiV"/>
+                            <constraint firstItem="OvS-ef-c7H" firstAttribute="leading" secondItem="bxq-0x-1xc" secondAttribute="leading" constant="161" id="5Te-Hh-R3j"/>
+                            <constraint firstItem="bxq-0x-1xc" firstAttribute="bottom" secondItem="OvS-ef-c7H" secondAttribute="bottom" constant="14" id="91J-Xs-Wlh"/>
+                            <constraint firstItem="ntb-6s-a1Q" firstAttribute="top" secondItem="bxq-0x-1xc" secondAttribute="top" constant="727" id="9H4-s8-aFe"/>
+                            <constraint firstItem="bxq-0x-1xc" firstAttribute="bottom" secondItem="FH8-sj-0nS" secondAttribute="bottom" constant="417" id="CyL-Vb-e4p"/>
+                            <constraint firstItem="bxq-0x-1xc" firstAttribute="bottom" secondItem="ntb-6s-a1Q" secondAttribute="bottom" constant="70" id="Jcm-pI-FbC"/>
+                            <constraint firstItem="oVC-Wh-8FR" firstAttribute="leading" secondItem="bxq-0x-1xc" secondAttribute="leading" constant="117" id="KN1-wy-ant"/>
+                            <constraint firstItem="bxq-0x-1xc" firstAttribute="trailing" secondItem="OvS-ef-c7H" secondAttribute="trailing" constant="161" id="PT6-bD-2UT"/>
+                            <constraint firstItem="bxq-0x-1xc" firstAttribute="bottom" secondItem="Jbs-NS-HxB" secondAttribute="bottom" constant="517" id="PpD-zl-Cef"/>
+                            <constraint firstItem="OvS-ef-c7H" firstAttribute="top" secondItem="bxq-0x-1xc" secondAttribute="top" constant="756" id="T0J-OQ-rTV"/>
+                            <constraint firstItem="bxq-0x-1xc" firstAttribute="trailing" secondItem="Jbs-NS-HxB" secondAttribute="trailing" constant="144" id="XDh-3p-64W"/>
+                            <constraint firstItem="FH8-sj-0nS" firstAttribute="leading" secondItem="bxq-0x-1xc" secondAttribute="leading" constant="34" id="c1A-aG-uYh"/>
+                            <constraint firstItem="ntb-6s-a1Q" firstAttribute="leading" secondItem="bxq-0x-1xc" secondAttribute="leading" constant="36" id="hsa-jI-eq0"/>
+                            <constraint firstItem="bxq-0x-1xc" firstAttribute="bottom" secondItem="oVC-Wh-8FR" secondAttribute="bottom" constant="717" id="jyN-05-IyN"/>
+                            <constraint firstItem="oVC-Wh-8FR" firstAttribute="top" secondItem="bxq-0x-1xc" secondAttribute="top" constant="71" id="nQ9-M4-Tja"/>
+                            <constraint firstItem="Jbs-NS-HxB" firstAttribute="leading" secondItem="bxq-0x-1xc" secondAttribute="leading" constant="145" id="sb6-Vl-idu"/>
+                            <constraint firstItem="bxq-0x-1xc" firstAttribute="trailing" secondItem="FH8-sj-0nS" secondAttribute="trailing" constant="29" id="t7U-L8-gmw"/>
+                            <constraint firstItem="bxq-0x-1xc" firstAttribute="trailing" secondItem="ntb-6s-a1Q" secondAttribute="trailing" constant="31" id="wBp-NE-zuE"/>
+                            <constraint firstItem="bxq-0x-1xc" firstAttribute="trailing" secondItem="oVC-Wh-8FR" secondAttribute="trailing" constant="117" id="xSY-jA-Htb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bxq-0x-1xc"/>
                     </view>
                     <connections>
                         <outlet property="nextButton" destination="OvS-ef-c7H" id="oL7-Bb-8LO"/>
                         <outlet property="profilePic" destination="Jbs-NS-HxB" id="2mt-Gk-2nw"/>
-                        <segue destination="7Ih-OZ-ne0" kind="presentation" identifier="toEnableContacts" modalPresentationStyle="fullScreen" id="WWN-Co-eEG"/>
+                        <segue destination="7z6-Np-tdR" kind="presentation" identifier="toSocializerFinalNotes" modalPresentationStyle="fullScreen" id="Fjg-cc-5Y7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWl-Uw-oPv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1140.5797101449277" y="2998.6607142857142"/>
-        </scene>
-        <!--Share Contacts Permission View Controller-->
-        <scene sceneID="lnj-pq-uHs">
-            <objects>
-                <viewController id="7Ih-OZ-ne0" customClass="ShareContactsPermissionViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QzR-3M-bVr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4t-8O-HDe">
-                                <rect key="frame" x="170" y="803" width="74" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="NEXT">
-                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextButtonPressed" destination="7Ih-OZ-ne0" eventType="touchUpInside" id="xvC-53-sl6"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="gqX-gP-tGP"/>
-                    </view>
-                    <connections>
-                        <outlet property="nextButton" destination="w4t-8O-HDe" id="ErL-Ss-ySS"/>
-                        <segue destination="7z6-Np-tdR" kind="presentation" identifier="toSocializerFinalNotes" modalPresentationStyle="fullScreen" id="zku-C8-qNt"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CHS-h2-cSU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1945" y="2999"/>
         </scene>
         <!--Socializer Final Notes View Controller-->
         <scene sceneID="Yrw-q9-zmu">
@@ -461,28 +455,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect with friends and follow DJs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLw-H5-XgS">
-                                <rect key="frame" x="81" y="172" width="275" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Write more lol idk whats helpful rn " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKs-OQ-WgD">
-                                <rect key="frame" x="64" y="279" width="265" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kng-vf-xag">
                                 <rect key="frame" x="113" y="767" width="188" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="25"/>
                                 <state key="normal" title="Get started!">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cQc-Pu-H1a" kind="presentation" modalPresentationStyle="fullScreen" id="3fE-co-njm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oy-pj-UuU">
                                 <rect key="frame" x="199" y="740" width="16" height="21"/>
@@ -492,27 +475,75 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAG-GE-8yR">
-                                <rect key="frame" x="97" y="687" width="223" height="39"/>
+                                <rect key="frame" x="64" y="673" width="296" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="27"/>
                                 <state key="normal" title="Connect With Contacts">
-                                    <color key="titleColor" red="0.14117647059999999" green="0.14901960780000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="c6F-5x-Gi0" kind="presentation" id="Iar-VC-VEz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUICK NOTES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sD-iU-8fe">
+                                <rect key="frame" x="133" y="111" width="149" height="30"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="22"/>
+                                <color key="textColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.) Add friends and follow DJs to see what events they're at   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjj-vi-Dg3">
+                                <rect key="frame" x="20" y="226" width="366" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="10"/>
+                                <color key="textColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2.) Create groups and enable location to keep in contact through the night " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYM-8I-Zeg">
+                                <rect key="frame" x="20" y="270" width="556" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="10"/>
+                                <color key="textColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNX-Jz-IAI">
+                                <rect key="frame" x="113" y="542" width="189" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="16"/>
+                                <state key="normal" title="Involved with Greek Life?">
+                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedNext:" destination="7z6-Np-tdR" eventType="touchUpInside" id="xRi-Ez-yOp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search and request to be a member of your chapter to be affiliated." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtP-tZ-3nl">
+                                <rect key="frame" x="48" y="570" width="366" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="10"/>
+                                <color key="textColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3sD-iU-8fe" firstAttribute="top" secondItem="QV0-SS-eDd" secondAttribute="top" constant="67" id="K0s-V4-CLD"/>
+                            <constraint firstItem="QV0-SS-eDd" firstAttribute="bottom" secondItem="3sD-iU-8fe" secondAttribute="bottom" constant="721" id="WKV-vu-7XI"/>
+                            <constraint firstItem="QV0-SS-eDd" firstAttribute="trailing" secondItem="3sD-iU-8fe" secondAttribute="trailing" constant="132" id="fE6-Ye-aj2"/>
+                            <constraint firstItem="3sD-iU-8fe" firstAttribute="leading" secondItem="QV0-SS-eDd" secondAttribute="leading" constant="133" id="iZb-vp-RyR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QV0-SS-eDd"/>
                     </view>
                     <connections>
+                        <outlet property="getStarted" destination="kng-vf-xag" id="Xue-DV-jF5"/>
+                        <outlet property="greekButton" destination="KNX-Jz-IAI" id="nt0-8P-Drr"/>
+                        <outlet property="infoVersion" destination="GtP-tZ-3nl" id="QFl-Ed-VxS"/>
+                        <outlet property="quickNotes" destination="3sD-iU-8fe" id="teB-rM-bCj"/>
                         <segue destination="cQc-Pu-H1a" kind="presentation" modalPresentationStyle="fullScreen" id="SIN-Pb-EEH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRM-11-L2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2684" y="2997"/>
+            <point key="canvasLocation" x="1976.8115942028987" y="2998.6607142857142"/>
         </scene>
         <!--Group Sign Up View Controller-->
         <scene sceneID="8XO-rj-6c4">
@@ -2671,7 +2702,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mXI-WB-Jjd"/>
+        <segue reference="Iar-VC-VEz"/>
         <segue reference="s1P-pj-7cP"/>
         <segue reference="0wN-b7-8Gs"/>
         <segue reference="up2-f4-JWw"/>
@@ -2680,8 +2711,8 @@
         <segue reference="xHO-fu-iOJ"/>
         <segue reference="pe4-In-XlF"/>
         <segue reference="075-nm-lCj"/>
-        <segue reference="25T-O7-Ilv"/>
-        <segue reference="GFl-9O-KAA"/>
+        <segue reference="JaA-dH-ZUv"/>
+        <segue reference="3fE-co-njm"/>
         <segue reference="coB-KU-7bX"/>
         <segue reference="qGx-LN-Y7t"/>
         <segue reference="u2I-in-cdN"/>

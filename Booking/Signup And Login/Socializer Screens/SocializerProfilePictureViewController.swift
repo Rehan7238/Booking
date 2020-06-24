@@ -46,7 +46,7 @@ class SocializerProfilePictureViewController: UIViewController {
                 let pathString = downloadURL.path // String
                 self.user?.setProfilePic(pathString)
               }
-                self.performSegue(withIdentifier: "toEnableContacts", sender: self)
+                self.performSegue(withIdentifier: "toSocializerFinalNotes", sender: self)
 
             }
         }

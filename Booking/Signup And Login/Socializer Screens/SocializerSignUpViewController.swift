@@ -11,6 +11,7 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import GooglePlaces
 
 class SocializerSignUpViewController: UIViewController {
     
@@ -24,7 +25,6 @@ class SocializerSignUpViewController: UIViewController {
     @IBOutlet weak var nameTextLabel: UITextField!
     
     @IBOutlet var cityTextField: UITextField! = UITextField()
-    @IBOutlet var stateTextField: UITextField! = UITextField()
     
     @IBOutlet weak var signupButton: UIButton!
     
@@ -34,11 +34,20 @@ class SocializerSignUpViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func citytextFieldTapped(_ sender: Any) {
+          self.cityTextField.resignFirstResponder()
+          self.cityTextField.selectedTextRange = nil
+          let acController = GMSAutocompleteViewController()
+          acController.delegate = self
+          present(acController, animated: true, completion: nil)
+        }
+    
+ 
     @IBAction func signUpAction(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
                         AlertView.instance.showAlert(message: "Please re-type password")
 
-        } else if nameTextLabel.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true || stateTextField.text?.isEmpty ?? true {
+        } else if nameTextLabel.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true {
                         AlertView.instance.showAlert(message: "Please enter all information")
 
         } else {
@@ -48,6 +57,7 @@ class SocializerSignUpViewController: UIViewController {
                     if error == nil {
                         let user = User.createNew(withID: (result?.user.uid)!)
                         user.setName(self.nameTextLabel.text!)
+                        user.setLocality(self.cityTextField.text!)
                         self.performSegue(withIdentifier: "signupToProfile", sender: self)
                     }
                     else {
@@ -65,3 +75,26 @@ class SocializerSignUpViewController: UIViewController {
     }
     
 }
+
+extension SocializerSignUpViewController: GMSAutocompleteViewControllerDelegate {
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+    // Get the place name from 'GMSAutocompleteViewController'
+    // Then display the name in textField
+        self.cityTextField.text = place.formattedAddress
+    print (place)
+// Dismiss the GMSAutocompleteViewController when something is selected
+    dismiss(animated: true, completion: nil)
+  }
+
+func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+    // Handle the error
+    print("Error: ", error.localizedDescription)
+  }
+func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+    // Dismiss when the user canceled the action
+    dismiss(animated: true, completion: nil)
+  }
+    
+    
+}
+
