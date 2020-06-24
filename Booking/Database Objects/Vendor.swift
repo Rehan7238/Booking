@@ -76,7 +76,7 @@ func setState(_ newState: String) {
     
     private func updateValue(fieldName: String, newValue: Any) {
         let db = Firestore.firestore()
-        let vendor = db.collection("Vendor").document(id)
+        let vendor = db.collection("Vendors").document(id)
         vendor.setData([fieldName: newValue], merge: true)
     }
     
@@ -84,7 +84,7 @@ func setState(_ newState: String) {
         let (promise, resolver) = Promise<Vendor?>.pending()
         
         let db = Firestore.firestore()
-        let vendors = db.collection("Vendor").document(id)
+        let vendors = db.collection("Vendors").document(id)
         
         vendors.getDocument { (document, err) in
             let vendor = Vendor()
@@ -116,7 +116,7 @@ func setState(_ newState: String) {
     
     static func createNew(withID groupID: String) -> Vendor {
         let db = Firestore.firestore()
-        let vendors = db.collection("Vendor")
+        let vendors = db.collection("Vendors")
 
         let newVendor = Vendor()
         newVendor.id = groupID

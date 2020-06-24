@@ -31,10 +31,10 @@ class VendorSignUpViewController: UIViewController {
     
     @IBAction func signupButtonPressed(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
-                       AlertView.instance.showAlert(message: "Please re-type password")
+            AlertView.instance.showAlert(message: "Please re-type password")
 
         } else if groupNameTextField.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true || stateTextField.text?.isEmpty ?? true || groupAddressTextField.text?.isEmpty ?? true {
-                        AlertView.instance.showAlert(message: "Please enter all information")
+            AlertView.instance.showAlert(message: "Please enter all information")
 
         } else {
             if let emailText = emailTextField.text, let passwordText = passwordTextField.text {
@@ -56,9 +56,8 @@ class VendorSignUpViewController: UIViewController {
                 }
             } else {
                 //either emailTextField.text or passwordTextField.text was nil
+                AlertView.instance.showAlert(message: "Try again later")
             }
-            self.performSegue(withIdentifier: "toVendorPlayingFee", sender: self)
-
         }
     }
 }

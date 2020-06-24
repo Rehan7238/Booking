@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i3z-vP-WSh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i3z-vP-WSh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -374,10 +374,28 @@
                                 <rect key="frame" x="113" y="767" width="188" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Let's get started!">
+                                <state key="normal" title="Get started!">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oy-pj-UuU">
+                                <rect key="frame" x="199" y="740" width="16" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAG-GE-8yR">
+                                <rect key="frame" x="97" y="687" width="223" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Connect With Contacts">
+                                    <color key="titleColor" red="0.14117647059999999" green="0.14901960780000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="c6F-5x-Gi0" kind="presentation" id="Iar-VC-VEz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -405,7 +423,7 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" keyboardKey="YES"/>
                                 </accessibility>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="your email"/>
@@ -447,7 +465,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46S-Q9-SXp">
-                                <rect key="frame" x="172" y="832" width="66" height="30"/>
+                                <rect key="frame" x="172" y="832" width="70" height="30"/>
                                 <state key="normal" title="GO BACK">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -526,7 +544,6 @@
                         <constraints>
                             <constraint firstItem="XJ1-Dy-sEX" firstAttribute="centerX" secondItem="WoG-hp-Ldt" secondAttribute="centerX" id="1qR-bQ-qAr"/>
                             <constraint firstItem="XJ1-Dy-sEX" firstAttribute="centerX" secondItem="WoG-hp-Ldt" secondAttribute="centerX" id="9f0-gR-Pfe"/>
-                            <constraint firstItem="WoG-hp-Ldt" firstAttribute="trailing" secondItem="XJ1-Dy-sEX" secondAttribute="trailing" constant="160" id="Cwd-wf-8Ot"/>
                             <constraint firstItem="XJ1-Dy-sEX" firstAttribute="leading" secondItem="WoG-hp-Ldt" secondAttribute="leading" constant="164" id="Lg5-vs-5wK"/>
                             <constraint firstItem="46S-Q9-SXp" firstAttribute="leading" secondItem="WoG-hp-Ldt" secondAttribute="leading" constant="172" id="Ut3-tg-aR4"/>
                             <constraint firstItem="XJ1-Dy-sEX" firstAttribute="top" secondItem="WoG-hp-Ldt" secondAttribute="top" constant="746" id="ehy-Ca-d08"/>
@@ -839,7 +856,7 @@
                                 <rect key="frame" x="113" y="774" width="188" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Let's get started!">
+                                <state key="normal" title="Get started!">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -871,6 +888,24 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This will allow them to have affiliation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NF-hh-k15">
                                 <rect key="frame" x="66" y="356" width="283" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sha-ha-5Td">
+                                <rect key="frame" x="99" y="692" width="223" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Connect With Contacts">
+                                    <color key="titleColor" red="0.14117647059999999" green="0.14901960780000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="c6F-5x-Gi0" kind="presentation" id="hoe-Rp-BEC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-ta-XQP">
+                                <rect key="frame" x="200" y="745" width="16" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -971,7 +1006,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmW-Dl-R7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4281" y="3927"/>
+            <point key="canvasLocation" x="5822" y="4140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q2S-cc-5Z2">
@@ -1193,6 +1228,7 @@
                         <outlet property="emailTextField" destination="zcU-zG-5dw" id="oqo-Rl-Yb6"/>
                         <outlet property="groupAddressTextField" destination="bRZ-bz-aLD" id="sqf-b7-rTC"/>
                         <outlet property="groupNameTextField" destination="0M3-9U-wrO" id="fik-og-kFM"/>
+                        <outlet property="passwordTextField" destination="mbA-hJ-Apc" id="Y5w-c9-huc"/>
                         <outlet property="retypePasswordTextField" destination="8Fy-dz-AaL" id="EnP-ve-FnP"/>
                         <outlet property="signUpButton" destination="jJb-my-7MJ" id="TYu-7D-N9e"/>
                         <outlet property="stateTextField" destination="OnI-L1-zcS" id="JKB-QT-tzV"/>
@@ -1494,7 +1530,7 @@
                                 <rect key="frame" x="113" y="788" width="188" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Let's get started!">
+                                <state key="normal" title="Get started!">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1502,6 +1538,24 @@
                                     <segue destination="cQc-Pu-H1a" kind="presentation" modalPresentationStyle="fullScreen" id="eFo-fG-FBB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eE-uA-Ym9">
+                                <rect key="frame" x="96" y="706" width="223" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Connect With Contacts">
+                                    <color key="titleColor" red="0.14117647059999999" green="0.14901960780000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="c6F-5x-Gi0" kind="presentation" id="mXI-WB-Jjd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d61-0k-MlK">
+                                <rect key="frame" x="198" y="759" width="16" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="R0H-0j-Si7"/>
@@ -1992,6 +2046,121 @@
             </objects>
             <point key="canvasLocation" x="3414" y="5232"/>
         </scene>
+        <!--Invite Contacts View Controller-->
+        <scene sceneID="Sec-9f-Fbt">
+            <objects>
+                <viewController id="c6F-5x-Gi0" customClass="InviteContactsViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ixF-lR-ns8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts On  X O X O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ac-mT-X5f">
+                                <rect key="frame" x="115" y="66" width="184.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P92-yu-C3E">
+                                <rect key="frame" x="15" y="149" width="384" height="619"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="contactsCell" id="mI7-BJ-ddT" customClass="InviteContactsCell" customModule="Booking" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="384" height="73"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mI7-BJ-ddT" id="FaE-yu-szQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="73"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friend Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdH-tg-Ejo">
+                                                    <rect key="frame" x="29" y="10" width="98" height="21.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="XAN-9R-zId"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erj-I9-Kio">
+                                                    <rect key="frame" x="318" y="21.5" width="46" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="7n3-SA-UCN"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="actionButtonPressed:" destination="mI7-BJ-ddT" eventType="touchUpInside" id="B3i-sa-H7f"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- User Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mf2-NB-Dyc">
+                                                    <rect key="frame" x="137" y="10.5" width="90" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTc-Bs-nZR">
+                                                    <rect key="frame" x="29" y="41.5" width="90.5" height="16.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16.5" id="EFy-Qv-KEZ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Mf2-NB-Dyc" firstAttribute="centerY" secondItem="EdH-tg-Ejo" secondAttribute="centerY" id="2dJ-sN-r7z"/>
+                                                <constraint firstItem="Erj-I9-Kio" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EdH-tg-Ejo" secondAttribute="trailing" constant="8" symbolic="YES" id="4AT-HT-uZ9"/>
+                                                <constraint firstItem="YTc-Bs-nZR" firstAttribute="leading" secondItem="EdH-tg-Ejo" secondAttribute="leading" id="DUr-gq-04j"/>
+                                                <constraint firstItem="YTc-Bs-nZR" firstAttribute="top" secondItem="EdH-tg-Ejo" secondAttribute="bottom" constant="10" id="FKZ-C4-tYD"/>
+                                                <constraint firstItem="EdH-tg-Ejo" firstAttribute="top" secondItem="FaE-yu-szQ" secondAttribute="top" constant="10" id="Lk2-NE-Vda"/>
+                                                <constraint firstItem="EdH-tg-Ejo" firstAttribute="leading" secondItem="FaE-yu-szQ" secondAttribute="leading" constant="29" id="ayV-I0-GDm"/>
+                                                <constraint firstItem="Mf2-NB-Dyc" firstAttribute="leading" secondItem="EdH-tg-Ejo" secondAttribute="trailing" constant="10" id="nJ3-IV-lhm"/>
+                                                <constraint firstItem="Erj-I9-Kio" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Mf2-NB-Dyc" secondAttribute="trailing" constant="8" symbolic="YES" id="o2W-CQ-q5B"/>
+                                                <constraint firstItem="Erj-I9-Kio" firstAttribute="centerY" secondItem="FaE-yu-szQ" secondAttribute="centerY" id="op2-Wv-ulv"/>
+                                                <constraint firstItem="Erj-I9-Kio" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YTc-Bs-nZR" secondAttribute="trailing" constant="8" symbolic="YES" id="qWw-lb-YOJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="Erj-I9-Kio" secondAttribute="trailing" constant="20" id="tUn-0D-iwW"/>
+                                                <constraint firstAttribute="bottom" secondItem="YTc-Bs-nZR" secondAttribute="bottom" constant="15" id="yFi-K1-ipA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="actionButton" destination="Erj-I9-Kio" id="ypB-69-qQo"/>
+                                            <outlet property="friendNameLabel" destination="EdH-tg-Ejo" id="Dto-UP-VPX"/>
+                                            <outlet property="phoneNumberLabel" destination="YTc-Bs-nZR" id="nni-I9-yYQ"/>
+                                            <outlet property="userTypeLabel" destination="Mf2-NB-Dyc" id="s7x-Wn-tw6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KO-XD-7PW">
+                                <rect key="frame" x="357" y="20" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="c6F-5x-Gi0" eventType="touchUpInside" id="h4I-JW-5mx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8uV-1b-Zcq" firstAttribute="bottom" secondItem="P92-yu-C3E" secondAttribute="bottom" constant="40" id="2pl-wK-8Te"/>
+                            <constraint firstItem="8uV-1b-Zcq" firstAttribute="trailing" secondItem="P92-yu-C3E" secondAttribute="trailing" constant="15" id="9qO-Zd-KPL"/>
+                            <constraint firstItem="9ac-mT-X5f" firstAttribute="top" secondItem="8uV-1b-Zcq" secondAttribute="top" constant="66" id="F4S-ON-hOQ"/>
+                            <constraint firstItem="3KO-XD-7PW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9ac-mT-X5f" secondAttribute="trailing" constant="8" symbolic="YES" id="QUc-mo-1X0"/>
+                            <constraint firstItem="P92-yu-C3E" firstAttribute="leading" secondItem="8uV-1b-Zcq" secondAttribute="leading" constant="15" id="Smx-CA-J5V"/>
+                            <constraint firstItem="P92-yu-C3E" firstAttribute="top" secondItem="9ac-mT-X5f" secondAttribute="bottom" constant="60" id="YOI-sz-Sqc"/>
+                            <constraint firstItem="9ac-mT-X5f" firstAttribute="centerX" secondItem="8uV-1b-Zcq" secondAttribute="centerX" id="nQT-vQ-wbq"/>
+                            <constraint firstItem="3KO-XD-7PW" firstAttribute="top" secondItem="8uV-1b-Zcq" secondAttribute="top" constant="20" id="ofk-Bh-Jaj"/>
+                            <constraint firstItem="8uV-1b-Zcq" firstAttribute="trailing" secondItem="3KO-XD-7PW" secondAttribute="trailing" constant="20" id="ycz-3t-n0k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8uV-1b-Zcq"/>
+                    </view>
+                    <connections>
+                        <outlet property="contactsTable" destination="P92-yu-C3E" id="S2s-TQ-xn9"/>
+                        <outlet property="doneButton" destination="3KO-XD-7PW" id="057-fd-FqX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BmR-L1-Pk7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3876.811594202899" y="6343.5267857142853"/>
+        </scene>
         <!--CollectDJ Profile Pic View Controller-->
         <scene sceneID="uSp-eS-DsD">
             <objects>
@@ -2098,7 +2267,7 @@
                                 <rect key="frame" x="118" y="775" width="188" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Let's get started!">
+                                <state key="normal" title="Get started!">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -2106,6 +2275,24 @@
                                     <segue destination="cQc-Pu-H1a" kind="presentation" modalPresentationStyle="fullScreen" id="e2U-cg-Yb3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fM2-3C-8iG">
+                                <rect key="frame" x="101" y="693" width="223" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Connect With Contacts">
+                                    <color key="titleColor" red="0.14117647059999999" green="0.14901960780000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="c6F-5x-Gi0" kind="presentation" id="PP3-4w-lpZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbk-Uc-ceb">
+                                <rect key="frame" x="203" y="746" width="16" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bOs-9V-I51"/>
@@ -2120,6 +2307,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="hoe-Rp-BEC"/>
         <segue reference="s1P-pj-7cP"/>
         <segue reference="0wN-b7-8Gs"/>
         <segue reference="up2-f4-JWw"/>
@@ -2127,9 +2315,9 @@
         <segue reference="gPg-LU-NxQ"/>
         <segue reference="xHO-fu-iOJ"/>
         <segue reference="pe4-In-XlF"/>
-        <segue reference="Zkx-mS-Ywi"/>
-        <segue reference="n7d-be-D0D"/>
-        <segue reference="CYo-v5-pmX"/>
+        <segue reference="075-nm-lCj"/>
+        <segue reference="4QN-g2-asO"/>
+        <segue reference="VhR-7o-DGz"/>
         <segue reference="oUF-k7-4O1"/>
         <segue reference="qGx-LN-Y7t"/>
         <segue reference="5l6-nM-6SV"/>
