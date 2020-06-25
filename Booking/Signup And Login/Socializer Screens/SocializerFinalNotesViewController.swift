@@ -23,10 +23,18 @@ class SocializerFinalNotesViewController: UIViewController {
         infoVersion.isHidden = !infoVersion.isHidden
     }
     
-    @IBAction func pressedNext (_ sender: Any) {
+    @IBAction func pressedGreek (_ sender: Any) {
         infoVersion.isHidden = !infoVersion.isHidden;
-
     }
+    
+    @IBAction func pressedGetStarted(_ sender: Any) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "SideMain", bundle: nil)
+        let vc: InitialScreen = storyboard.instantiateViewController(withIdentifier: "InitialScreen") as! InitialScreen
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(navigationController, animated: true, completion: nil)
+    }
+    
 }
 
 

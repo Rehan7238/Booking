@@ -61,10 +61,6 @@
                         <viewLayoutGuide key="safeArea" id="kJg-zq-ofy"/>
                     </view>
                     <navigationItem key="navigationItem" id="HOR-fE-aP7"/>
-                    <connections>
-                        <segue destination="cQc-Pu-H1a" kind="presentation" identifier="alreadyLoggedIn" modalPresentationStyle="fullScreen" id="EAz-3g-KBd"/>
-                        <segue destination="cQc-Pu-H1a" kind="presentation" identifier="straightToLogin" modalPresentationStyle="fullScreen" id="5dC-Mi-PQp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqA-f9-iG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,6 +104,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="DY6-Tf-4FA" eventType="touchUpInside" id="0jF-f6-F3l"/>
+                                    <action selector="pressedGetStarted:" destination="DY6-Tf-4FA" eventType="touchUpInside" id="cNg-Bb-HEU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b44-ov-Ebe">
@@ -170,7 +167,6 @@
                         <outlet property="emailTextField" destination="7mN-SA-fW0" id="jyw-G9-0Kt"/>
                         <outlet property="makeAnAccountLabel" destination="b44-ov-Ebe" id="cfi-QZ-MNv"/>
                         <outlet property="passwordTextField" destination="1pf-4z-uFM" id="GkX-bw-Xgt"/>
-                        <segue destination="cQc-Pu-H1a" kind="presentation" identifier="loginToHome" modalPresentationStyle="fullScreen" id="GFl-9O-KAA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhU-2q-IlW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -497,7 +493,7 @@
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cQc-Pu-H1a" kind="presentation" modalPresentationStyle="fullScreen" id="3fE-co-njm"/>
+                                    <action selector="pressedGetStarted:" destination="7z6-Np-tdR" eventType="touchUpInside" id="uCN-Hs-tot"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oy-pj-UuU">
@@ -514,9 +510,6 @@
                                 <state key="normal" title="Connect With Contacts">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="c6F-5x-Gi0" kind="presentation" id="Iar-VC-VEz"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUICK NOTES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sD-iU-8fe">
                                 <rect key="frame" x="133" y="111" width="149" height="30"/>
@@ -571,12 +564,11 @@
                         <outlet property="greekButton" destination="KNX-Jz-IAI" id="nt0-8P-Drr"/>
                         <outlet property="infoVersion" destination="GtP-tZ-3nl" id="QFl-Ed-VxS"/>
                         <outlet property="quickNotes" destination="3sD-iU-8fe" id="teB-rM-bCj"/>
-                        <segue destination="cQc-Pu-H1a" kind="presentation" modalPresentationStyle="fullScreen" id="SIN-Pb-EEH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRM-11-L2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976.8115942028987" y="2998.6607142857142"/>
+            <point key="canvasLocation" x="1945" y="2999"/>
         </scene>
         <!--Group Sign Up View Controller-->
         <scene sceneID="8XO-rj-6c4">
@@ -790,7 +782,6 @@
                         <outlet property="passwordTextField" destination="1vN-ru-o06" id="r1H-DR-7WR"/>
                         <outlet property="retypePasswordTextField" destination="eJT-zc-rvm" id="RaS-lN-Gq1"/>
                         <outlet property="schoolTextField" destination="65T-kM-ako" id="zmB-Qh-8H8"/>
-                        <segue destination="cQc-Pu-H1a" kind="presentation" identifier="signupToHome" modalPresentationStyle="fullScreen" id="CYo-v5-pmX"/>
                         <segue destination="811-24-jsZ" kind="presentation" identifier="toGroupEquipmentQuestion" modalPresentationStyle="fullScreen" id="qGx-LN-Y7t"/>
                     </connections>
                 </viewController>
@@ -1187,8 +1178,8 @@
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="pressedGetStarted:" destination="7Rv-PC-Bax" eventType="touchUpInside" id="qhS-30-Ani"/>
                                     <action selector="pressedNextButtonWith_sender:" destination="8CM-Dt-qzl" eventType="touchUpInside" id="XEV-PK-WBX"/>
-                                    <segue destination="cQc-Pu-H1a" kind="presentation" modalPresentationStyle="fullScreen" id="VhR-7o-DGz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1201,7 +1192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u88-Th-MT4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3346" y="3767"/>
+            <point key="canvasLocation" x="3490" y="3767"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="UZG-W9-Pkw">
@@ -1286,7 +1277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmW-Dl-R7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5822" y="4140"/>
+            <point key="canvasLocation" x="3412" y="2416"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q2S-cc-5Z2">
@@ -1925,7 +1916,7 @@
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cQc-Pu-H1a" kind="presentation" modalPresentationStyle="fullScreen" id="eFo-fG-FBB"/>
+                                    <action selector="pressedGetStarted:" destination="YiB-JC-zG6" eventType="touchUpInside" id="UMO-Zb-fS2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eE-uA-Ym9">
@@ -2900,7 +2891,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PP3-4w-lpZ"/>
+        <segue reference="mXI-WB-Jjd"/>
         <segue reference="LDC-1y-ZTK"/>
         <segue reference="IUn-IV-m2r"/>
         <segue reference="6sB-9n-Ygk"/>
@@ -2909,8 +2900,7 @@
         <segue reference="05L-9g-lk7"/>
         <segue reference="pe4-In-XlF"/>
         <segue reference="075-nm-lCj"/>
-        <segue reference="mJJ-Tu-w3f"/>
-        <segue reference="EAz-3g-KBd"/>
+        <segue reference="25T-O7-Ilv"/>
         <segue reference="oUF-k7-4O1"/>
         <segue reference="qGx-LN-Y7t"/>
         <segue reference="5l6-nM-6SV"/>
