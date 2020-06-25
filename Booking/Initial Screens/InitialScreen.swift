@@ -35,7 +35,7 @@ class InitialScreen: UIViewController {
 }
     override func viewDidAppear (_ animated: Bool){
         titleLabel.isHidden = false
-        UIView.animate(withDuration: 5.0, delay: 0.0, options: [], animations: { () -> Void in
+        UIView.animate(withDuration: 3.0, delay: 0.0, options: [], animations: { () -> Void in
 
             self.titleLabel.alpha = 0
 
@@ -48,9 +48,8 @@ class InitialScreen: UIViewController {
     }
     
     func checkType() {
-        if checkDJ() != nil {
+                if checkDJ(){
                                self.performSegue(withIdentifier: "toDJ", sender: nil)
-
                }
                
                else if checkUser() != nil {
@@ -65,42 +64,66 @@ class InitialScreen: UIViewController {
            
     }
     
-    func checkDJ() {
+    func checkDJ() -> Bool {
+        var flag  = false
         _ = DJ.fromID(id: uid).done { dj in
             if dj != nil {
                 self.isGroup = false
                 self.dj = dj
+                flag = true
                 //self.loadDJInfo()
             }
         }
+        if flag == true {
+            return true
+        }
+        return false
     }
     
-    func checkUser() {
+    func checkUser() -> Bool {
+        var flag = false
         _ = User.fromID(id: uid).done { user in
             if user != nil {
                 self.isGroup = false
                 self.user = user
+                flag = true
             }
         }
+        if flag == true {
+            return true
+        }
+        return false
     }
     
     func checkVendor() {
+        var flag = false
         _ = Vendor.fromID(id: uid).done { vendor in
             if vendor != nil {
                 self.isGroup = true
                 self.vendor = vendor
+                flag = true
             }
         }
+        if flag == true {
+            return true
+        }
+        return false
     }
     
     func checkGroup() {
+        var flag = false
         _ = Group.fromID(id: uid).done { group in
             if group != nil {
                 self.isGroup = true
                 self.group = group
+                flag = true
                 //self.loadDJInfo()
             }
         }
+        if flag == true {
+            return true
+        }
+        return false
     }
 
 }
