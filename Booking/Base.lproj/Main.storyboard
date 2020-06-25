@@ -61,10 +61,13 @@
                         <viewLayoutGuide key="safeArea" id="kJg-zq-ofy"/>
                     </view>
                     <navigationItem key="navigationItem" id="HOR-fE-aP7"/>
+                    <connections>
+                        <segue destination="cQc-Pu-H1a" kind="presentation" identifier="alreadyLoggedIn" modalPresentationStyle="fullScreen" id="cxh-vW-7XL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqA-f9-iG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2040.5797101449277" y="1506.6964285714284"/>
+            <point key="canvasLocation" x="2109" y="1507"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="jMf-XH-inB">
@@ -2900,7 +2903,7 @@
         <segue reference="05L-9g-lk7"/>
         <segue reference="pe4-In-XlF"/>
         <segue reference="075-nm-lCj"/>
-        <segue reference="25T-O7-Ilv"/>
+        <segue reference="mJJ-Tu-w3f"/>
         <segue reference="oUF-k7-4O1"/>
         <segue reference="qGx-LN-Y7t"/>
         <segue reference="5l6-nM-6SV"/>
