@@ -1950,9 +1950,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGO-ST-lJq">
-                                <rect key="frame" x="156" y="766" width="90" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGO-ST-lJq">
+                                <rect key="frame" x="156" y="766" width="91" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="SignUp">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1961,9 +1960,8 @@
                                     <action selector="signUpAction:" destination="fdy-Zz-KLN" eventType="touchUpInside" id="J2G-9i-L0R"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qiL-uF-ObT" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="69" y="199" width="277" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qiL-uF-ObT" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="69" y="199" width="276" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -1983,9 +1981,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H42-bX-ba4" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="69" y="272" width="277" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H42-bX-ba4" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="69" y="272" width="276" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="hn1-S6-SU4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -2005,9 +2005,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2N-PU-R3N" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="69" y="347" width="277" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2N-PU-R3N" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="69" y="347" width="276" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -2027,9 +2026,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PT8-z3-mLz" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="69" y="498" width="277" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PT8-z3-mLz" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="69" y="498" width="276" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="o6y-we-Ec0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -2052,16 +2053,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yAH-XY-kvf" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="69" y="571" width="277" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yAH-XY-kvf" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="69" y="571" width="276" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="city"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                        <color key="value" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
@@ -2072,14 +2069,16 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconMarginBottom">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="citytextFieldTapped:" destination="fdy-Zz-KLN" eventType="editingDidBegin" id="KsK-eu-ZLI"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksp-Wm-6Lo">
-                                <rect key="frame" x="168" y="809" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksp-Wm-6Lo">
+                                <rect key="frame" x="168.5" y="809" width="66" height="30"/>
                                 <state key="normal" title="GO BACK">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -2087,23 +2086,26 @@
                                     <segue destination="yfX-Gh-TGB" kind="presentation" modalPresentationStyle="fullScreen" id="n7d-be-D0D"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ACCOUNT INFO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goD-Gq-6wE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCOUNT INFO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goD-Gq-6wE">
                                 <rect key="frame" x="119" y="136" width="165" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5Hz-Js-oY9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="22"/>
                                 <color key="textColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PERSONAL INFO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlm-LO-tCt">
-                                <rect key="frame" x="123" y="446" width="169" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PERSONAL INFO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlm-LO-tCt">
+                                <rect key="frame" x="122.5" y="446" width="169" height="30"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="22"/>
                                 <color key="textColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="optional" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epa-aE-Wtk" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="69" y="647" width="277" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="optional" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epa-aE-Wtk" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="69" y="647" width="276" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="2h2-3C-x4v"/>
+                                </constraints>
                                 <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -2119,6 +2121,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconMarginBottom">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="schoolFieldTapped:" destination="fdy-Zz-KLN" eventType="editingDidBegin" id="L2M-aa-Hgl"/>
@@ -2127,6 +2132,31 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KGO-ST-lJq" firstAttribute="centerX" secondItem="goD-Gq-6wE" secondAttribute="centerX" id="4WL-jL-d75"/>
+                            <constraint firstItem="H42-bX-ba4" firstAttribute="top" secondItem="Vaq-Tw-wdI" secondAttribute="top" constant="272" id="5oz-Nr-gZZ"/>
+                            <constraint firstItem="x2N-PU-R3N" firstAttribute="centerX" secondItem="BkO-5k-mH7" secondAttribute="centerX" id="8BC-ag-M7N"/>
+                            <constraint firstItem="yAH-XY-kvf" firstAttribute="top" secondItem="PT8-z3-mLz" secondAttribute="bottom" constant="39" id="8mp-qb-XxW"/>
+                            <constraint firstItem="epa-aE-Wtk" firstAttribute="top" secondItem="yAH-XY-kvf" secondAttribute="bottom" constant="42" id="Aqd-3o-mOC"/>
+                            <constraint firstItem="epa-aE-Wtk" firstAttribute="centerX" secondItem="Mlm-LO-tCt" secondAttribute="centerX" id="CmS-2C-I5Q"/>
+                            <constraint firstItem="x2N-PU-R3N" firstAttribute="top" secondItem="H42-bX-ba4" secondAttribute="bottom" constant="41" id="CxP-f1-yyw"/>
+                            <constraint firstItem="PT8-z3-mLz" firstAttribute="centerX" secondItem="BkO-5k-mH7" secondAttribute="centerX" id="D1r-Nm-RwT"/>
+                            <constraint firstItem="goD-Gq-6wE" firstAttribute="top" secondItem="BkO-5k-mH7" secondAttribute="top" constant="92" id="FE2-6X-URd"/>
+                            <constraint firstItem="goD-Gq-6wE" firstAttribute="leading" secondItem="BkO-5k-mH7" secondAttribute="leading" constant="119" id="Fe9-Eh-w5R"/>
+                            <constraint firstItem="epa-aE-Wtk" firstAttribute="trailing" secondItem="H42-bX-ba4" secondAttribute="trailing" id="GQB-RX-11O"/>
+                            <constraint firstItem="PT8-z3-mLz" firstAttribute="top" secondItem="Mlm-LO-tCt" secondAttribute="bottom" constant="22" id="Kce-lF-MN0"/>
+                            <constraint firstItem="KGO-ST-lJq" firstAttribute="centerX" secondItem="Ksp-Wm-6Lo" secondAttribute="centerX" id="WJo-69-dfF"/>
+                            <constraint firstItem="qiL-uF-ObT" firstAttribute="top" secondItem="goD-Gq-6wE" secondAttribute="bottom" constant="33" id="ajl-Y0-Dg8"/>
+                            <constraint firstItem="qiL-uF-ObT" firstAttribute="centerX" secondItem="BkO-5k-mH7" secondAttribute="centerX" id="egt-Rd-waE"/>
+                            <constraint firstItem="KGO-ST-lJq" firstAttribute="leading" secondItem="BkO-5k-mH7" secondAttribute="leading" constant="156" id="ekn-io-Lxb"/>
+                            <constraint firstItem="KGO-ST-lJq" firstAttribute="top" secondItem="epa-aE-Wtk" secondAttribute="bottom" constant="85" id="ft2-LH-u6S"/>
+                            <constraint firstItem="BkO-5k-mH7" firstAttribute="bottom" secondItem="Ksp-Wm-6Lo" secondAttribute="bottom" constant="23" id="kLx-SX-bhm"/>
+                            <constraint firstItem="yAH-XY-kvf" firstAttribute="centerX" secondItem="BkO-5k-mH7" secondAttribute="centerX" id="lKD-AM-LsI"/>
+                            <constraint firstItem="epa-aE-Wtk" firstAttribute="centerX" secondItem="Vaq-Tw-wdI" secondAttribute="centerX" id="n1a-Sd-KG3"/>
+                            <constraint firstAttribute="bottom" secondItem="PT8-z3-mLz" secondAttribute="bottom" constant="364" id="q0T-Xa-Tnk"/>
+                            <constraint firstAttribute="bottom" secondItem="epa-aE-Wtk" secondAttribute="bottom" constant="215" id="xaw-nZ-rmF"/>
+                            <constraint firstItem="H42-bX-ba4" firstAttribute="top" secondItem="qiL-uF-ObT" secondAttribute="bottom" constant="39" id="yii-Zq-fzE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BkO-5k-mH7"/>
                     </view>
                     <connections>
@@ -2823,22 +2853,20 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vRQ-ec-wUy"/>
-        <segue reference="eA0-nD-DzA"/>
         <segue reference="hoe-Rp-BEC"/>
         <segue reference="LDC-1y-ZTK"/>
         <segue reference="IUn-IV-m2r"/>
         <segue reference="6sB-9n-Ygk"/>
-        <segue reference="OhQ-6X-k6A"/>
+        <segue reference="7ud-0k-mNA"/>
         <segue reference="1wV-Uy-7fX"/>
         <segue reference="05L-9g-lk7"/>
-        <segue reference="4aR-Sf-du1"/>
-        <segue reference="Zkx-mS-Ywi"/>
-        <segue reference="mJJ-Tu-w3f"/>
+        <segue reference="pe4-In-XlF"/>
+        <segue reference="075-nm-lCj"/>
+        <segue reference="n7d-be-D0D"/>
         <segue reference="5dC-Mi-PQp"/>
         <segue reference="coB-KU-7bX"/>
         <segue reference="ffO-3b-P5w"/>
-        <segue reference="5l6-nM-6SV"/>
+        <segue reference="u2I-in-cdN"/>
         <segue reference="Hf9-ed-xR6"/>
     </inferredMetricsTieBreakers>
     <resources>
