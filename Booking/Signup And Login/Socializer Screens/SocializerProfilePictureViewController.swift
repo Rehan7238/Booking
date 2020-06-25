@@ -21,7 +21,7 @@ class SocializerProfilePictureViewController: UIViewController {
     var user: User?
 
     
-    @IBAction func pressedNextButton(_sender: Any){
+    @IBAction func pressedNextButton(_ sender: Any){
         if let uid = Auth.auth().currentUser?.uid {
             self.uid = uid
         }

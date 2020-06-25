@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i3z-vP-WSh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i3z-vP-WSh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,8 +31,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFn-lZ-gHI">
-                                <rect key="frame" x="110" y="765" width="250" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFn-lZ-gHI">
+                                <rect key="frame" x="121.5" y="765" width="171" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="  SIGN-UP  ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,16 +46,14 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.72420182086469986" green="0.89172771088914204" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="tFn-lZ-gHI" firstAttribute="leading" secondItem="kJg-zq-ofy" secondAttribute="leading" constant="147" id="3KO-ge-oR1"/>
                             <constraint firstItem="kJg-zq-ofy" firstAttribute="bottom" secondItem="YTV-Bm-yZp" secondAttribute="bottom" constant="702" id="5O6-UT-jOo"/>
                             <constraint firstItem="YTV-Bm-yZp" firstAttribute="leading" secondItem="kJg-zq-ofy" secondAttribute="leading" constant="73" id="CRs-TR-CSV"/>
                             <constraint firstItem="kJg-zq-ofy" firstAttribute="bottom" secondItem="LgF-pk-cgI" secondAttribute="bottom" id="CUv-Il-D3n"/>
                             <constraint firstItem="YTV-Bm-yZp" firstAttribute="top" secondItem="kJg-zq-ofy" secondAttribute="top" constant="56" id="Iqo-Xp-DA9"/>
-                            <constraint firstItem="kJg-zq-ofy" firstAttribute="trailing" secondItem="tFn-lZ-gHI" secondAttribute="trailing" constant="142" id="Omy-Ag-yr1"/>
                             <constraint firstItem="LgF-pk-cgI" firstAttribute="top" secondItem="kJg-zq-ofy" secondAttribute="top" constant="783" id="PSY-SL-que"/>
                             <constraint firstItem="tFn-lZ-gHI" firstAttribute="top" secondItem="kJg-zq-ofy" secondAttribute="top" constant="721" id="PX4-gE-hs3"/>
                             <constraint firstItem="kJg-zq-ofy" firstAttribute="bottom" secondItem="tFn-lZ-gHI" secondAttribute="bottom" constant="43" id="Scc-cH-aeP"/>
-                            <constraint firstItem="tFn-lZ-gHI" firstAttribute="leading" secondItem="kJg-zq-ofy" secondAttribute="leading" constant="92" id="TOk-O7-Tia"/>
+                            <constraint firstItem="tFn-lZ-gHI" firstAttribute="centerX" secondItem="kJg-zq-ofy" secondAttribute="centerX" id="g3s-XI-GYM"/>
                             <constraint firstItem="kJg-zq-ofy" firstAttribute="trailing" secondItem="LgF-pk-cgI" secondAttribute="trailing" constant="177" id="ivV-Zz-KhC"/>
                             <constraint firstItem="kJg-zq-ofy" firstAttribute="trailing" secondItem="YTV-Bm-yZp" secondAttribute="trailing" constant="32" id="lhX-Ku-TWi"/>
                             <constraint firstItem="LgF-pk-cgI" firstAttribute="leading" secondItem="kJg-zq-ofy" secondAttribute="leading" constant="181" id="xfp-Wp-S5c"/>
@@ -387,7 +385,7 @@
                                     <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressedNextButtonWith_sender:" destination="iaV-8S-QCJ" eventType="touchUpInside" id="9e4-XG-kX6"/>
+                                    <action selector="pressedNextButton:" destination="iaV-8S-QCJ" eventType="touchUpInside" id="NXf-yI-qnd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFILE PICTURE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVC-Wh-8FR">
@@ -2287,7 +2285,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5I-Gv-2TL">
                                                     <rect key="frame" x="70" y="32.5" width="117.5" height="25.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Y4V-tI-xPk">
@@ -2335,7 +2333,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="s9U-1J-QtE"/>
                     </view>
                     <connections>
@@ -2403,7 +2401,6 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIz-Fv-LLZ">
                                                     <rect key="frame" x="70" y="32.5" width="117.5" height="25.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QUQ-93-ynj">
@@ -2451,7 +2448,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="U60-R8-T9R"/>
                     </view>
                     <connections>
@@ -2826,17 +2823,19 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="vRQ-ec-wUy"/>
+        <segue reference="eA0-nD-DzA"/>
         <segue reference="hoe-Rp-BEC"/>
-        <segue reference="s1P-pj-7cP"/>
-        <segue reference="0wN-b7-8Gs"/>
-        <segue reference="up2-f4-JWw"/>
-        <segue reference="7ud-0k-mNA"/>
+        <segue reference="LDC-1y-ZTK"/>
+        <segue reference="IUn-IV-m2r"/>
+        <segue reference="6sB-9n-Ygk"/>
+        <segue reference="OhQ-6X-k6A"/>
         <segue reference="1wV-Uy-7fX"/>
         <segue reference="05L-9g-lk7"/>
         <segue reference="4aR-Sf-du1"/>
         <segue reference="Zkx-mS-Ywi"/>
         <segue reference="mJJ-Tu-w3f"/>
-        <segue reference="VhR-7o-DGz"/>
+        <segue reference="5dC-Mi-PQp"/>
         <segue reference="coB-KU-7bX"/>
         <segue reference="ffO-3b-P5w"/>
         <segue reference="5l6-nM-6SV"/>

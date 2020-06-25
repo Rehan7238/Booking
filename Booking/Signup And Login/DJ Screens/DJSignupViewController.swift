@@ -16,31 +16,15 @@ class DJSignupViewController: UIViewController {
     
     //Mark: Properties
     
-    @IBOutlet weak var personalInformationTitleLabel: UILabel!
-    
-    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
-    
-    @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    @IBOutlet weak var retypePasswordLabel: UILabel!
     @IBOutlet weak var retypePasswordTextField: UITextField!
-    
-    @IBOutlet weak var universityAffiliationLabel: UILabel!
     @IBOutlet weak var uniAffiliationTextField: UITextField!
-    
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
-    
-    @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var cityTextField: UITextField!
-    
-
-    
     @IBOutlet weak var signupButton: UIButton!
-    
     @IBOutlet weak var goBackButton: UIButton!
+    var selectedTextField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +47,7 @@ class DJSignupViewController: UIViewController {
        }
     
     @IBAction func citytextFieldTapped(_ sender: Any) {
+        selectedTextField = self.cityTextField
           self.cityTextField.resignFirstResponder()
           self.cityTextField.selectedTextRange = nil
           let acController = GMSAutocompleteViewController()
@@ -71,6 +56,7 @@ class DJSignupViewController: UIViewController {
         }
     
     @IBAction func schoolFieldTapped (_ sender: Any) {
+        selectedTextField = self.uniAffiliationTextField
           self.uniAffiliationTextField.resignFirstResponder()
           self.uniAffiliationTextField.selectedTextRange = nil
           let acController = GMSAutocompleteViewController()
@@ -117,7 +103,11 @@ extension DJSignupViewController: GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
     // Get the place name from 'GMSAutocompleteViewController'
     // Then display the name in textField
-        self.cityTextField.text = place.formattedAddress
+        if selectedTextField == cityTextField {
+            self.cityTextField.text = place.formattedAddress
+        } else if selectedTextField == self.uniAffiliationTextField {
+            self.uniAffiliationTextField.text = place.formattedAddress
+        }
     print (place)
 // Dismiss the GMSAutocompleteViewController when something is selected
     dismiss(animated: true, completion: nil)
