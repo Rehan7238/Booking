@@ -108,7 +108,6 @@ extension DJSignupViewController: GMSAutocompleteViewControllerDelegate {
         } else if selectedTextField == self.uniAffiliationTextField {
             self.uniAffiliationTextField.text = place.formattedAddress
         }
-    print (place)
 // Dismiss the GMSAutocompleteViewController when something is selected
     dismiss(animated: true, completion: nil)
   }
@@ -121,7 +120,5 @@ func wasCancelled(_ viewController: GMSAutocompleteViewController) {
     // Dismiss when the user canceled the action
     dismiss(animated: true, completion: nil)
   }
-    
-    
 }
 

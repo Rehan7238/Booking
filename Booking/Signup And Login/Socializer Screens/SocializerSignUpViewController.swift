@@ -27,9 +27,14 @@ class SocializerSignUpViewController: UIViewController {
     
     @IBOutlet var cityTextField: UITextField! = UITextField()
     
+    @IBOutlet var schoolTextField: UITextField! = UITextField()
+
+    
     @IBOutlet weak var signupButton: UIButton!
     
     @IBOutlet weak var goBackButton: UIButton!
+    var selectedTextField: UITextField?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,12 +59,22 @@ class SocializerSignUpViewController: UIViewController {
   
     
     @IBAction func citytextFieldTapped(_ sender: Any) {
+          selectedTextField = self.cityTextField
           self.cityTextField.resignFirstResponder()
           self.cityTextField.selectedTextRange = nil
           let acController = GMSAutocompleteViewController()
           acController.delegate = self
           present(acController, animated: true, completion: nil)
         }
+    
+    @IBAction func schoolFieldTapped (_ sender: Any) {
+        selectedTextField = self.schoolTextField
+        self.schoolTextField.resignFirstResponder()
+        self.schoolTextField.selectedTextRange = nil
+        let acController = GMSAutocompleteViewController()
+        acController.delegate = self
+        present(acController, animated: true, completion: nil)
+    }
  
     @IBAction func signUpAction(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
@@ -98,8 +113,11 @@ extension SocializerSignUpViewController: GMSAutocompleteViewControllerDelegate 
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
     // Get the place name from 'GMSAutocompleteViewController'
     // Then display the name in textField
+    if selectedTextField == cityTextField {
         self.cityTextField.text = place.formattedAddress
-    print (place)
+    } else if selectedTextField == self.schoolTextField {
+        self.schoolTextField.text = place.formattedAddress
+    }
 // Dismiss the GMSAutocompleteViewController when something is selected
     dismiss(animated: true, completion: nil)
   }

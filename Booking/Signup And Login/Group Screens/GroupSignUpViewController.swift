@@ -24,7 +24,8 @@ class GroupSignUpViewController: UIViewController {
     @IBOutlet weak var schoolTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var goBackButton: UIButton!
-    
+    var selectedTextField: UITextField?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,7 @@ class GroupSignUpViewController: UIViewController {
     }
     
     @IBAction func textFieldTapped(_ sender: Any) {
+        selectedTextField = self.addressTextField
         self.addressTextField.resignFirstResponder()
         self.addressTextField.selectedTextRange = nil
         let acController = GMSAutocompleteViewController()
@@ -56,7 +58,14 @@ class GroupSignUpViewController: UIViewController {
       }
     
     
-    
+    @IBAction func schoolFieldTapped (_ sender: Any) {
+      selectedTextField = self.schoolTextField
+        self.schoolTextField.resignFirstResponder()
+        self.schoolTextField.selectedTextRange = nil
+        let acController = GMSAutocompleteViewController()
+        acController.delegate = self
+        present(acController, animated: true, completion: nil)
+    }
     
     @IBAction func signupButtonPressed(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
@@ -89,8 +98,11 @@ extension GroupSignUpViewController: GMSAutocompleteViewControllerDelegate {
   func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
     // Get the place name from 'GMSAutocompleteViewController'
     // Then display the name in textField
-    self.addressTextField.text = place.formattedAddress
-    print (place)
+    if selectedTextField == addressTextField {
+        self.addressTextField.text = place.formattedAddress
+    } else if selectedTextField == self.schoolTextField {
+        self.schoolTextField.text = place.formattedAddress
+    }
 // Dismiss the GMSAutocompleteViewController when something is selected
     dismiss(animated: true, completion: nil)
   }

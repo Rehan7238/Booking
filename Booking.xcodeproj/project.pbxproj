@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2417129824A43FA000F950B6 /* SideMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2417129724A43FA000F950B6 /* SideMain.storyboard */; };
+		2417129A24A4424400F950B6 /* InitialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417129924A4424400F950B6 /* InitialScreen.swift */; };
+		2417129D24A5275900F950B6 /* GroupInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417129C24A5275900F950B6 /* GroupInitialViewController.swift */; };
+		2417129F24A5279D00F950B6 /* VendorInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417129E24A5279D00F950B6 /* VendorInitialViewController.swift */; };
+		241712A124A527D900F950B6 /* SocializerInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241712A024A527D900F950B6 /* SocializerInitialViewController.swift */; };
+		241712A324A52EBC00F950B6 /* DJInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241712A224A52EBC00F950B6 /* DJInitialViewController.swift */; };
 		245FEF0024940319003267CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEEFF24940319003267CE /* HomeViewController.swift */; };
 		245FEF0224940365003267CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0124940365003267CE /* LoginViewController.swift */; };
 		245FEF0424940381003267CE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0324940381003267CE /* StartViewController.swift */; };
@@ -72,6 +78,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2417129724A43FA000F950B6 /* SideMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMain.storyboard; sourceTree = "<group>"; };
+		2417129924A4424400F950B6 /* InitialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreen.swift; sourceTree = "<group>"; };
+		2417129C24A5275900F950B6 /* GroupInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInitialViewController.swift; sourceTree = "<group>"; };
+		2417129E24A5279D00F950B6 /* VendorInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorInitialViewController.swift; sourceTree = "<group>"; };
+		241712A024A527D900F950B6 /* SocializerInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocializerInitialViewController.swift; sourceTree = "<group>"; };
+		241712A224A52EBC00F950B6 /* DJInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJInitialViewController.swift; sourceTree = "<group>"; };
 		245FEEFF24940319003267CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		245FEF0124940365003267CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		245FEF0324940381003267CE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +171,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2417129B24A5274700F950B6 /* Initial Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2417129924A4424400F950B6 /* InitialScreen.swift */,
+				2417129C24A5275900F950B6 /* GroupInitialViewController.swift */,
+				2417129E24A5279D00F950B6 /* VendorInitialViewController.swift */,
+				241712A024A527D900F950B6 /* SocializerInitialViewController.swift */,
+				241712A224A52EBC00F950B6 /* DJInitialViewController.swift */,
+			);
+			path = "Initial Screens";
+			sourceTree = "<group>";
+		};
 		276E0694E602ED4CA9F78C95 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +303,7 @@
 			children = (
 				5DE698E0248DB92600301B39 /* AppDelegate.swift */,
 				5DE698E2248DB92600301B39 /* SceneDelegate.swift */,
+				2417129724A43FA000F950B6 /* SideMain.storyboard */,
 				5DE698E6248DB92600301B39 /* Main.storyboard */,
 				5DDF6B3624915BDF00B76C14 /* Database Objects */,
 				5D66E49124A3786E00BD36DF /* Signup And Login */,
@@ -286,6 +311,7 @@
 				5DE698EB248DB92F00301B39 /* LaunchScreen.storyboard */,
 				5DE698EE248DB92F00301B39 /* Info.plist */,
 				5DDF6B342491585000B76C14 /* GoogleService-Info.plist */,
+				2417129B24A5274700F950B6 /* Initial Screens */,
 			);
 			path = Booking;
 			sourceTree = "<group>";
@@ -431,6 +457,7 @@
 			files = (
 				5DE698ED248DB92F00301B39 /* LaunchScreen.storyboard in Resources */,
 				5DDF6B352491585000B76C14 /* GoogleService-Info.plist in Resources */,
+				2417129824A43FA000F950B6 /* SideMain.storyboard in Resources */,
 				2492761124A299770048C54A /* AlertView.xib in Resources */,
 				5DE698EA248DB92F00301B39 /* Assets.xcassets in Resources */,
 				5DE698E8248DB92600301B39 /* Main.storyboard in Resources */,
@@ -596,6 +623,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2492760524A138110048C54A /* Vendor.swift in Sources */,
+				2417129F24A5279D00F950B6 /* VendorInitialViewController.swift in Sources */,
 				245FEF2C249C7625003267CE /* CollectDJLinkViewController.swift in Sources */,
 				245FEF0224940365003267CE /* LoginViewController.swift in Sources */,
 				245FEF26249C7566003267CE /* CollectDJProfilePicViewController.swift in Sources */,
@@ -610,15 +638,19 @@
 				5D12207C249957C2006D2517 /* Event.swift in Sources */,
 				249275F9249FDD610048C54A /* CollectGroupPlayingFeeViewController.swift in Sources */,
 				245FEF2E249C76E4003267CE /* CollectDJEquipmentViewController.swift in Sources */,
+				241712A124A527D900F950B6 /* SocializerInitialViewController.swift in Sources */,
 				5D87BD8624949D1800F4CA6C /* GroupSignUpViewController.swift in Sources */,
 				245FEF12249C63FD003267CE /* SocializerProfilePictureViewController.swift in Sources */,
 				245FEF0024940319003267CE /* HomeViewController.swift in Sources */,
 				245FEF0424940381003267CE /* StartViewController.swift in Sources */,
+				2417129D24A5275900F950B6 /* GroupInitialViewController.swift in Sources */,
 				245FEF0C249C19D5003267CE /* SocializerSignUpViewController.swift in Sources */,
+				241712A324A52EBC00F950B6 /* DJInitialViewController.swift in Sources */,
 				2492760124A130AA0048C54A /* DJFinalNotesViewController.swift in Sources */,
 				2492760724A13FD10048C54A /* VendorSignUpViewController.swift in Sources */,
 				249275FF24A041590048C54A /* GroupFinalNotesViewController.swift in Sources */,
 				5D12207E249957CB006D2517 /* User.swift in Sources */,
+				2417129A24A4424400F950B6 /* InitialScreen.swift in Sources */,
 				2492760324A1346B0048C54A /* SocializerFinalNotesViewController.swift in Sources */,
 				5D66E48D24A3497200BD36DF /* InviteContactsViewController.swift in Sources */,
 				245FEF2A249C7608003267CE /* CollectDJGenresViewController.swift in Sources */,
