@@ -21,11 +21,18 @@ class User {
     var previousEvents: [String] = []
     var groups: [String: [String]] = [:]
     var profilePic: String = ""
+    var locality: String = ""
     
     func setName(_ newValue: String) {
         self.name = newValue
         updateValue(fieldName: "name", newValue: newValue)
     }
+    
+    func setLocality(_ newValue: String) {
+           self.locality = newValue
+           updateValue(fieldName: "locality", newValue: newValue)
+       }
+       
     
     func setDJsFollowing(_ newValue: [String]) {
         self.DJsFollowing = newValue

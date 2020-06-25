@@ -10,11 +10,15 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import GooglePlaces
+import SkyFloatingLabelTextField
 
 class VendorSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+
     }
     
     @IBOutlet weak var signUpButton: UIButton!
@@ -23,17 +27,36 @@ class VendorSignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var retypePasswordTextField: UITextField!
     @IBOutlet weak var groupAddressTextField: UITextField!
-    @IBOutlet weak var cityTextField: UITextField!
-    @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var groupNameTextField: UITextField!
     
+    @IBAction func addresstextFieldTapped(_ sender: Any) {
+          self.groupAddressTextField.resignFirstResponder()
+          self.groupAddressTextField.selectedTextRange = nil
+          let acController = GMSAutocompleteViewController()
+          acController.delegate = self
+          present(acController, animated: true, completion: nil)
+        }
+    
+    @objc func textFieldDidChange(_ textfield: UITextField) {
+           if let text = textfield.text {
+               if let floatingLabelTextField = textfield as? SkyFloatingLabelTextField {
+               if(text.count < 3 || !text.contains("@")) {
+                       floatingLabelTextField.errorMessage = "Invalid email"
+                   }
+                   else {
+                       // The error message will only disappear when we reset it to nil or empty string
+                       floatingLabelTextField.errorMessage = ""
+                   }
+               }
+           }
+       }
     
     
     @IBAction func signupButtonPressed(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
             AlertView.instance.showAlert(message: "Please re-type password")
 
-        } else if groupNameTextField.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true || stateTextField.text?.isEmpty ?? true || groupAddressTextField.text?.isEmpty ?? true {
+        } else if groupNameTextField.text?.isEmpty ?? true || groupAddressTextField.text?.isEmpty ?? true {
             AlertView.instance.showAlert(message: "Please enter all information")
 
         } else {
@@ -43,8 +66,6 @@ class VendorSignUpViewController: UIViewController {
                         let vendor = Vendor.createNew(withID: (result?.user.uid)!)
                         vendor.setName(self.groupNameTextField.text!)
                         vendor.setAddress(self.groupAddressTextField.text!)
-                        vendor.setCity(self.cityTextField.text!)
-                        vendor.setState(self.stateTextField.text!)
                         self.performSegue(withIdentifier: "toVendorPlayingFee", sender: self)
                     } else {
                         let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -60,4 +81,26 @@ class VendorSignUpViewController: UIViewController {
             }
         }
     }
+}
+
+extension VendorSignUpViewController: GMSAutocompleteViewControllerDelegate {
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+    // Get the place name from 'GMSAutocompleteViewController'
+    // Then display the name in textField
+        self.groupAddressTextField.text = place.formattedAddress
+    print (place)
+// Dismiss the GMSAutocompleteViewController when something is selected
+    dismiss(animated: true, completion: nil)
+  }
+
+func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+    // Handle the error
+    print("Error: ", error.localizedDescription)
+  }
+func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+    // Dismiss when the user canceled the action
+    dismiss(animated: true, completion: nil)
+  }
+    
+    
 }

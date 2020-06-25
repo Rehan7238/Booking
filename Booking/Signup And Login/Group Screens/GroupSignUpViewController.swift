@@ -20,10 +20,7 @@ class GroupSignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var retypePasswordTextField: UITextField!
     @IBOutlet weak var groupNameTextField: UITextField!
-    
-    @IBOutlet weak var cityTextField: UITextField!
-    
-    @IBOutlet weak var stateTextField: UITextField!
+        
     @IBOutlet weak var schoolTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var goBackButton: UIButton!
@@ -64,7 +61,7 @@ class GroupSignUpViewController: UIViewController {
     @IBAction func signupButtonPressed(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
             AlertView.instance.showAlert(message: "Please re-type password")
-        } else if groupNameTextField.text?.isEmpty ?? true || schoolTextField.text?.isEmpty ?? true || addressTextField.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true || stateTextField.text?.isEmpty ?? true {
+        } else if groupNameTextField.text?.isEmpty ?? true || schoolTextField.text?.isEmpty ?? true || addressTextField.text?.isEmpty ?? true  {
             AlertView.instance.showAlert(message: "Please enter all information")
 
         } else {
@@ -75,8 +72,6 @@ class GroupSignUpViewController: UIViewController {
                         group.setName(self.groupNameTextField.text!)
                         group.setAddress(self.addressTextField.text!)
                         group.setSchool(self.schoolTextField.text!)
-                        group.setCity(self.cityTextField.text!)
-                        group.setState(self.stateTextField.text!)
                         self.performSegue(withIdentifier: "toGroupEquipmentQuestion", sender: self)
                     } else {
                         AlertView.instance.showAlert(message: "Error signing up with that email and password")
