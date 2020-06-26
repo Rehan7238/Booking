@@ -563,6 +563,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="pressedGreek:" destination="7z6-Np-tdR" eventType="touchUpInside" id="3KG-XF-AUk"/>
                                     <action selector="pressedNext:" destination="7z6-Np-tdR" eventType="touchUpInside" id="xRi-Ez-yOp"/>
                                 </connections>
                             </button>
