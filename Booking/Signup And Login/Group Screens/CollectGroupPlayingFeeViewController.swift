@@ -13,12 +13,10 @@ import FirebaseStorage
 class CollectGroupPlayingFeeViewController: UIViewController {
     
     // MARK: Properties
-    
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet var higherFeeTextField: UITextField! = UITextField()
     @IBOutlet var lowFeeTextField: UITextField! = UITextField()
-    
     var group: Group?
     
     override func viewDidLoad() {
@@ -41,5 +39,7 @@ class CollectGroupPlayingFeeViewController: UIViewController {
         self.performSegue(withIdentifier: "toGroupEquipmentQuestion", sender: self)
     }
     
-    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

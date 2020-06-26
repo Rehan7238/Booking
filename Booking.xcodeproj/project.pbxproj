@@ -231,8 +231,8 @@
 			children = (
 				5DA31BE724919B4B00C18F55 /* DJSignupViewController.swift */,
 				245FEF27249C759B003267CE /* CollectDJPlayingFeeViewController.swift */,
-				245FEF29249C7608003267CE /* CollectDJGenresViewController.swift */,
 				245FEF2D249C76E4003267CE /* CollectDJEquipmentViewController.swift */,
+				245FEF29249C7608003267CE /* CollectDJGenresViewController.swift */,
 				245FEF2B249C7625003267CE /* CollectDJLinkViewController.swift */,
 				245FEF25249C7566003267CE /* CollectDJProfilePicViewController.swift */,
 				2492760024A130A90048C54A /* DJFinalNotesViewController.swift */,
@@ -256,9 +256,9 @@
 			isa = PBXGroup;
 			children = (
 				2492760624A13FD10048C54A /* VendorSignUpViewController.swift */,
+				2492760824A14C0D0048C54A /* VendorPlayingFeeViewController.swift */,
 				2492760A24A1776C0048C54A /* CollectVendorEquipmentViewController.swift */,
 				2492760C24A179BE0048C54A /* CollectVendorProfilePicViewController.swift */,
-				2492760824A14C0D0048C54A /* VendorPlayingFeeViewController.swift */,
 				2492760E24A17B810048C54A /* VendorFinalNotesViewController.swift */,
 			);
 			path = "Vendor Screens";
