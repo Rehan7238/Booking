@@ -22,41 +22,50 @@ class SocializerSignUpViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField! = UITextField()
     @IBOutlet var passwordTextField: UITextField! = UITextField()
     @IBOutlet var retypePasswordTextField: UITextField! = UITextField()
+ 
     @IBOutlet weak var nameTextLabel: UITextField!
+    
     @IBOutlet var cityTextField: UITextField! = UITextField()
+    
     @IBOutlet var schoolTextField: UITextField! = UITextField()
+
+    
     @IBOutlet weak var signupButton: UIButton!
+    
     @IBOutlet weak var goBackButton: UIButton!
-    var selectedTextField: UITextField!
+    var selectedTextField: UITextField?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        
+
     }
     
     @objc func textFieldDidChange(_ textfield: UITextField) {
-        if let text = textfield.text {
-            if let floatingLabelTextField = textfield as? SkyFloatingLabelTextField {
-                if(text.count < 3 || !text.contains("@")) {
-                    floatingLabelTextField.errorMessage = "Invalid email"
-                }
-                else {
-                    // The error message will only disappear when we reset it to nil or empty string
-                    floatingLabelTextField.errorMessage = ""
-                }
-            }
-        }
-    }
+           if let text = textfield.text {
+               if let floatingLabelTextField = textfield as? SkyFloatingLabelTextField {
+               if(text.count < 3 || !text.contains("@")) {
+                       floatingLabelTextField.errorMessage = "Invalid email"
+                   }
+                   else {
+                       // The error message will only disappear when we reset it to nil or empty string
+                       floatingLabelTextField.errorMessage = ""
+                   }
+               }
+           }
+       }
+    
+  
     
     @IBAction func citytextFieldTapped(_ sender: Any) {
-        selectedTextField = self.cityTextField
-        self.cityTextField.resignFirstResponder()
-        self.cityTextField.selectedTextRange = nil
-        let acController = GMSAutocompleteViewController()
-        acController.delegate = self
-        present(acController, animated: true, completion: nil)
-    }
+          selectedTextField = self.cityTextField
+          self.cityTextField.resignFirstResponder()
+          self.cityTextField.selectedTextRange = nil
+          let acController = GMSAutocompleteViewController()
+          acController.delegate = self
+          present(acController, animated: true, completion: nil)
+        }
     
     @IBAction func schoolFieldTapped (_ sender: Any) {
         selectedTextField = self.schoolTextField
@@ -66,12 +75,14 @@ class SocializerSignUpViewController: UIViewController {
         acController.delegate = self
         present(acController, animated: true, completion: nil)
     }
-    
+ 
     @IBAction func signUpAction(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
-            AlertView.instance.showAlert(message: "Please re-type password")
+                        AlertView.instance.showAlert(message: "Please re-type password")
+
         } else if nameTextLabel.text?.isEmpty ?? true || cityTextField.text?.isEmpty ?? true {
-            AlertView.instance.showAlert(message: "Please enter all information")
+                        AlertView.instance.showAlert(message: "Please enter all information")
+
         } else {
             
             if let emailText = emailTextField.text, let passwordText = passwordTextField.text {
@@ -96,32 +107,30 @@ class SocializerSignUpViewController: UIViewController {
         }
     }
     
-    @IBAction func backButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
 }
 
 extension SocializerSignUpViewController: GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        // Get the place name from 'GMSAutocompleteViewController'
-        // Then display the name in textField
-        if selectedTextField == cityTextField {
-            self.cityTextField.text = place.formattedAddress
-        } else if selectedTextField == self.schoolTextField {
-            self.schoolTextField.text = place.formattedAddress
-        }
-        // Dismiss the GMSAutocompleteViewController when something is selected
-        dismiss(animated: true, completion: nil)
+    // Get the place name from 'GMSAutocompleteViewController'
+    // Then display the name in textField
+    if selectedTextField == cityTextField {
+        self.cityTextField.text = place.formattedAddress
+    } else if selectedTextField == self.schoolTextField {
+        self.schoolTextField.text = place.formattedAddress
     }
+// Dismiss the GMSAutocompleteViewController when something is selected
+    dismiss(animated: true, completion: nil)
+  }
+
+func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+    // Handle the error
+    print("Error: ", error.localizedDescription)
+  }
+func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+    // Dismiss when the user canceled the action
+    dismiss(animated: true, completion: nil)
+  }
     
-    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        // Handle the error
-        print("Error: ", error.localizedDescription)
-    }
-    
-    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        // Dismiss when the user canceled the action
-        dismiss(animated: true, completion: nil)
-    }
     
 }
+

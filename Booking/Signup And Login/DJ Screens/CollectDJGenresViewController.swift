@@ -14,8 +14,10 @@ import FirebaseAuth
 class CollectDJGenresViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //MARK: Properties
+    
     @IBOutlet weak var optionsTable: UITableView!
     @IBOutlet weak var nextButton: UIButton!
+    
     let options: [String] = ["EDM", "Alternate", "Rap", "Hip-Hop", "Classical :)", "Swag", "Test", "Something else"]
     var genreList: [String] = []
     var dj: DJ?
@@ -62,13 +64,8 @@ class CollectDJGenresViewController: UIViewController, UITableViewDelegate, UITa
             selectedChatCell.setSelected(!selectedChatCell.isOptionSelected)
         }
     }
-    
     @IBAction func nextButtonPressed(_ sender: Any) {
         self.dj?.setMusicStyle(genreList)
         self.performSegue(withIdentifier: "proceed", sender: self)
-    }
-    
-    @IBAction func backButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
     }
 }

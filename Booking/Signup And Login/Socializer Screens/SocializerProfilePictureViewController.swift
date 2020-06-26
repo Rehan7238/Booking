@@ -68,6 +68,7 @@ class SocializerProfilePictureViewController: UIViewController {
         pickerController.delegate = self
     }
    
+    
 }
 
 extension SocializerProfilePictureViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{

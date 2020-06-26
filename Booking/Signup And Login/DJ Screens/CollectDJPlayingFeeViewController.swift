@@ -16,9 +16,11 @@ class CollectDJPlayingFeeViewController: UIViewController {
     // MARK: Properties
     
     @IBOutlet weak var questionLabel: UILabel!
+    
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet var playingFeeText: UITextField! = UITextField()
+    
     var dj: DJ?
     
     override func viewDidLoad() {
@@ -36,9 +38,5 @@ class CollectDJPlayingFeeViewController: UIViewController {
         
         // Go to the next screen
         self.performSegue(withIdentifier: "toEquipmentQuestion", sender: self)
-    }
-    
-    @IBAction func backButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
     }
 }

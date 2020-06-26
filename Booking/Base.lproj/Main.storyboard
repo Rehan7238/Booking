@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i3z-vP-WSh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i3z-vP-WSh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -67,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqA-f9-iG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2503" y="3282"/>
+            <point key="canvasLocation" x="2109" y="1507"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="jMf-XH-inB">
@@ -174,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhU-2q-IlW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1368" y="3282"/>
+            <point key="canvasLocation" x="2811.594202898551" y="1506.6964285714284"/>
         </scene>
         <!--Socializer Sign Up View Controller-->
         <scene sceneID="gxJ-MY-OAr">
@@ -357,7 +357,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="bpT-mN-cbL" eventType="touchUpInside" id="HCR-2x-EkZ"/>
+                                    <segue destination="yfX-Gh-TGB" kind="presentation" modalPresentationStyle="fullScreen" id="JaA-dH-ZUv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -532,9 +532,6 @@
                                 <state key="normal" title="Connect With Contacts">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="c6F-5x-Gi0" kind="presentation" id="glM-3y-jCg"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUICK NOTES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sD-iU-8fe">
                                 <rect key="frame" x="133" y="111" width="149" height="30"/>
@@ -740,8 +737,8 @@
                                     <action selector="textFieldTapped:" destination="ISF-K5-EwU" eventType="touchUpInside" id="WGJ-5q-dFN"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJ1-Dy-sEX">
-                                <rect key="frame" x="164" y="790" width="86" height="47"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJ1-Dy-sEX">
+                                <rect key="frame" x="160" y="733" width="90" height="46"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="26"/>
                                 <state key="normal" title="SignUp">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -783,13 +780,13 @@
                                 <color key="textColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46S-Q9-SXp">
-                                <rect key="frame" x="172" y="832" width="66" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46S-Q9-SXp">
+                                <rect key="frame" x="170" y="813" width="66" height="30"/>
                                 <state key="normal" title="GO BACK">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="ISF-K5-EwU" eventType="touchUpInside" id="6JA-MG-1e1"/>
+                                    <segue destination="yfX-Gh-TGB" kind="presentation" modalPresentationStyle="fullScreen" id="s1H-Zt-ExR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -938,7 +935,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="811-24-jsZ" eventType="touchUpInside" id="uoc-26-emG"/>
+                                    <segue destination="ISF-K5-EwU" kind="presentation" modalPresentationStyle="fullScreen" id="5l6-nM-6SV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the highest playing fee you'd like to pay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIU-EX-0O0">
@@ -1074,7 +1071,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="Cb7-RA-2zI" eventType="touchUpInside" id="7Cs-g0-DIZ"/>
+                                    <segue destination="811-24-jsZ" kind="presentation" modalPresentationStyle="fullScreen" id="ffO-3b-P5w"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EQUIPMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4u-QW-Zl6">
@@ -1161,7 +1158,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="8CM-Dt-qzl" eventType="touchUpInside" id="4aZ-5G-hQ1"/>
+                                    <segue destination="Cb7-RA-2zI" kind="presentation" modalPresentationStyle="fullScreen" id="coB-KU-7bX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLJ-T5-72J">
@@ -1432,7 +1429,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmW-Dl-R7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1368" y="2419"/>
+            <point key="canvasLocation" x="3412" y="2416"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q2S-cc-5Z2">
@@ -1449,7 +1446,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TX4-gm-itk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3536" y="3282"/>
+            <point key="canvasLocation" x="1103" y="1507"/>
         </scene>
         <!--Jor Group View Controller-->
         <scene sceneID="5BB-cm-vd8">
@@ -1491,7 +1488,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="yfX-Gh-TGB" eventType="touchUpInside" id="f0j-yP-MgJ"/>
+                                    <segue destination="i3z-vP-WSh" kind="presentation" modalPresentationStyle="fullScreen" id="Hf9-ed-xR6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qam-ra-Rox">
@@ -1565,7 +1562,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dH-Ee-tmv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1368" y="4088"/>
+            <point key="canvasLocation" x="1610" y="2257"/>
         </scene>
         <!--Vendor Sign Up View Controller-->
         <scene sceneID="4aU-PG-poQ">
@@ -1676,7 +1673,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="WmP-o9-Btx" eventType="touchUpInside" id="ASi-LZ-fEc"/>
+                                    <segue destination="yfX-Gh-TGB" kind="presentation" modalPresentationStyle="fullScreen" id="4QN-g2-asO"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bRZ-bz-aLD" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
@@ -1829,7 +1826,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="Gs1-UJ-Fbe" eventType="touchUpInside" id="Fm5-pL-vfD"/>
+                                    <segue destination="WmP-o9-Btx" kind="presentation" modalPresentationStyle="fullScreen" id="Zkx-mS-Ywi"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tAs-F9-9AM" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
@@ -2001,7 +1998,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="3Ce-ls-a7r" eventType="touchUpInside" id="DWV-Lm-osa"/>
+                                    <segue destination="Gs1-UJ-Fbe" kind="presentation" modalPresentationStyle="fullScreen" id="4aR-Sf-du1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EQUIPMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgY-6f-jj9">
@@ -2078,7 +2075,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="xWF-yG-i54" eventType="touchUpInside" id="nlI-JY-tYv"/>
+                                    <segue destination="3Ce-ls-a7r" kind="presentation" modalPresentationStyle="fullScreen" id="05L-9g-lk7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLw-fb-Pcc">
@@ -2298,7 +2295,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2N-PU-R3N" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="347" width="354" height="39"/>
+                                <rect key="frame" x="30" y="347" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -2375,7 +2372,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="fdy-Zz-KLN" eventType="touchUpInside" id="llt-tD-fbv"/>
+                                    <segue destination="yfX-Gh-TGB" kind="presentation" modalPresentationStyle="fullScreen" id="n7d-be-D0D"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCOUNT INFO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goD-Gq-6wE">
@@ -2516,7 +2513,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="wlP-pv-0sv" eventType="touchUpInside" id="QVb-rc-zNf"/>
+                                    <segue destination="fdy-Zz-KLN" kind="presentation" modalPresentationStyle="fullScreen" id="gPg-LU-NxQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="________________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRs-EA-dKP">
@@ -2611,7 +2608,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="ids-zC-ly1" eventType="touchUpInside" id="6h0-yM-pcp"/>
+                                    <segue destination="wlP-pv-0sv" kind="presentation" modalPresentationStyle="fullScreen" id="OhQ-6X-k6A"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NYd-2N-RAJ">
@@ -2733,7 +2730,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="aK5-gW-l6C" eventType="touchUpInside" id="2S9-Mm-cDn"/>
+                                    <segue destination="ids-zC-ly1" kind="presentation" modalPresentationStyle="fullScreen" id="6sB-9n-Ygk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQx-j2-cOn">
@@ -2869,7 +2866,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="zjC-T9-lJi" eventType="touchUpInside" id="p4X-fb-g9e"/>
+                                    <segue destination="aK5-gW-l6C" kind="presentation" modalPresentationStyle="fullScreen" id="0wN-b7-8Gs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This link can be a Spotify or Soundcloud link.   " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7El-3J-UZJ">
@@ -3070,7 +3067,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BmR-L1-Pk7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5629" y="3854"/>
+            <point key="canvasLocation" x="3876.811594202899" y="6343.5267857142853"/>
         </scene>
         <!--CollectDJ Profile Pic View Controller-->
         <scene sceneID="uSp-eS-DsD">
@@ -3103,7 +3100,7 @@
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="hIO-is-s3t" eventType="touchUpInside" id="k08-We-end"/>
+                                    <segue destination="zjC-T9-lJi" kind="presentation" modalPresentationStyle="fullScreen" id="s1P-pj-7cP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fM-0B-hci">
@@ -3272,8 +3269,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mXI-WB-Jjd"/>
-        <segue reference="mJJ-Tu-w3f"/>
         <segue reference="PP3-4w-lpZ"/>
         <segue reference="s1P-pj-7cP"/>
         <segue reference="0wN-b7-8Gs"/>
