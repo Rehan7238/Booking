@@ -65,8 +65,4 @@ class CollectDJEquipmentViewController: UIViewController, UITableViewDelegate, U
         self.dj?.setEquipment(equipmentList)
         self.performSegue(withIdentifier: "proceed", sender: self)
     }
-    
-    @IBAction func backButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
 }

@@ -15,7 +15,8 @@ class CollectVendorEquipmentViewController: UIViewController, UITableViewDelegat
     //MARK: Properties
     @IBOutlet weak var optionsTable: UITableView!
     @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var backButton: UIButton!
+ @IBOutlet weak var backButton: UIButton!
+    
     let options: [String] = ["Stereos", "Speakers", "Microphone", "Lights", "Magic Potion", "Something else idk"]
     var equipmentList: [String] = []
     var vendor: Vendor?
@@ -61,12 +62,9 @@ class CollectVendorEquipmentViewController: UIViewController, UITableViewDelegat
         }
     }
     
+    
     @IBAction func nextButtonPressed(_ sender: Any) {
         self.vendor?.setEquipment(equipmentList)
         self.performSegue(withIdentifier: "toVendorProfilePic", sender: self)
-    }
-    
-    @IBAction func backButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
     }
 }

@@ -15,6 +15,12 @@ import SkyFloatingLabelTextField
 
 class VendorSignUpViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+
+    }
+    
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
@@ -23,42 +29,36 @@ class VendorSignUpViewController: UIViewController {
     @IBOutlet weak var groupAddressTextField: UITextField!
     @IBOutlet weak var groupNameTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        
-    }
-    
     @IBAction func addresstextFieldTapped(_ sender: Any) {
-        self.groupAddressTextField.resignFirstResponder()
-        self.groupAddressTextField.selectedTextRange = nil
-        let acController = GMSAutocompleteViewController()
-        acController.delegate = self
-        present(acController, animated: true, completion: nil)
-    }
+          self.groupAddressTextField.resignFirstResponder()
+          self.groupAddressTextField.selectedTextRange = nil
+          let acController = GMSAutocompleteViewController()
+          acController.delegate = self
+          present(acController, animated: true, completion: nil)
+        }
     
     @objc func textFieldDidChange(_ textfield: UITextField) {
-        if let text = textfield.text {
-            if let floatingLabelTextField = textfield as? SkyFloatingLabelTextField {
-                if(text.count < 3 || !text.contains("@")) {
-                    floatingLabelTextField.errorMessage = "Invalid email"
-                }
-                else {
-                    // The error message will only disappear when we reset it to nil or empty string
-                    floatingLabelTextField.errorMessage = ""
-                }
-            }
-        }
-    }
+           if let text = textfield.text {
+               if let floatingLabelTextField = textfield as? SkyFloatingLabelTextField {
+               if(text.count < 3 || !text.contains("@")) {
+                       floatingLabelTextField.errorMessage = "Invalid email"
+                   }
+                   else {
+                       // The error message will only disappear when we reset it to nil or empty string
+                       floatingLabelTextField.errorMessage = ""
+                   }
+               }
+           }
+       }
     
     
     @IBAction func signupButtonPressed(_ sender: Any) {
         if passwordTextField.text != retypePasswordTextField.text {
             AlertView.instance.showAlert(message: "Please re-type password")
-            
+
         } else if groupNameTextField.text?.isEmpty ?? true || groupAddressTextField.text?.isEmpty ?? true {
             AlertView.instance.showAlert(message: "Please enter all information")
-            
+
         } else {
             if let emailText = emailTextField.text, let passwordText = passwordTextField.text {
                 Auth.auth().createUser(withEmail: emailText, password: passwordText) { (result, error) in
@@ -81,30 +81,26 @@ class VendorSignUpViewController: UIViewController {
             }
         }
     }
-    
-    @IBAction func backButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
 }
 
 extension VendorSignUpViewController: GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        // Get the place name from 'GMSAutocompleteViewController'
-        // Then display the name in textField
+    // Get the place name from 'GMSAutocompleteViewController'
+    // Then display the name in textField
         self.groupAddressTextField.text = place.formattedAddress
-        print (place)
-        // Dismiss the GMSAutocompleteViewController when something is selected
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        // Handle the error
-        print("Error: ", error.localizedDescription)
-    }
-    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        // Dismiss when the user canceled the action
-        dismiss(animated: true, completion: nil)
-    }
+    print (place)
+// Dismiss the GMSAutocompleteViewController when something is selected
+    dismiss(animated: true, completion: nil)
+  }
+
+func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+    // Handle the error
+    print("Error: ", error.localizedDescription)
+  }
+func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+    // Dismiss when the user canceled the action
+    dismiss(animated: true, completion: nil)
+  }
     
     
 }
