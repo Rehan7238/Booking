@@ -48,21 +48,18 @@ class InitialScreen: UIViewController {
     }
     
     func checkType() {
-co                    print ("check dj")
+                if checkDJ(){
                     self.performSegue(withIdentifier: "toDJ", sender: nil)
                }
                
                 else if checkUser(){
-                    print("check user")
                    self.performSegue(withIdentifier: "toSocializer", sender: nil)
                }
                 else if checkVendor() {
-                    print("check vendor")
 
                    self.performSegue(withIdentifier: "toVendor", sender: nil)
                }
                 else if checkGroup()  {
-                    print("check group")
 
                    self.performSegue(withIdentifier: "toGroup", sender: nil)
                }
@@ -70,6 +67,8 @@ co                    print ("check dj")
     }
     
     func checkDJ() -> Bool {
+        print ("check dj")
+
         var flag  = false
         _ = DJ.fromID(id: uid).done { dj in
             if dj != nil {
@@ -84,6 +83,7 @@ co                    print ("check dj")
     }
     
     func checkUser() -> Bool {
+        print("check user")
         var flag = false
         _ = User.fromID(id: uid).done { user in
             if user != nil {
@@ -91,11 +91,17 @@ co                    print ("check dj")
                 self.user = user
                 flag = true
             }
+            print("gdfgd", flag)
+
         }
+        print("dfgdfrytt", flag)
+
         return flag
     }
     
     func checkVendor() -> Bool{
+        print("check vendor")
+
         var flag = false
         _ = Vendor.fromID(id: uid).done { vendor in
             if vendor != nil {
@@ -108,6 +114,8 @@ co                    print ("check dj")
     }
     
     func checkGroup() -> Bool{
+        print("check group")
+
         var flag = false
         _ = Group.fromID(id: uid).done { group in
             if group != nil {

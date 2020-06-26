@@ -13,6 +13,7 @@
 		2417129F24A5279D00F950B6 /* VendorInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417129E24A5279D00F950B6 /* VendorInitialViewController.swift */; };
 		241712A124A527D900F950B6 /* SocializerInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241712A024A527D900F950B6 /* SocializerInitialViewController.swift */; };
 		241712A324A52EBC00F950B6 /* DJInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241712A224A52EBC00F950B6 /* DJInitialViewController.swift */; };
+		241712A524A586EB00F950B6 /* Initial Screens in Resources */ = {isa = PBXBuildFile; fileRef = 241712A424A586EB00F950B6 /* Initial Screens */; };
 		245FEF0024940319003267CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEEFF24940319003267CE /* HomeViewController.swift */; };
 		245FEF0224940365003267CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0124940365003267CE /* LoginViewController.swift */; };
 		245FEF0424940381003267CE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0324940381003267CE /* StartViewController.swift */; };
@@ -84,6 +85,7 @@
 		2417129E24A5279D00F950B6 /* VendorInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorInitialViewController.swift; sourceTree = "<group>"; };
 		241712A024A527D900F950B6 /* SocializerInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocializerInitialViewController.swift; sourceTree = "<group>"; };
 		241712A224A52EBC00F950B6 /* DJInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJInitialViewController.swift; sourceTree = "<group>"; };
+		241712A424A586EB00F950B6 /* Initial Screens */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Initial Screens"; sourceTree = "<group>"; };
 		245FEEFF24940319003267CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		245FEF0124940365003267CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		245FEF0324940381003267CE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				2417129E24A5279D00F950B6 /* VendorInitialViewController.swift */,
 				241712A024A527D900F950B6 /* SocializerInitialViewController.swift */,
 				241712A224A52EBC00F950B6 /* DJInitialViewController.swift */,
+				241712A424A586EB00F950B6 /* Initial Screens */,
 			);
 			path = "Initial Screens";
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				241712A524A586EB00F950B6 /* Initial Screens in Resources */,
 				5DE698ED248DB92F00301B39 /* LaunchScreen.storyboard in Resources */,
 				5DDF6B352491585000B76C14 /* GoogleService-Info.plist in Resources */,
 				2417129824A43FA000F950B6 /* SideMain.storyboard in Resources */,
