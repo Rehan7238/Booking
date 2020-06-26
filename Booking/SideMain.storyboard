@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X  O  X  O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbY-Ig-BiP">
-                                <rect key="frame" x="96" y="399" width="218.5" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="X  O  X  O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbY-Ig-BiP">
+                                <rect key="frame" x="96" y="315" width="219" height="144"/>
                                 <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="47"/>
                                 <color key="textColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,14 +35,14 @@
                     <connections>
                         <outlet property="titleLabel" destination="VbY-Ig-BiP" id="eTn-2C-iDh"/>
                         <segue destination="XDp-PT-xUM" kind="presentation" identifier="toDJ" modalPresentationStyle="fullScreen" id="paI-Yi-JRz"/>
-                        <segue destination="LWL-hE-Jb6" kind="presentation" modalPresentationStyle="fullScreen" id="XvX-xJ-b1T"/>
-                        <segue destination="TRY-li-gBh" kind="presentation" modalPresentationStyle="fullScreen" id="D0Q-5R-9G5"/>
-                        <segue destination="BpP-QR-QMN" kind="presentation" modalPresentationStyle="fullScreen" id="ri6-pw-Xwz"/>
+                        <segue destination="LWL-hE-Jb6" kind="presentation" identifier="toGroup" modalPresentationStyle="fullScreen" id="XvX-xJ-b1T"/>
+                        <segue destination="TRY-li-gBh" kind="presentation" identifier="toVendor" modalPresentationStyle="fullScreen" id="D0Q-5R-9G5"/>
+                        <segue destination="BpP-QR-QMN" kind="presentation" identifier="toSocializer" modalPresentationStyle="fullScreen" id="ri6-pw-Xwz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Xk-3K-FCs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2680" y="891"/>
+            <point key="canvasLocation" x="2679.7101449275365" y="890.625"/>
         </scene>
         <!--Item-->
         <scene sceneID="u7S-eQ-qfP">
