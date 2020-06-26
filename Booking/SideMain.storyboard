@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,8 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="X  O  X  O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbY-Ig-BiP">
-                                <rect key="frame" x="96" y="315" width="219" height="144"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X  O  X  O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbY-Ig-BiP">
+                                <rect key="frame" x="97.5" y="426" width="219" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="A26-8O-rcd"/>
+                                    <constraint firstAttribute="height" constant="54" id="WjZ-qp-bK9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="47"/>
                                 <color key="textColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -24,10 +28,8 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="D9H-BG-sqA" firstAttribute="trailing" secondItem="VbY-Ig-BiP" secondAttribute="trailing" constant="99.5" id="C2Q-it-Djz"/>
-                            <constraint firstItem="D9H-BG-sqA" firstAttribute="bottom" secondItem="VbY-Ig-BiP" secondAttribute="bottom" constant="403" id="gJX-bh-frU"/>
-                            <constraint firstItem="VbY-Ig-BiP" firstAttribute="top" secondItem="D9H-BG-sqA" secondAttribute="top" constant="355" id="owm-V4-KZ6"/>
-                            <constraint firstItem="VbY-Ig-BiP" firstAttribute="leading" secondItem="D9H-BG-sqA" secondAttribute="leading" constant="96" id="to4-d3-6IQ"/>
+                            <constraint firstItem="VbY-Ig-BiP" firstAttribute="centerY" secondItem="D9H-BG-sqA" secondAttribute="centerY" id="5ko-nh-cnz"/>
+                            <constraint firstItem="VbY-Ig-BiP" firstAttribute="centerX" secondItem="D9H-BG-sqA" secondAttribute="centerX" id="UfR-8F-qDm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D9H-BG-sqA"/>
                     </view>
@@ -224,18 +226,49 @@
         <!--calendar-->
         <scene sceneID="mXg-qd-AIa">
             <objects>
-                <viewController id="ez8-47-Pej" sceneMemberID="viewController">
+                <viewController id="ez8-47-Pej" customClass="GroupCalendarViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cce-l4-EfZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0S-Sm-Y5y" customClass="FSCalendar">
+                                <rect key="frame" x="67" y="141" width="280" height="259"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="tag-4x-YDq"/>
+                                    <constraint firstAttribute="height" constant="259" id="vRo-zM-JYO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xh3-lW-tGi">
+                                <rect key="frame" x="162" y="483" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="toggle scope"/>
+                                <connections>
+                                    <action selector="toggleClicked:" destination="ez8-47-Pej" eventType="touchUpInside" id="ivG-xP-j5P"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="B0S-Sm-Y5y" firstAttribute="top" secondItem="gaL-ep-hrp" secondAttribute="top" constant="97" id="0C8-v2-Wdm"/>
+                            <constraint firstItem="B0S-Sm-Y5y" firstAttribute="centerX" secondItem="gaL-ep-hrp" secondAttribute="centerX" id="XCx-UU-Apq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gaL-ep-hrp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="calendar" id="FZA-FO-9Qt"/>
+                    <connections>
+                        <outlet property="calendar" destination="B0S-Sm-Y5y" id="uiq-Ax-hH2"/>
+                        <outlet property="calendarHeightConstraint" destination="vRo-zM-JYO" id="mn3-L6-KrD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPZ-5E-mjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1942" y="2479"/>
+            <point key="canvasLocation" x="1940.5797101449277" y="2478.3482142857142"/>
         </scene>
         <!--Book-->
         <scene sceneID="qt8-RU-b7l">

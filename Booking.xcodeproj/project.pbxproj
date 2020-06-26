@@ -41,6 +41,7 @@
 		2F86396BB586F46C97CFEF8E /* Pods_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1A24D4CC0398587A1539D8 /* Pods_BookingTests.framework */; };
 		43DB8D5CF7CD7F5ABEDA8F31 /* Pods_Booking_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D6B79E1497CC26A269A1C /* Pods_Booking_BookingUITests.framework */; };
 		479DF79D35D0A425F450CCDF /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED699F371A2993D3B76D66E0 /* Pods_Booking.framework */; };
+		5D0FBCD124A6ADF00011F8D9 /* GroupCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0FBCD024A6ADF00011F8D9 /* GroupCalendarViewController.swift */; };
 		5D12207C249957C2006D2517 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207B249957C2006D2517 /* Event.swift */; };
 		5D12207E249957CB006D2517 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207D249957CB006D2517 /* User.swift */; };
 		5D66E48D24A3497200BD36DF /* InviteContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D66E48C24A3497200BD36DF /* InviteContactsViewController.swift */; };
@@ -111,6 +112,7 @@
 		2492761224A2A25C0048C54A /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		572733D997C660A83A8E95A5 /* Pods-Booking-BookingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking-BookingUITests.debug.xcconfig"; path = "Target Support Files/Pods-Booking-BookingUITests/Pods-Booking-BookingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5809FB3C41A3EEC35105BBA8 /* Pods-Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.debug.xcconfig"; path = "Target Support Files/Pods-Booking/Pods-Booking.debug.xcconfig"; sourceTree = "<group>"; };
+		5D0FBCD024A6ADF00011F8D9 /* GroupCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCalendarViewController.swift; sourceTree = "<group>"; };
 		5D12207B249957C2006D2517 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		5D12207D249957CB006D2517 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5D66E48C24A3497200BD36DF /* InviteContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteContactsViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				2417129E24A5279D00F950B6 /* VendorInitialViewController.swift */,
 				241712A024A527D900F950B6 /* SocializerInitialViewController.swift */,
 				241712A224A52EBC00F950B6 /* DJInitialViewController.swift */,
+				5D0FBCD024A6ADF00011F8D9 /* GroupCalendarViewController.swift */,
 			);
 			path = "Initial Screens";
 			sourceTree = "<group>";
@@ -634,6 +637,7 @@
 				249275FB249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift in Sources */,
 				5DB17EB2249F639900237276 /* OptionToSelect.swift in Sources */,
 				245FEF0624941ABB003267CE /* DJorGroupViewController.swift in Sources */,
+				5D0FBCD124A6ADF00011F8D9 /* GroupCalendarViewController.swift in Sources */,
 				5DDF6B3824915BFF00B76C14 /* DJ.swift in Sources */,
 				5D12207C249957C2006D2517 /* Event.swift in Sources */,
 				249275F9249FDD610048C54A /* CollectGroupPlayingFeeViewController.swift in Sources */,

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i3z-vP-WSh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i3z-vP-WSh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -348,7 +348,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signUpAction:" destination="bpT-mN-cbL" eventType="touchUpInside" id="AJG-cg-6hF"/>
-                                    <action selector="signupButtonPressed:" destination="ISF-K5-EwU" eventType="touchUpInside" id="twh-xz-4TN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K08-wD-b8l">
@@ -421,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Uj-3h-5eN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="379.71014492753625" y="2998.6607142857142"/>
+            <point key="canvasLocation" x="313" y="2999"/>
         </scene>
         <!--Socializer Profile Picture View Controller-->
         <scene sceneID="kiS-Ir-4cD">
@@ -741,16 +740,6 @@
                                     <action selector="textFieldTapped:" destination="ISF-K5-EwU" eventType="touchUpInside" id="WGJ-5q-dFN"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJ1-Dy-sEX">
-                                <rect key="frame" x="164" y="790" width="86" height="47"/>
-                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="26"/>
-                                <state key="normal" title="SignUp">
-                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="signupButtonPressed:" destination="ISF-K5-EwU" eventType="touchUpInside" id="dEF-yI-YQP"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kO8-rm-zRQ" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="69" y="504" width="277" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -793,27 +782,36 @@
                                     <action selector="backButtonPressed:" destination="ISF-K5-EwU" eventType="touchUpInside" id="6JA-MG-1e1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxD-HM-aSC">
+                                <rect key="frame" x="159" y="766" width="88" height="48"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="27"/>
+                                <state key="normal" title="SignUp">
+                                    <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signupButtonPressed:" destination="ISF-K5-EwU" eventType="touchUpInside" id="WLc-Nz-lk5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="trailing" secondItem="Fap-oh-dlh" secondAttribute="trailing" constant="119" id="0PE-nT-1oV"/>
-                            <constraint firstItem="XJ1-Dy-sEX" firstAttribute="centerX" secondItem="WoG-hp-Ldt" secondAttribute="centerX" id="1qR-bQ-qAr"/>
                             <constraint firstItem="eJT-zc-rvm" firstAttribute="top" secondItem="WoG-hp-Ldt" secondAttribute="top" constant="312" id="21D-t7-nVO"/>
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="bottom" secondItem="kO8-rm-zRQ" secondAttribute="bottom" constant="324" id="2c0-2s-FZJ"/>
                             <constraint firstItem="0me-XD-wiw" firstAttribute="top" secondItem="WoG-hp-Ldt" secondAttribute="top" constant="609" id="2zG-Ds-Ofu"/>
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="bottom" secondItem="65T-kM-ako" secondAttribute="bottom" constant="250" id="3hG-ib-7Sp"/>
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="bottom" secondItem="eJT-zc-rvm" secondAttribute="bottom" constant="472" id="5QZ-29-NXm"/>
-                            <constraint firstItem="XJ1-Dy-sEX" firstAttribute="centerX" secondItem="WoG-hp-Ldt" secondAttribute="centerX" id="9f0-gR-Pfe"/>
+                            <constraint firstItem="oxD-HM-aSC" firstAttribute="centerX" secondItem="46S-Q9-SXp" secondAttribute="centerX" id="8XD-yW-v61"/>
                             <constraint firstItem="Fap-oh-dlh" firstAttribute="leading" secondItem="WoG-hp-Ldt" secondAttribute="leading" constant="112" id="9rF-fh-CMq"/>
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="bottom" secondItem="xls-Zg-rn5" secondAttribute="bottom" constant="704" id="9vS-SU-aPa"/>
                             <constraint firstItem="kO8-rm-zRQ" firstAttribute="leading" secondItem="WoG-hp-Ldt" secondAttribute="leading" constant="69" id="EtQ-4h-BQ9"/>
                             <constraint firstItem="65T-kM-ako" firstAttribute="leading" secondItem="WoG-hp-Ldt" secondAttribute="leading" constant="69" id="GJR-vl-q5T"/>
                             <constraint firstItem="uaT-Xk-giQ" firstAttribute="leading" secondItem="WoG-hp-Ldt" secondAttribute="leading" constant="69" id="Gfd-n0-R7I"/>
                             <constraint firstItem="uaT-Xk-giQ" firstAttribute="top" secondItem="WoG-hp-Ldt" secondAttribute="top" constant="164" id="Gm1-4h-MQd"/>
+                            <constraint firstItem="46S-Q9-SXp" firstAttribute="top" secondItem="oxD-HM-aSC" secondAttribute="bottom" constant="18" id="H5b-WU-hKB"/>
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="trailing" secondItem="1vN-ru-o06" secondAttribute="trailing" constant="68" id="JV9-bl-vIl"/>
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="trailing" secondItem="xls-Zg-rn5" secondAttribute="trailing" constant="124" id="Jh9-KE-TW4"/>
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="bottom" secondItem="0me-XD-wiw" secondAttribute="bottom" constant="175" id="L3N-Ff-Q24"/>
-                            <constraint firstItem="XJ1-Dy-sEX" firstAttribute="leading" secondItem="WoG-hp-Ldt" secondAttribute="leading" constant="164" id="Lg5-vs-5wK"/>
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="trailing" secondItem="0me-XD-wiw" secondAttribute="trailing" constant="68" id="Mir-Up-MHc"/>
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="trailing" secondItem="kO8-rm-zRQ" secondAttribute="trailing" constant="68" id="Oj8-Bd-sgq"/>
                             <constraint firstItem="eJT-zc-rvm" firstAttribute="leading" secondItem="WoG-hp-Ldt" secondAttribute="leading" constant="69" id="OuK-0X-gGE"/>
@@ -826,10 +824,7 @@
                             <constraint firstItem="xls-Zg-rn5" firstAttribute="leading" secondItem="WoG-hp-Ldt" secondAttribute="leading" constant="125" id="Xud-M0-Hg8"/>
                             <constraint firstItem="kO8-rm-zRQ" firstAttribute="top" secondItem="WoG-hp-Ldt" secondAttribute="top" constant="460" id="bdj-Ya-c78"/>
                             <constraint firstItem="1vN-ru-o06" firstAttribute="top" secondItem="WoG-hp-Ldt" secondAttribute="top" constant="237" id="cVN-2n-LRj"/>
-                            <constraint firstItem="WoG-hp-Ldt" firstAttribute="trailing" secondItem="XJ1-Dy-sEX" secondAttribute="trailing" constant="164" id="cWa-qz-S4r"/>
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="trailing" secondItem="uaT-Xk-giQ" secondAttribute="trailing" constant="68" id="eHC-xp-mPs"/>
-                            <constraint firstItem="XJ1-Dy-sEX" firstAttribute="top" secondItem="WoG-hp-Ldt" secondAttribute="top" constant="746" id="ehy-Ca-d08"/>
-                            <constraint firstItem="WoG-hp-Ldt" firstAttribute="bottom" secondItem="XJ1-Dy-sEX" secondAttribute="bottom" constant="83" id="fbs-zQ-zY3"/>
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="trailing" secondItem="46S-Q9-SXp" secondAttribute="trailing" constant="176" id="jvJ-7W-baA"/>
                             <constraint firstItem="65T-kM-ako" firstAttribute="top" secondItem="WoG-hp-Ldt" secondAttribute="top" constant="534" id="mJO-ta-VQo"/>
                             <constraint firstItem="46S-Q9-SXp" firstAttribute="top" secondItem="WoG-hp-Ldt" secondAttribute="top" constant="788" id="nKO-mE-dV4"/>
@@ -837,7 +832,6 @@
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="bottom" secondItem="uaT-Xk-giQ" secondAttribute="bottom" constant="620" id="sLG-hn-RCd"/>
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="trailing" secondItem="65T-kM-ako" secondAttribute="trailing" constant="68" id="scc-jr-qVU"/>
                             <constraint firstItem="WoG-hp-Ldt" firstAttribute="trailing" secondItem="eJT-zc-rvm" secondAttribute="trailing" constant="68" id="v2a-p8-Ius"/>
-                            <constraint firstItem="XJ1-Dy-sEX" firstAttribute="width" secondItem="1Vp-RA-oxS" secondAttribute="width" multiplier="0.217391" id="wjE-gq-I3m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WoG-hp-Ldt"/>
                     </view>
@@ -849,6 +843,7 @@
                         <outlet property="passwordTextField" destination="1vN-ru-o06" id="r1H-DR-7WR"/>
                         <outlet property="retypePasswordTextField" destination="eJT-zc-rvm" id="RaS-lN-Gq1"/>
                         <outlet property="schoolTextField" destination="65T-kM-ako" id="zmB-Qh-8H8"/>
+                        <outlet property="signupButton" destination="oxD-HM-aSC" id="BsI-Y3-BsC"/>
                         <segue destination="811-24-jsZ" kind="presentation" identifier="toGroupEquipmentQuestion" modalPresentationStyle="fullScreen" id="qGx-LN-Y7t"/>
                     </connections>
                 </viewController>
@@ -2254,7 +2249,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qiL-uF-ObT" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="194" width="354" height="39"/>
+                                <rect key="frame" x="30" y="199" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -2299,7 +2294,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2N-PU-R3N" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="347" width="354" height="39"/>
+                                <rect key="frame" x="30" y="347" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>

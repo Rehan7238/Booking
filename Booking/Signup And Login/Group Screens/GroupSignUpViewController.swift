@@ -23,6 +23,7 @@ class GroupSignUpViewController: UIViewController {
     @IBOutlet weak var schoolTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var goBackButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
     var selectedTextField: UITextField?
     
     override func viewDidLoad() {
@@ -63,6 +64,7 @@ class GroupSignUpViewController: UIViewController {
     }
     
     @IBAction func signupButtonPressed(_ sender: Any) {
+        print("HELLO IS THIS WORKING")
         if passwordTextField.text != retypePasswordTextField.text {
             AlertView.instance.showAlert(message: "Please re-type password")
         } else if groupNameTextField.text?.isEmpty ?? true || schoolTextField.text?.isEmpty ?? true || addressTextField.text?.isEmpty ?? true  {
@@ -81,6 +83,7 @@ class GroupSignUpViewController: UIViewController {
                     }
                 }
             } else {
+                AlertView.instance.showAlert(message: "Error signing up with that email and password")
                 //either emailTextField.text or passwordTextField.text was nil
             }
         }

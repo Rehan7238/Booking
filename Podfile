@@ -13,7 +13,6 @@ target 'Booking' do
   # Pods for authentication
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  
   pod 'Firebase/Storage'
   
   # For Sign Up
@@ -22,7 +21,8 @@ target 'Booking' do
   # Map
   pod 'GooglePlaces'
 
-
+  # Calendar
+  pod 'FSCalendar'
 
 
   target 'BookingTests' do
