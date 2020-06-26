@@ -48,17 +48,22 @@ class InitialScreen: UIViewController {
     }
     
     func checkType() {
-                if checkDJ(){
-                               self.performSegue(withIdentifier: "toDJ", sender: nil)
+co                    print ("check dj")
+                    self.performSegue(withIdentifier: "toDJ", sender: nil)
                }
                
-               else if checkUser() != nil {
+                else if checkUser(){
+                    print("check user")
                    self.performSegue(withIdentifier: "toSocializer", sender: nil)
                }
-               else if checkVendor() != nil {
+                else if checkVendor() {
+                    print("check vendor")
+
                    self.performSegue(withIdentifier: "toVendor", sender: nil)
                }
-               else if checkGroup() != nil {
+                else if checkGroup()  {
+                    print("check group")
+
                    self.performSegue(withIdentifier: "toGroup", sender: nil)
                }
            
@@ -74,10 +79,8 @@ class InitialScreen: UIViewController {
                 //self.loadDJInfo()
             }
         }
-        if flag == true {
-            return true
-        }
-        return false
+        
+        return flag
     }
     
     func checkUser() -> Bool {
@@ -89,13 +92,10 @@ class InitialScreen: UIViewController {
                 flag = true
             }
         }
-        if flag == true {
-            return true
-        }
-        return false
+        return flag
     }
     
-    func checkVendor() {
+    func checkVendor() -> Bool{
         var flag = false
         _ = Vendor.fromID(id: uid).done { vendor in
             if vendor != nil {
@@ -104,13 +104,10 @@ class InitialScreen: UIViewController {
                 flag = true
             }
         }
-        if flag == true {
-            return true
-        }
-        return false
+        return flag
     }
     
-    func checkGroup() {
+    func checkGroup() -> Bool{
         var flag = false
         _ = Group.fromID(id: uid).done { group in
             if group != nil {
@@ -120,10 +117,7 @@ class InitialScreen: UIViewController {
                 //self.loadDJInfo()
             }
         }
-        if flag == true {
-            return true
-        }
-        return false
+        return flag
     }
 
 }
