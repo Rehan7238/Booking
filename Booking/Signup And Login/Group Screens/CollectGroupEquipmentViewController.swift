@@ -73,4 +73,8 @@ class CollectGroupEquipmentViewController: UIViewController, UITableViewDelegate
         self.group?.setEquipment(equipmentList)
         self.performSegue(withIdentifier: "toGroupProfilePic", sender: self)
     }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
