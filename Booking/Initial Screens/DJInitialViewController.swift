@@ -17,7 +17,7 @@ class DJInitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let uid = Auth.auth().currentUser?.uid {
-        self.uid = uid
+            self.uid = uid
+        }
     }
-}
 }

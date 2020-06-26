@@ -9,13 +9,12 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import PromiseKit
 
 class InitialScreen: UIViewController {
     
-    
     @IBOutlet weak var titleLabel: UILabel!
 
-    
     var uid: String = ""
     var isGroup: Bool = false
     var dj: DJ! //will only exist if logged in as a DJ
@@ -28,15 +27,13 @@ class InitialScreen: UIViewController {
         
         super.viewDidLoad()
         if let uid = Auth.auth().currentUser?.uid {
-        self.uid = uid
-            
+            self.uid = uid
+        }
     }
-       
-}
-    override func viewDidAppear (_ animated: Bool){
+    
+    override func viewDidAppear (_ animated: Bool) {
         titleLabel.isHidden = false
         UIView.animate(withDuration: 3.0, delay: 0.0, options: [], animations: { () -> Void in
-
             self.titleLabel.alpha = 0
 
             }, completion: { (finished: Bool) -> Void in
@@ -44,88 +41,100 @@ class InitialScreen: UIViewController {
                 // next animation
                 self.checkType()
         })
-        
     }
     
     func checkType() {
-                if checkDJ(){
-                    self.performSegue(withIdentifier: "toDJ", sender: nil)
-               }
-               
-                else if checkUser(){
-                   self.performSegue(withIdentifier: "toSocializer", sender: nil)
-               }
-                else if checkVendor() {
+        _ = self.checkDJ().done { isDJ in
+            if isDJ {
+                self.performSegue(withIdentifier: "toDJ", sender: nil)
+            }
+        }
+        
+        _ = self.checkUser().done { isUser in
+            if isUser {
+                self.performSegue(withIdentifier: "toSocializer", sender: nil)
+            }
+        }
 
-                   self.performSegue(withIdentifier: "toVendor", sender: nil)
-               }
-                else if checkGroup()  {
-
-                   self.performSegue(withIdentifier: "toGroup", sender: nil)
-               }
-           
+        _ = self.checkVendor().done { isVendor in
+            if isVendor {
+                self.performSegue(withIdentifier: "toVendor", sender: nil)
+            }
+        }
+        
+        _ = self.checkGroup().done { isGroup in
+            if isGroup {
+                self.performSegue(withIdentifier: "toGroup", sender: nil)
+            }
+        }
     }
     
-    func checkDJ() -> Bool {
+    func checkDJ() -> Promise<Bool> {
+        let (promise, resolver) = Promise<Bool>.pending()
+        
         print ("check dj")
 
-        var flag  = false
         _ = DJ.fromID(id: uid).done { dj in
             if dj != nil {
                 self.isGroup = false
                 self.dj = dj
-                flag = true
-                //self.loadDJInfo()
+                resolver.fulfill(true)
+            } else {
+                resolver.fulfill(false)
             }
         }
-        
-        return flag
+        return promise
     }
     
-    func checkUser() -> Bool {
+    func checkUser() -> Promise<Bool> {
+        let (promise, resolver) = Promise<Bool>.pending()
+
         print("check user")
-        var flag = false
         _ = User.fromID(id: uid).done { user in
             if user != nil {
                 self.isGroup = false
                 self.user = user
-                flag = true
+                resolver.fulfill(true)
+            } else {
+                resolver.fulfill(false)
             }
-            print("gdfgd", flag)
-
         }
-        print("dfgdfrytt", flag)
 
-        return flag
+        return promise
     }
     
-    func checkVendor() -> Bool{
+    func checkVendor() -> Promise<Bool> {
+        let (promise, resolver) = Promise<Bool>.pending()
+
         print("check vendor")
 
-        var flag = false
         _ = Vendor.fromID(id: uid).done { vendor in
             if vendor != nil {
                 self.isGroup = true
                 self.vendor = vendor
-                flag = true
+                resolver.fulfill(true)
+            } else {
+                resolver.fulfill(false)
             }
         }
-        return flag
+        return promise
     }
     
-    func checkGroup() -> Bool{
+    func checkGroup() -> Promise<Bool> {
+        let (promise, resolver) = Promise<Bool>.pending()
+
         print("check group")
 
-        var flag = false
         _ = Group.fromID(id: uid).done { group in
             if group != nil {
                 self.isGroup = true
                 self.group = group
-                flag = true
+                resolver.fulfill(true)
                 //self.loadDJInfo()
+            } else {
+                resolver.fulfill(false)
             }
         }
-        return flag
+        return promise
     }
-
 }

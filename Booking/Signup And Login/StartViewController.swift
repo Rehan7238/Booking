@@ -13,8 +13,6 @@ import UIKit
 class StartViewController: UIViewController {
     
     //Mark: Properties
-    
- 
     @IBAction func loginButton(_ sender: Any) {
     }
     @IBAction func signupButton(_ sender: Any) {
@@ -27,8 +25,6 @@ class StartViewController: UIViewController {
         backgroundImage.image = UIImage(named: "Background")
         backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
-
-
     }
     
     override func viewDidAppear(_ animated: Bool){
