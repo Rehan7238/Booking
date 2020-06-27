@@ -1,0 +1,8 @@
+xcuserdata
+Pods/
+Booking.xcworkspace/xcuserdata
+Booking.xcworkspace/xcshareddata
+xcshareddata
+build/
+DerivedData/
+.build/
