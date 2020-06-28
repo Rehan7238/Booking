@@ -9,6 +9,7 @@
 import Foundation
 import Firebase
 import PromiseKit
+import MapKit
 
 class User {
     
@@ -22,11 +23,25 @@ class User {
     var groups: [String: [String]] = [:]
     var profilePic: String = ""
     var locality: String = ""
-    
+    //var favPlaces: [CLLocationCoordinate2D]  = [CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0), CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)]
+    //var location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
+
+
     func setName(_ newValue: String) {
         self.name = newValue
         updateValue(fieldName: "name", newValue: newValue)
     }
+    
+    //func setLocation(_ newValue: CLLocationCoordinate2D) {
+    //    self.location = newValue
+    //    updateValue(fieldName: "location", newValue: newValue)
+    //}
+    
+    //func setFavPlaces(_ newValue: [CLLocationCoordinate2D]) {
+    //    self.favPlaces = newValue
+   //     updateValue(fieldName: "favoritePlaces", newValue: newValue)
+   // }
+    
     
     func setLocality(_ newValue: String) {
            self.locality = newValue
@@ -95,6 +110,7 @@ class User {
                     user.previousEvents = data["previousEvents"] as! [String]
                     user.groups = data["groups"] as! [String: [String]]
                     user.profilePic = data["profilePic"] as! String
+                    //user.location = data["location"] as! CLLocationCoordinate2D
 
                 }
                 resolver.fulfill(user)
@@ -123,7 +139,8 @@ class User {
             "futureEvents": newUser.futureEvents,
             "previousEvents": newUser.previousEvents,
             "groups": newUser.groups,
-            "profilePic": newUser.profilePic
+            "profilePic": newUser.profilePic,
+            //"location": newUser.location
         ])
         
         return newUser

@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import GooglePlaces
-
+import MapKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -9,16 +9,23 @@
 import Foundation
 import UIKit
 import MapKit
+import FirebaseAuth
 
 class socializerMapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
+    var user: User?
     
     private let locationManager = CLLocationManager()
     private var currentCoordinate : CLLocationCoordinate2D?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let uid = Auth.auth().currentUser?.uid {
+            _ = User.fromID(id: uid).done { loadedUser in
+                self.user = loadedUser
+            }
+        }
         configureLocationServices()
     }
     
@@ -52,6 +59,8 @@ class socializerMapViewController: UIViewController {
         mapView.showsUserLocation = true
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
+        //let locValue:CLLocationCoordinate2D = locationManager.location!.coordinate
+        //user?.setLocation(locValue)
     }
     
 }
