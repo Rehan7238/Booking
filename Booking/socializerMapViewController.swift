@@ -36,9 +36,20 @@ class socializerMapViewController: UIViewController, MGLMapViewDelegate {
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
-         
         
         
+    // Add a point annotation
+        let annotation = MGLPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 40.77014, longitude: -73.97480)
+        annotation.title = "Central Park"
+        annotation.subtitle = "The biggest park in New York City!"
+        mapView.addAnnotation(annotation)
+        
+        
+    }
+    func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+    // Always allow callouts to popup when annotations are tapped.
+    return true
     }
     
 }
