@@ -9,6 +9,7 @@ target 'Booking' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
   pod 'PromiseKit'
+  pod 'IQKeyboardManagerSwift'
 
   # Pods for authentication
   pod 'Firebase/Core'

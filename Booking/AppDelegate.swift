@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import GooglePlaces
 import MapKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,11 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-      FirebaseApp.configure()
-      GMSPlacesClient.provideAPIKey("AIzaSyCsmSQw5se9JjsrQ6XI6tcsOOG1UNxzvqY")
+        IQKeyboardManager.shared.enable = true
         
-    // Customize the UI of GMSAutocompleteViewController
-    // Set some colors (colorLiteral is convenient)
+        FirebaseApp.configure()
+        GMSPlacesClient.provideAPIKey("AIzaSyCsmSQw5se9JjsrQ6XI6tcsOOG1UNxzvqY")
+        
+        // Customize the UI of GMSAutocompleteViewController
+        // Set some colors (colorLiteral is convenient)
         let barColor: UIColor =  _ColorLiteralType(red: 0, green: 0, blue: 0, alpha: 1)
         let backgroundColor: UIColor =  _ColorLiteralType(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         let textColor: UIColor =  _ColorLiteralType(red: 100, green: 100, blue: 100, alpha: 1)

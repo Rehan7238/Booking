@@ -280,6 +280,7 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
   - GTMSessionFetcher/Core (1.4.0)
+  - IQKeyboardManagerSwift (6.5.5)
   - leveldb-library (1.22)
   - Mapbox-iOS-SDK (5.9.0):
     - MapboxMobileEvents (= 0.10.2)
@@ -330,6 +331,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - FSCalendar
   - GooglePlaces
+  - IQKeyboardManagerSwift
   - Mapbox-iOS-SDK
   - MapboxNavigation
   - PromiseKit
@@ -359,6 +361,7 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - IQKeyboardManagerSwift
     - leveldb-library
     - Mapbox-iOS-SDK
     - MapboxAccounts
@@ -399,6 +402,7 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9dfe7b44821e7b3e44aacad2af29d2c21f7cde83
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   Mapbox-iOS-SDK: a5915700ec84bc1a7f8b3e746d474789e35b7956
   MapboxAccounts: f9716ba2cc66013e44ef93e0e16cfa1049f3aeec
@@ -416,6 +420,6 @@ SPEC CHECKSUMS:
   Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
   Turf: c6bdf62d6a70c647874f295dd1cf4eefc0c3e9e6
 
-PODFILE CHECKSUM: 5429e78b12a485c7ea85ca06228b69f42e57fe4e
+PODFILE CHECKSUM: d4afb68586ff5473b4a1c4962fd97cc4f7e3219c
 
 COCOAPODS: 1.9.3
