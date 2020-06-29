@@ -87,6 +87,7 @@
 		241712A024A527D900F950B6 /* SocializerInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocializerInitialViewController.swift; sourceTree = "<group>"; };
 		241712A224A52EBC00F950B6 /* DJInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJInitialViewController.swift; sourceTree = "<group>"; };
 		2447CCA924A91EF6007163DB /* socializerMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socializerMapViewController.swift; sourceTree = "<group>"; };
+		24593EE224A98292002C2729 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Downloads/mapbox-ios-sdk-5/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
 		245FEEFF24940319003267CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		245FEF0124940365003267CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		245FEF0324940381003267CE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -343,6 +344,7 @@
 		B24CFCB92A93F99EADF8A967 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24593EE224A98292002C2729 /* Mapbox.framework */,
 				ED699F371A2993D3B76D66E0 /* Pods_Booking.framework */,
 				C56D6B79E1497CC26A269A1C /* Pods_Booking_BookingUITests.framework */,
 				6B1A24D4CC0398587A1539D8 /* Pods_BookingTests.framework */,

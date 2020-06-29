@@ -9,17 +9,19 @@ target 'Booking' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
   pod 'PromiseKit'
-  
+
   # Pods for authentication
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
-  
+
   # For Sign Up
   pod 'SkyFloatingLabelTextField', '~> 3.0'
-  
+
   # Map
   pod 'GooglePlaces'
+  pod 'Mapbox-iOS-SDK'
+  pod 'MapboxNavigation'
 
   # Calendar
   pod 'FSCalendar'

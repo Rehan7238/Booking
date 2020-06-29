@@ -90,30 +90,35 @@
         <!--Item 1-->
         <scene sceneID="gfh-KW-Z1S">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2dM-ct-sBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="HeP-J5-Nx2" customClass="socializerMapViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="log-Ao-Q0a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i45-TZ-kIr">
-                                <rect key="frame" x="0.0" y="44" width="414" height="591"/>
-                            </mapView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ivB-jR-8YK" customClass="MGLMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="367"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/streets-v11"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="IQQ-Ec-Nc1" firstAttribute="trailing" secondItem="i45-TZ-kIr" secondAttribute="trailing" id="CVO-vi-4Nw"/>
-                            <constraint firstItem="i45-TZ-kIr" firstAttribute="leading" secondItem="IQQ-Ec-Nc1" secondAttribute="leading" id="TdB-PN-O3I"/>
-                            <constraint firstItem="IQQ-Ec-Nc1" firstAttribute="bottom" secondItem="i45-TZ-kIr" secondAttribute="bottom" id="VaJ-kc-z6F"/>
-                            <constraint firstItem="i45-TZ-kIr" firstAttribute="top" secondItem="IQQ-Ec-Nc1" secondAttribute="top" id="pTB-rh-7dO"/>
+                            <constraint firstItem="ivB-jR-8YK" firstAttribute="leading" secondItem="IQQ-Ec-Nc1" secondAttribute="leading" id="Kyj-UX-s01"/>
+                            <constraint firstItem="ivB-jR-8YK" firstAttribute="top" secondItem="IQQ-Ec-Nc1" secondAttribute="top" id="QCj-cB-sAM"/>
+                            <constraint firstItem="ivB-jR-8YK" firstAttribute="top" secondItem="IQQ-Ec-Nc1" secondAttribute="top" id="Wu0-Yw-zKt"/>
+                            <constraint firstItem="ivB-jR-8YK" firstAttribute="top" secondItem="IQQ-Ec-Nc1" secondAttribute="top" id="aFT-Su-39E"/>
+                            <constraint firstItem="IQQ-Ec-Nc1" firstAttribute="trailing" secondItem="ivB-jR-8YK" secondAttribute="trailing" id="fX6-ST-YWH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IQQ-Ec-Nc1"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="nNJ-4i-N8p"/>
                     <connections>
-                        <outlet property="mapView" destination="i45-TZ-kIr" id="1D1-zx-whG"/>
+                        <outlet property="mapView" destination="ivB-jR-8YK" id="cjQ-we-Zc4"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2dM-ct-sBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8260.8695652173919" y="2477.0089285714284"/>
         </scene>

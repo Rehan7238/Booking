@@ -281,11 +281,33 @@ PODS:
   - gRPC-Core/Interface (1.21.0)
   - GTMSessionFetcher/Core (1.4.0)
   - leveldb-library (1.22)
+  - Mapbox-iOS-SDK (5.9.0):
+    - MapboxMobileEvents (= 0.10.2)
+  - MapboxAccounts (2.2.0)
+  - MapboxCoreNavigation (0.40.0):
+    - MapboxAccounts (~> 2.2.0)
+    - MapboxDirections (~> 0.31.0)
+    - MapboxMobileEvents (~> 0.10.2)
+    - MapboxNavigationNative (~> 6.2.1)
+    - Turf (~> 0.3.0)
+  - MapboxDirections (0.31.0):
+    - Polyline (~> 4.2)
+    - Turf (~> 0.3)
+  - MapboxMobileEvents (0.10.2)
+  - MapboxNavigation (0.40.0):
+    - Mapbox-iOS-SDK (~> 5.6)
+    - MapboxCoreNavigation (= 0.40.0)
+    - MapboxMobileEvents (~> 0.10.2)
+    - MapboxSpeech (~> 0.3.0)
+    - Solar (~> 2.1)
+  - MapboxNavigationNative (6.2.1)
+  - MapboxSpeech (0.3.0)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - Polyline (4.2.1)
   - PromiseKit (6.13.1):
     - PromiseKit/CorePromise (= 6.13.1)
     - PromiseKit/Foundation (= 6.13.1)
@@ -297,6 +319,8 @@ PODS:
     - PromiseKit/CorePromise
   - PromisesObjC (1.2.8)
   - SkyFloatingLabelTextField (3.8.0)
+  - Solar (2.1.0)
+  - Turf (0.3.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -306,6 +330,8 @@ DEPENDENCIES:
   - Firebase/Storage
   - FSCalendar
   - GooglePlaces
+  - Mapbox-iOS-SDK
+  - MapboxNavigation
   - PromiseKit
   - SkyFloatingLabelTextField (~> 3.0)
 
@@ -334,10 +360,21 @@ SPEC REPOS:
     - gRPC-Core
     - GTMSessionFetcher
     - leveldb-library
+    - Mapbox-iOS-SDK
+    - MapboxAccounts
+    - MapboxCoreNavigation
+    - MapboxDirections
+    - MapboxMobileEvents
+    - MapboxNavigation
+    - MapboxNavigationNative
+    - MapboxSpeech
     - nanopb
+    - Polyline
     - PromiseKit
     - PromisesObjC
     - SkyFloatingLabelTextField
+    - Solar
+    - Turf
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -363,11 +400,22 @@ SPEC CHECKSUMS:
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  Mapbox-iOS-SDK: a5915700ec84bc1a7f8b3e746d474789e35b7956
+  MapboxAccounts: f9716ba2cc66013e44ef93e0e16cfa1049f3aeec
+  MapboxCoreNavigation: 2856c46bd064bb11c406ba00191d579cda424efa
+  MapboxDirections: 0b97aa320d7cddbe72d6513becc07dd747935240
+  MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
+  MapboxNavigation: 42bae50b0381dce317c85884ba0de38fc68a4814
+  MapboxNavigationNative: 11dc22140f4698d3f26989f2b6379dc81ef0d4c1
+  MapboxSpeech: 403415e932e084cf290b9d55c49ab7ea210b9595
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  Polyline: 0e9890790292741c8186201a536b6bb6a78d02dd
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
+  Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
+  Turf: c6bdf62d6a70c647874f295dd1cf4eefc0c3e9e6
 
-PODFILE CHECKSUM: 955f1fed97ea3fad329eb4cbba8c9c2897f1e924
+PODFILE CHECKSUM: 5429e78b12a485c7ea85ca06228b69f42e57fe4e
 
 COCOAPODS: 1.9.3

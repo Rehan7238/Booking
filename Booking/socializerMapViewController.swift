@@ -10,10 +10,13 @@ import Foundation
 import UIKit
 import MapKit
 import FirebaseAuth
+import Mapbox
+import MapboxNavigation
+import MapboxDirections
 
-class socializerMapViewController: UIViewController {
+class socializerMapViewController: UIViewController, MGLMapViewDelegate {
     
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapView: MGLMapView!
     var user: User?
     
     private let locationManager = CLLocationManager()
@@ -26,65 +29,18 @@ class socializerMapViewController: UIViewController {
                 self.user = loadedUser
             }
         }
-        configureLocationServices()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    private func configureLocationServices() {
-        locationManager.delegate = self
+        mapView = NavigationMapView(frame: view.bounds)
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(mapView)
         
-        let status = CLLocationManager.authorizationStatus()
-        
-        if status == .notDetermined {
-            locationManager.requestAlwaysAuthorization()
-
-        } else if status == .authorizedAlways || status == .authorizedWhenInUse{
-            beginLocationUpdates(locationManager: locationManager)
-            
-        }
-        
-       
-            
-        }
-     private func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D) {
-        
-        let zoomRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
-        mapView.setRegion(zoomRegion, animated: true)
-    }
-    
-    private func beginLocationUpdates(locationManager: CLLocationManager) {
+        mapView.delegate = self
         mapView.showsUserLocation = true
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingLocation()
-        //let locValue:CLLocationCoordinate2D = locationManager.location!.coordinate
-        //user?.setLocation(locValue)
-    }
-    
-}
-
-extension socializerMapViewController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print ("Did get latest location")
+        mapView.setUserTrackingMode(.follow, animated: true)
+         
         
-        guard let latestLocation = locations.first else {return}
-        
-        if currentCoordinate == nil {
-            zoomToLatestLocation(with: latestLocation.coordinate)
-        }
-        
-        currentCoordinate = latestLocation.coordinate
-    
-    }
-    func locationManager(_ manager:CLLocationManager, didChangeAuthorization status:CLAuthorizationStatus){
-        print ("The status changed")
-        if status == .authorizedAlways || status == .authorizedWhenInUse {
-            beginLocationUpdates(locationManager: manager)
-        }
         
     }
     
 }
+    
+  
