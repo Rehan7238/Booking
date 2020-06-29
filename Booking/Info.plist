@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Turn on location when in use </string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We need your location</string>
-	<key>NSContactsUsageDescription</key>
-	<string>To connect users with other DJ&apos;s or Socializers</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -26,6 +20,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MGLMapboxAccessToken</key>
+	<string>sk.eyJ1IjoiZWltYXJhIiwiYSI6ImNrYnp2NW5lNDFkdGMydnFmY29lMGtpcDcifQ.TYLAn2lRW0PnzMT_VdU1FQ</string>
+	<key>NSContactsUsageDescription</key>
+	<string>To connect users with other DJ's or Socializers</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We need your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Turn on location when in use </string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -66,7 +68,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>MGLMapboxAccessToken</key>
-	<string>sk.eyJ1IjoiZWltYXJhIiwiYSI6ImNrYnp2NW5lNDFkdGMydnFmY29lMGtpcDcifQ.TYLAn2lRW0PnzMT_VdU1FQ</string>
 </dict>
 </plist>
