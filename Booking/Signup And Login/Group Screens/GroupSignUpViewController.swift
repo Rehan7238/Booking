@@ -14,7 +14,7 @@ import GooglePlaces
 
 
 
-class GroupSignUpViewController: UIViewController {
+class GroupSignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -29,6 +29,32 @@ class GroupSignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        retypePasswordTextField.delegate = self
+        groupNameTextField.delegate = self
+        schoolTextField.delegate = self
+        addressTextField.delegate = self
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            retypePasswordTextField.becomeFirstResponder()
+        } else if textField == retypePasswordTextField {
+            groupNameTextField.becomeFirstResponder()
+        } else if textField == groupNameTextField {
+            schoolTextField.becomeFirstResponder()
+        } else if textField == schoolTextField {
+            addressTextField.becomeFirstResponder()
+        } else {
+            addressTextField.resignFirstResponder()
+        }
+        return true
     }
     
     @objc func textFieldDidChange(_ textfield: UITextField) {

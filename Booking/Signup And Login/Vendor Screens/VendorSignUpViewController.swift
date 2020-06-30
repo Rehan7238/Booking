@@ -13,7 +13,7 @@ import FirebaseAuth
 import GooglePlaces
 import SkyFloatingLabelTextField
 
-class VendorSignUpViewController: UIViewController {
+class VendorSignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
@@ -27,6 +27,28 @@ class VendorSignUpViewController: UIViewController {
         super.viewDidLoad()
         emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        retypePasswordTextField.delegate = self
+        groupNameTextField.delegate = self
+        groupAddressTextField.delegate = self
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            retypePasswordTextField.becomeFirstResponder()
+        } else if textField == retypePasswordTextField {
+            groupNameTextField.becomeFirstResponder()
+        } else if textField == groupNameTextField {
+            groupAddressTextField.becomeFirstResponder()
+        } else {
+            groupAddressTextField.resignFirstResponder()
+        }
+        return true
     }
     
     @IBAction func addresstextFieldTapped(_ sender: Any) {

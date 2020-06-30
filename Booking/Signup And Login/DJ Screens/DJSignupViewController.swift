@@ -12,7 +12,7 @@ import FirebaseAuth
 import GooglePlaces
 import SkyFloatingLabelTextField
 
-class DJSignupViewController: UIViewController {
+class DJSignupViewController: UIViewController, UITextFieldDelegate {
     
     //Mark: Properties
     @IBOutlet weak var emailTextField: UITextField!
@@ -29,6 +29,31 @@ class DJSignupViewController: UIViewController {
         super.viewDidLoad()
         emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        retypePasswordTextField.delegate = self
+        uniAffiliationTextField.delegate = self
+        nameTextField.delegate = self
+        cityTextField.delegate = self
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            retypePasswordTextField.becomeFirstResponder()
+        } else if textField == retypePasswordTextField {
+            uniAffiliationTextField.becomeFirstResponder()
+        } else if textField == uniAffiliationTextField {
+            nameTextField.becomeFirstResponder()
+        } else if textField == nameTextField {
+            cityTextField.becomeFirstResponder()
+        } else {
+            cityTextField.resignFirstResponder()
+        }
+        return true
     }
     
     @objc func textFieldDidChange(_ textfield: UITextField) {

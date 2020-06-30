@@ -14,7 +14,7 @@ import FirebaseAuth
 import GooglePlaces
 import SkyFloatingLabelTextField
 
-class SocializerSignUpViewController: UIViewController {
+class SocializerSignUpViewController: UIViewController, UITextFieldDelegate {
     
     //Mark: Properties
     
@@ -33,6 +33,31 @@ class SocializerSignUpViewController: UIViewController {
         super.viewDidLoad()
         emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        retypePasswordTextField.delegate = self
+        nameTextLabel.delegate = self
+        cityTextField.delegate = self
+        schoolTextField.delegate = self
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            retypePasswordTextField.becomeFirstResponder()
+        } else if textField == retypePasswordTextField {
+            nameTextLabel.becomeFirstResponder()
+        } else if textField == nameTextLabel {
+            cityTextField.becomeFirstResponder()
+        } else if textField == cityTextField {
+            schoolTextField.becomeFirstResponder()
+        } else {
+            schoolTextField.resignFirstResponder()
+        }
+        return true
     }
     
     @objc func textFieldDidChange(_ textfield: UITextField) {

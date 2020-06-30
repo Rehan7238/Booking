@@ -187,9 +187,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0mn-RR-Rip" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="68.5" y="213" width="277" height="39"/>
+                                <rect key="frame" x="30" y="213" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="email"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
@@ -217,9 +217,9 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uzp-Vd-bPW" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="68.5" y="291" width="277" height="39"/>
+                                <rect key="frame" x="30" y="286" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="password"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -238,9 +238,9 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oGA-bj-l44" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="68.5" y="366" width="277" height="39"/>
+                                <rect key="frame" x="30" y="356" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="password"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -262,9 +262,9 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAw-gE-bWZ" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="68.5" y="525" width="277" height="39"/>
+                                <rect key="frame" x="30" y="510" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="name"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="person.crop.circle" catalog="system"/>
@@ -283,9 +283,9 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gd-Ef-uPb" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="68.5" y="603" width="277" height="39"/>
+                                <rect key="frame" x="30" y="583" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="city"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -313,15 +313,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PERSONAL INFO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0c-s6-nKX">
-                                <rect key="frame" x="113" y="453.5" width="188.5" height="25.5"/>
+                                <rect key="frame" x="113" y="438.5" width="188.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCq-lV-QV6" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="68.5" y="670" width="277" height="39"/>
+                                <rect key="frame" x="30" y="645" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="school"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="house" catalog="system"/>
@@ -370,23 +370,35 @@
                         <constraints>
                             <constraint firstItem="oGA-bj-l44" firstAttribute="centerX" secondItem="uzp-Vd-bPW" secondAttribute="centerX" id="08q-A5-x42"/>
                             <constraint firstItem="1gd-Ef-uPb" firstAttribute="top" secondItem="QAw-gE-bWZ" secondAttribute="bottom" constant="39" id="3CL-Vv-cTy"/>
+                            <constraint firstItem="0mn-RR-Rip" firstAttribute="leading" secondItem="IiF-be-7rJ" secondAttribute="leading" constant="30" id="3FW-fb-4Bl"/>
                             <constraint firstItem="K08-wD-b8l" firstAttribute="centerX" secondItem="GXw-hz-diJ" secondAttribute="centerX" id="4Ty-oz-gPY"/>
                             <constraint firstItem="RCq-lV-QV6" firstAttribute="centerX" secondItem="1gd-Ef-uPb" secondAttribute="centerX" id="AjO-kt-NBV"/>
                             <constraint firstItem="IiF-be-7rJ" firstAttribute="bottom" secondItem="K08-wD-b8l" secondAttribute="bottom" constant="22" id="H28-SO-Bp2"/>
                             <constraint firstItem="Kho-WS-YNt" firstAttribute="top" secondItem="IiF-be-7rJ" secondAttribute="top" constant="80" id="JHn-pd-7vL"/>
+                            <constraint firstItem="uzp-Vd-bPW" firstAttribute="trailing" secondItem="0mn-RR-Rip" secondAttribute="trailing" id="KlI-ws-hDw"/>
                             <constraint firstItem="Kho-WS-YNt" firstAttribute="centerX" secondItem="IiF-be-7rJ" secondAttribute="centerX" id="L99-V0-bR7"/>
                             <constraint firstItem="IiF-be-7rJ" firstAttribute="bottom" secondItem="Kho-WS-YNt" secondAttribute="bottom" constant="708" id="LDB-Cd-Ksi"/>
                             <constraint firstItem="oGA-bj-l44" firstAttribute="top" secondItem="uzp-Vd-bPW" secondAttribute="bottom" constant="36" id="Lkp-dC-i14"/>
                             <constraint firstItem="uzp-Vd-bPW" firstAttribute="centerX" secondItem="0mn-RR-Rip" secondAttribute="centerX" id="NsJ-ST-yL5"/>
                             <constraint firstItem="0mn-RR-Rip" firstAttribute="top" secondItem="Kho-WS-YNt" secondAttribute="bottom" constant="59" id="PbZ-Ro-fCp"/>
                             <constraint firstItem="uzp-Vd-bPW" firstAttribute="top" secondItem="0mn-RR-Rip" secondAttribute="bottom" constant="39" id="Skv-GR-Ne4"/>
+                            <constraint firstItem="oGA-bj-l44" firstAttribute="trailing" secondItem="uzp-Vd-bPW" secondAttribute="trailing" id="TLG-mK-fnk"/>
+                            <constraint firstItem="uzp-Vd-bPW" firstAttribute="leading" secondItem="0mn-RR-Rip" secondAttribute="leading" id="X2k-8x-NYc"/>
                             <constraint firstItem="0mn-RR-Rip" firstAttribute="centerX" secondItem="IiF-be-7rJ" secondAttribute="centerX" id="XB1-68-QpW"/>
                             <constraint firstItem="q0c-s6-nKX" firstAttribute="centerX" secondItem="oGA-bj-l44" secondAttribute="centerX" id="Yw8-JG-NM5"/>
                             <constraint firstItem="GXw-hz-diJ" firstAttribute="centerX" secondItem="IiF-be-7rJ" secondAttribute="centerX" id="ZtH-cL-tOG"/>
+                            <constraint firstItem="IiF-be-7rJ" firstAttribute="trailing" secondItem="0mn-RR-Rip" secondAttribute="trailing" constant="30" id="a9b-Av-m3m"/>
                             <constraint firstItem="1gd-Ef-uPb" firstAttribute="centerX" secondItem="QAw-gE-bWZ" secondAttribute="centerX" id="cda-qt-K1s"/>
                             <constraint firstItem="QAw-gE-bWZ" firstAttribute="centerX" secondItem="q0c-s6-nKX" secondAttribute="centerX" id="cwi-71-F4w"/>
+                            <constraint firstItem="1gd-Ef-uPb" firstAttribute="leading" secondItem="QAw-gE-bWZ" secondAttribute="leading" id="dMF-21-2bV"/>
+                            <constraint firstItem="QAw-gE-bWZ" firstAttribute="leading" secondItem="oGA-bj-l44" secondAttribute="leading" id="dOo-NQ-4Ap"/>
+                            <constraint firstItem="RCq-lV-QV6" firstAttribute="leading" secondItem="1gd-Ef-uPb" secondAttribute="leading" id="dtY-50-Soa"/>
+                            <constraint firstItem="RCq-lV-QV6" firstAttribute="trailing" secondItem="1gd-Ef-uPb" secondAttribute="trailing" id="fz6-MS-16M"/>
                             <constraint firstItem="RCq-lV-QV6" firstAttribute="top" secondItem="1gd-Ef-uPb" secondAttribute="bottom" constant="28" id="ij8-7j-BJo"/>
+                            <constraint firstItem="QAw-gE-bWZ" firstAttribute="trailing" secondItem="oGA-bj-l44" secondAttribute="trailing" id="nL8-RL-l8r"/>
+                            <constraint firstItem="oGA-bj-l44" firstAttribute="leading" secondItem="uzp-Vd-bPW" secondAttribute="leading" id="pAM-FU-UF7"/>
                             <constraint firstItem="K08-wD-b8l" firstAttribute="top" secondItem="GXw-hz-diJ" secondAttribute="bottom" constant="8" id="sJX-ep-G6v"/>
+                            <constraint firstItem="1gd-Ef-uPb" firstAttribute="trailing" secondItem="QAw-gE-bWZ" secondAttribute="trailing" id="tSw-BK-gbz"/>
                             <constraint firstItem="q0c-s6-nKX" firstAttribute="top" secondItem="oGA-bj-l44" secondAttribute="bottom" constant="48.5" id="yu3-ec-ra7"/>
                             <constraint firstItem="QAw-gE-bWZ" firstAttribute="top" secondItem="q0c-s6-nKX" secondAttribute="bottom" constant="46" id="zan-Ze-fao"/>
                         </constraints>
@@ -634,7 +646,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1vN-ru-o06" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="69" y="281" width="277" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                         <integer key="value" value="1"/>
@@ -655,7 +667,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJT-zc-rvm" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="69" y="356" width="277" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="re-type password"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -726,7 +738,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kO8-rm-zRQ" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="69" y="504" width="277" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                         <integer key="value" value="1"/>
@@ -839,12 +851,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTh-Cg-kyP" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="152.5" y="426" width="100" height="43.5"/>
+                                <rect key="frame" x="152.5" y="426" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="ANI-Y6-FXT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                         <integer key="value" value="1"/>
@@ -868,12 +880,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="882-LJ-aCb" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="155.5" y="571" width="100" height="39"/>
+                                <rect key="frame" x="155.5" y="571" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="tnh-Cr-1kh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                         <integer key="value" value="1"/>
@@ -1546,7 +1558,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zcU-zG-5dw" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="70" y="221" width="277" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="email"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="person.circle" catalog="system"/>
@@ -1567,7 +1579,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mbA-hJ-Apc" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="70" y="294" width="277" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="password"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="shield.lefthalf.fill" catalog="system"/>
@@ -1588,7 +1600,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Fy-dz-AaL" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="70" y="369" width="277" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="re-type password"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="checkmark.shield" catalog="system"/>
@@ -1609,7 +1621,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0M3-9U-wrO" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="68" y="492" width="277" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="vendor name"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="house" catalog="system"/>
@@ -1640,7 +1652,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bRZ-bz-aLD" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="68" y="574" width="277" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="address"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -1735,12 +1747,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yQ0-2r-5mk" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="157" y="415" width="100" height="43.5"/>
+                                <rect key="frame" x="157" y="415" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Uud-0o-lgn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                         <integer key="value" value="1"/>
@@ -1802,12 +1814,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tAs-F9-9AM" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="157" y="565" width="100" height="44"/>
+                                <rect key="frame" x="157" y="565" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="VEZ-Sk-97P"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                         <integer key="value" value="1"/>
@@ -2192,9 +2204,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qiL-uF-ObT" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="194" width="354" height="39"/>
+                                <rect key="frame" x="30" y="199" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="email"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -2218,7 +2230,7 @@
                                     <constraint firstAttribute="height" constant="34" id="hn1-S6-SU4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="password"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -2237,9 +2249,9 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2N-PU-R3N" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="347" width="354" height="39"/>
+                                <rect key="frame" x="30" y="347" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="re-type password"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -2263,7 +2275,7 @@
                                     <constraint firstAttribute="height" constant="34" id="o6y-we-Ec0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="name"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -2287,7 +2299,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yAH-XY-kvf" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="30" y="571" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="city"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -2337,7 +2349,7 @@
                                 </constraints>
                                 <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="University/College - optional "/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -2434,7 +2446,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M0O-Ll-moP" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="159" y="431" width="97" height="34"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                         <integer key="value" value="1"/>
@@ -2850,7 +2862,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPF-oA-oCF">
                                 <rect key="frame" x="74" y="330" width="261" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="________________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTL-0s-IuG">
                                 <rect key="frame" x="42" y="774" width="347" height="21"/>
