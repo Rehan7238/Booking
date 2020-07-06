@@ -220,7 +220,7 @@
         <!--profile-->
         <scene sceneID="gjA-fb-jiB">
             <objects>
-                <viewController id="hcb-9e-qS3" customClass="GroupProfileViewController" sceneMemberID="viewController">
+                <viewController id="hcb-9e-qS3" customClass="GroupProfileViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HfD-Ru-leN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,7 +242,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="profile" id="dMC-mj-Gqx"/>
                     <connections>
-                        <outlet property="groupName" destination="5sV-T7-dTp" id="SOG-3G-bn0"/>
+                        <outlet property="groupName" destination="5sV-T7-dTp" id="cjh-9E-Rxc"/>
                         <outlet property="profilePic" destination="sU2-i1-FHe" id="e8t-DB-17z"/>
                     </connections>
                 </viewController>

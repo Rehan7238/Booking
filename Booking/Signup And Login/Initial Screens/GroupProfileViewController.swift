@@ -11,7 +11,7 @@ import UIKit
 import FSCalendar
 import FirebaseAuth
 
-class GroupProfileViewController: UIViewController{
+class GroupProfileViewController: UIViewController {
     
     //Mark: Properties
     
@@ -24,12 +24,10 @@ class GroupProfileViewController: UIViewController{
         super.viewDidLoad()
         
         if let uid = Auth.auth().currentUser?.uid {
-                  _ = Group.fromID(id: uid).done { loadedGroup in
-                      self.group = loadedGroup
-                    self.groupName.text = self.group?.name
-                  }
-              }
-        
-        
+            _ = Group.fromID(id: uid).done { loadedGroup in
+                self.group = loadedGroup
+                self.groupName.text = self.group?.name
+            }
+        }
     }
 }
