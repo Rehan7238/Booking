@@ -230,10 +230,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sV-T7-dTp">
-                                <rect key="frame" x="152" y="308" width="95" height="21"/>
+                                <rect key="frame" x="79" y="308" width="240" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -248,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QhF-fe-YTJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1167" y="2478"/>
+            <point key="canvasLocation" x="1166.6666666666667" y="2477.0089285714284"/>
         </scene>
         <!--calendar-->
         <scene sceneID="mXg-qd-AIa">
@@ -258,8 +258,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xh3-lW-tGi">
+                                <rect key="frame" x="262" y="455" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="toggle scope"/>
+                                <connections>
+                                    <action selector="toggleClicked:" destination="ez8-47-Pej" eventType="touchUpInside" id="ivG-xP-j5P"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scheduled Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgq-Iy-8tB">
+                                <rect key="frame" x="67" y="112" width="285" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B0S-Sm-Y5y" customClass="FSCalendar">
-                                <rect key="frame" x="67" y="141" width="285" height="259"/>
+                                <rect key="frame" x="67" y="174" width="285" height="259"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="tag-4x-YDq"/>
@@ -289,19 +304,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xh3-lW-tGi">
-                                <rect key="frame" x="162" y="483" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="toggle scope"/>
-                                <connections>
-                                    <action selector="toggleClicked:" destination="ez8-47-Pej" eventType="touchUpInside" id="ivG-xP-j5P"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="B0S-Sm-Y5y" firstAttribute="top" secondItem="gaL-ep-hrp" secondAttribute="top" constant="97" id="0C8-v2-Wdm"/>
+                            <constraint firstItem="B0S-Sm-Y5y" firstAttribute="top" secondItem="gaL-ep-hrp" secondAttribute="top" constant="130" id="13V-Ji-s4o"/>
                             <constraint firstItem="B0S-Sm-Y5y" firstAttribute="centerX" secondItem="gaL-ep-hrp" secondAttribute="centerX" id="XCx-UU-Apq"/>
+                            <constraint firstItem="B0S-Sm-Y5y" firstAttribute="centerY" secondItem="gaL-ep-hrp" secondAttribute="centerY" id="hwI-6O-Q88"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gaL-ep-hrp"/>
                     </view>
@@ -309,6 +317,7 @@
                     <connections>
                         <outlet property="calendar" destination="B0S-Sm-Y5y" id="uiq-Ax-hH2"/>
                         <outlet property="calendarHeightConstraint" destination="vRo-zM-JYO" id="mn3-L6-KrD"/>
+                        <outlet property="groupName" destination="mgq-Iy-8tB" id="iU6-cd-5p7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPZ-5E-mjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -318,7 +327,7 @@
         <!--Book-->
         <scene sceneID="qt8-RU-b7l">
             <objects>
-                <viewController id="SiI-rO-u2F" sceneMemberID="viewController">
+                <viewController id="SiI-rO-u2F" customClass="GroupExploreViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2vn-Eg-EEi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8h-Rv-G0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2681" y="2478"/>
+            <point key="canvasLocation" x="2679.7101449275365" y="2477.0089285714284"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="W54-h9-LrY">

@@ -13,6 +13,7 @@ import FirebaseAuth
 
 class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     
+    @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
     var group: Group?
@@ -35,8 +36,11 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         if let uid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: uid).done { loadedGroup in
                 self.group = loadedGroup
+                //self.groupName.text = self.group?.name
+
             }
         }
+
     }
     
     @IBAction func toggleClicked(_ sender: Any) {

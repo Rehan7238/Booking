@@ -10,11 +10,13 @@ target 'Booking' do
   pod 'Firebase/Analytics'
   pod 'PromiseKit'
   pod 'IQKeyboardManagerSwift'
+  pod 'Firebase/Database'
 
   # Pods for authentication
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
+
 
   # For Sign Up
   pod 'SkyFloatingLabelTextField', '~> 3.0'
