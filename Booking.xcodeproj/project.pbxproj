@@ -14,6 +14,7 @@
 		241712A124A527D900F950B6 /* SocializerInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241712A024A527D900F950B6 /* SocializerInitialViewController.swift */; };
 		241712A324A52EBC00F950B6 /* DJInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241712A224A52EBC00F950B6 /* DJInitialViewController.swift */; };
 		2447CCAA24A91EF6007163DB /* socializerMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447CCA924A91EF6007163DB /* socializerMapViewController.swift */; };
+		24593EE724B2B600002C2729 /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EE624B2B600002C2729 /* GroupProfileViewController.swift */; };
 		245FEF0024940319003267CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEEFF24940319003267CE /* HomeViewController.swift */; };
 		245FEF0224940365003267CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0124940365003267CE /* LoginViewController.swift */; };
 		245FEF0424940381003267CE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0324940381003267CE /* StartViewController.swift */; };
@@ -88,6 +89,7 @@
 		241712A224A52EBC00F950B6 /* DJInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJInitialViewController.swift; sourceTree = "<group>"; };
 		2447CCA924A91EF6007163DB /* socializerMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socializerMapViewController.swift; sourceTree = "<group>"; };
 		24593EE224A98292002C2729 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Downloads/mapbox-ios-sdk-5/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
+		24593EE624B2B600002C2729 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileViewController.swift; sourceTree = "<group>"; };
 		245FEEFF24940319003267CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		245FEF0124940365003267CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		245FEF0324940381003267CE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				241712A024A527D900F950B6 /* SocializerInitialViewController.swift */,
 				241712A224A52EBC00F950B6 /* DJInitialViewController.swift */,
 				5D0FBCD024A6ADF00011F8D9 /* GroupCalendarViewController.swift */,
+				24593EE624B2B600002C2729 /* GroupProfileViewController.swift */,
 			);
 			path = "Initial Screens";
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				5DDF6B3A24915C0E00B76C14 /* Group.swift in Sources */,
 				2492760B24A1776C0048C54A /* CollectVendorEquipmentViewController.swift in Sources */,
 				5DE698E3248DB92600301B39 /* SceneDelegate.swift in Sources */,
+				24593EE724B2B600002C2729 /* GroupProfileViewController.swift in Sources */,
 				2492760924A14C0D0048C54A /* VendorPlayingFeeViewController.swift in Sources */,
 				245FEF28249C759B003267CE /* CollectDJPlayingFeeViewController.swift in Sources */,
 				2492761324A2A25D0048C54A /* AlertView.swift in Sources */,
