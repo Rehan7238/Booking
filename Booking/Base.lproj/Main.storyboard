@@ -618,15 +618,12 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" keyboardKey="YES"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="your email"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
                                         <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                         <integer key="value" value="1"/>
@@ -1686,7 +1683,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bRZ-bz-aLD" firstAttribute="leading" secondItem="Ax5-hU-2UI" secondAttribute="leading" constant="68" id="1Mz-uL-ok5"/>
                             <constraint firstItem="Ax5-hU-2UI" firstAttribute="trailing" secondItem="8Fy-dz-AaL" secondAttribute="trailing" constant="67" id="1ui-0y-Yqh"/>
@@ -1837,7 +1834,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uPR-9l-RiD" firstAttribute="bottom" secondItem="cj9-uU-gOs" secondAttribute="bottom" constant="712" id="2lY-6c-QY8"/>
                             <constraint firstItem="uPR-9l-RiD" firstAttribute="bottom" secondItem="PTi-TF-USh" secondAttribute="bottom" constant="347" id="4Dc-zD-xMd"/>
@@ -1979,7 +1976,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sWg-XI-Sz6" firstAttribute="trailing" secondItem="oEn-pI-MH3" secondAttribute="trailing" constant="53" id="5bq-oK-OtM"/>
                             <constraint firstItem="0i4-zL-ybt" firstAttribute="leading" secondItem="sWg-XI-Sz6" secondAttribute="leading" constant="58" id="65h-Nu-DHd"/>
@@ -2071,7 +2068,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="asz-YT-ZwA" firstAttribute="top" secondItem="Rhs-VK-MfL" secondAttribute="top" constant="352" id="0cd-DZ-UY3"/>
                             <constraint firstItem="hwU-1N-2kg" firstAttribute="leading" secondItem="Rhs-VK-MfL" secondAttribute="leading" constant="138" id="2Of-9u-clx"/>
@@ -2164,7 +2161,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oJX-XM-1CA" firstAttribute="top" secondItem="R0H-0j-Si7" secondAttribute="top" constant="230" id="0aa-kH-P2c"/>
                             <constraint firstItem="R0H-0j-Si7" firstAttribute="bottom" secondItem="Dnm-Rj-pny" secondAttribute="bottom" constant="30" id="32I-sX-3OF"/>
@@ -2639,7 +2636,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="s9U-1J-QtE" firstAttribute="trailing" secondItem="j3I-YO-omN" secondAttribute="trailing" constant="55" id="8JE-of-lRb"/>
                             <constraint firstItem="Z3A-vw-IVH" firstAttribute="centerX" secondItem="NYd-2N-RAJ" secondAttribute="centerX" id="9iy-g9-CFC"/>
@@ -2774,7 +2771,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="U60-R8-T9R" firstAttribute="trailing" secondItem="BKt-PE-Wm7" secondAttribute="trailing" constant="43" id="3Ga-Ar-FZd"/>
                             <constraint firstItem="U60-R8-T9R" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gPZ-ie-bqX" secondAttribute="trailing" symbolic="YES" id="FGT-qX-SSJ"/>
@@ -3199,7 +3196,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Wb8-K7-X1j" firstAttribute="top" secondItem="bOs-9V-I51" secondAttribute="top" constant="731" id="2Gx-wR-dpF"/>
                             <constraint firstItem="bOs-9V-I51" firstAttribute="bottom" secondItem="Wb8-K7-X1j" secondAttribute="bottom" constant="37" id="2ib-Gu-sxX"/>
@@ -3242,7 +3239,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hoe-Rp-BEC"/>
+        <segue reference="glM-3y-jCg"/>
         <segue reference="mJJ-Tu-w3f"/>
     </inferredMetricsTieBreakers>
     <resources>
