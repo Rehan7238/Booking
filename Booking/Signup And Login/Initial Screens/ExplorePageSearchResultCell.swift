@@ -14,6 +14,7 @@ class ExplorePageSearchResultCell: UITableViewCell {
     @IBOutlet var profilePic: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
+    @IBOutlet weak var feeLabel: UILabel!
     var dj: DJ?
     
     func setup(djID: String) {
@@ -22,6 +23,8 @@ class ExplorePageSearchResultCell: UITableViewCell {
             self.dj = loadedDJ
             self.nameLabel.text = loadedDJ?.name
             self.locationLabel.text = loadedDJ?.location
+            let fee = "\(String(describing: loadedDJ?.playingFee ?? nil))"
+            self.feeLabel.text = fee
             if let profile = loadedDJ?.profilePic {
                 self.profilePic.downloadImage(from: URL(string: profile)!)
             }

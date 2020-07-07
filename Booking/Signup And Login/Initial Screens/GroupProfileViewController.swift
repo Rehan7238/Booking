@@ -21,6 +21,8 @@ class GroupProfileViewController: UIViewController {
     
     @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var schoolLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,8 @@ class GroupProfileViewController: UIViewController {
             _ = Group.fromID(id: uid).done { loadedGroup in
                 self.group = loadedGroup
                 self.groupName.text = self.group?.name
+                self.addressLabel.text = self.group?.address
+                self.schoolLabel.text = self.group?.school
                 if let profilePic = self.group?.profilePic {
                     self.profilePic.downloadImage(from: URL(string: profilePic)!)
                 }
