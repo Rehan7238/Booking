@@ -16,6 +16,9 @@
 		2447CCAA24A91EF6007163DB /* socializerMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447CCA924A91EF6007163DB /* socializerMapViewController.swift */; };
 		24593EE724B2B600002C2729 /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EE624B2B600002C2729 /* GroupProfileViewController.swift */; };
 		24593EE924B3B629002C2729 /* GroupExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EE824B3B629002C2729 /* GroupExploreViewController.swift */; };
+		24593EED24B5031B002C2729 /* createEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24593EEC24B5031B002C2729 /* createEventView.xib */; };
+		24593EEF24B50344002C2729 /* createEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EEE24B50344002C2729 /* createEventView.swift */; };
+		24593EF124B51984002C2729 /* DJProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EF024B51984002C2729 /* DJProfileViewController.swift */; };
 		245FEF0024940319003267CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEEFF24940319003267CE /* HomeViewController.swift */; };
 		245FEF0224940365003267CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0124940365003267CE /* LoginViewController.swift */; };
 		245FEF0424940381003267CE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0324940381003267CE /* StartViewController.swift */; };
@@ -93,6 +96,9 @@
 		24593EE224A98292002C2729 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Downloads/mapbox-ios-sdk-5/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
 		24593EE624B2B600002C2729 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileViewController.swift; sourceTree = "<group>"; };
 		24593EE824B3B629002C2729 /* GroupExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupExploreViewController.swift; sourceTree = "<group>"; };
+		24593EEC24B5031B002C2729 /* createEventView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = createEventView.xib; path = "Initial Screens/createEventView.xib"; sourceTree = "<group>"; };
+		24593EEE24B50344002C2729 /* createEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = createEventView.swift; path = "Initial Screens/createEventView.swift"; sourceTree = "<group>"; };
+		24593EF024B51984002C2729 /* DJProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJProfileViewController.swift; sourceTree = "<group>"; };
 		245FEEFF24940319003267CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		245FEF0124940365003267CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		245FEF0324940381003267CE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -224,7 +230,9 @@
 				245FEF0324940381003267CE /* StartViewController.swift */,
 				245FEF0524941ABB003267CE /* DJorGroupViewController.swift */,
 				2492761024A299770048C54A /* AlertView.xib */,
+				24593EEC24B5031B002C2729 /* createEventView.xib */,
 				2492761224A2A25C0048C54A /* AlertView.swift */,
+				24593EEE24B50344002C2729 /* createEventView.swift */,
 				5DB17EB1249F639900237276 /* OptionToSelect.swift */,
 				5D66E48C24A3497200BD36DF /* InviteContactsViewController.swift */,
 				5D66E48E24A34BF400BD36DF /* InviteContactsCell.swift */,
@@ -322,6 +330,7 @@
 				5DE698E2248DB92600301B39 /* SceneDelegate.swift */,
 				5DE698EB248DB92F00301B39 /* LaunchScreen.storyboard */,
 				2417129724A43FA000F950B6 /* SideMain.storyboard */,
+				24593EF024B51984002C2729 /* DJProfileViewController.swift */,
 				5DE698E6248DB92600301B39 /* Main.storyboard */,
 				5DDF6B3624915BDF00B76C14 /* Database Objects */,
 				5D66E49124A3786E00BD36DF /* Signup And Login */,
@@ -477,6 +486,7 @@
 				2417129824A43FA000F950B6 /* SideMain.storyboard in Resources */,
 				2492761124A299770048C54A /* AlertView.xib in Resources */,
 				5DE698EA248DB92F00301B39 /* Assets.xcassets in Resources */,
+				24593EED24B5031B002C2729 /* createEventView.xib in Resources */,
 				5DE698E8248DB92600301B39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,6 +656,7 @@
 				24593EE924B3B629002C2729 /* GroupExploreViewController.swift in Sources */,
 				245FEF26249C7566003267CE /* CollectDJProfilePicViewController.swift in Sources */,
 				5D66E48F24A34BF400BD36DF /* InviteContactsCell.swift in Sources */,
+				24593EEF24B50344002C2729 /* createEventView.swift in Sources */,
 				5DA31BE824919B4B00C18F55 /* DJSignupViewController.swift in Sources */,
 				2492760D24A179BE0048C54A /* CollectVendorProfilePicViewController.swift in Sources */,
 				249275FD24A03C080048C54A /* CollectGroupProfilePicViewController.swift in Sources */,
@@ -674,6 +685,7 @@
 				2447CCAA24A91EF6007163DB /* socializerMapViewController.swift in Sources */,
 				2492760324A1346B0048C54A /* SocializerFinalNotesViewController.swift in Sources */,
 				5D66E48D24A3497200BD36DF /* InviteContactsViewController.swift in Sources */,
+				24593EF124B51984002C2729 /* DJProfileViewController.swift in Sources */,
 				245FEF2A249C7608003267CE /* CollectDJGenresViewController.swift in Sources */,
 				5DE698E1248DB92600301B39 /* AppDelegate.swift in Sources */,
 				2492760F24A17B810048C54A /* VendorFinalNotesViewController.swift in Sources */,

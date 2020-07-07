@@ -16,6 +16,7 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var createEventButton: UIButton!
     var group: Group?
     
     fileprivate lazy var dateFormatter: DateFormatter = {
@@ -49,6 +50,12 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         } else {
             self.calendar.setScope(.month, animated: true)
         }
+    }
+    
+    
+    @IBAction func createEventClicked(_ sender: Any) {
+        createEventView.instance.showCreateEventView()
+        //self.performSegue(withIdentifier: "creatingEvent", sender: self)
     }
     
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
