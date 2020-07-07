@@ -14,7 +14,7 @@ class Event {
     
     var id: String = ""
     var eventName: String = "Event Name"
-    var address: [String: String] = [:]
+    var address: String = ""
     var DJBooked: Bool = false
     var DJID: String = ""
     var closedEvent: Bool = false
@@ -26,7 +26,7 @@ class Event {
         updateValue(fieldName: "eventName", newValue: newValue)
     }
     
-    func setAddress(_ newValue: [String: String]) {
+    func setAddress(_ newValue: String) {
         self.address = newValue
         updateValue(fieldName: "address", newValue: newValue)
     }
@@ -75,7 +75,7 @@ class Event {
                 if let data = document.data() {
                     event.id = document.documentID
                     event.eventName = data["eventName"] as! String
-                    event.address = data["address"] as! [String: String]
+                    event.address = data["address"] as! String
                     event.DJBooked = data["DJBooked"] as! Bool
                     event.DJID = data["DJID"] as! String
                     event.closedEvent = data["closedEvent"] as! Bool

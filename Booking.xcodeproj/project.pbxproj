@@ -19,6 +19,7 @@
 		24593EED24B5031B002C2729 /* createEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24593EEC24B5031B002C2729 /* createEventView.xib */; };
 		24593EEF24B50344002C2729 /* createEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EEE24B50344002C2729 /* createEventView.swift */; };
 		24593EF124B51984002C2729 /* DJProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EF024B51984002C2729 /* DJProfileViewController.swift */; };
+		24593EF324B51D11002C2729 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EF224B51D11002C2729 /* EventCell.swift */; };
 		245FEF0024940319003267CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEEFF24940319003267CE /* HomeViewController.swift */; };
 		245FEF0224940365003267CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0124940365003267CE /* LoginViewController.swift */; };
 		245FEF0424940381003267CE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0324940381003267CE /* StartViewController.swift */; };
@@ -99,6 +100,7 @@
 		24593EEC24B5031B002C2729 /* createEventView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = createEventView.xib; path = "Initial Screens/createEventView.xib"; sourceTree = "<group>"; };
 		24593EEE24B50344002C2729 /* createEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = createEventView.swift; path = "Initial Screens/createEventView.swift"; sourceTree = "<group>"; };
 		24593EF024B51984002C2729 /* DJProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJProfileViewController.swift; sourceTree = "<group>"; };
+		24593EF224B51D11002C2729 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		245FEEFF24940319003267CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		245FEF0124940365003267CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		245FEF0324940381003267CE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				24593EE624B2B600002C2729 /* GroupProfileViewController.swift */,
 				24593EE824B3B629002C2729 /* GroupExploreViewController.swift */,
 				5D63BD2624B4CA3D0022A2C0 /* ExplorePageSearchResultCell.swift */,
+				24593EF224B51D11002C2729 /* EventCell.swift */,
 			);
 			path = "Initial Screens";
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				2417129D24A5275900F950B6 /* GroupInitialViewController.swift in Sources */,
 				245FEF0C249C19D5003267CE /* SocializerSignUpViewController.swift in Sources */,
 				241712A324A52EBC00F950B6 /* DJInitialViewController.swift in Sources */,
+				24593EF324B51D11002C2729 /* EventCell.swift in Sources */,
 				2492760124A130AA0048C54A /* DJFinalNotesViewController.swift in Sources */,
 				2492760724A13FD10048C54A /* VendorSignUpViewController.swift in Sources */,
 				249275FF24A041590048C54A /* GroupFinalNotesViewController.swift in Sources */,

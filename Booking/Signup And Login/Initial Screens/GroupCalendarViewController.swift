@@ -10,9 +10,13 @@ import Foundation
 import UIKit
 import FSCalendar
 import FirebaseAuth
+import Firebase
+import FirebaseDatabase
 
-class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
+
+class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource {
     
+
     @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
@@ -27,7 +31,7 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         calendar.delegate = self
         calendar.dataSource = self
         calendar.select(Date())
@@ -41,8 +45,8 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
 
             }
         }
-
-    }
+        
+       
     
     @IBAction func toggleClicked(_ sender: Any) {
         if self.calendar.scope == .month {
@@ -75,5 +79,7 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         print("\(self.dateFormatter.string(from: calendar.currentPage))")
     }
+    
+   
     
 }
