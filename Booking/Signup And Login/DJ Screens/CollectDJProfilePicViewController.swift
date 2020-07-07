@@ -45,8 +45,8 @@ class CollectDJProfilePicViewController: UIViewController, UIImagePickerControll
                         // Uh-oh, an error occurred!
                         return
                     }
-                    let pathString = downloadURL.path // String
-                    self.dj?.setProfilepic(pathString)
+                    //let pathString = downloadURL.path // String
+                    self.dj?.setProfilepic(downloadURL.absoluteString)
                 }
             }
         }

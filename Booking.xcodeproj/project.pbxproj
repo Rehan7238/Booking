@@ -47,6 +47,7 @@
 		5D0FBCD124A6ADF00011F8D9 /* GroupCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0FBCD024A6ADF00011F8D9 /* GroupCalendarViewController.swift */; };
 		5D12207C249957C2006D2517 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207B249957C2006D2517 /* Event.swift */; };
 		5D12207E249957CB006D2517 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207D249957CB006D2517 /* User.swift */; };
+		5D63BD2724B4CA3D0022A2C0 /* ExplorePageSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63BD2624B4CA3D0022A2C0 /* ExplorePageSearchResultCell.swift */; };
 		5D66E48D24A3497200BD36DF /* InviteContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D66E48C24A3497200BD36DF /* InviteContactsViewController.swift */; };
 		5D66E48F24A34BF400BD36DF /* InviteContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D66E48E24A34BF400BD36DF /* InviteContactsCell.swift */; };
 		5D87BD8624949D1800F4CA6C /* GroupSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */; };
@@ -122,6 +123,7 @@
 		5D0FBCD024A6ADF00011F8D9 /* GroupCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCalendarViewController.swift; sourceTree = "<group>"; };
 		5D12207B249957C2006D2517 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		5D12207D249957CB006D2517 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5D63BD2624B4CA3D0022A2C0 /* ExplorePageSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePageSearchResultCell.swift; sourceTree = "<group>"; };
 		5D66E48C24A3497200BD36DF /* InviteContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteContactsViewController.swift; sourceTree = "<group>"; };
 		5D66E48E24A34BF400BD36DF /* InviteContactsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteContactsCell.swift; sourceTree = "<group>"; };
 		5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSignUpViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				5D0FBCD024A6ADF00011F8D9 /* GroupCalendarViewController.swift */,
 				24593EE624B2B600002C2729 /* GroupProfileViewController.swift */,
 				24593EE824B3B629002C2729 /* GroupExploreViewController.swift */,
+				5D63BD2624B4CA3D0022A2C0 /* ExplorePageSearchResultCell.swift */,
 			);
 			path = "Initial Screens";
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				2492760D24A179BE0048C54A /* CollectVendorProfilePicViewController.swift in Sources */,
 				249275FD24A03C080048C54A /* CollectGroupProfilePicViewController.swift in Sources */,
 				249275FB249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift in Sources */,
+				5D63BD2724B4CA3D0022A2C0 /* ExplorePageSearchResultCell.swift in Sources */,
 				5DB17EB2249F639900237276 /* OptionToSelect.swift in Sources */,
 				245FEF0624941ABB003267CE /* DJorGroupViewController.swift in Sources */,
 				5D0FBCD124A6ADF00011F8D9 /* GroupCalendarViewController.swift in Sources */,

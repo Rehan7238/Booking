@@ -101,7 +101,7 @@ class DJSignupViewController: UIViewController, UITextFieldDelegate {
                         
                         let dj = DJ.createNew(withID: (result?.user.uid)!)
                         dj.setName(self.nameTextField.text!)
-                        dj.setLocality(self.cityTextField.text!)
+                        dj.setLocation(self.cityTextField.text!)
                         dj.setUniversity(self.uniAffiliationTextField.text!)
                         self.performSegue(withIdentifier: "signupToQuestions", sender: self)
                     }
