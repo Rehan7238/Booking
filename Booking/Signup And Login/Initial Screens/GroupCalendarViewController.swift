@@ -94,6 +94,7 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     
     @IBAction func createEventClicked(_ sender: Any) {
         if let createEventVC = Bundle.main.loadNibNamed("createEventView", owner: nil, options: nil)?.first as? createEventView {
+            createEventVC.parentView = self
             self.present(createEventVC, animated: true, completion: nil)
         }
     }

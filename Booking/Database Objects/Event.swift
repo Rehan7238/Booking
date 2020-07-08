@@ -88,8 +88,6 @@ class Event {
                 resolver.fulfill(nil)
                 print("Document does not exist")
             }
-            
-            
         }
         return promise
     }
