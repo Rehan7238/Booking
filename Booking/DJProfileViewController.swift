@@ -59,19 +59,19 @@ override func viewDidLoad() {
     
     @IBAction func InstagramAction() {
         if let dj = dj{
-        let Username =  self.dj?.instagramLink// Your Instagram Username here}
-        
-        let appURL = URL(string: "instagram://user?username=\(Username)")!
-        
-        let application = UIApplication.shared
+            let username =  dj.instagramLink// Your Instagram Username here}
+            
+            let appURL = URL(string: "instagram://user?username=" + (username))!
+            
+            let application = UIApplication.shared
 
-        if application.canOpenURL(appURL) {
-            application.open(appURL)
-        } else {
-            // if Instagram app is not installed, open URL inside Safari
-            let webURL = URL(string: "https://instagram.com/\(Username)")!
-            application.open(webURL)
-        }
+            if application.canOpenURL(appURL) {
+                application.open(appURL)
+            } else {
+                // if Instagram app is not installed, open URL inside Safari
+                let webURL = URL(string: "https://instagram.com/\(username)")!
+                application.open(webURL)
+            }
         }
 
     }
