@@ -14,14 +14,15 @@ import Firebase
 import FirebaseDatabase
 
 
-class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
+class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource {
     
-
     @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var calendar: FSCalendar!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var createEventButton: UIButton!
     var group: Group?
+    var results: [String]?
     
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -31,7 +32,10 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         calendar.delegate = self
         calendar.dataSource = self
         calendar.select(Date())
@@ -42,12 +46,38 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
             _ = Group.fromID(id: uid).done { loadedGroup in
                 self.group = loadedGroup
                 //self.groupName.text = self.group?.name
-
+                
+            }
+        }
+        
+        let db = Firestore.firestore()
+        db.collection("Events").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    if self.results == nil {
+                        self.results = [document.documentID]
+                    } else {
+                        self.results?.append(document.documentID)
+                    }
+                }
+                self.tableView.reloadData()
             }
         }
     }
-        
-       
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return results?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell") as! EventCell
+        if let id = results?[indexPath.row] {
+            cell.setup(eventID: id)
+        }
+        return cell
+    }
     
     @IBAction func toggleClicked(_ sender: Any) {
         if self.calendar.scope == .month {
@@ -76,12 +106,9 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
             calendar.setCurrentPage(date, animated: true)
         }
     }
-
+    
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         print("\(self.dateFormatter.string(from: calendar.currentPage))")
     }
     
-   
-    
-
 }

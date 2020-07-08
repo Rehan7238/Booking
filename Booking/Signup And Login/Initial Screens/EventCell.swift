@@ -11,18 +11,15 @@ import UIKit
 
 class EventCell: UITableViewCell {
     
-    @IBOutlet var profilePic: UIImageView!
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var locationLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     var event: Event?
     
-    func setup(djID: String) {
-        profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
-        _ = Event.fromID(id: djID).done { loadedEvent in
+    func setup(eventID: String) {
+        _ = Event.fromID(id: eventID).done { loadedEvent in
             self.event = loadedEvent
             self.nameLabel.text = loadedEvent?.eventName
             self.locationLabel.text = loadedEvent?.address
-            
         }
     }
 }
