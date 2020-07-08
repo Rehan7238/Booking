@@ -19,6 +19,7 @@ class GroupProfileViewController: UIViewController {
     
     var group: Group?
     
+    @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var addressLabel: UILabel!
@@ -42,6 +43,27 @@ class GroupProfileViewController: UIViewController {
             }
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
+        
+        
+        if let uid = Auth.auth().currentUser?.uid {
+            _ = Group.fromID(id: uid).done { loadedGroup in
+                self.group = loadedGroup
+                self.groupName.text = self.group?.name
+                self.addressLabel.text = self.group?.address
+                self.schoolLabel.text = self.group?.school
+                if let profilePic = self.group?.profilePic {
+                    self.profilePic.downloadImage(from: URL(string: profilePic)!)
+                }
+            }
+        }
+    }
+    
+    
 }
 extension UIImageView {
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {

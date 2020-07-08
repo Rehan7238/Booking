@@ -14,6 +14,7 @@ class DJ {
     
     var id: String = ""
     var name: String = "Name"
+    var instagramLink: String = ""
     var equipment: [String] = []
     var hostRating: NSNumber = 0.0
     var litness: NSNumber = 0.0
@@ -38,6 +39,10 @@ class DJ {
     func setEquipment(_ newEquipment: [String]) {
         self.equipment = newEquipment
         updateValue(fieldName: "equipment", newValue: newEquipment)
+    }
+    func setInstagramLink(_ newName: String) {
+        self.instagramLink = newName
+        updateValue(fieldName: "instagramLink", newValue: newName)
     }
     
     func setHostRating(_ newHostRating: NSNumber) {
@@ -124,6 +129,7 @@ class DJ {
                 if let data = document.data() {
                     dj.id = document.documentID
                     dj.name = data["name"] as! String
+                    dj.instagramLink = data["instagramLink"] as! String
                     dj.equipment = data["equipment"] as! [String]
                     dj.hostRating = data["hostRating"] as! NSNumber
                     dj.litness = data["litness"] as! NSNumber
@@ -169,7 +175,8 @@ class DJ {
             "playlist": newDJ.playlist,
             "previousEvents": newDJ.previousEvents,
             "profilePic": newDJ.profilePic,
-            "upcomingEvents": newDJ.upcomingEvents
+            "upcomingEvents": newDJ.upcomingEvents,
+            "instagramLink": newDJ.instagramLink
         ])
         
         return newDJ

@@ -19,6 +19,7 @@ class DJProfileViewController: UIViewController {
     
     @IBOutlet weak var djName: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var instaButton: UIButton!
     var dj: DJ?
         
     
@@ -37,6 +38,42 @@ override func viewDidLoad() {
                 }
             }
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+               profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
+               
+               
+               if let uid = Auth.auth().currentUser?.uid {
+                   _ = DJ.fromID(id: uid).done { loadedDJ in
+                       self.dj = loadedDJ
+                       self.djName.text = self.dj?.name
+                       if let profilePic = self.dj?.profilePic {
+                           self.profilePic.downloadImage(from: URL(string: profilePic)!)
+                       }
+                   }
+               }
+    }
+    
+    @IBAction func InstagramAction() {
+        if let dj = dj{
+        let Username =  self.dj?.instagramLink// Your Instagram Username here}
+        
+        let appURL = URL(string: "instagram://user?username=\(Username)")!
+        
+        let application = UIApplication.shared
+
+        if application.canOpenURL(appURL) {
+            application.open(appURL)
+        } else {
+            // if Instagram app is not installed, open URL inside Safari
+            let webURL = URL(string: "https://instagram.com/\(Username)")!
+            application.open(webURL)
+        }
+        }
+
     }
 }
 //extension UIImageView {

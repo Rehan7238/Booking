@@ -32,7 +32,8 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        createEventButton.layer.cornerRadius = 4
+
         tableView.delegate = self
         tableView.dataSource = self
         
