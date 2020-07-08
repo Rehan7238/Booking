@@ -9,15 +9,20 @@
 import Foundation
 import Firebase
 import PromiseKit
+import GooglePlaces
+
 
 class Group {
     
     var id: String = ""
     var school: String = ""
+   // var schoolGeoPoint:  GeoPoint? = nil
+    var schoolLongitude:  String = ""
+    var schoolLatitude:  String = ""
     var name: String = "Name"
     var address: String = ""
-    var city: String = " "
-    var state: String =  " "
+    var city: String = ""
+    var state: String =  ""
     var equipment: [String] = []
     var futureEvents: [String] = []
     var higherPrice: NSNumber = 0.0
@@ -33,6 +38,16 @@ class Group {
     func setAddress(_ newAddress: String) {
         self.address = newAddress
         updateValue(fieldName: "address", newValue: newAddress)
+    }
+    
+    func setLongitude(_ newAddress: String) {
+        self.schoolLongitude = newAddress
+        updateValue(fieldName: "schoolLongitude", newValue: newAddress)
+    }
+    
+    func setLatitude(_ newAddress: String) {
+        self.schoolLatitude = newAddress
+        updateValue(fieldName: "schoolLatitude", newValue: newAddress)
     }
     
     func setCity(_ newCity: String) {
@@ -105,6 +120,9 @@ class Group {
                     group.lowerPrice = data["lowerPrice"] as! NSNumber
                     group.previousEvents = data["previousEvents"] as! [String]
                     group.profilePic = data["profilePic"] as! String
+                    group.schoolLatitude = data["schoolLatitude"] as! String
+                    group.schoolLongitude = data["schoolLongitude"] as! String
+
                 }
                 resolver.fulfill(group)
             } else {
@@ -134,7 +152,10 @@ class Group {
             "higherPrice": newGroup.higherPrice,
             "lowerPrice": newGroup.lowerPrice,
             "previousEvents": newGroup.previousEvents,
-            "profilePic": newGroup.profilePic
+            "profilePic": newGroup.profilePic,
+            "schoolLatitude" : newGroup.schoolLatitude,
+            "schoolLongitude" : newGroup.schoolLongitude
+
 
         ])
         

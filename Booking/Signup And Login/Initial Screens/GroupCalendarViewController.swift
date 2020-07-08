@@ -14,7 +14,7 @@ import Firebase
 import FirebaseDatabase
 
 
-class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource {
+class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     
 
     @IBOutlet weak var groupName: UILabel!
@@ -45,6 +45,7 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
 
             }
         }
+    }
         
        
     
@@ -82,4 +83,5 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     
    
     
+
 }

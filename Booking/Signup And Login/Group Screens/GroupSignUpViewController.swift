@@ -11,6 +11,8 @@ import UIKit
 import FirebaseAuth
 import SkyFloatingLabelTextField;
 import GooglePlaces
+import PromiseKit
+import Firebase
 
 
 
@@ -25,6 +27,7 @@ class GroupSignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var goBackButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     var selectedTextField: UITextField?
+    var geopointHolder: CLLocationCoordinate2D?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,6 +106,10 @@ class GroupSignUpViewController: UIViewController, UITextFieldDelegate {
                         group.setName(self.groupNameTextField.text!)
                         group.setAddress(self.addressTextField.text!)
                         group.setSchool(self.schoolTextField.text!)
+                        let schoolLongitude = self.geopointHolder?.longitude
+                        let schoolLatitude = self.geopointHolder?.latitude
+                        group.setLongitude("\(String(describing: schoolLongitude ))")
+                        group.setLatitude("\(String(describing: schoolLatitude))")
                         self.performSegue(withIdentifier: "toGroupEquipmentQuestion", sender: self)
                     } else {
                         AlertView.instance.showAlert(message: "Error signing up with that email and password")
@@ -128,6 +135,8 @@ extension GroupSignUpViewController: GMSAutocompleteViewControllerDelegate {
             self.addressTextField.text = place.formattedAddress
         } else if selectedTextField == self.schoolTextField {
             self.schoolTextField.text = place.formattedAddress
+            self.geopointHolder = (place.coordinate)
+            
         }
         // Dismiss the GMSAutocompleteViewController when something is selected
         dismiss(animated: true, completion: nil)
