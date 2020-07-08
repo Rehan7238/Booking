@@ -32,7 +32,7 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createEventButton.layer.cornerRadius = 4
+        createEventButton.layer.cornerRadius = createEventButton.frame.height / 2
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -82,6 +82,7 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell") as! EventCell
         let id = results[indexPath.row]
         cell.setup(eventID: id)
+        cell.layer.cornerRadius = cell.frame.height / 3
         return cell
     }
     

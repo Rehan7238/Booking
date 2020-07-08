@@ -39,6 +39,7 @@
             _ = Group.fromID(id: uid).done { loadedGroup in
                 self.group = loadedGroup
                 event.setHostID(loadedGroup!.id)
+                event.setHostName(loadedGroup!.name)
             }
         }
         

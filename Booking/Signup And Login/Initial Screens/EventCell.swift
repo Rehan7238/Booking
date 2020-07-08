@@ -12,22 +12,22 @@ import UIKit
 class EventCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var groupNameLabel: UILabel!
     var event: Event?
     
     override func prepareForReuse() {
         super.prepareForReuse()
         nameLabel.text = ""
-        locationLabel.text = ""
+        groupNameLabel.text = ""
     }
     
     func setup(eventID: String) {
         nameLabel.text = ""
-        locationLabel.text = ""
+        groupNameLabel.text = ""
         _ = Event.fromID(id: eventID).done { loadedEvent in
             self.event = loadedEvent
             self.nameLabel.text = loadedEvent?.eventName
-            self.locationLabel.text = loadedEvent?.address
+            self.groupNameLabel.text = loadedEvent?.hostName
         }
     }
 }

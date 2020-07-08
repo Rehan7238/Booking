@@ -20,6 +20,8 @@ class Event {
     var closedEvent: Bool = false
     var date: String = ""
     var hostID: String = ""
+    var hostName: String = ""
+
     
     func setEventName(_ newValue: String) {
         self.eventName = newValue
@@ -56,6 +58,11 @@ class Event {
         updateValue(fieldName: "hostID", newValue: newValue)
     }
     
+    func setHostName(_ newValue: String) {
+        self.hostName = newValue
+        updateValue(fieldName: "hostName", newValue: newValue)
+    }
+    
     private func updateValue(fieldName: String, newValue: Any) {
         let db = Firestore.firestore()
         let event = db.collection("Events").document(id)
@@ -81,6 +88,8 @@ class Event {
                     event.closedEvent = data["closedEvent"] as! Bool
                     event.date = data["date"] as! String
                     event.hostID = data["hostID"] as! String
+                    event.hostName = data["hostName"] as! String
+
 
                 }
                 resolver.fulfill(event)
@@ -106,7 +115,9 @@ class Event {
             "DJID": newEvent.DJID,
             "closedEvent": newEvent.closedEvent,
             "date": newEvent.date,
-            "hostID": newEvent.hostID
+            "hostID": newEvent.hostID,
+            "hostName": newEvent.hostName
+
         ])
         
         return newEvent

@@ -19,6 +19,10 @@ class GroupExploreViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var searchBar: UITextField!
     @IBOutlet weak var searchResultsTable: UITableView!
+    
+    @IBOutlet weak var DJSearchButton: UIButton!
+    @IBOutlet weak var groupSearchButton: UIButton!
+    
     var group: Group?
     var results: [String]?
     
