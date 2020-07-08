@@ -11,40 +11,26 @@
  import Firebase
  import FirebaseDatabase
  
- class createEventView: UIView {
+ class createEventView: UIViewController {
     
-    @IBOutlet var parentView: UIView! = UIView()
-    @IBOutlet var titleLabel: UILabel! = UILabel()
     @IBOutlet var eventNameText: UITextField! = UITextField()
     @IBOutlet var doneButton: UIButton! = UIButton()
+    @IBOutlet weak var cancelButton: UIButton!
     
-    static let instance = createEventView()
     var group: Group?
+    var parentView: GroupCalendarViewController?
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        Bundle.main.loadNibNamed("createEventView", owner: self, options: nil)
-        commonInit()
-        
-    }
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        //fatalError("init has not been implemented")
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
-    private func commonInit() {
-        parentView.frame = CGRect(x:0, y:0,width: UIScreen.main.bounds.width, height:UIScreen.main.bounds.height)
-        parentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-    }
-    
-    func showCreateEventView() {
-        UIApplication.shared.keyWindow?.addSubview(parentView)
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func onClick(_ sender: Any) {
         let identifier = UUID()
         let event = Event.createNew(withID: "\(String(describing: identifier ))")
-        event.setEventName("\(String(describing: identifier ))")
         if let text = self.eventNameText.text {
             event.setEventName(text)
         }
@@ -56,6 +42,7 @@
             }
         }
         
-        parentView.removeFromSuperview()
+        self.dismiss(animated: true, completion: nil)
+        parentView?.refreshData()
     }
  }

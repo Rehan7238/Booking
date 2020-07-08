@@ -15,7 +15,15 @@ class EventCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     var event: Event?
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        nameLabel.text = ""
+        locationLabel.text = ""
+    }
+    
     func setup(eventID: String) {
+        nameLabel.text = ""
+        locationLabel.text = ""
         _ = Event.fromID(id: eventID).done { loadedEvent in
             self.event = loadedEvent
             self.nameLabel.text = loadedEvent?.eventName

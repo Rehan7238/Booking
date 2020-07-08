@@ -22,7 +22,7 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var createEventButton: UIButton!
     var group: Group?
-    var results: [String]?
+    var results: [String] = [String]()
     
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -50,17 +50,23 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
             }
         }
         
+        refreshData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        refreshData()
+    }
+    
+    func refreshData() {
         let db = Firestore.firestore()
         db.collection("Events").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
+                self.results = [String]()
                 for document in querySnapshot!.documents {
-                    if self.results == nil {
-                        self.results = [document.documentID]
-                    } else {
-                        self.results?.append(document.documentID)
-                    }
+                    self.results.append(document.documentID)
                 }
                 self.tableView.reloadData()
             }
@@ -68,14 +74,13 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return results?.count ?? 0
+        return results.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell") as! EventCell
-        if let id = results?[indexPath.row] {
-            cell.setup(eventID: id)
-        }
+        let id = results[indexPath.row]
+        cell.setup(eventID: id)
         return cell
     }
     
@@ -87,10 +92,10 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         }
     }
     
-    
     @IBAction func createEventClicked(_ sender: Any) {
-        createEventView.instance.showCreateEventView()
-        //self.performSegue(withIdentifier: "creatingEvent", sender: self)
+        if let createEventVC = Bundle.main.loadNibNamed("createEventView", owner: nil, options: nil)?.first as? createEventView {
+            self.present(createEventVC, animated: true, completion: nil)
+        }
     }
     
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
