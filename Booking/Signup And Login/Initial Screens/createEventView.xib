@@ -15,12 +15,14 @@
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voW-cc-kuk">
-                        <rect key="frame" x="51" y="233" width="312" height="440"/>
+                        <rect key="frame" x="51" y="253" width="312" height="400"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxa-Fw-DWz">
-                                <rect key="frame" x="0.0" y="397" width="312" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxa-Fw-DWz">
+                                <rect key="frame" x="0.0" y="365" width="312" height="35"/>
                                 <color key="backgroundColor" red="0.53646795960000004" green="0.90898545519999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="2Ym-JG-e4R"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
                                 <state key="normal" title="CREATE!">
                                     <color key="titleColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -29,16 +31,14 @@
                                     <action selector="onClick:" destination="IZS-9L-hyJ" eventType="touchUpInside" id="94v-kU-IUv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlO-df-2Xy">
-                                <rect key="frame" x="107" y="43" width="100" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlO-df-2Xy">
+                                <rect key="frame" x="106" y="43" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LdD-3E-qZU" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="56" y="95" width="225" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LdD-3E-qZU" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="43.5" y="84" width="225" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -65,12 +65,27 @@
                                     <action selector="cancelButtonPressed:" destination="IZS-9L-hyJ" eventType="touchUpInside" id="K7C-Ie-8xX"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGW-cH-Q3t" customClass="FSCalendar">
+                                <rect key="frame" x="41" y="143" width="240" height="202"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="xxa-Fw-DWz" firstAttribute="leading" secondItem="voW-cc-kuk" secondAttribute="leading" id="3Jo-3J-cwO"/>
                             <constraint firstAttribute="width" constant="312" id="50k-IZ-J8k"/>
+                            <constraint firstItem="EGW-cH-Q3t" firstAttribute="leading" secondItem="voW-cc-kuk" secondAttribute="leading" constant="41" id="7cn-1Y-v1L"/>
+                            <constraint firstItem="XlO-df-2Xy" firstAttribute="centerX" secondItem="voW-cc-kuk" secondAttribute="centerX" id="BHe-EP-gdC"/>
+                            <constraint firstAttribute="trailing" secondItem="xxa-Fw-DWz" secondAttribute="trailing" id="CNj-1v-bYM"/>
+                            <constraint firstItem="EGW-cH-Q3t" firstAttribute="top" secondItem="LdD-3E-qZU" secondAttribute="bottom" constant="20" id="Fds-l8-TAc"/>
                             <constraint firstAttribute="trailing" secondItem="npE-O3-rnA" secondAttribute="trailing" constant="10" id="Fsw-7A-Vk2"/>
-                            <constraint firstAttribute="height" constant="440" id="U1p-L1-E6z"/>
+                            <constraint firstAttribute="bottom" secondItem="xxa-Fw-DWz" secondAttribute="bottom" id="LpH-B5-0Wo"/>
+                            <constraint firstAttribute="height" constant="400" id="U1p-L1-E6z"/>
+                            <constraint firstItem="LdD-3E-qZU" firstAttribute="centerX" secondItem="voW-cc-kuk" secondAttribute="centerX" id="WQQ-I2-sln"/>
+                            <constraint firstItem="XlO-df-2Xy" firstAttribute="top" secondItem="voW-cc-kuk" secondAttribute="top" constant="43" id="ate-sJ-HuW"/>
+                            <constraint firstItem="LdD-3E-qZU" firstAttribute="top" secondItem="XlO-df-2Xy" secondAttribute="bottom" constant="20" id="cru-fl-SyD"/>
+                            <constraint firstAttribute="trailing" secondItem="EGW-cH-Q3t" secondAttribute="trailing" constant="31" id="leN-rb-7rR"/>
+                            <constraint firstItem="xxa-Fw-DWz" firstAttribute="top" secondItem="EGW-cH-Q3t" secondAttribute="bottom" constant="20" id="sg9-Ou-L5A"/>
                             <constraint firstItem="npE-O3-rnA" firstAttribute="top" secondItem="voW-cc-kuk" secondAttribute="top" constant="10" id="u9z-PZ-ttC"/>
                         </constraints>
                     </view>
@@ -83,6 +98,7 @@
                 <viewLayoutGuide key="safeArea" id="wSh-OZ-f8T"/>
             </view>
             <connections>
+                <outlet property="calendarView" destination="EGW-cH-Q3t" id="LO4-so-MT2"/>
                 <outlet property="cancelButton" destination="npE-O3-rnA" id="Mxh-Yc-7Mk"/>
                 <outlet property="doneButton" destination="xxa-Fw-DWz" id="9f8-g4-yJr"/>
                 <outlet property="eventNameText" destination="LdD-3E-qZU" id="OX2-3k-khd"/>

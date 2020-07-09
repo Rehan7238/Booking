@@ -39,7 +39,6 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         
         calendar.delegate = self
         calendar.dataSource = self
-        calendar.select(Date())
         calendar.scope = .month
         calendar.allowsMultipleSelection = true
         
@@ -61,15 +60,26 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     
     func refreshData() {
         let db = Firestore.firestore()
-        db.collection("Events").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                self.results = [String]()
-                for document in querySnapshot!.documents {
-                    self.results.append(document.documentID)
+        if let uid = Auth.auth().currentUser?.uid {
+
+            db.collection("Events").whereField("hostID", isEqualTo: uid).getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    self.results = [String]()
+                    for document in querySnapshot!.documents {
+                        self.results.append(document.documentID)
+                    }
+                    for eventID in self.results {
+                        _ = Event.fromID(id: eventID).done { loadedEvent in
+                            if let date = loadedEvent?.date, !date.isEmpty {
+                                let eventDate = self.dateFormatter.date(from: date)
+                                self.calendar.select(eventDate)
+                            }
+                        }
+                    }
+                    self.tableView.reloadData()
                 }
-                self.tableView.reloadData()
             }
         }
     }

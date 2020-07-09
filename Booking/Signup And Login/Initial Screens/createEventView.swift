@@ -10,12 +10,14 @@
  import UIKit
  import Firebase
  import FirebaseDatabase
+ import FSCalendar
  
  class createEventView: UIViewController {
     
     @IBOutlet var eventNameText: UITextField! = UITextField()
     @IBOutlet var doneButton: UIButton! = UIButton()
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var calendarView: FSCalendar!
     
     var group: Group?
     var parentView: GroupCalendarViewController?
@@ -29,21 +31,28 @@
     }
     
     @IBAction func onClick(_ sender: Any) {
-        let identifier = UUID()
-        let event = Event.createNew(withID: "\(String(describing: identifier ))")
-        if let text = self.eventNameText.text {
-            event.setEventName(text)
-        }
-        
-        if let uid = Auth.auth().currentUser?.uid {
-            _ = Group.fromID(id: uid).done { loadedGroup in
-                self.group = loadedGroup
-                event.setHostID(loadedGroup!.id)
-                event.setHostName(loadedGroup!.name)
+        if let eventName = eventNameText.text, !eventName.isEmpty, let selectedDate = calendarView.selectedDate {
+            
+            let identifier = UUID()
+            let event = Event.createNew(withID: "\(String(describing: identifier ))")
+            event.setEventName(eventName)
+            
+            let df = DateFormatter()
+            df.dateFormat = "yyyy/MM/dd"
+            let dateString = df.string(from: selectedDate)
+            
+            event.setDate(dateString)
+            
+            if let uid = Auth.auth().currentUser?.uid {
+                _ = Group.fromID(id: uid).done { loadedGroup in
+                    self.group = loadedGroup
+                    event.setHostID(loadedGroup!.id)
+                    event.setHostName(loadedGroup!.name)
+                    
+                    self.parentView?.refreshData()
+                    self.dismiss(animated: true, completion: nil)                    
+                }
             }
         }
-        
-        self.dismiss(animated: true, completion: nil)
-        parentView?.refreshData()
     }
  }

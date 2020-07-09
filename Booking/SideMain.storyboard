@@ -429,7 +429,25 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATa-DF-QAS">
                                                     <rect key="frame" x="5" y="5" width="364" height="63"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ING-uV-ScA">
+                                                            <rect key="frame" x="262" y="9" width="82" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dj label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkE-zI-nva">
+                                                            <rect key="frame" x="303" y="37.5" width="41" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="wkE-zI-nva" firstAttribute="trailing" secondItem="ING-uV-ScA" secondAttribute="trailing" id="UwB-f7-hoz"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ING-uV-ScA" secondAttribute="trailing" constant="20" id="nxd-AS-PQE"/>
+                                                    </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qb-mF-JvI">
                                                     <rect key="frame" x="20" y="15" width="81.5" height="19"/>
@@ -453,6 +471,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="ATa-DF-QAS" secondAttribute="trailing" constant="5" id="3b3-Op-qNQ"/>
+                                                <constraint firstItem="ING-uV-ScA" firstAttribute="centerY" secondItem="5Qb-mF-JvI" secondAttribute="centerY" id="4jf-Vp-xb5"/>
                                                 <constraint firstItem="5Ny-eZ-ghy" firstAttribute="leading" secondItem="Sf4-Y8-Hoi" secondAttribute="leading" constant="20" id="5ML-jB-0bb"/>
                                                 <constraint firstItem="5Ny-eZ-ghy" firstAttribute="bottom" secondItem="ATa-DF-QAS" secondAttribute="bottom" constant="-10" id="7d4-iB-eak"/>
                                                 <constraint firstAttribute="bottom" secondItem="ATa-DF-QAS" secondAttribute="bottom" constant="5" id="EKm-DC-MN4"/>
@@ -460,11 +479,14 @@
                                                 <constraint firstItem="5Ny-eZ-ghy" firstAttribute="top" secondItem="5Qb-mF-JvI" secondAttribute="bottom" constant="7" id="TDC-Ho-ABe"/>
                                                 <constraint firstItem="ATa-DF-QAS" firstAttribute="leading" secondItem="Sf4-Y8-Hoi" secondAttribute="leading" constant="5" id="Xgk-rR-Do2"/>
                                                 <constraint firstItem="5Qb-mF-JvI" firstAttribute="top" secondItem="ATa-DF-QAS" secondAttribute="top" constant="10" id="bJX-R2-hO5"/>
+                                                <constraint firstItem="wkE-zI-nva" firstAttribute="centerY" secondItem="5Ny-eZ-ghy" secondAttribute="centerY" id="lQB-XE-Tin"/>
                                                 <constraint firstItem="ATa-DF-QAS" firstAttribute="top" secondItem="Sf4-Y8-Hoi" secondAttribute="top" constant="5" id="rGe-kq-1Ea"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="dateLabel" destination="ING-uV-ScA" id="945-ga-MUH"/>
+                                            <outlet property="djLabel" destination="wkE-zI-nva" id="7ys-Z9-3nb"/>
                                             <outlet property="groupNameLabel" destination="5Ny-eZ-ghy" id="Ymv-Ru-lKn"/>
                                             <outlet property="nameLabel" destination="5Qb-mF-JvI" id="lDp-M5-gp9"/>
                                             <outlet property="shadowView" destination="ATa-DF-QAS" id="bQz-Z0-2fp"/>
