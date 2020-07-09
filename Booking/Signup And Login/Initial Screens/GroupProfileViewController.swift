@@ -12,6 +12,7 @@ import FSCalendar
 import FirebaseAuth
 import Firebase
 import FirebaseStorage
+import GooglePlaces
 
 class GroupProfileViewController: UIViewController {
     
