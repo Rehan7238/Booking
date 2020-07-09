@@ -37,7 +37,7 @@ class GroupProfileViewController: UIViewController {
                 self.groupName.text = self.group?.name
                 self.addressLabel.text = self.group?.address
                 self.schoolLabel.text = self.group?.school
-                if let profilePic = self.group?.profilePic {
+                if let profilePic = self.group?.profilePic, !profilePic.isEmpty {
                     self.profilePic.downloadImage(from: URL(string: profilePic)!)
                 }
             }
@@ -56,15 +56,14 @@ class GroupProfileViewController: UIViewController {
                 self.groupName.text = self.group?.name
                 self.addressLabel.text = self.group?.address
                 self.schoolLabel.text = self.group?.school
-                if let profilePic = self.group?.profilePic {
-                    self.profilePic.downloadImage(from: URL(string: profilePic)!)
+                if let profilePicURL = self.group?.profilePic, let url = URL(string: profilePicURL) {
+                    self.profilePic.downloadImage(from: url)
                 }
             }
         }
     }
-    
-    
 }
+
 extension UIImageView {
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()

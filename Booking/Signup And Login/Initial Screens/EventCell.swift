@@ -13,6 +13,7 @@ class EventCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var groupNameLabel: UILabel!
+    @IBOutlet weak var shadowView: UIView!
     var event: Event?
     
     override func prepareForReuse() {
@@ -24,6 +25,8 @@ class EventCell: UITableViewCell {
     func setup(eventID: String) {
         nameLabel.text = ""
         groupNameLabel.text = ""
+        shadowView.layer.cornerRadius = 10
+
         _ = Event.fromID(id: eventID).done { loadedEvent in
             self.event = loadedEvent
             self.nameLabel.text = loadedEvent?.eventName
