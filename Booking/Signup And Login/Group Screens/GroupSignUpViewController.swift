@@ -31,6 +31,8 @@ class GroupSignUpViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
         emailTextField.delegate = self
@@ -134,8 +136,13 @@ extension GroupSignUpViewController: GMSAutocompleteViewControllerDelegate {
         if selectedTextField == addressTextField {
             self.addressTextField.text = place.formattedAddress
         } else if selectedTextField == self.schoolTextField {
-            self.schoolTextField.text = place.formattedAddress
-            self.geopointHolder = (place.coordinate)
+            if (place.types?.contains("university"))!{
+                self.schoolTextField.text = place.name
+                self.geopointHolder = (place.coordinate)
+            }
+            else {
+                AlertView.instance.showAlert(message: "Please enter a valid university")
+            }
             
         }
         // Dismiss the GMSAutocompleteViewController when something is selected
