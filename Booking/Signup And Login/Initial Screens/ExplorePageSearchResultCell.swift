@@ -23,8 +23,9 @@ class ExplorePageSearchResultCell: UITableViewCell {
             self.dj = loadedDJ
             self.nameLabel.text = loadedDJ?.name
             self.locationLabel.text = loadedDJ?.location
-            let fee = "\(String(describing: loadedDJ?.playingFee ?? nil))"
-            self.feeLabel.text = fee
+           
+            self.feeLabel.text = "$" + "\(String(describing: self.dj?.playingFee ?? 0))"
+
             if let profile = loadedDJ?.profilePic {
                 self.profilePic.downloadImage(from: URL(string: profile)!)
             }
