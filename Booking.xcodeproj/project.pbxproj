@@ -47,6 +47,7 @@
 		2492761324A2A25D0048C54A /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492761224A2A25C0048C54A /* AlertView.swift */; };
 		24D6EF0624B648FF0075A665 /* EditDJProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EF0524B648FF0075A665 /* EditDJProfileViewController.swift */; };
 		24D6EF0824B659DA0075A665 /* EditGroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EF0724B659DA0075A665 /* EditGroupProfileViewController.swift */; };
+		24D6EF0A24BA5F550075A665 /* DJProfileForGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EF0924BA5F550075A665 /* DJProfileForGroupViewController.swift */; };
 		2F86396BB586F46C97CFEF8E /* Pods_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1A24D4CC0398587A1539D8 /* Pods_BookingTests.framework */; };
 		43DB8D5CF7CD7F5ABEDA8F31 /* Pods_Booking_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D6B79E1497CC26A269A1C /* Pods_Booking_BookingUITests.framework */; };
 		479DF79D35D0A425F450CCDF /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED699F371A2993D3B76D66E0 /* Pods_Booking.framework */; };
@@ -130,6 +131,7 @@
 		2492761224A2A25C0048C54A /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		24D6EF0524B648FF0075A665 /* EditDJProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDJProfileViewController.swift; sourceTree = "<group>"; };
 		24D6EF0724B659DA0075A665 /* EditGroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGroupProfileViewController.swift; sourceTree = "<group>"; };
+		24D6EF0924BA5F550075A665 /* DJProfileForGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJProfileForGroupViewController.swift; sourceTree = "<group>"; };
 		572733D997C660A83A8E95A5 /* Pods-Booking-BookingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking-BookingUITests.debug.xcconfig"; path = "Target Support Files/Pods-Booking-BookingUITests/Pods-Booking-BookingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5809FB3C41A3EEC35105BBA8 /* Pods-Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.debug.xcconfig"; path = "Target Support Files/Pods-Booking/Pods-Booking.debug.xcconfig"; sourceTree = "<group>"; };
 		5D0FBCD024A6ADF00011F8D9 /* GroupCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCalendarViewController.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				24593EF024B51984002C2729 /* DJProfileViewController.swift */,
 				5DE698E6248DB92600301B39 /* Main.storyboard */,
 				24D6EF0524B648FF0075A665 /* EditDJProfileViewController.swift */,
+				24D6EF0924BA5F550075A665 /* DJProfileForGroupViewController.swift */,
 				5DDF6B3624915BDF00B76C14 /* Database Objects */,
 				5D66E49124A3786E00BD36DF /* Signup And Login */,
 				5DE698E9248DB92F00301B39 /* Assets.xcassets */,
@@ -701,6 +704,7 @@
 				245FEF2A249C7608003267CE /* CollectDJGenresViewController.swift in Sources */,
 				5DE698E1248DB92600301B39 /* AppDelegate.swift in Sources */,
 				2492760F24A17B810048C54A /* VendorFinalNotesViewController.swift in Sources */,
+				24D6EF0A24BA5F550075A665 /* DJProfileForGroupViewController.swift in Sources */,
 				5DDF6B3A24915C0E00B76C14 /* Group.swift in Sources */,
 				2492760B24A1776C0048C54A /* CollectVendorEquipmentViewController.swift in Sources */,
 				5DE698E3248DB92600301B39 /* SceneDelegate.swift in Sources */,
