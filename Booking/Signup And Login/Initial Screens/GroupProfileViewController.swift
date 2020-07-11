@@ -55,8 +55,8 @@ class GroupProfileViewController: UIViewController {
             _ = Group.fromID(id: uid).done { loadedGroup in
                 self.group = loadedGroup
                 self.groupName.text = self.group?.name
-                self.addressLabel.text = self.group?.school
-                self.schoolLabel.text = self.group?.address
+                self.addressLabel.text = self.group?.address
+                self.schoolLabel.text = self.group?.school
                 if let profilePicURL = self.group?.profilePic, let url = URL(string: profilePicURL) {
                     self.profilePic.downloadImage(from: url)
                 }

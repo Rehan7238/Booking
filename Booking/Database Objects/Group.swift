@@ -114,6 +114,7 @@ class Group {
                     group.id = document.documentID
                     group.name = data["name"] as! String
                     group.address = data["address"] as! String
+                    group.school = data["school"] as! String
                     group.equipment = data["equipment"] as! [String]
                     group.futureEvents = data["futureEvents"] as! [String]
                     group.higherPrice = data["higherPrice"] as! NSNumber
@@ -145,6 +146,7 @@ class Group {
         groups.document(groupID).setData([
             "name": newGroup.name,
             "address": newGroup.address,
+            "school": newGroup.school,
             "state": newGroup.state,
             "city": newGroup.city,
             "equipment": newGroup.equipment,
