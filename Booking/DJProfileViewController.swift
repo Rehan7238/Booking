@@ -43,7 +43,7 @@ override func viewDidLoad() {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-               profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
+               profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 6
                
                
                if let uid = Auth.auth().currentUser?.uid {

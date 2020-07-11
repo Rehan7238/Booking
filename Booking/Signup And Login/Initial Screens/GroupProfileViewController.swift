@@ -48,15 +48,15 @@ class GroupProfileViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
+        profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 6
         
         
         if let uid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: uid).done { loadedGroup in
                 self.group = loadedGroup
                 self.groupName.text = self.group?.name
-                self.addressLabel.text = self.group?.address
-                self.schoolLabel.text = self.group?.school
+                self.addressLabel.text = self.group?.school
+                self.schoolLabel.text = self.group?.address
                 if let profilePicURL = self.group?.profilePic, let url = URL(string: profilePicURL) {
                     self.profilePic.downloadImage(from: url)
                 }
