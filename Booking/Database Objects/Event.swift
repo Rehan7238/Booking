@@ -15,6 +15,7 @@ class Event {
     var id: String = ""
     var eventName: String = "Event Name"
     var address: String = ""
+    var school: String = ""
     var DJBooked: Bool = false
     var DJID: String = ""
     var closedEvent: Bool = false
@@ -31,6 +32,11 @@ class Event {
     func setAddress(_ newValue: String) {
         self.address = newValue
         updateValue(fieldName: "address", newValue: newValue)
+    }
+    
+    func setSchool(_ newValue: String) {
+        self.school = newValue
+        updateValue(fieldName: "school", newValue: newValue)
     }
     
     func setDJBooked(_ newValue: Bool) {
@@ -89,6 +95,8 @@ class Event {
                     event.date = data["date"] as! String
                     event.hostID = data["hostID"] as! String
                     event.hostName = data["hostName"] as! String
+                    event.school = data["school"] as! String
+
 
 
                 }
@@ -116,7 +124,9 @@ class Event {
             "closedEvent": newEvent.closedEvent,
             "date": newEvent.date,
             "hostID": newEvent.hostID,
-            "hostName": newEvent.hostName
+            "hostName": newEvent.hostName,
+            "school": newEvent.school
+
 
         ])
         

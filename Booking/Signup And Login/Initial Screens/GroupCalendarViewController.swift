@@ -62,7 +62,7 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         let db = Firestore.firestore()
         if let uid = Auth.auth().currentUser?.uid {
 
-            db.collection("Events").whereField("hostID", isEqualTo: uid).getDocuments() { (querySnapshot, err) in
+            db.collection("Events").whereField("school", isEqualTo: group?.school).getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {

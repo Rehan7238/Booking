@@ -48,6 +48,7 @@
                     self.group = loadedGroup
                     event.setHostID(loadedGroup!.id)
                     event.setHostName(loadedGroup!.name)
+                    event.setSchool(loadedGroup!.school)
                     
                     self.parentView?.refreshData()
                     self.dismiss(animated: true, completion: nil)                    
