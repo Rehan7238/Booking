@@ -19,11 +19,14 @@ class DJProfileForGroupViewController: UIViewController {
 
     //MARK: Properties
     
-     @IBOutlet weak var djName: UILabel!
-        @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var djName: UILabel!
+    @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var requestButton: UIButton!
     @IBOutlet weak var instaButton: UIButton!
-        var dj: DJ?
+    @IBOutlet weak var DJRatingNumber: UILabel!
+    @IBOutlet weak var numberOfGigsNumber: UILabel!
+    
+    var dj: DJ?
             
         
     override func viewDidLoad() {
@@ -31,13 +34,21 @@ class DJProfileForGroupViewController: UIViewController {
             
             profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
             
-            
+            requestButton.layer.cornerRadius = requestButton.frame.height / 5
+
             if let uid = Auth.auth().currentUser?.uid {
                 _ = DJ.fromID(id: uid).done { loadedDJ in
                     self.dj = loadedDJ
                     self.djName.text = self.dj?.name
                     if let profilePic = self.dj?.profilePic {
                         self.profilePic.downloadImage(from: URL(string: profilePic)!)
+                        var calculatedRating = 0
+                        let ratings = self.dj?.hostRating
+                        for rating in ratings!{
+                            calculatedRating = calculatedRating + Int(truncating: rating)
+                        }
+                        self.DJRatingNumber.text = "\(String(describing: calculatedRating))"
+                        self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
                     }
                 }
             }
@@ -53,6 +64,14 @@ class DJProfileForGroupViewController: UIViewController {
                        _ = DJ.fromID(id: uid).done { loadedDJ in
                            self.dj = loadedDJ
                            self.djName.text = self.dj?.name
+                        var calculatedRating = 0
+                        let ratings = self.dj?.hostRating
+                        for rating in ratings!{
+                            calculatedRating = calculatedRating + Int(truncating: rating)
+                        }
+                        self.DJRatingNumber.text = "\(String(describing: calculatedRating))"
+                        self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
+                        
                            if let profilePic = self.dj?.profilePic {
                                self.profilePic.downloadImage(from: URL(string: profilePic)!)
                            }

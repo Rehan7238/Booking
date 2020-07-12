@@ -16,7 +16,7 @@ class DJ {
     var name: String = "Name"
     var instagramLink: String = ""
     var equipment: [String] = []
-    var hostRating: NSNumber = 0.0
+    var hostRating: [NSNumber] = []
     var litness: NSNumber = 0.0
     var locality: String = " "
     var location: String = ""
@@ -45,7 +45,7 @@ class DJ {
         updateValue(fieldName: "instagramLink", newValue: newName)
     }
     
-    func setHostRating(_ newHostRating: NSNumber) {
+    func setHostRating(_ newHostRating: [NSNumber]) {
         self.hostRating = newHostRating
         updateValue(fieldName: "hostRating", newValue: newHostRating)
     }
@@ -131,7 +131,7 @@ class DJ {
                     dj.name = data["name"] as! String
                     dj.instagramLink = data["instagramLink"] as! String
                     dj.equipment = data["equipment"] as! [String]
-                    dj.hostRating = data["hostRating"] as! NSNumber
+                    dj.hostRating = data["hostRating"] as! [NSNumber]
                     dj.litness = data["litness"] as! NSNumber
                     dj.locality = data["locality"] as! String
                     dj.location = data["location"] as! String

@@ -20,6 +20,9 @@ class DJProfileViewController: UIViewController {
     @IBOutlet weak var djName: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var instaButton: UIButton!
+    @IBOutlet weak var DJRatingNumber: UILabel!
+    @IBOutlet weak var numberOfGigsNumber: UILabel!
+    
     var dj: DJ?
         
     
@@ -35,6 +38,13 @@ override func viewDidLoad() {
                 self.djName.text = self.dj?.name
                 if let profilePic = self.dj?.profilePic {
                     self.profilePic.downloadImage(from: URL(string: profilePic)!)
+                    var calculatedRating = 0
+                    let ratings = self.dj?.hostRating
+                    for rating in ratings!{
+                        calculatedRating = calculatedRating + Int(truncating: rating)
+                    }
+                    self.DJRatingNumber.text = "\(String(describing: calculatedRating))"
+                    self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
                 }
             }
         }
@@ -52,6 +62,13 @@ override func viewDidLoad() {
                        self.djName.text = self.dj?.name
                        if let profilePic = self.dj?.profilePic {
                            self.profilePic.downloadImage(from: URL(string: profilePic)!)
+                        var calculatedRating = 0
+                        let ratings = self.dj?.hostRating
+                        for rating in ratings!{
+                            calculatedRating = calculatedRating + Int(truncating: rating)
+                        }
+                        self.DJRatingNumber.text = "\(String(describing: calculatedRating))"
+                        self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
                        }
                    }
                }

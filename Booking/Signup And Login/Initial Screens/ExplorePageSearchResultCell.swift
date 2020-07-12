@@ -18,12 +18,11 @@ class ExplorePageSearchResultCell: UITableViewCell {
     var dj: DJ?
     
     func setup(djID: String) {
-        profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
+        profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 6
         _ = DJ.fromID(id: djID).done { loadedDJ in
             self.dj = loadedDJ
             self.nameLabel.text = loadedDJ?.name
             self.locationLabel.text = loadedDJ?.location
-           
             self.feeLabel.text = "$" + "\(String(describing: self.dj?.playingFee ?? 0))"
 
             if let profile = loadedDJ?.profilePic {
