@@ -23,7 +23,8 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     @IBOutlet weak var createEventButton: UIButton!
     var group: Group?
     var results: [String] = [String]()
-    
+    var allResults: [String] = [String]()
+
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
@@ -40,48 +41,57 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         calendar.delegate = self
         calendar.dataSource = self
         calendar.scope = .month
-        calendar.allowsMultipleSelection = true
+        calendar.allowsMultipleSelection = false
         
         if let uid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: uid).done { loadedGroup in
                 self.group = loadedGroup
                 //self.groupName.text = self.group?.name
                 
+                self.refreshData(Date())
             }
         }
-        
-        refreshData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        refreshData()
     }
     
-    func refreshData() {
+    func refreshData(_ date: Date) {
         let db = Firestore.firestore()
-        if let uid = Auth.auth().currentUser?.uid {
 
-            db.collection("Events").whereField("school", isEqualTo: group?.school).getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    self.results = [String]()
-                    for document in querySnapshot!.documents {
+        db.collection("Events").whereField("school", isEqualTo: group?.school ?? "").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                self.results = [String]()
+                self.allResults = [String]()
+                
+                for document in querySnapshot!.documents {
+                    self.allResults.append(document["date"] as? String ?? "")
+                    if document["date"] as? String == self.dateFormatter.string(from: date) {
                         self.results.append(document.documentID)
                     }
-                    for eventID in self.results {
-                        _ = Event.fromID(id: eventID).done { loadedEvent in
-                            if let date = loadedEvent?.date, !date.isEmpty {
-                                let eventDate = self.dateFormatter.date(from: date)
-                                self.calendar.select(eventDate)
-                            }
-                        }
-                    }
-                    self.tableView.reloadData()
                 }
+                self.tableView.reloadData()
+                self.calendar.reloadData()
             }
         }
+    }
+    
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+
+        let dateString = self.dateFormatter.string(from: date)
+
+        var eventCount = 0
+        
+        for eventDateString in self.allResults {
+            if eventDateString == dateString {
+                eventCount += 1
+            }
+        }
+
+        return eventCount
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -117,12 +127,10 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print("did select date \(self.dateFormatter.string(from: date))")
-        let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
-        print("selected dates is \(selectedDates)")
         if monthPosition == .next || monthPosition == .previous {
             calendar.setCurrentPage(date, animated: true)
         }
+        refreshData(date)
     }
     
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {

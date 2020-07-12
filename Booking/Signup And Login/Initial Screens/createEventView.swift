@@ -50,7 +50,7 @@
                     event.setHostName(loadedGroup!.name)
                     event.setSchool(loadedGroup!.school)
                     
-                    self.parentView?.refreshData()
+                    self.parentView?.refreshData(selectedDate)
                     self.dismiss(animated: true, completion: nil)                    
                 }
             }

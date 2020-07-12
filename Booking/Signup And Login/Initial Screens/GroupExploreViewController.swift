@@ -66,4 +66,13 @@ class GroupExploreViewController: UIViewController, UITableViewDelegate, UITable
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedDJid = results?[indexPath.row]
+        
+        if let viewController = UIStoryboard(name: "SideMain", bundle: nil).instantiateViewController(identifier: "DJProfileForGroupViewController") as? DJProfileForGroupViewController {
+            viewController.uid = selectedDJid
+            self.present(viewController, animated: true, completion: nil)
+        }
+    }
 }

@@ -16,7 +16,7 @@ import Firebase
 
 
 class DJProfileForGroupViewController: UIViewController {
-
+    
     //MARK: Properties
     
     @IBOutlet weak var djName: UILabel!
@@ -25,76 +25,84 @@ class DJProfileForGroupViewController: UIViewController {
     @IBOutlet weak var instaButton: UIButton!
     @IBOutlet weak var DJRatingNumber: UILabel!
     @IBOutlet weak var numberOfGigsNumber: UILabel!
-    
     var dj: DJ?
-            
-        
+    var uid: String?
+    
     override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
-            
-            requestButton.layer.cornerRadius = requestButton.frame.height / 5
-
-            if let uid = Auth.auth().currentUser?.uid {
-                _ = DJ.fromID(id: uid).done { loadedDJ in
-                    self.dj = loadedDJ
-                    self.djName.text = self.dj?.name
-                    if let profilePic = self.dj?.profilePic {
-                        self.profilePic.downloadImage(from: URL(string: profilePic)!)
-                        var calculatedRating = 0
-                        let ratings = self.dj?.hostRating
-                        for rating in ratings!{
-                            calculatedRating = calculatedRating + Int(truncating: rating)
-                        }
-                        self.DJRatingNumber.text = "\(String(describing: calculatedRating/ratings!.count))"
-                        self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
-                    }
-                }
-            }
-        }
+        super.viewDidLoad()
         
-        override func viewDidAppear(_ animated: Bool) {
-            super.viewDidAppear(animated)
-            
-                   profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
-                   
-                   
-                   if let uid = Auth.auth().currentUser?.uid {
-                       _ = DJ.fromID(id: uid).done { loadedDJ in
-                           self.dj = loadedDJ
-                           self.djName.text = self.dj?.name
-                        var calculatedRating = 0
-                        let ratings = self.dj?.hostRating
-                        for rating in ratings!{
+        profilePic.layer.cornerRadius = profilePic.frame.height / 2
+        requestButton.layer.cornerRadius = requestButton.frame.height / 5
+        
+        if let uid = self.uid {
+            _ = DJ.fromID(id: uid).done { loadedDJ in
+                self.dj = loadedDJ
+                self.djName.text = self.dj?.name
+                if let profilePic = self.dj?.profilePic {
+                    self.profilePic.downloadImage(from: URL(string: profilePic)!)
+                    var calculatedRating = 0
+                    if let ratings = self.dj?.hostRating {
+                        for rating in ratings {
                             calculatedRating = calculatedRating + Int(truncating: rating)
                         }
-                        self.DJRatingNumber.text = "\(String(describing: calculatedRating/ratings!.count))"
-                        self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
+                        if ratings.count == 0 {
+                            self.DJRatingNumber.text = "N/A"
+                        } else {
+                            self.DJRatingNumber.text = "\(String(describing: calculatedRating/ratings.count))"
+                        }
                         
-                           if let profilePic = self.dj?.profilePic {
-                               self.profilePic.downloadImage(from: URL(string: profilePic)!)
-                           }
-                       }
-                   }
-        }
-        
-        @IBAction func InstagramAction() {
-            if let dj = dj{
-                let username =  dj.instagramLink// Your Instagram Username here}
-                
-                let appURL = URL(string: "instagram://user?username=" + (username))!
-                
-                let application = UIApplication.shared
-
-                if application.canOpenURL(appURL) {
-                    application.open(appURL)
-                } else {
-                    // if Instagram app is not installed, open URL inside Safari
-                    let webURL = URL(string: "https://instagram.com/\(username)")!
-                    application.open(webURL)
+                    }
+                    self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
                 }
             }
-
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        profilePic.layer.cornerRadius = profilePic.frame.height / 2
+        
+        if let uid = self.uid {
+            _ = DJ.fromID(id: uid).done { loadedDJ in
+                self.dj = loadedDJ
+                self.djName.text = self.dj?.name
+                var calculatedRating = 0
+                if let ratings = self.dj?.hostRating {
+                    for rating in ratings {
+                        calculatedRating = calculatedRating + Int(truncating: rating)
+                    }
+                    if ratings.count == 0 {
+                        self.DJRatingNumber.text = "N/A"
+                    } else {
+                        self.DJRatingNumber.text = "\(String(describing: calculatedRating/ratings.count))"
+                    }
+                    
+                }
+                self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
+                
+                if let profilePic = self.dj?.profilePic {
+                    self.profilePic.downloadImage(from: URL(string: profilePic)!)
+                }
+            }
+        }
+    }
+    
+    @IBAction func InstagramAction() {
+        if let dj = dj{
+            let username =  dj.instagramLink// Your Instagram Username here}
+            
+            let appURL = URL(string: "instagram://user?username=" + (username))!
+            
+            let application = UIApplication.shared
+            
+            if application.canOpenURL(appURL) {
+                application.open(appURL)
+            } else {
+                // if Instagram app is not installed, open URL inside Safari
+                let webURL = URL(string: "https://instagram.com/\(username)")!
+                application.open(webURL)
+            }
+        }
+    }
+}

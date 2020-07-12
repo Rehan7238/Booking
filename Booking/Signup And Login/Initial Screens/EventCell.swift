@@ -27,10 +27,6 @@ class EventCell: UITableViewCell {
     }
     
     func setup(eventID: String) {
-        nameLabel.text = ""
-        groupNameLabel.text = ""
-        dateLabel.text = ""
-        djLabel.text = ""
         
         shadowView.layer.cornerRadius = 10
 
