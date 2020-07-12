@@ -15,10 +15,13 @@ class ExplorePageSearchResultCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet weak var feeLabel: UILabel!
+    @IBOutlet weak var requestButton: UIButton!
     var dj: DJ?
     
     func setup(djID: String) {
         profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 6
+        requestButton.layer.cornerRadius = profilePic.layer.bounds.height / 5
+
         _ = DJ.fromID(id: djID).done { loadedDJ in
             self.dj = loadedDJ
             self.nameLabel.text = loadedDJ?.name
@@ -27,7 +30,9 @@ class ExplorePageSearchResultCell: UITableViewCell {
 
             if let profile = loadedDJ?.profilePic {
                 self.profilePic.downloadImage(from: URL(string: profile)!)
+                
             }
+            
         }
     }
 }

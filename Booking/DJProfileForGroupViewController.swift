@@ -23,6 +23,8 @@ class DJProfileForGroupViewController: UIViewController {
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var requestButton: UIButton!
     @IBOutlet weak var instaButton: UIButton!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var playingFeeLabel: UILabel!
     @IBOutlet weak var DJRatingNumber: UILabel!
     @IBOutlet weak var numberOfGigsNumber: UILabel!
     var dj: DJ?
@@ -31,13 +33,14 @@ class DJProfileForGroupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        profilePic.layer.cornerRadius = profilePic.frame.height / 2
+        profilePic.layer.cornerRadius = profilePic.frame.height / 6
         requestButton.layer.cornerRadius = requestButton.frame.height / 5
         
         if let uid = self.uid {
             _ = DJ.fromID(id: uid).done { loadedDJ in
                 self.dj = loadedDJ
                 self.djName.text = self.dj?.name
+                self.locationLabel.text = self.dj?.locality
                 if let profilePic = self.dj?.profilePic {
                     self.profilePic.downloadImage(from: URL(string: profilePic)!)
                     var calculatedRating = 0
@@ -53,6 +56,8 @@ class DJProfileForGroupViewController: UIViewController {
                         
                     }
                     self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
+                    self.playingFeeLabel.text = "$" + "\(String(describing: self.dj?.playingFee ?? 0))"
+
                 }
             }
         }
@@ -61,12 +66,13 @@ class DJProfileForGroupViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        profilePic.layer.cornerRadius = profilePic.frame.height / 2
+        profilePic.layer.cornerRadius = profilePic.frame.height / 6
         
         if let uid = self.uid {
             _ = DJ.fromID(id: uid).done { loadedDJ in
                 self.dj = loadedDJ
                 self.djName.text = self.dj?.name
+                self.locationLabel.text = self.dj?.location
                 var calculatedRating = 0
                 if let ratings = self.dj?.hostRating {
                     for rating in ratings {
@@ -84,6 +90,8 @@ class DJProfileForGroupViewController: UIViewController {
                 if let profilePic = self.dj?.profilePic {
                     self.profilePic.downloadImage(from: URL(string: profilePic)!)
                 }
+                self.playingFeeLabel.text = "$" + "\(String(describing: self.dj?.playingFee ?? 0))"
+
             }
         }
     }

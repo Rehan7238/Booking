@@ -45,9 +45,7 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         
         if let uid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: uid).done { loadedGroup in
-                self.group = loadedGroup
-                //self.groupName.text = self.group?.name
-                
+                self.group = loadedGroup                
                 self.refreshData(Date())
             }
         }
