@@ -47,7 +47,7 @@ class DJProfileForGroupViewController: UIViewController {
                         for rating in ratings!{
                             calculatedRating = calculatedRating + Int(truncating: rating)
                         }
-                        self.DJRatingNumber.text = "\(String(describing: calculatedRating))"
+                        self.DJRatingNumber.text = "\(String(describing: calculatedRating/ratings!.count))"
                         self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
                     }
                 }
@@ -69,7 +69,7 @@ class DJProfileForGroupViewController: UIViewController {
                         for rating in ratings!{
                             calculatedRating = calculatedRating + Int(truncating: rating)
                         }
-                        self.DJRatingNumber.text = "\(String(describing: calculatedRating))"
+                        self.DJRatingNumber.text = "\(String(describing: calculatedRating/ratings!.count))"
                         self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
                         
                            if let profilePic = self.dj?.profilePic {

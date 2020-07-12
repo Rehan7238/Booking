@@ -43,7 +43,7 @@ override func viewDidLoad() {
                     for rating in ratings!{
                         calculatedRating = calculatedRating + Int(truncating: rating)
                     }
-                    self.DJRatingNumber.text = "\(String(describing: calculatedRating))"
+                    self.DJRatingNumber.text = "\(String(describing: calculatedRating/ratings!.count))"
                     self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
                 }
             }
@@ -67,7 +67,7 @@ override func viewDidLoad() {
                         for rating in ratings!{
                             calculatedRating = calculatedRating + Int(truncating: rating)
                         }
-                        self.DJRatingNumber.text = "\(String(describing: calculatedRating))"
+                        self.DJRatingNumber.text = "\(String(describing: calculatedRating/ratings!.count))"
                         self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
                        }
                    }
