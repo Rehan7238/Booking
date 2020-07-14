@@ -14,18 +14,25 @@
  
  class checkRequestStatusOpen: UIViewController {
     
-    @IBOutlet var eventNameText: UITextField! = UITextField()
+    @IBOutlet var eventNameLabel: UILabel!
     @IBOutlet var doneButton: UIButton! = UIButton()
     @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var calendarView: FSCalendar!
+    @IBOutlet weak var DJNameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     
-    var group: Group?
+    var request: Request?
     var parentView: GroupProfileViewController?
     var uid: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        _ = Request.fromID(id: uid!).done { loadedRequest in
+                    self.request = loadedRequest
+            self.eventNameLabel.text = loadedRequest?.eventName
+            self.DJNameLabel.text = loadedRequest?.DJName
+            self.dateLabel.text = loadedRequest?.date
+        }
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -33,29 +40,6 @@
     }
     
     @IBAction func onClick(_ sender: Any) {
-        if let eventName = eventNameText.text, !eventName.isEmpty, let selectedDate = calendarView.selectedDate {
-            
-            let identifier = UUID()
-            let event = Event.createNew(withID: "\(String(describing: identifier ))")
-            event.setEventName(eventName)
-            
-            let df = DateFormatter()
-            df.dateFormat = "yyyy/MM/dd"
-            let dateString = df.string(from: selectedDate)
-            
-            event.setDate(dateString)
-            
-            if let uid = Auth.auth().currentUser?.uid {
-                _ = Group.fromID(id: uid).done { loadedGroup in
-                    self.group = loadedGroup
-                    event.setHostID(loadedGroup!.id)
-                    event.setHostName(loadedGroup!.name)
-                    event.setSchool(loadedGroup!.school)
-                    
-                    self.parentView?.refreshData()
-                    self.dismiss(animated: true, completion: nil)                    
-                }
-            }
-        }
+        self.dismiss(animated: true, completion: nil)
     }
  }

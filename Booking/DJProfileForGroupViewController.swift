@@ -28,7 +28,8 @@ class DJProfileForGroupViewController: UIViewController {
     @IBOutlet weak var DJRatingNumber: UILabel!
     @IBOutlet weak var numberOfGigsNumber: UILabel!
     var dj: DJ?
-    var uid: String?
+    var group: Group?
+    var DJUID: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class DJProfileForGroupViewController: UIViewController {
         profilePic.layer.cornerRadius = profilePic.frame.height / 6
         requestButton.layer.cornerRadius = requestButton.frame.height / 5
         
-        if let uid = self.uid {
+        if let uid = self.DJUID {
             _ = DJ.fromID(id: uid).done { loadedDJ in
                 self.dj = loadedDJ
                 self.djName.text = self.dj?.name
@@ -68,7 +69,7 @@ class DJProfileForGroupViewController: UIViewController {
         
         profilePic.layer.cornerRadius = profilePic.frame.height / 6
         
-        if let uid = self.uid {
+        if let uid = self.DJUID {
             _ = DJ.fromID(id: uid).done { loadedDJ in
                 self.dj = loadedDJ
                 self.djName.text = self.dj?.name
@@ -93,6 +94,15 @@ class DJProfileForGroupViewController: UIViewController {
                 self.playingFeeLabel.text = "$" + "\(String(describing: self.dj?.playingFee ?? 0))"
 
             }
+        }
+    }
+    
+    @IBAction func createEventClicked(_ sender: Any) {
+
+        if let createRequestVC = Bundle.main.loadNibNamed("createRequestView", owner: nil, options: nil)?.first as? createRequestView {
+            createRequestVC.DJUID = DJUID
+            createRequestVC.parentView = self
+            self.present(createRequestVC, animated: true, completion: nil)
         }
     }
     

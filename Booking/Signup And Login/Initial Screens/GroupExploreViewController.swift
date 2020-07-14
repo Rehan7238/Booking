@@ -71,7 +71,7 @@ class GroupExploreViewController: UIViewController, UITableViewDelegate, UITable
         let selectedDJid = results?[indexPath.row]
         
         if let viewController = UIStoryboard(name: "SideMain", bundle: nil).instantiateViewController(identifier: "DJProfileForGroupViewController") as? DJProfileForGroupViewController {
-            viewController.uid = selectedDJid
+            viewController.DJUID = selectedDJid
             self.present(viewController, animated: true, completion: nil)
         }
     }

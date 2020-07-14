@@ -24,6 +24,10 @@ class Request {
     var hostID: String = ""
     var hostName: String = ""
     var status: String = ""
+    var originalFee: String = ""
+    var counterFee: String = ""
+    var counteringParty: String = ""
+
 
 
     
@@ -47,7 +51,7 @@ class Request {
         updateValue(fieldName: "school", newValue: newValue)
     }
     
-    func paymentStatus(_ newValue: Bool) {
+    func setPaymentStatus(_ newValue: Bool) {
         self.paymentStatus = newValue
         updateValue(fieldName: "paymentStatus", newValue: newValue)
     }
@@ -62,9 +66,24 @@ class Request {
         updateValue(fieldName: "DJName", newValue: newValue)
     }
     
-    func status(_ newValue: String) {
+    func setStatus(_ newValue: String) {
         self.status = newValue
         updateValue(fieldName: "status", newValue: newValue)
+    }
+    
+    func setOriginalFee(_ newValue: String) {
+        self.originalFee = newValue
+        updateValue(fieldName: "originalFee", newValue: newValue)
+    }
+    
+    func setCounterFee(_ newValue: String) {
+        self.counterFee = newValue
+        updateValue(fieldName: "counterFee", newValue: newValue)
+    }
+    
+    func setCounteringParty(_ newValue: String) {
+        self.counteringParty = newValue
+        updateValue(fieldName: "counteringParty", newValue: newValue)
     }
     
     func setDate(_ newValue: String) {
@@ -110,6 +129,9 @@ class Request {
                     request.hostName = data["hostName"] as! String
                     request.school = data["school"] as! String
                     request.status = data["status"] as! String
+                    request.originalFee = data["originalFee"] as! String
+                    request.counterFee = data["counterFee"] as! String
+                    request.counteringParty = data["counteringParty"] as! String
 
                 }
                 resolver.fulfill(request)
@@ -139,7 +161,10 @@ class Request {
             "date": newRequest.date,
             "hostID": newRequest.hostID,
             "hostName": newRequest.hostName,
-            "school": newRequest.school
+            "school": newRequest.school,
+            "originalFee": newRequest.originalFee,
+            "counterFee": newRequest.counterFee,
+            "counteringParty": newRequest.counteringParty
 
 
         ])

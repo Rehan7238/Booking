@@ -21,6 +21,8 @@
 		2452706124BE37AA005BC912 /* checkRequestStatusDeclined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452706024BE37AA005BC912 /* checkRequestStatusDeclined.swift */; };
 		2452706324BE3837005BC912 /* checkRequestStatusCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452706224BE3837005BC912 /* checkRequestStatusCounter.swift */; };
 		2452706524BE3846005BC912 /* checkRequestStatusCounter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452706424BE3846005BC912 /* checkRequestStatusCounter.xib */; };
+		2452706B24BE5B26005BC912 /* createRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452706A24BE5B26005BC912 /* createRequestView.swift */; };
+		2452706D24BE5B4F005BC912 /* createRequestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452706C24BE5B4F005BC912 /* createRequestView.xib */; };
 		24593EE724B2B600002C2729 /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EE624B2B600002C2729 /* GroupProfileViewController.swift */; };
 		24593EE924B3B629002C2729 /* GroupExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EE824B3B629002C2729 /* GroupExploreViewController.swift */; };
 		24593EED24B5031B002C2729 /* createEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24593EEC24B5031B002C2729 /* createEventView.xib */; };
@@ -113,6 +115,8 @@
 		2452706024BE37AA005BC912 /* checkRequestStatusDeclined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = checkRequestStatusDeclined.swift; path = "Initial Screens/checkRequestStatusDeclined.swift"; sourceTree = "<group>"; };
 		2452706224BE3837005BC912 /* checkRequestStatusCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkRequestStatusCounter.swift; sourceTree = "<group>"; };
 		2452706424BE3846005BC912 /* checkRequestStatusCounter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusCounter.xib; sourceTree = "<group>"; };
+		2452706A24BE5B26005BC912 /* createRequestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createRequestView.swift; sourceTree = "<group>"; };
+		2452706C24BE5B4F005BC912 /* createRequestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = createRequestView.xib; path = "Initial Screens/createRequestView.xib"; sourceTree = "<group>"; };
 		24593EE224A98292002C2729 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Downloads/mapbox-ios-sdk-5/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
 		24593EE624B2B600002C2729 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileViewController.swift; sourceTree = "<group>"; };
 		24593EE824B3B629002C2729 /* GroupExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupExploreViewController.swift; sourceTree = "<group>"; };
@@ -262,10 +266,12 @@
 				2492761024A299770048C54A /* AlertView.xib */,
 				2492761224A2A25C0048C54A /* AlertView.swift */,
 				24593EEC24B5031B002C2729 /* createEventView.xib */,
+				2452706C24BE5B4F005BC912 /* createRequestView.xib */,
 				2452705824BD5DCF005BC912 /* checkRequestStatusOpen.xib */,
 				2452705E24BE3791005BC912 /* checkRequestStatusDeclined.xib */,
 				2452706424BE3846005BC912 /* checkRequestStatusCounter.xib */,
 				24593EEE24B50344002C2729 /* createEventView.swift */,
+				2452706A24BE5B26005BC912 /* createRequestView.swift */,
 				2452705A24BD5DE0005BC912 /* checkRequestStatusOpen.swift */,
 				2452706024BE37AA005BC912 /* checkRequestStatusDeclined.swift */,
 				2452706224BE3837005BC912 /* checkRequestStatusCounter.swift */,
@@ -520,6 +526,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2452706D24BE5B4F005BC912 /* createRequestView.xib in Resources */,
 				2452705F24BE3791005BC912 /* checkRequestStatusDeclined.xib in Resources */,
 				5DE698ED248DB92F00301B39 /* LaunchScreen.storyboard in Resources */,
 				5DDF6B352491585000B76C14 /* GoogleService-Info.plist in Resources */,
@@ -729,6 +736,7 @@
 				2492760724A13FD10048C54A /* VendorSignUpViewController.swift in Sources */,
 				2452706324BE3837005BC912 /* checkRequestStatusCounter.swift in Sources */,
 				249275FF24A041590048C54A /* GroupFinalNotesViewController.swift in Sources */,
+				2452706B24BE5B26005BC912 /* createRequestView.swift in Sources */,
 				5D12207E249957CB006D2517 /* User.swift in Sources */,
 				2417129A24A4424400F950B6 /* InitialScreen.swift in Sources */,
 				2447CCAA24A91EF6007163DB /* socializerMapViewController.swift in Sources */,
