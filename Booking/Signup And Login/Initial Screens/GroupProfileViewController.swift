@@ -122,6 +122,22 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
                 self.present(showRequestVC, animated: true, completion: nil)
                 }
             }
+            // if the status was declined
+            else if loadedRequest?.status == "declined" {
+                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusDeclined", owner: nil, options: nil)?.first as? checkRequestStatusDeclined {
+                showRequestVC.parentView = self
+                showRequestVC.uid = selectedRequestid
+                self.present(showRequestVC, animated: true, completion: nil)
+                }
+            }
+            // if the status was countered
+            if loadedRequest?.status == "countered" {
+                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusCounter", owner: nil, options: nil)?.first as? checkRequestStatusCounter {
+                showRequestVC.parentView = self
+                showRequestVC.uid = selectedRequestid
+                self.present(showRequestVC, animated: true, completion: nil)
+                }
+            }
         }
     }
 }
