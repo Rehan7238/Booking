@@ -14,6 +14,9 @@
 		241712A124A527D900F950B6 /* SocializerInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241712A024A527D900F950B6 /* SocializerInitialViewController.swift */; };
 		241712A324A52EBC00F950B6 /* DJInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241712A224A52EBC00F950B6 /* DJInitialViewController.swift */; };
 		2447CCAA24A91EF6007163DB /* socializerMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447CCA924A91EF6007163DB /* socializerMapViewController.swift */; };
+		2452705924BD5DCF005BC912 /* checkRequestStatusOpen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452705824BD5DCF005BC912 /* checkRequestStatusOpen.xib */; };
+		2452705B24BD5DE0005BC912 /* checkRequestStatusOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452705A24BD5DE0005BC912 /* checkRequestStatusOpen.swift */; };
+		2452705D24BE2BB8005BC912 /* showRequestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452705C24BE2BB7005BC912 /* showRequestStatus.swift */; };
 		24593EE724B2B600002C2729 /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EE624B2B600002C2729 /* GroupProfileViewController.swift */; };
 		24593EE924B3B629002C2729 /* GroupExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EE824B3B629002C2729 /* GroupExploreViewController.swift */; };
 		24593EED24B5031B002C2729 /* createEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24593EEC24B5031B002C2729 /* createEventView.xib */; };
@@ -48,6 +51,8 @@
 		24D6EF0624B648FF0075A665 /* EditDJProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EF0524B648FF0075A665 /* EditDJProfileViewController.swift */; };
 		24D6EF0824B659DA0075A665 /* EditGroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EF0724B659DA0075A665 /* EditGroupProfileViewController.swift */; };
 		24D6EF0A24BA5F550075A665 /* DJProfileForGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EF0924BA5F550075A665 /* DJProfileForGroupViewController.swift */; };
+		24D6EF1624BCFEF50075A665 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EF1524BCFEF50075A665 /* Request.swift */; };
+		24D6EF1824BD03BA0075A665 /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EF1724BD03BA0075A665 /* RequestCell.swift */; };
 		2F86396BB586F46C97CFEF8E /* Pods_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1A24D4CC0398587A1539D8 /* Pods_BookingTests.framework */; };
 		43DB8D5CF7CD7F5ABEDA8F31 /* Pods_Booking_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D6B79E1497CC26A269A1C /* Pods_Booking_BookingUITests.framework */; };
 		479DF79D35D0A425F450CCDF /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED699F371A2993D3B76D66E0 /* Pods_Booking.framework */; };
@@ -97,6 +102,9 @@
 		241712A024A527D900F950B6 /* SocializerInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocializerInitialViewController.swift; sourceTree = "<group>"; };
 		241712A224A52EBC00F950B6 /* DJInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJInitialViewController.swift; sourceTree = "<group>"; };
 		2447CCA924A91EF6007163DB /* socializerMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socializerMapViewController.swift; sourceTree = "<group>"; };
+		2452705824BD5DCF005BC912 /* checkRequestStatusOpen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusOpen.xib; sourceTree = "<group>"; };
+		2452705A24BD5DE0005BC912 /* checkRequestStatusOpen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = checkRequestStatusOpen.swift; path = "Initial Screens/checkRequestStatusOpen.swift"; sourceTree = "<group>"; };
+		2452705C24BE2BB7005BC912 /* showRequestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showRequestStatus.swift; sourceTree = "<group>"; };
 		24593EE224A98292002C2729 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Downloads/mapbox-ios-sdk-5/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
 		24593EE624B2B600002C2729 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileViewController.swift; sourceTree = "<group>"; };
 		24593EE824B3B629002C2729 /* GroupExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupExploreViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +140,8 @@
 		24D6EF0524B648FF0075A665 /* EditDJProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDJProfileViewController.swift; sourceTree = "<group>"; };
 		24D6EF0724B659DA0075A665 /* EditGroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGroupProfileViewController.swift; sourceTree = "<group>"; };
 		24D6EF0924BA5F550075A665 /* DJProfileForGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJProfileForGroupViewController.swift; sourceTree = "<group>"; };
+		24D6EF1524BCFEF50075A665 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		24D6EF1724BD03BA0075A665 /* RequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
 		572733D997C660A83A8E95A5 /* Pods-Booking-BookingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking-BookingUITests.debug.xcconfig"; path = "Target Support Files/Pods-Booking-BookingUITests/Pods-Booking-BookingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5809FB3C41A3EEC35105BBA8 /* Pods-Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.debug.xcconfig"; path = "Target Support Files/Pods-Booking/Pods-Booking.debug.xcconfig"; sourceTree = "<group>"; };
 		5D0FBCD024A6ADF00011F8D9 /* GroupCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCalendarViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +220,8 @@
 				24593EE824B3B629002C2729 /* GroupExploreViewController.swift */,
 				5D63BD2624B4CA3D0022A2C0 /* ExplorePageSearchResultCell.swift */,
 				24593EF224B51D11002C2729 /* EventCell.swift */,
+				24D6EF1724BD03BA0075A665 /* RequestCell.swift */,
+				2452705C24BE2BB7005BC912 /* showRequestStatus.swift */,
 			);
 			path = "Initial Screens";
 			sourceTree = "<group>";
@@ -242,7 +254,9 @@
 				2492761024A299770048C54A /* AlertView.xib */,
 				2492761224A2A25C0048C54A /* AlertView.swift */,
 				24593EEC24B5031B002C2729 /* createEventView.xib */,
+				2452705824BD5DCF005BC912 /* checkRequestStatusOpen.xib */,
 				24593EEE24B50344002C2729 /* createEventView.swift */,
+				2452705A24BD5DE0005BC912 /* checkRequestStatusOpen.swift */,
 				5DB17EB1249F639900237276 /* OptionToSelect.swift */,
 				5D66E48C24A3497200BD36DF /* InviteContactsViewController.swift */,
 				5D66E48E24A34BF400BD36DF /* InviteContactsCell.swift */,
@@ -305,6 +319,7 @@
 				5DDF6B3924915C0E00B76C14 /* Group.swift */,
 				2492760424A138110048C54A /* Vendor.swift */,
 				5D12207B249957C2006D2517 /* Event.swift */,
+				24D6EF1524BCFEF50075A665 /* Request.swift */,
 				5D12207D249957CB006D2517 /* User.swift */,
 			);
 			path = "Database Objects";
@@ -495,6 +510,7 @@
 			files = (
 				5DE698ED248DB92F00301B39 /* LaunchScreen.storyboard in Resources */,
 				5DDF6B352491585000B76C14 /* GoogleService-Info.plist in Resources */,
+				2452705924BD5DCF005BC912 /* checkRequestStatusOpen.xib in Resources */,
 				2417129824A43FA000F950B6 /* SideMain.storyboard in Resources */,
 				2492761124A299770048C54A /* AlertView.xib in Resources */,
 				5DE698EA248DB92F00301B39 /* Assets.xcassets in Resources */,
@@ -662,6 +678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2492760524A138110048C54A /* Vendor.swift in Sources */,
+				24D6EF1624BCFEF50075A665 /* Request.swift in Sources */,
 				2417129F24A5279D00F950B6 /* VendorInitialViewController.swift in Sources */,
 				245FEF2C249C7625003267CE /* CollectDJLinkViewController.swift in Sources */,
 				245FEF0224940365003267CE /* LoginViewController.swift in Sources */,
@@ -671,6 +688,7 @@
 				24593EEF24B50344002C2729 /* createEventView.swift in Sources */,
 				24D6EF0824B659DA0075A665 /* EditGroupProfileViewController.swift in Sources */,
 				5DA31BE824919B4B00C18F55 /* DJSignupViewController.swift in Sources */,
+				24D6EF1824BD03BA0075A665 /* RequestCell.swift in Sources */,
 				2492760D24A179BE0048C54A /* CollectVendorProfilePicViewController.swift in Sources */,
 				249275FD24A03C080048C54A /* CollectGroupProfilePicViewController.swift in Sources */,
 				249275FB249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift in Sources */,
@@ -693,6 +711,7 @@
 				241712A324A52EBC00F950B6 /* DJInitialViewController.swift in Sources */,
 				24593EF324B51D11002C2729 /* EventCell.swift in Sources */,
 				2492760124A130AA0048C54A /* DJFinalNotesViewController.swift in Sources */,
+				2452705D24BE2BB8005BC912 /* showRequestStatus.swift in Sources */,
 				2492760724A13FD10048C54A /* VendorSignUpViewController.swift in Sources */,
 				249275FF24A041590048C54A /* GroupFinalNotesViewController.swift in Sources */,
 				5D12207E249957CB006D2517 /* User.swift in Sources */,
@@ -705,6 +724,7 @@
 				5DE698E1248DB92600301B39 /* AppDelegate.swift in Sources */,
 				2492760F24A17B810048C54A /* VendorFinalNotesViewController.swift in Sources */,
 				24D6EF0A24BA5F550075A665 /* DJProfileForGroupViewController.swift in Sources */,
+				2452705B24BD5DE0005BC912 /* checkRequestStatusOpen.swift in Sources */,
 				5DDF6B3A24915C0E00B76C14 /* Group.swift in Sources */,
 				2492760B24A1776C0048C54A /* CollectVendorEquipmentViewController.swift in Sources */,
 				5DE698E3248DB92600301B39 /* SceneDelegate.swift in Sources */,

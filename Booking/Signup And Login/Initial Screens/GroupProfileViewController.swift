@@ -19,6 +19,7 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     //Mark: Properties
     
     var group: Group?
+    var request: Request?
     
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var groupName: UILabel!
@@ -42,13 +43,13 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
         if let uid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: uid).done { loadedGroup in
                 self.group = loadedGroup
-                self.refreshData()
                 self.groupName.text = self.group?.name
                 self.addressLabel.text = self.group?.address
                 self.schoolLabel.text = self.group?.school
+                self.refreshData()
                 if let profilePic = self.group?.profilePic, !profilePic.isEmpty {
                     self.profilePic.downloadImage(from: URL(string: profilePic)!)
-                    
+                                        
                 }
 
             }
@@ -57,9 +58,7 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 6
-        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -67,10 +66,10 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
         if let uid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: uid).done { loadedGroup in
                 self.group = loadedGroup
-                self.refreshData()
                 self.groupName.text = self.group?.name
                 self.addressLabel.text = self.group?.address
                 self.schoolLabel.text = self.group?.school
+                self.refreshData()
                 if let profilePicURL = self.group?.profilePic, let url = URL(string: profilePicURL) {
                     self.profilePic.downloadImage(from: url)
 
@@ -83,7 +82,7 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     func refreshData() {
            let db = Firestore.firestore()
 
-           db.collection("Events").whereField("school", isEqualTo: group?.school ?? "").getDocuments() { (querySnapshot, err) in
+           db.collection("Requests").whereField("school", isEqualTo: group?.school ?? "").getDocuments() { (querySnapshot, err) in
                if let err = err {
                    print("Error getting documents: \(err)")
                } else {
@@ -101,11 +100,29 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell") as! EventCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RequestCell") as! RequestCell
         let id = results[indexPath.row]
-        cell.setup(eventID: id)
+        cell.setup(requestID: id)
         cell.layer.cornerRadius = cell.frame.height / 3
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedRequestid = results[indexPath.row]
+        print (selectedRequestid)
+        // show different view controllers based on different cases
+        _ = Request.fromID(id: selectedRequestid).done { loadedRequest in
+            self.request = loadedRequest
+            
+            // if the status is open
+            if loadedRequest?.status == "open" {
+                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusOpen", owner: nil, options: nil)?.first as? checkRequestStatusOpen {
+                showRequestVC.parentView = self
+                showRequestVC.uid = selectedRequestid
+                self.present(showRequestVC, animated: true, completion: nil)
+                }
+            }
+        }
     }
 }
 
