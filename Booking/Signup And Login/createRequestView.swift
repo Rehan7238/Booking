@@ -75,7 +75,7 @@
                     }
                     else {
                         let offer = "\(String(describing: loadedDJ?.playingFee ?? 0))"
-                        request.setCounterFee(offer)
+                        request.setOriginalFee(offer)
                     }
                     }
                 }
