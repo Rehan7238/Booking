@@ -939,6 +939,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nG-XR-71w">
+                                <rect key="frame" x="295" y="300" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Favorite"/>
+                                <connections>
+                                    <action selector="favoriteButtonClicked:" destination="hqr-ox-WEg" eventType="touchUpInside" id="AKd-hX-lh8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -986,6 +994,7 @@
                     <connections>
                         <outlet property="DJRatingNumber" destination="uPd-4i-5ZX" id="uIA-IL-pIz"/>
                         <outlet property="djName" destination="enV-PC-1OO" id="haz-JK-8Qi"/>
+                        <outlet property="favoriteButton" destination="0nG-XR-71w" id="Sfd-q4-ho4"/>
                         <outlet property="instaButton" destination="i0G-6N-hGR" id="dFP-IQ-vot"/>
                         <outlet property="locationLabel" destination="QYY-HN-1xX" id="YTj-sk-Uuj"/>
                         <outlet property="numberOfGigsNumber" destination="hN9-GZ-One" id="oCM-wY-b6U"/>

@@ -24,6 +24,7 @@ class DJProfileForGroupViewController: UIViewController {
     @IBOutlet weak var requestButton: UIButton!
     @IBOutlet weak var instaButton: UIButton!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var playingFeeLabel: UILabel!
     @IBOutlet weak var DJRatingNumber: UILabel!
     @IBOutlet weak var numberOfGigsNumber: UILabel!
@@ -97,6 +98,13 @@ class DJProfileForGroupViewController: UIViewController {
         }
     }
     
+    @IBAction func favoriteButtonClicked(_ sender: Any) {
+        var favDJs = group?.favoriteDJs
+        favDJs?.append("\(String(describing: DJUID))")
+        group?.setFavoriteDJs(favDJs ?? [])
+           }
+
+
     @IBAction func createEventClicked(_ sender: Any) {
 
         if let createRequestVC = Bundle.main.loadNibNamed("createRequestView", owner: nil, options: nil)?.first as? createRequestView {
@@ -105,6 +113,7 @@ class DJProfileForGroupViewController: UIViewController {
             self.present(createRequestVC, animated: true, completion: nil)
         }
     }
+    
     
     @IBAction func InstagramAction() {
         if let dj = dj{

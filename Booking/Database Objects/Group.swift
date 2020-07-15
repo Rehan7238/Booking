@@ -29,6 +29,7 @@ class Group {
     var lowerPrice: NSNumber = 0.0
     var previousEvents: [String] = []
     var profilePic: String = ""
+    var favoriteDJs: [String] = []
     
     func setName(_ newName: String) {
         self.name = newName
@@ -72,6 +73,11 @@ class Group {
     func setFutureEvents(_ newFutureEvents: [String]) {
         self.futureEvents = newFutureEvents
         updateValue(fieldName: "futureEvents", newValue: newFutureEvents)
+    }
+    
+    func setFavoriteDJs(_ newFutureEvents: [String]) {
+        self.favoriteDJs = newFutureEvents
+        updateValue(fieldName: "favoriteDJs", newValue: newFutureEvents)
     }
     
     func setHigherPrice(_ newHigherPrice: NSNumber) {
@@ -123,6 +129,8 @@ class Group {
                     group.profilePic = data["profilePic"] as! String
                     group.schoolLatitude = data["schoolLatitude"] as! String
                     group.schoolLongitude = data["schoolLongitude"] as! String
+                    group.favoriteDJs = data["favoriteDJs"] as! [String]
+
 
                 }
                 resolver.fulfill(group)
@@ -156,9 +164,8 @@ class Group {
             "previousEvents": newGroup.previousEvents,
             "profilePic": newGroup.profilePic,
             "schoolLatitude" : newGroup.schoolLatitude,
-            "schoolLongitude" : newGroup.schoolLongitude
-
-
+            "schoolLongitude" : newGroup.schoolLongitude,
+            "favoriteDJs" : newGroup.favoriteDJs
         ])
         
         return newGroup

@@ -175,7 +175,7 @@ class DJProfileViewController: UIViewController, UITableViewDelegate, UITableVie
             
             else if loadedRequest?.status == "accepted" {
                 if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusAcceptedDJ", owner: nil, options: nil)?.first as? checkRequestStatusAcceptedDJ {
-                    showRequestVC.parentView = self
+                    showRequestVC.DJparentView = self
                     showRequestVC.setup(uid: selectedRequestid)
                     self.present(showRequestVC, animated: true, completion: nil)
                 }
