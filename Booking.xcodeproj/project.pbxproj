@@ -25,6 +25,10 @@
 		2452706D24BE5B4F005BC912 /* createRequestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452706C24BE5B4F005BC912 /* createRequestView.xib */; };
 		2452706F24BF8D02005BC912 /* checkRequestStatusOpenDJ.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452706E24BF8D02005BC912 /* checkRequestStatusOpenDJ.xib */; };
 		2452707124BF8D10005BC912 /* checkRequestStatusOpenDJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452707024BF8D10005BC912 /* checkRequestStatusOpenDJ.swift */; };
+		2452707324BFAD32005BC912 /* checkRequestStatusAcceptedGroup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452707224BFAD32005BC912 /* checkRequestStatusAcceptedGroup.xib */; };
+		2452707524BFAD46005BC912 /* checkRequestStatusAcceptedGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452707424BFAD46005BC912 /* checkRequestStatusAcceptedGroup.swift */; };
+		2452707724BFAE4F005BC912 /* checkRequestStatusAcceptedDJ.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452707624BFAE4F005BC912 /* checkRequestStatusAcceptedDJ.xib */; };
+		2452707924BFAE64005BC912 /* checkRequestStatusAcceptedDJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452707824BFAE64005BC912 /* checkRequestStatusAcceptedDJ.swift */; };
 		24593EE724B2B600002C2729 /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EE624B2B600002C2729 /* GroupProfileViewController.swift */; };
 		24593EE924B3B629002C2729 /* GroupExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EE824B3B629002C2729 /* GroupExploreViewController.swift */; };
 		24593EED24B5031B002C2729 /* createEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24593EEC24B5031B002C2729 /* createEventView.xib */; };
@@ -121,6 +125,10 @@
 		2452706C24BE5B4F005BC912 /* createRequestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = createRequestView.xib; path = "Initial Screens/createRequestView.xib"; sourceTree = "<group>"; };
 		2452706E24BF8D02005BC912 /* checkRequestStatusOpenDJ.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusOpenDJ.xib; sourceTree = "<group>"; };
 		2452707024BF8D10005BC912 /* checkRequestStatusOpenDJ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = checkRequestStatusOpenDJ.swift; path = "Initial Screens/checkRequestStatusOpenDJ.swift"; sourceTree = "<group>"; };
+		2452707224BFAD32005BC912 /* checkRequestStatusAcceptedGroup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusAcceptedGroup.xib; sourceTree = "<group>"; };
+		2452707424BFAD46005BC912 /* checkRequestStatusAcceptedGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = checkRequestStatusAcceptedGroup.swift; path = "Initial Screens/checkRequestStatusAcceptedGroup.swift"; sourceTree = "<group>"; };
+		2452707624BFAE4F005BC912 /* checkRequestStatusAcceptedDJ.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusAcceptedDJ.xib; sourceTree = "<group>"; };
+		2452707824BFAE64005BC912 /* checkRequestStatusAcceptedDJ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = checkRequestStatusAcceptedDJ.swift; path = "Initial Screens/checkRequestStatusAcceptedDJ.swift"; sourceTree = "<group>"; };
 		24593EE224A98292002C2729 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Downloads/mapbox-ios-sdk-5/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
 		24593EE624B2B600002C2729 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileViewController.swift; sourceTree = "<group>"; };
 		24593EE824B3B629002C2729 /* GroupExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupExploreViewController.swift; sourceTree = "<group>"; };
@@ -273,6 +281,8 @@
 				2452706C24BE5B4F005BC912 /* createRequestView.xib */,
 				2452705824BD5DCF005BC912 /* checkRequestStatusOpen.xib */,
 				2452706E24BF8D02005BC912 /* checkRequestStatusOpenDJ.xib */,
+				2452707224BFAD32005BC912 /* checkRequestStatusAcceptedGroup.xib */,
+				2452707624BFAE4F005BC912 /* checkRequestStatusAcceptedDJ.xib */,
 				2452705E24BE3791005BC912 /* checkRequestStatusDeclined.xib */,
 				2452706424BE3846005BC912 /* checkRequestStatusCounter.xib */,
 				24593EEE24B50344002C2729 /* createEventView.swift */,
@@ -280,6 +290,8 @@
 				2452705A24BD5DE0005BC912 /* checkRequestStatusOpen.swift */,
 				2452707024BF8D10005BC912 /* checkRequestStatusOpenDJ.swift */,
 				2452706024BE37AA005BC912 /* checkRequestStatusDeclined.swift */,
+				2452707424BFAD46005BC912 /* checkRequestStatusAcceptedGroup.swift */,
+				2452707824BFAE64005BC912 /* checkRequestStatusAcceptedDJ.swift */,
 				2452706224BE3837005BC912 /* checkRequestStatusCounter.swift */,
 				5DB17EB1249F639900237276 /* OptionToSelect.swift */,
 				5D66E48C24A3497200BD36DF /* InviteContactsViewController.swift */,
@@ -539,8 +551,10 @@
 				5DDF6B352491585000B76C14 /* GoogleService-Info.plist in Resources */,
 				2452706524BE3846005BC912 /* checkRequestStatusCounter.xib in Resources */,
 				2452705924BD5DCF005BC912 /* checkRequestStatusOpen.xib in Resources */,
+				2452707324BFAD32005BC912 /* checkRequestStatusAcceptedGroup.xib in Resources */,
 				2417129824A43FA000F950B6 /* SideMain.storyboard in Resources */,
 				2492761124A299770048C54A /* AlertView.xib in Resources */,
+				2452707724BFAE4F005BC912 /* checkRequestStatusAcceptedDJ.xib in Resources */,
 				5DE698EA248DB92F00301B39 /* Assets.xcassets in Resources */,
 				24593EED24B5031B002C2729 /* createEventView.xib in Resources */,
 				5DE698E8248DB92600301B39 /* Main.storyboard in Resources */,
@@ -730,6 +744,7 @@
 				245FEF2E249C76E4003267CE /* CollectDJEquipmentViewController.swift in Sources */,
 				241712A124A527D900F950B6 /* SocializerInitialViewController.swift in Sources */,
 				24D6EF0624B648FF0075A665 /* EditDJProfileViewController.swift in Sources */,
+				2452707524BFAD46005BC912 /* checkRequestStatusAcceptedGroup.swift in Sources */,
 				5D87BD8624949D1800F4CA6C /* GroupSignUpViewController.swift in Sources */,
 				245FEF12249C63FD003267CE /* SocializerProfilePictureViewController.swift in Sources */,
 				245FEF0024940319003267CE /* HomeViewController.swift in Sources */,
@@ -750,6 +765,7 @@
 				2492760324A1346B0048C54A /* SocializerFinalNotesViewController.swift in Sources */,
 				5D66E48D24A3497200BD36DF /* InviteContactsViewController.swift in Sources */,
 				24593EF124B51984002C2729 /* DJProfileViewController.swift in Sources */,
+				2452707924BFAE64005BC912 /* checkRequestStatusAcceptedDJ.swift in Sources */,
 				245FEF2A249C7608003267CE /* CollectDJGenresViewController.swift in Sources */,
 				2452706124BE37AA005BC912 /* checkRequestStatusDeclined.swift in Sources */,
 				5DE698E1248DB92600301B39 /* AppDelegate.swift in Sources */,
