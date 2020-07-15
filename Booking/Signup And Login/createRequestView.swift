@@ -18,6 +18,7 @@
     @IBOutlet weak var DJNameLabel: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
     
+    @IBOutlet weak var originalPlayingFee: UILabel!
     @IBOutlet weak var playingFeeOfferTextField: UITextField!
     
     var group: Group?
@@ -32,6 +33,7 @@
         _ = DJ.fromID(id: DJuid).done { loadedDJ in
             self.dj = loadedDJ
             self.DJNameLabel.text = self.dj?.name
+            self.originalPlayingFee.text = "\(String(describing: self.dj?.playingFee ?? 0))"
             self.playingFeeOfferTextField.text = "\(String(describing: self.dj?.playingFee ?? 0))"
             }
         }

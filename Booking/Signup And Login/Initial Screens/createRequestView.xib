@@ -130,9 +130,9 @@
             <connections>
                 <outlet property="DJNameLabel" destination="JzB-ZL-bUJ" id="eDc-wL-ILx"/>
                 <outlet property="cancelButton" destination="npE-O3-rnA" id="Mxh-Yc-7Mk"/>
-                <outlet property="counterOfferTextField" destination="LmX-xd-nV3" id="WAt-Ub-1mD"/>
                 <outlet property="doneButton" destination="xxa-Fw-DWz" id="9f8-g4-yJr"/>
-                <outlet property="playingFeeLabel" destination="yoJ-3S-xlC" id="E6d-fJ-f9f"/>
+                <outlet property="originalPlayingFee" destination="yoJ-3S-xlC" id="Ogv-Vy-6Ob"/>
+                <outlet property="playingFeeOfferTextField" destination="LmX-xd-nV3" id="80Q-Gj-FcM"/>
             </connections>
             <point key="canvasLocation" x="36.231884057971016" y="44.866071428571423"/>
         </viewController>
