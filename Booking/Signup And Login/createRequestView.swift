@@ -17,8 +17,8 @@
     @IBOutlet var doneButton: UIButton! = UIButton()
     @IBOutlet weak var DJNameLabel: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
-    
-    @IBOutlet weak var playingFeeOfferTextField: UITextField!
+    @IBOutlet weak var playingFeeLabel: UILabel!
+    @IBOutlet weak var counterOfferTextField: UITextField!
     
     var group: Group?
     var dj: DJ?
@@ -32,7 +32,7 @@
         _ = DJ.fromID(id: DJuid).done { loadedDJ in
             self.dj = loadedDJ
             self.DJNameLabel.text = self.dj?.name
-            self.playingFeeOfferTextField.text = "\(String(describing: self.dj?.playingFee ?? 0))"
+            self.playingFeeLabel.text = "\(String(describing: self.dj?.playingFee ?? 0))"
             }
         }
         // load in current user
@@ -67,8 +67,8 @@
                     request.setDJID(loadedDJ!.id)
                     request.setStatus("open")
                     request.setPaymentStatus(false)
-                    if self.playingFeeOfferTextField != nil {
-                    let offer = String(self.playingFeeOfferTextField.text!)
+                    if self.playingFeeLabel != nil {
+                    let offer = String(self.playingFeeLabel.text!)
                     request.setCounterFee(offer)
                     }
                     else {
