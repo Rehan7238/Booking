@@ -135,7 +135,7 @@ override func viewDidLoad() {
             // show different view controllers based on different cases
             _ = Request.fromID(id: selectedRequestid).done { loadedRequest in
                 self.request = loadedRequest
-                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusOpen", owner: nil, options: nil)?.first as? checkRequestStatusOpen {
+                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusOpenDJ", owner: nil, options: nil)?.first as? checkRequestStatusOpenDJ {
                 showRequestVC.DJparentView = self
                 showRequestVC.uid = selectedRequestid
                 self.present(showRequestVC, animated: true, completion: nil)

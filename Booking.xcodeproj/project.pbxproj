@@ -23,6 +23,8 @@
 		2452706524BE3846005BC912 /* checkRequestStatusCounter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452706424BE3846005BC912 /* checkRequestStatusCounter.xib */; };
 		2452706B24BE5B26005BC912 /* createRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452706A24BE5B26005BC912 /* createRequestView.swift */; };
 		2452706D24BE5B4F005BC912 /* createRequestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452706C24BE5B4F005BC912 /* createRequestView.xib */; };
+		2452706F24BF8D02005BC912 /* checkRequestStatusOpenDJ.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452706E24BF8D02005BC912 /* checkRequestStatusOpenDJ.xib */; };
+		2452707124BF8D10005BC912 /* checkRequestStatusOpenDJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452707024BF8D10005BC912 /* checkRequestStatusOpenDJ.swift */; };
 		24593EE724B2B600002C2729 /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EE624B2B600002C2729 /* GroupProfileViewController.swift */; };
 		24593EE924B3B629002C2729 /* GroupExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EE824B3B629002C2729 /* GroupExploreViewController.swift */; };
 		24593EED24B5031B002C2729 /* createEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24593EEC24B5031B002C2729 /* createEventView.xib */; };
@@ -117,6 +119,8 @@
 		2452706424BE3846005BC912 /* checkRequestStatusCounter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusCounter.xib; sourceTree = "<group>"; };
 		2452706A24BE5B26005BC912 /* createRequestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createRequestView.swift; sourceTree = "<group>"; };
 		2452706C24BE5B4F005BC912 /* createRequestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = createRequestView.xib; path = "Initial Screens/createRequestView.xib"; sourceTree = "<group>"; };
+		2452706E24BF8D02005BC912 /* checkRequestStatusOpenDJ.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusOpenDJ.xib; sourceTree = "<group>"; };
+		2452707024BF8D10005BC912 /* checkRequestStatusOpenDJ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = checkRequestStatusOpenDJ.swift; path = "Initial Screens/checkRequestStatusOpenDJ.swift"; sourceTree = "<group>"; };
 		24593EE224A98292002C2729 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Downloads/mapbox-ios-sdk-5/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
 		24593EE624B2B600002C2729 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileViewController.swift; sourceTree = "<group>"; };
 		24593EE824B3B629002C2729 /* GroupExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupExploreViewController.swift; sourceTree = "<group>"; };
@@ -268,11 +272,13 @@
 				24593EEC24B5031B002C2729 /* createEventView.xib */,
 				2452706C24BE5B4F005BC912 /* createRequestView.xib */,
 				2452705824BD5DCF005BC912 /* checkRequestStatusOpen.xib */,
+				2452706E24BF8D02005BC912 /* checkRequestStatusOpenDJ.xib */,
 				2452705E24BE3791005BC912 /* checkRequestStatusDeclined.xib */,
 				2452706424BE3846005BC912 /* checkRequestStatusCounter.xib */,
 				24593EEE24B50344002C2729 /* createEventView.swift */,
 				2452706A24BE5B26005BC912 /* createRequestView.swift */,
 				2452705A24BD5DE0005BC912 /* checkRequestStatusOpen.swift */,
+				2452707024BF8D10005BC912 /* checkRequestStatusOpenDJ.swift */,
 				2452706024BE37AA005BC912 /* checkRequestStatusDeclined.swift */,
 				2452706224BE3837005BC912 /* checkRequestStatusCounter.swift */,
 				5DB17EB1249F639900237276 /* OptionToSelect.swift */,
@@ -526,6 +532,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2452706F24BF8D02005BC912 /* checkRequestStatusOpenDJ.xib in Resources */,
 				2452706D24BE5B4F005BC912 /* createRequestView.xib in Resources */,
 				2452705F24BE3791005BC912 /* checkRequestStatusDeclined.xib in Resources */,
 				5DE698ED248DB92F00301B39 /* LaunchScreen.storyboard in Resources */,
@@ -754,6 +761,7 @@
 				5DE698E3248DB92600301B39 /* SceneDelegate.swift in Sources */,
 				24593EE724B2B600002C2729 /* GroupProfileViewController.swift in Sources */,
 				2492760924A14C0D0048C54A /* VendorPlayingFeeViewController.swift in Sources */,
+				2452707124BF8D10005BC912 /* checkRequestStatusOpenDJ.swift in Sources */,
 				245FEF28249C759B003267CE /* CollectDJPlayingFeeViewController.swift in Sources */,
 				2492761324A2A25D0048C54A /* AlertView.swift in Sources */,
 			);
