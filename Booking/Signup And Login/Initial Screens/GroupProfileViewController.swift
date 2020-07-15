@@ -136,6 +136,13 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
                     self.present(showRequestVC, animated: true, completion: nil)
                 }
             }
+//            else if loadedRequest?.status == "accepted" {
+//                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusAccepted", owner: nil, options: nil)?.first as? checkRequestStatusAccepted {
+//                    showRequestVC.parentView = self
+//                    showRequestVC.setup(uid: selectedRequestid)
+//                    self.present(showRequestVC, animated: true, completion: nil)
+//                }
+//            }
         }
     }
 }

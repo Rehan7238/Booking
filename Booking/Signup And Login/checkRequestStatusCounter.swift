@@ -17,7 +17,9 @@
     @IBOutlet var eventNameLabel: UILabel!
     @IBOutlet var doneButton: UIButton! = UIButton()
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var declineButton: UIButton!
     @IBOutlet weak var DJNameLabel: UILabel!
+    @IBOutlet weak var acceptButton: UIButton!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     
@@ -41,15 +43,32 @@
                 self.dateLabel.text = loadedRequest.date
                 if loadedRequest.counteringParty == "group"{
                     self.messageLabel.text = "You countered " + loadedRequest.counterFee
+                    self.acceptButton.isHidden = true
+                    self.declineButton.isHidden = true
+
                 }
                 else if loadedRequest.counteringParty == "DJ"{
                     self.messageLabel.text = loadedRequest.DJName + "  countered " + loadedRequest.counterFee
+                    self.acceptButton.isHidden = false
+                    self.declineButton.isHidden = false
+
                 }
             }
         }
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func acceptClicked(_ sender: Any) {
+        request?.setStatus("accepted")
+        request?.setOriginalFee(request?.counterFee ?? "0")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func declinedClicked(_ sender: Any) {
+        request?.setStatus("declined")
         self.dismiss(animated: true, completion: nil)
     }
     

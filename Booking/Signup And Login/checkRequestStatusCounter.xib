@@ -74,6 +74,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdO-eN-Lwy">
+                                <rect key="frame" x="45" y="327" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Accept"/>
+                                <connections>
+                                    <action selector="acceptClicked:" destination="IZS-9L-hyJ" eventType="touchUpInside" id="9wg-0U-xOf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ti-Nv-sLz">
+                                <rect key="frame" x="182" y="327" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Decline"/>
+                                <connections>
+                                    <action selector="declinedClicked:" destination="IZS-9L-hyJ" eventType="touchUpInside" id="hGa-rN-Xza"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -132,8 +148,10 @@
             </view>
             <connections>
                 <outlet property="DJNameLabel" destination="qdd-ab-r29" id="agL-fV-RMw"/>
+                <outlet property="acceptButton" destination="ZdO-eN-Lwy" id="9IQ-uQ-I4b"/>
                 <outlet property="cancelButton" destination="npE-O3-rnA" id="Mxh-Yc-7Mk"/>
                 <outlet property="dateLabel" destination="cVK-2p-ikF" id="7XU-Iq-LaQ"/>
+                <outlet property="declineButton" destination="8ti-Nv-sLz" id="8XM-L4-kD0"/>
                 <outlet property="doneButton" destination="xxa-Fw-DWz" id="9f8-g4-yJr"/>
                 <outlet property="eventNameLabel" destination="ttx-YZ-UEk" id="J5Q-lu-wuw"/>
                 <outlet property="messageLabel" destination="diU-Fl-Tky" id="Jpw-RJ-KjS"/>
