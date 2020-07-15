@@ -23,10 +23,17 @@
     
     var request: Request?
     var parentView: GroupProfileViewController?
+    var DJparentView: DJProfileViewController?
+
     var uid: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    func setup(uid: String) {
+        self.uid = uid
         if let uid = self.uid {
             _ = Request.fromID(id: uid).done { loadedRequest in
                 self.request = loadedRequest

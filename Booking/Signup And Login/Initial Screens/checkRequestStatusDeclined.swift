@@ -23,16 +23,25 @@
     
     var request: Request?
     var parentView: GroupProfileViewController?
+    var DJparentView: DJProfileViewController?
+
     var uid: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ = Request.fromID(id: uid!).done { loadedRequest in
-                           self.request = loadedRequest
-                   self.eventNameLabel.text = loadedRequest?.eventName
-                   self.DJNameLabel.text = loadedRequest?.DJName
-                   self.dateLabel.text = loadedRequest?.date
-               }
+        
+    }
+    
+    func setup(uid: String) {
+        self.uid = uid
+        if let uid = self.uid {
+            _ = Request.fromID(id: uid).done { loadedRequest in
+                self.request = loadedRequest
+                self.eventNameLabel.text = loadedRequest?.eventName
+                self.DJNameLabel.text = loadedRequest?.DJName
+                self.dateLabel.text = loadedRequest?.date
+            }
+        }
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {

@@ -13,7 +13,7 @@ import FirebaseAuth
 import Firebase
 import FirebaseStorage
 
-class DJProfileViewController: UIViewController {
+class DJProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //Mark: Properties
     
@@ -22,14 +22,22 @@ class DJProfileViewController: UIViewController {
     @IBOutlet weak var instaButton: UIButton!
     @IBOutlet weak var DJRatingNumber: UILabel!
     @IBOutlet weak var numberOfGigsNumber: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+
     
     var dj: DJ?
+    var request: Request?
+    var results: [String] = [String]()
+
         
     
 override func viewDidLoad() {
         super.viewDidLoad()
         
         profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
+    
+    tableView.delegate = self
+    tableView.dataSource = self
         
         
         if let uid = Auth.auth().currentUser?.uid {
@@ -91,6 +99,74 @@ override func viewDidLoad() {
             }
         }
 
+    }
+    
+    func refreshData() {
+        let db = Firestore.firestore()
+
+        db.collection("Requests").whereField("DJID", isEqualTo: dj?.id ?? "").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                self.results = [String]()
+             for document in querySnapshot!.documents {
+                     self.results.append(document.documentID)
+             }
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return results.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RequestCell") as! RequestCell
+        let id = results[indexPath.row]
+        cell.setup(requestID: id)
+        cell.layer.cornerRadius = cell.frame.height / 3
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let selectedRequestid = results[indexPath.row]
+            print (selectedRequestid)
+            // show different view controllers based on different cases
+            _ = Request.fromID(id: selectedRequestid).done { loadedRequest in
+                self.request = loadedRequest
+                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusOpen", owner: nil, options: nil)?.first as? checkRequestStatusOpen {
+                showRequestVC.DJparentView = self
+                showRequestVC.uid = selectedRequestid
+                self.present(showRequestVC, animated: true, completion: nil)
+                }
+                
+                // if the status is open
+    //            if loadedRequest?.status == "open" {
+    //                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusOpen", owner: nil, options: nil)?.first as? checkRequestStatusOpen {
+    //                showRequestVC.DJparentView = self
+    //                showRequestVC.uid = selectedRequestid
+    //                self.present(showRequestVC, animated: true, completion: nil)
+    //                }
+    //            }
+    //            // if the status was declined
+    //            else if loadedRequest?.status == "declined" {
+    //                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusDeclined", owner: nil, options: nil)?.first as? checkRequestStatusDeclined {
+    //                showRequestVC.DJparentView = self
+    //                showRequestVC.uid = selectedRequestid
+    //                self.present(showRequestVC, animated: true, completion: nil)
+    //                }
+    //            }
+    //            // if the status was countered
+    //            else if loadedRequest?.status == "countered" {
+    //                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusCounter", owner: nil, options: nil)?.first as? checkRequestStatusCounter {
+    //                showRequestVC.DJparentView = self
+    //                showRequestVC.uid = selectedRequestid
+    //                self.present(showRequestVC, animated: true, completion: nil)
+    //                }
+    //            }
+    
+        }
     }
 }
 //extension UIImageView {

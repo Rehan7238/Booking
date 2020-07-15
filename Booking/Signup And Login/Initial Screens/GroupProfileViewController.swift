@@ -27,9 +27,9 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var schoolLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-
+    
     var results: [String] = [String]()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,9 +49,9 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
                 self.refreshData()
                 if let profilePic = self.group?.profilePic, !profilePic.isEmpty {
                     self.profilePic.downloadImage(from: URL(string: profilePic)!)
-                                        
+                    
                 }
-
+                
             }
         }
     }
@@ -70,28 +70,28 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
                 self.refreshData()
                 if let profilePicURL = self.group?.profilePic, let url = URL(string: profilePicURL) {
                     self.profilePic.downloadImage(from: url)
-
+                    
                 }
-
+                
             }
         }
     }
     
     func refreshData() {
-           let db = Firestore.firestore()
-
-           db.collection("Requests").whereField("hostID", isEqualTo: group?.id ?? "").getDocuments() { (querySnapshot, err) in
-               if let err = err {
-                   print("Error getting documents: \(err)")
-               } else {
-                   self.results = [String]()
+        let db = Firestore.firestore()
+        
+        db.collection("Requests").whereField("hostID", isEqualTo: group?.id ?? "").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                self.results = [String]()
                 for document in querySnapshot!.documents {
-                        self.results.append(document.documentID)
+                    self.results.append(document.documentID)
                 }
-                   self.tableView.reloadData()
-               }
-           }
-       }
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return results.count
@@ -112,35 +112,35 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
         _ = Request.fromID(id: selectedRequestid).done { loadedRequest in
             self.request = loadedRequest
             if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusOpen", owner: nil, options: nil)?.first as? checkRequestStatusOpen {
-            showRequestVC.parentView = self
-            showRequestVC.uid = selectedRequestid
-            self.present(showRequestVC, animated: true, completion: nil)
+                showRequestVC.parentView = self
+                showRequestVC.setup(uid: selectedRequestid)
+                self.present(showRequestVC, animated: true, completion: nil)
             }
             
-            // if the status is open
-//            if loadedRequest?.status == "open" {
-//                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusOpen", owner: nil, options: nil)?.first as? checkRequestStatusOpen {
-//                showRequestVC.parentView = self
-//                showRequestVC.uid = selectedRequestid
-//                self.present(showRequestVC, animated: true, completion: nil)
-//                }
-//            }
-//            // if the status was declined
-//            else if loadedRequest?.status == "declined" {
-//                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusDeclined", owner: nil, options: nil)?.first as? checkRequestStatusDeclined {
-//                showRequestVC.parentView = self
-//                showRequestVC.uid = selectedRequestid
-//                self.present(showRequestVC, animated: true, completion: nil)
-//                }
-//            }
-//            // if the status was countered
-//            else if loadedRequest?.status == "countered" {
-//                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusCounter", owner: nil, options: nil)?.first as? checkRequestStatusCounter {
-//                showRequestVC.parentView = self
-//                showRequestVC.uid = selectedRequestid
-//                self.present(showRequestVC, animated: true, completion: nil)
-//                }
-//            }
+            //if the status is open
+            if loadedRequest?.status == "open" {
+                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusOpen", owner: nil, options: nil)?.first as? checkRequestStatusOpen {
+                    showRequestVC.parentView = self
+                    showRequestVC.setup(uid: selectedRequestid)
+                    self.present(showRequestVC, animated: true, completion: nil)
+                }
+            }
+                // if the status was declined
+            else if loadedRequest?.status == "declined" {
+                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusDeclined", owner: nil, options: nil)?.first as? checkRequestStatusDeclined {
+                    showRequestVC.parentView = self
+                    showRequestVC.setup(uid: selectedRequestid)
+                    self.present(showRequestVC, animated: true, completion: nil)
+                }
+            }
+                // if the status was countered
+            else if loadedRequest?.status == "countered" {
+                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusCounter", owner: nil, options: nil)?.first as? checkRequestStatusCounter {
+                    showRequestVC.parentView = self
+                    showRequestVC.setup(uid: selectedRequestid)
+                    self.present(showRequestVC, animated: true, completion: nil)
+                }
+            }
         }
     }
 }
