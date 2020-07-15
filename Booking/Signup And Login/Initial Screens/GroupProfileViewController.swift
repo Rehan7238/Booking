@@ -82,7 +82,7 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     func refreshData() {
            let db = Firestore.firestore()
 
-           db.collection("Requests").whereField("school", isEqualTo: group?.school ?? "").getDocuments() { (querySnapshot, err) in
+           db.collection("Requests").whereField("hostID", isEqualTo: group?.id ?? "").getDocuments() { (querySnapshot, err) in
                if let err = err {
                    print("Error getting documents: \(err)")
                } else {
