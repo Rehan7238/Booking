@@ -14,12 +14,11 @@
  
  class checkRequestStatusOpen: UIViewController {
     
-    @IBOutlet var eventNameLabel: UILabel!
     @IBOutlet var doneButton: UIButton! = UIButton()
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var DJNameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    
+    @IBOutlet weak var eventNameLabel: UILabel!
     
     var request: Request?
     var parentView: GroupProfileViewController?
@@ -40,6 +39,7 @@
                 self.eventNameLabel.text = loadedRequest?.eventName
                 self.DJNameLabel.text = loadedRequest?.DJName
                 self.dateLabel.text = loadedRequest?.date
+                //self.eventNameLabel.text = loadedRequest?.eventName
             }
         }
     }
