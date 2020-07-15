@@ -129,6 +129,7 @@ class Group {
                     group.profilePic = data["profilePic"] as! String
                     group.schoolLatitude = data["schoolLatitude"] as! String
                     group.schoolLongitude = data["schoolLongitude"] as! String
+                    
                     group.favoriteDJs = data["favoriteDJs"] as! [String]
 
 

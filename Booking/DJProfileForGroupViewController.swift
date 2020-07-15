@@ -101,7 +101,7 @@ class DJProfileForGroupViewController: UIViewController {
     @IBAction func favoriteButtonClicked(_ sender: Any) {
         var favDJs = group?.favoriteDJs
         favDJs?.append("\(String(describing: DJUID))")
-        group?.setFavoriteDJs(favDJs ?? [])
+        group?.setFavoriteDJs(favDJs ?? [""])
            }
 
 
