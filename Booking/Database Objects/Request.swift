@@ -29,8 +29,6 @@ class Request {
     var counteringParty: String = ""
 
 
-
-    
     func setEventName(_ newValue: String) {
         self.eventName = newValue
         updateValue(fieldName: "eventName", newValue: newValue)
@@ -165,8 +163,6 @@ class Request {
             "originalFee": newRequest.originalFee,
             "counterFee": newRequest.counterFee,
             "counteringParty": newRequest.counteringParty
-
-
         ])
         
         return newRequest

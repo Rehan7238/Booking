@@ -27,11 +27,13 @@
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ = Request.fromID(id: uid!).done { loadedRequest in
-                    self.request = loadedRequest
-            self.eventNameLabel.text = loadedRequest?.eventName
-            self.DJNameLabel.text = loadedRequest?.DJName
-            self.dateLabel.text = loadedRequest?.date
+        if let uid = self.uid {
+            _ = Request.fromID(id: uid).done { loadedRequest in
+                self.request = loadedRequest
+                self.eventNameLabel.text = loadedRequest?.eventName
+                self.DJNameLabel.text = loadedRequest?.DJName
+                self.dateLabel.text = loadedRequest?.date
+            }
         }
     }
     

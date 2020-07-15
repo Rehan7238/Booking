@@ -12,7 +12,6 @@ import UIKit
 
 class showRequestStatus: UIViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

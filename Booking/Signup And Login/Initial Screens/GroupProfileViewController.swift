@@ -59,8 +59,6 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 6
-        tableView.delegate = self
-        tableView.dataSource = self
         
         
         if let uid = Auth.auth().currentUser?.uid {
@@ -82,7 +80,7 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     func refreshData() {
            let db = Firestore.firestore()
 
-           db.collection("Requests").whereField("school", isEqualTo: group?.school ?? "").getDocuments() { (querySnapshot, err) in
+           db.collection("Requests").whereField("hostID", isEqualTo: group?.id ?? "").getDocuments() { (querySnapshot, err) in
                if let err = err {
                    print("Error getting documents: \(err)")
                } else {
