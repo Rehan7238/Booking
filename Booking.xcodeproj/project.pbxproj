@@ -234,14 +234,10 @@
 			isa = PBXGroup;
 			children = (
 				2417129924A4424400F950B6 /* InitialScreen.swift */,
-				2417129C24A5275900F950B6 /* GroupInitialViewController.swift */,
-				2417129E24A5279D00F950B6 /* VendorInitialViewController.swift */,
-				241712A024A527D900F950B6 /* SocializerInitialViewController.swift */,
-				241712A224A52EBC00F950B6 /* DJInitialViewController.swift */,
-				5D0FBCD024A6ADF00011F8D9 /* GroupCalendarViewController.swift */,
-				24593EE624B2B600002C2729 /* GroupProfileViewController.swift */,
-				24D6EF0724B659DA0075A665 /* EditGroupProfileViewController.swift */,
-				24593EE824B3B629002C2729 /* GroupExploreViewController.swift */,
+				5DFDCED524C0A9AD00AADD95 /* Socializer */,
+				5DFDCED424C0A9A000AADD95 /* Vendor */,
+				5DFDCED324C0A98E00AADD95 /* DJ */,
+				5DFDCED224C0A98400AADD95 /* Group */,
 				5D63BD2624B4CA3D0022A2C0 /* ExplorePageSearchResultCell.swift */,
 				24593EF224B51D11002C2729 /* EventCell.swift */,
 				24D6EF1724BD03BA0075A665 /* RequestCell.swift */,
@@ -269,7 +265,6 @@
 				5D66E49524A378FD00BD36DF /* Vendor Screens */,
 				5D66E49424A378CC00BD36DF /* Group Screens */,
 				5D66E49324A378B400BD36DF /* DJ Screens */,
-				2417129B24A5274700F950B6 /* Initial Screens */,
 				5D66E49224A378A200BD36DF /* Socializer Screens */,
 				245FEEFF24940319003267CE /* HomeViewController.swift */,
 				245FEF0124940365003267CE /* LoginViewController.swift */,
@@ -396,6 +391,7 @@
 				24D6EF0524B648FF0075A665 /* EditDJProfileViewController.swift */,
 				24D6EF0924BA5F550075A665 /* DJProfileForGroupViewController.swift */,
 				5DDF6B3624915BDF00B76C14 /* Database Objects */,
+				2417129B24A5274700F950B6 /* Initial Screens */,
 				5D66E49124A3786E00BD36DF /* Signup And Login */,
 				5DE698E9248DB92F00301B39 /* Assets.xcassets */,
 				5DE698EE248DB92F00301B39 /* Info.plist */,
@@ -420,6 +416,42 @@
 				5DE69904248DB93000301B39 /* Info.plist */,
 			);
 			path = BookingUITests;
+			sourceTree = "<group>";
+		};
+		5DFDCED224C0A98400AADD95 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				2417129C24A5275900F950B6 /* GroupInitialViewController.swift */,
+				5D0FBCD024A6ADF00011F8D9 /* GroupCalendarViewController.swift */,
+				24593EE624B2B600002C2729 /* GroupProfileViewController.swift */,
+				24D6EF0724B659DA0075A665 /* EditGroupProfileViewController.swift */,
+				24593EE824B3B629002C2729 /* GroupExploreViewController.swift */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		5DFDCED324C0A98E00AADD95 /* DJ */ = {
+			isa = PBXGroup;
+			children = (
+				241712A224A52EBC00F950B6 /* DJInitialViewController.swift */,
+			);
+			path = DJ;
+			sourceTree = "<group>";
+		};
+		5DFDCED424C0A9A000AADD95 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				2417129E24A5279D00F950B6 /* VendorInitialViewController.swift */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		5DFDCED524C0A9AD00AADD95 /* Socializer */ = {
+			isa = PBXGroup;
+			children = (
+				241712A024A527D900F950B6 /* SocializerInitialViewController.swift */,
+			);
+			path = Socializer;
 			sourceTree = "<group>";
 		};
 		B24CFCB92A93F99EADF8A967 /* Frameworks */ = {

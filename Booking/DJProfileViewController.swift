@@ -17,6 +17,7 @@ class DJProfileViewController: UIViewController, UITableViewDelegate, UITableVie
     
     //Mark: Properties
     
+    @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var djName: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var instaButton: UIButton!
@@ -24,12 +25,9 @@ class DJProfileViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var numberOfGigsNumber: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    
     var dj: DJ?
     var request: Request?
     var results: [String] = [String]()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -182,6 +180,14 @@ class DJProfileViewController: UIViewController, UITableViewDelegate, UITableVie
             }
             
         }
+    }
+    
+    @IBAction func logoutButtonPressed(_ sender: Any) {
+        do { try Auth.auth().signOut() }
+        catch {
+            print("already logged out")
+        }
+        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }
 //extension UIImageView {

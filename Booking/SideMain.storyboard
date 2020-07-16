@@ -338,6 +338,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOw-eH-J4Y">
+                                <rect key="frame" x="342" y="763" width="52" height="30"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="hcb-9e-qS3" eventType="touchUpInside" id="kjT-Jc-kV4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -347,11 +354,13 @@
                             <constraint firstItem="PUh-la-p8Z" firstAttribute="top" secondItem="cYC-PG-9AL" secondAttribute="top" constant="359" id="JFM-xo-lVv"/>
                             <constraint firstItem="e9w-Xc-sTY" firstAttribute="centerX" secondItem="5sV-T7-dTp" secondAttribute="centerX" id="Lbw-Na-nrJ"/>
                             <constraint firstItem="cYC-PG-9AL" firstAttribute="trailing" secondItem="wpH-uo-bOq" secondAttribute="trailing" constant="40" id="POu-S7-ime"/>
+                            <constraint firstItem="cYC-PG-9AL" firstAttribute="trailing" secondItem="TOw-eH-J4Y" secondAttribute="trailing" constant="20" id="TKr-3d-aVM"/>
                             <constraint firstItem="sU2-i1-FHe" firstAttribute="top" secondItem="cYC-PG-9AL" secondAttribute="top" constant="30" id="Y5f-1e-t0b"/>
                             <constraint firstItem="5sV-T7-dTp" firstAttribute="top" secondItem="sU2-i1-FHe" secondAttribute="bottom" constant="15" id="Yab-sx-YS6"/>
                             <constraint firstItem="PUh-la-p8Z" firstAttribute="leading" secondItem="cYC-PG-9AL" secondAttribute="leading" constant="20" id="bgi-k0-ssV"/>
                             <constraint firstItem="e9w-Xc-sTY" firstAttribute="top" secondItem="5sV-T7-dTp" secondAttribute="bottom" constant="5" id="eTg-Yn-vjk"/>
                             <constraint firstItem="wpH-uo-bOq" firstAttribute="top" secondItem="cYC-PG-9AL" secondAttribute="top" constant="40" id="fHr-J1-97J"/>
+                            <constraint firstItem="cYC-PG-9AL" firstAttribute="bottom" secondItem="TOw-eH-J4Y" secondAttribute="bottom" constant="20" id="fMq-3B-3Vd"/>
                             <constraint firstItem="5me-BG-ypg" firstAttribute="top" secondItem="e9w-Xc-sTY" secondAttribute="bottom" constant="5" id="i5v-ia-U7S"/>
                             <constraint firstItem="kxl-gF-5eF" firstAttribute="top" secondItem="5me-BG-ypg" secondAttribute="bottom" constant="5" id="kc5-ia-QLn"/>
                             <constraint firstItem="5sV-T7-dTp" firstAttribute="centerX" secondItem="sU2-i1-FHe" secondAttribute="centerX" id="uHB-Lk-bFf"/>
@@ -363,6 +372,7 @@
                         <outlet property="addressLabel" destination="kxl-gF-5eF" id="4IN-wf-e36"/>
                         <outlet property="editButton" destination="wpH-uo-bOq" id="wpt-8T-DQj"/>
                         <outlet property="groupName" destination="5sV-T7-dTp" id="cjh-9E-Rxc"/>
+                        <outlet property="logoutButton" destination="TOw-eH-J4Y" id="R2V-KY-KGK"/>
                         <outlet property="profilePic" destination="sU2-i1-FHe" id="e8t-DB-17z"/>
                         <outlet property="schoolLabel" destination="5me-BG-ypg" id="Vcl-Aa-tf7"/>
                         <outlet property="tableView" destination="PUh-la-p8Z" id="qmY-3V-eZY"/>
@@ -1312,13 +1322,22 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qD-HI-PHf">
+                                <rect key="frame" x="332" y="763" width="52" height="30"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="mka-ae-cEB" eventType="touchUpInside" id="zAu-nr-OBI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="uJb-zF-CN2" firstAttribute="trailing" secondItem="6qD-HI-PHf" secondAttribute="trailing" constant="30" id="6Tx-nt-31E"/>
                             <constraint firstItem="fQw-sj-BZE" firstAttribute="leading" secondItem="uJb-zF-CN2" secondAttribute="leading" constant="20" id="80B-so-yQ4"/>
                             <constraint firstItem="TNR-4e-zqo" firstAttribute="leading" secondItem="uJb-zF-CN2" secondAttribute="leading" constant="63" id="EGZ-Y3-Og0"/>
                             <constraint firstItem="wq4-5a-fgm" firstAttribute="leading" secondItem="uJb-zF-CN2" secondAttribute="leading" constant="52" id="MCG-88-aWD"/>
                             <constraint firstItem="wq4-5a-fgm" firstAttribute="top" secondItem="uJb-zF-CN2" secondAttribute="top" constant="36" id="NV5-XP-gWH"/>
+                            <constraint firstItem="uJb-zF-CN2" firstAttribute="bottom" secondItem="6qD-HI-PHf" secondAttribute="bottom" constant="20" id="NVf-k4-58t"/>
                             <constraint firstItem="fQw-sj-BZE" firstAttribute="top" secondItem="uJb-zF-CN2" secondAttribute="top" constant="347" id="ero-i6-Xfy"/>
                             <constraint firstItem="TNR-4e-zqo" firstAttribute="top" secondItem="wq4-5a-fgm" secondAttribute="bottom" constant="13" id="i9R-Jq-7t0"/>
                         </constraints>
@@ -1329,6 +1348,7 @@
                         <outlet property="DJRatingNumber" destination="Oh0-uW-Dux" id="shl-bi-BuI"/>
                         <outlet property="djName" destination="TNR-4e-zqo" id="sGz-N5-VJd"/>
                         <outlet property="instaButton" destination="b9p-1y-odp" id="eDd-C3-zaO"/>
+                        <outlet property="logoutButton" destination="6qD-HI-PHf" id="sYw-We-axk"/>
                         <outlet property="numberOfGigsNumber" destination="1Ft-sZ-Mxl" id="6c9-da-cJg"/>
                         <outlet property="profilePic" destination="wq4-5a-fgm" id="K8N-SP-nCS"/>
                         <outlet property="tableView" destination="fQw-sj-BZE" id="v0r-7L-br7"/>

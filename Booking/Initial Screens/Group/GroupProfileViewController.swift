@@ -21,6 +21,7 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     var group: Group?
     var request: Request?
     
+    @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
@@ -144,6 +145,14 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
                 }
             }
         }
+    }
+    
+    @IBAction func logoutButtonPressed(_ sender: Any) {
+        do { try Auth.auth().signOut() }
+        catch {
+            print("already logged out")
+        }
+        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }
 
