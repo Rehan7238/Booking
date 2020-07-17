@@ -7,86 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2417129824A43FA000F950B6 /* SideMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2417129724A43FA000F950B6 /* SideMain.storyboard */; };
-		2417129A24A4424400F950B6 /* InitialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417129924A4424400F950B6 /* InitialScreen.swift */; };
-		2417129D24A5275900F950B6 /* GroupInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417129C24A5275900F950B6 /* GroupInitialViewController.swift */; };
-		2417129F24A5279D00F950B6 /* VendorInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417129E24A5279D00F950B6 /* VendorInitialViewController.swift */; };
-		241712A124A527D900F950B6 /* SocializerInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241712A024A527D900F950B6 /* SocializerInitialViewController.swift */; };
-		241712A324A52EBC00F950B6 /* DJInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241712A224A52EBC00F950B6 /* DJInitialViewController.swift */; };
-		2447CCAA24A91EF6007163DB /* socializerMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447CCA924A91EF6007163DB /* socializerMapViewController.swift */; };
-		2452705924BD5DCF005BC912 /* checkRequestStatusOpen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452705824BD5DCF005BC912 /* checkRequestStatusOpen.xib */; };
-		2452705B24BD5DE0005BC912 /* checkRequestStatusOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452705A24BD5DE0005BC912 /* checkRequestStatusOpen.swift */; };
-		2452705D24BE2BB8005BC912 /* showRequestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452705C24BE2BB7005BC912 /* showRequestStatus.swift */; };
-		2452705F24BE3791005BC912 /* checkRequestStatusDeclined.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452705E24BE3791005BC912 /* checkRequestStatusDeclined.xib */; };
-		2452706124BE37AA005BC912 /* checkRequestStatusDeclined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452706024BE37AA005BC912 /* checkRequestStatusDeclined.swift */; };
-		2452706324BE3837005BC912 /* checkRequestStatusCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452706224BE3837005BC912 /* checkRequestStatusCounter.swift */; };
-		2452706524BE3846005BC912 /* checkRequestStatusCounter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452706424BE3846005BC912 /* checkRequestStatusCounter.xib */; };
-		2452706B24BE5B26005BC912 /* createRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452706A24BE5B26005BC912 /* createRequestView.swift */; };
-		2452706D24BE5B4F005BC912 /* createRequestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452706C24BE5B4F005BC912 /* createRequestView.xib */; };
-		2452706F24BF8D02005BC912 /* checkRequestStatusOpenDJ.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452706E24BF8D02005BC912 /* checkRequestStatusOpenDJ.xib */; };
-		2452707124BF8D10005BC912 /* checkRequestStatusOpenDJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452707024BF8D10005BC912 /* checkRequestStatusOpenDJ.swift */; };
-		2452707324BFAD32005BC912 /* checkRequestStatusAcceptedGroup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452707224BFAD32005BC912 /* checkRequestStatusAcceptedGroup.xib */; };
-		2452707524BFAD46005BC912 /* checkRequestStatusAcceptedGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452707424BFAD46005BC912 /* checkRequestStatusAcceptedGroup.swift */; };
-		2452707724BFAE4F005BC912 /* checkRequestStatusAcceptedDJ.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2452707624BFAE4F005BC912 /* checkRequestStatusAcceptedDJ.xib */; };
-		2452707924BFAE64005BC912 /* checkRequestStatusAcceptedDJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452707824BFAE64005BC912 /* checkRequestStatusAcceptedDJ.swift */; };
-		24593EE724B2B600002C2729 /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EE624B2B600002C2729 /* GroupProfileViewController.swift */; };
-		24593EE924B3B629002C2729 /* GroupExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EE824B3B629002C2729 /* GroupExploreViewController.swift */; };
-		24593EED24B5031B002C2729 /* createEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24593EEC24B5031B002C2729 /* createEventView.xib */; };
-		24593EEF24B50344002C2729 /* createEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EEE24B50344002C2729 /* createEventView.swift */; };
-		24593EF124B51984002C2729 /* DJProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EF024B51984002C2729 /* DJProfileViewController.swift */; };
-		24593EF324B51D11002C2729 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24593EF224B51D11002C2729 /* EventCell.swift */; };
-		245FEF0024940319003267CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEEFF24940319003267CE /* HomeViewController.swift */; };
-		245FEF0224940365003267CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0124940365003267CE /* LoginViewController.swift */; };
-		245FEF0424940381003267CE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0324940381003267CE /* StartViewController.swift */; };
-		245FEF0624941ABB003267CE /* DJorGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0524941ABB003267CE /* DJorGroupViewController.swift */; };
-		245FEF0C249C19D5003267CE /* SocializerSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF0B249C19D5003267CE /* SocializerSignUpViewController.swift */; };
-		245FEF12249C63FD003267CE /* SocializerProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */; };
-		245FEF26249C7566003267CE /* CollectDJProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF25249C7566003267CE /* CollectDJProfilePicViewController.swift */; };
-		245FEF28249C759B003267CE /* CollectDJPlayingFeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF27249C759B003267CE /* CollectDJPlayingFeeViewController.swift */; };
-		245FEF2A249C7608003267CE /* CollectDJGenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF29249C7608003267CE /* CollectDJGenresViewController.swift */; };
-		245FEF2C249C7625003267CE /* CollectDJLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF2B249C7625003267CE /* CollectDJLinkViewController.swift */; };
-		245FEF2E249C76E4003267CE /* CollectDJEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245FEF2D249C76E4003267CE /* CollectDJEquipmentViewController.swift */; };
-		249275F9249FDD610048C54A /* CollectGroupPlayingFeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249275F8249FDD610048C54A /* CollectGroupPlayingFeeViewController.swift */; };
-		249275FB249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249275FA249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift */; };
-		249275FD24A03C080048C54A /* CollectGroupProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249275FC24A03C080048C54A /* CollectGroupProfilePicViewController.swift */; };
-		249275FF24A041590048C54A /* GroupFinalNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249275FE24A041590048C54A /* GroupFinalNotesViewController.swift */; };
-		2492760124A130AA0048C54A /* DJFinalNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760024A130A90048C54A /* DJFinalNotesViewController.swift */; };
-		2492760324A1346B0048C54A /* SocializerFinalNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760224A1346A0048C54A /* SocializerFinalNotesViewController.swift */; };
-		2492760524A138110048C54A /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760424A138110048C54A /* Vendor.swift */; };
-		2492760724A13FD10048C54A /* VendorSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760624A13FD10048C54A /* VendorSignUpViewController.swift */; };
-		2492760924A14C0D0048C54A /* VendorPlayingFeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760824A14C0D0048C54A /* VendorPlayingFeeViewController.swift */; };
-		2492760B24A1776C0048C54A /* CollectVendorEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760A24A1776C0048C54A /* CollectVendorEquipmentViewController.swift */; };
-		2492760D24A179BE0048C54A /* CollectVendorProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760C24A179BE0048C54A /* CollectVendorProfilePicViewController.swift */; };
-		2492760F24A17B810048C54A /* VendorFinalNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492760E24A17B810048C54A /* VendorFinalNotesViewController.swift */; };
-		2492761124A299770048C54A /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2492761024A299770048C54A /* AlertView.xib */; };
-		2492761324A2A25D0048C54A /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492761224A2A25C0048C54A /* AlertView.swift */; };
-		24D6EF0624B648FF0075A665 /* EditDJProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EF0524B648FF0075A665 /* EditDJProfileViewController.swift */; };
-		24D6EF0824B659DA0075A665 /* EditGroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EF0724B659DA0075A665 /* EditGroupProfileViewController.swift */; };
-		24D6EF0A24BA5F550075A665 /* DJProfileForGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EF0924BA5F550075A665 /* DJProfileForGroupViewController.swift */; };
-		24D6EF1624BCFEF50075A665 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EF1524BCFEF50075A665 /* Request.swift */; };
-		24D6EF1824BD03BA0075A665 /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EF1724BD03BA0075A665 /* RequestCell.swift */; };
 		2F86396BB586F46C97CFEF8E /* Pods_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1A24D4CC0398587A1539D8 /* Pods_BookingTests.framework */; };
 		43DB8D5CF7CD7F5ABEDA8F31 /* Pods_Booking_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D6B79E1497CC26A269A1C /* Pods_Booking_BookingUITests.framework */; };
 		479DF79D35D0A425F450CCDF /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED699F371A2993D3B76D66E0 /* Pods_Booking.framework */; };
-		5D0FBCD124A6ADF00011F8D9 /* GroupCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0FBCD024A6ADF00011F8D9 /* GroupCalendarViewController.swift */; };
-		5D12207C249957C2006D2517 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207B249957C2006D2517 /* Event.swift */; };
-		5D12207E249957CB006D2517 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12207D249957CB006D2517 /* User.swift */; };
-		5D63BD2724B4CA3D0022A2C0 /* ExplorePageSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D63BD2624B4CA3D0022A2C0 /* ExplorePageSearchResultCell.swift */; };
-		5D66E48D24A3497200BD36DF /* InviteContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D66E48C24A3497200BD36DF /* InviteContactsViewController.swift */; };
-		5D66E48F24A34BF400BD36DF /* InviteContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D66E48E24A34BF400BD36DF /* InviteContactsCell.swift */; };
-		5D87BD8624949D1800F4CA6C /* GroupSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */; };
-		5DA31BE824919B4B00C18F55 /* DJSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA31BE724919B4B00C18F55 /* DJSignupViewController.swift */; };
-		5DB17EB2249F639900237276 /* OptionToSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB17EB1249F639900237276 /* OptionToSelect.swift */; };
-		5DDF6B352491585000B76C14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DDF6B342491585000B76C14 /* GoogleService-Info.plist */; };
-		5DDF6B3824915BFF00B76C14 /* DJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF6B3724915BFF00B76C14 /* DJ.swift */; };
-		5DDF6B3A24915C0E00B76C14 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF6B3924915C0E00B76C14 /* Group.swift */; };
-		5DE698E1248DB92600301B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE698E0248DB92600301B39 /* AppDelegate.swift */; };
-		5DE698E3248DB92600301B39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE698E2248DB92600301B39 /* SceneDelegate.swift */; };
-		5DE698E8248DB92600301B39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE698E6248DB92600301B39 /* Main.storyboard */; };
-		5DE698EA248DB92F00301B39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DE698E9248DB92F00301B39 /* Assets.xcassets */; };
-		5DE698ED248DB92F00301B39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE698EB248DB92F00301B39 /* LaunchScreen.storyboard */; };
 		5DE698F8248DB93000301B39 /* BookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE698F7248DB93000301B39 /* BookingTests.swift */; };
 		5DE69903248DB93000301B39 /* BookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE69902248DB93000301B39 /* BookingUITests.swift */; };
+		CD4C9DA324C1E56D00EF33E6 /* EventSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4C9DA224C1E56D00EF33E6 /* EventSelectionCell.swift */; };
+		CD4C9DA524C1E5C500EF33E6 /* EventSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4C9DA424C1E5C500EF33E6 /* EventSelectionCell.xib */; };
+		CD9D3B8424C1C32A00A3D85D /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B3824C1C32A00A3D85D /* GroupProfileViewController.swift */; };
+		CD9D3B8524C1C32A00A3D85D /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B3924C1C32A00A3D85D /* Vendor.swift */; };
+		CD9D3B8824C1C32A00A3D85D /* checkRequestStatusDeclined.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B3C24C1C32A00A3D85D /* checkRequestStatusDeclined.swift */; };
+		CD9D3B8924C1C32A00A3D85D /* CollectDJGenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B3D24C1C32A00A3D85D /* CollectDJGenresViewController.swift */; };
+		CD9D3B8A24C1C32A00A3D85D /* CollectDJProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B3E24C1C32A00A3D85D /* CollectDJProfilePicViewController.swift */; };
+		CD9D3B8B24C1C32A00A3D85D /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B3F24C1C32A00A3D85D /* EventCell.swift */; };
+		CD9D3B8C24C1C32A00A3D85D /* SocializerProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B4024C1C32A00A3D85D /* SocializerProfilePictureViewController.swift */; };
+		CD9D3B8D24C1C32A00A3D85D /* CollectDJEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B4124C1C32A00A3D85D /* CollectDJEquipmentViewController.swift */; };
+		CD9D3B8E24C1C32A00A3D85D /* DJorGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B4224C1C32A00A3D85D /* DJorGroupViewController.swift */; };
+		CD9D3B8F24C1C32A00A3D85D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B4324C1C32A00A3D85D /* Event.swift */; };
+		CD9D3B9024C1C32A00A3D85D /* DJInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B4424C1C32A00A3D85D /* DJInitialViewController.swift */; };
+		CD9D3B9124C1C32A00A3D85D /* VendorInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B4524C1C32A00A3D85D /* VendorInitialViewController.swift */; };
+		CD9D3B9224C1C32A00A3D85D /* socializerMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B4624C1C32A00A3D85D /* socializerMapViewController.swift */; };
+		CD9D3B9424C1C32A00A3D85D /* CollectDJPlayingFeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B4824C1C32A00A3D85D /* CollectDJPlayingFeeViewController.swift */; };
+		CD9D3B9724C1C32A00A3D85D /* SocializerInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B4B24C1C32A00A3D85D /* SocializerInitialViewController.swift */; };
+		CD9D3B9924C1C32A00A3D85D /* InitialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B4D24C1C32A00A3D85D /* InitialScreen.swift */; };
+		CD9D3B9A24C1C32A00A3D85D /* CollectDJLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B4E24C1C32A00A3D85D /* CollectDJLinkViewController.swift */; };
+		CD9D3B9B24C1C32A00A3D85D /* checkRequestStatusAcceptedGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B4F24C1C32A00A3D85D /* checkRequestStatusAcceptedGroup.swift */; };
+		CD9D3B9C24C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B5024C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.swift */; };
+		CD9D3B9F24C1C32A00A3D85D /* GroupSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B5324C1C32A00A3D85D /* GroupSignUpViewController.swift */; };
+		CD9D3BA024C1C32A00A3D85D /* DJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B5424C1C32A00A3D85D /* DJ.swift */; };
+		CD9D3BA124C1C32A00A3D85D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B5524C1C32A00A3D85D /* User.swift */; };
+		CD9D3BA324C1C32A00A3D85D /* showRequestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B5724C1C32A00A3D85D /* showRequestStatus.swift */; };
+		CD9D3BA424C1C32A00A3D85D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B5824C1C32A00A3D85D /* HomeViewController.swift */; };
+		CD9D3BA524C1C32A00A3D85D /* checkRequestStatusCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B5924C1C32A00A3D85D /* checkRequestStatusCounter.swift */; };
+		CD9D3BA624C1C32A00A3D85D /* EditGroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B5A24C1C32A00A3D85D /* EditGroupProfileViewController.swift */; };
+		CD9D3BA724C1C32A00A3D85D /* InviteContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B5B24C1C32A00A3D85D /* InviteContactsViewController.swift */; };
+		CD9D3BA924C1C32A00A3D85D /* createEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B5D24C1C32A00A3D85D /* createEventView.swift */; };
+		CD9D3BAA24C1C32A00A3D85D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B5E24C1C32A00A3D85D /* StartViewController.swift */; };
+		CD9D3BAB24C1C32A00A3D85D /* InviteContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B5F24C1C32A00A3D85D /* InviteContactsCell.swift */; };
+		CD9D3BAC24C1C32A00A3D85D /* DJProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B6024C1C32A00A3D85D /* DJProfileViewController.swift */; };
+		CD9D3BAD24C1C32A00A3D85D /* createRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B6124C1C32A00A3D85D /* createRequestView.swift */; };
+		CD9D3BAE24C1C32A00A3D85D /* CollectGroupProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B6224C1C32A00A3D85D /* CollectGroupProfilePicViewController.swift */; };
+		CD9D3BAF24C1C32A00A3D85D /* ExplorePageSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B6324C1C32A00A3D85D /* ExplorePageSearchResultCell.swift */; };
+		CD9D3BB124C1C32A00A3D85D /* DJFinalNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B6524C1C32A00A3D85D /* DJFinalNotesViewController.swift */; };
+		CD9D3BB224C1C32A00A3D85D /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B6624C1C32A00A3D85D /* RequestCell.swift */; };
+		CD9D3BB324C1C32A00A3D85D /* checkRequestStatusOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B6724C1C32A00A3D85D /* checkRequestStatusOpen.swift */; };
+		CD9D3BB424C1C32A00A3D85D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B6824C1C32A00A3D85D /* Request.swift */; };
+		CD9D3BB524C1C32A00A3D85D /* SocializerFinalNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B6924C1C32A00A3D85D /* SocializerFinalNotesViewController.swift */; };
+		CD9D3BB624C1C32A00A3D85D /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B6A24C1C32A00A3D85D /* AlertView.swift */; };
+		CD9D3BB724C1C32A00A3D85D /* CollectGroupEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B6B24C1C32A00A3D85D /* CollectGroupEquipmentViewController.swift */; };
+		CD9D3BB824C1C32A00A3D85D /* CollectGroupPlayingFeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B6C24C1C32A00A3D85D /* CollectGroupPlayingFeeViewController.swift */; };
+		CD9D3BBA24C1C32A00A3D85D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B6E24C1C32A00A3D85D /* Group.swift */; };
+		CD9D3BBB24C1C32A00A3D85D /* checkRequestStatusOpenDJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B6F24C1C32A00A3D85D /* checkRequestStatusOpenDJ.swift */; };
+		CD9D3BBC24C1C32A00A3D85D /* GroupInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B7024C1C32A00A3D85D /* GroupInitialViewController.swift */; };
+		CD9D3BBD24C1C32A00A3D85D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B7124C1C32A00A3D85D /* LoginViewController.swift */; };
+		CD9D3BBE24C1C32A00A3D85D /* GroupCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B7224C1C32A00A3D85D /* GroupCalendarViewController.swift */; };
+		CD9D3BBF24C1C32A00A3D85D /* CollectVendorEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B7324C1C32A00A3D85D /* CollectVendorEquipmentViewController.swift */; };
+		CD9D3BC024C1C32A00A3D85D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B7424C1C32A00A3D85D /* AppDelegate.swift */; };
+		CD9D3BC124C1C32A00A3D85D /* GroupFinalNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B7524C1C32A00A3D85D /* GroupFinalNotesViewController.swift */; };
+		CD9D3BC324C1C32A00A3D85D /* VendorPlayingFeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B7724C1C32A00A3D85D /* VendorPlayingFeeViewController.swift */; };
+		CD9D3BC424C1C32A00A3D85D /* VendorFinalNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B7824C1C32A00A3D85D /* VendorFinalNotesViewController.swift */; };
+		CD9D3BC624C1C32A00A3D85D /* VendorSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B7A24C1C32A00A3D85D /* VendorSignUpViewController.swift */; };
+		CD9D3BC724C1C32A00A3D85D /* CollectVendorProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B7B24C1C32A00A3D85D /* CollectVendorProfilePicViewController.swift */; };
+		CD9D3BC824C1C32A00A3D85D /* EditDJProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B7C24C1C32A00A3D85D /* EditDJProfileViewController.swift */; };
+		CD9D3BC924C1C32A00A3D85D /* OptionToSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B7D24C1C32A00A3D85D /* OptionToSelect.swift */; };
+		CD9D3BCA24C1C32A00A3D85D /* DJSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B7E24C1C32A00A3D85D /* DJSignupViewController.swift */; };
+		CD9D3BCB24C1C32A00A3D85D /* DJProfileForGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B7F24C1C32A00A3D85D /* DJProfileForGroupViewController.swift */; };
+		CD9D3BCD24C1C32A00A3D85D /* GroupExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B8124C1C32A00A3D85D /* GroupExploreViewController.swift */; };
+		CD9D3BCE24C1C32A00A3D85D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B8224C1C32A00A3D85D /* SceneDelegate.swift */; };
+		CD9D3BCF24C1C32A00A3D85D /* SocializerSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B8324C1C32A00A3D85D /* SocializerSignUpViewController.swift */; };
+		CD9D3BD124C1C72F00A3D85D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3BD024C1C72F00A3D85D /* GoogleService-Info.plist */; };
+		CD9D3BD224C1C92C00A3D85D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B5C24C1C32A00A3D85D /* Main.storyboard */; };
+		CD9D3BD324C1CA3A00A3D85D /* checkRequestStatusAcceptedDJ.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B6D24C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.xib */; };
+		CD9D3BD424C1CA4200A3D85D /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B6424C1C32A00A3D85D /* AlertView.xib */; };
+		CD9D3BD524C1CA4D00A3D85D /* checkRequestStatusAcceptedGroup.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B4724C1C32A00A3D85D /* checkRequestStatusAcceptedGroup.xib */; };
+		CD9D3BD624C1CA5300A3D85D /* checkRequestStatusCounter.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B4C24C1C32A00A3D85D /* checkRequestStatusCounter.xib */; };
+		CD9D3BD724C1CA5900A3D85D /* checkRequestStatusDeclined.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B4A24C1C32A00A3D85D /* checkRequestStatusDeclined.xib */; };
+		CD9D3BD824C1CA5D00A3D85D /* checkRequestStatusOpen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B3A24C1C32A00A3D85D /* checkRequestStatusOpen.xib */; };
+		CD9D3BD924C1CA6000A3D85D /* checkRequestStatusOpenDJ.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B7624C1C32A00A3D85D /* checkRequestStatusOpenDJ.xib */; };
+		CD9D3BDB24C1CA6700A3D85D /* createEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B5124C1C32A00A3D85D /* createEventView.xib */; };
+		CD9D3BDC24C1CA6C00A3D85D /* createRequestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B4924C1C32A00A3D85D /* createRequestView.xib */; };
+		CD9D3BDD24C1CA7B00A3D85D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B3B24C1C32A00A3D85D /* LaunchScreen.storyboard */; };
+		CD9D3BDE24C1CA7F00A3D85D /* SideMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B7924C1C32A00A3D85D /* SideMain.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,86 +108,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2417129724A43FA000F950B6 /* SideMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMain.storyboard; sourceTree = "<group>"; };
-		2417129924A4424400F950B6 /* InitialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreen.swift; sourceTree = "<group>"; };
-		2417129C24A5275900F950B6 /* GroupInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInitialViewController.swift; sourceTree = "<group>"; };
-		2417129E24A5279D00F950B6 /* VendorInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorInitialViewController.swift; sourceTree = "<group>"; };
-		241712A024A527D900F950B6 /* SocializerInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocializerInitialViewController.swift; sourceTree = "<group>"; };
-		241712A224A52EBC00F950B6 /* DJInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJInitialViewController.swift; sourceTree = "<group>"; };
-		2447CCA924A91EF6007163DB /* socializerMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socializerMapViewController.swift; sourceTree = "<group>"; };
-		2452705824BD5DCF005BC912 /* checkRequestStatusOpen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusOpen.xib; sourceTree = "<group>"; };
-		2452705A24BD5DE0005BC912 /* checkRequestStatusOpen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = checkRequestStatusOpen.swift; path = "Initial Screens/checkRequestStatusOpen.swift"; sourceTree = "<group>"; };
-		2452705C24BE2BB7005BC912 /* showRequestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showRequestStatus.swift; sourceTree = "<group>"; };
-		2452705E24BE3791005BC912 /* checkRequestStatusDeclined.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusDeclined.xib; sourceTree = "<group>"; };
-		2452706024BE37AA005BC912 /* checkRequestStatusDeclined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = checkRequestStatusDeclined.swift; path = "Initial Screens/checkRequestStatusDeclined.swift"; sourceTree = "<group>"; };
-		2452706224BE3837005BC912 /* checkRequestStatusCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkRequestStatusCounter.swift; sourceTree = "<group>"; };
-		2452706424BE3846005BC912 /* checkRequestStatusCounter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusCounter.xib; sourceTree = "<group>"; };
-		2452706A24BE5B26005BC912 /* createRequestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createRequestView.swift; sourceTree = "<group>"; };
-		2452706C24BE5B4F005BC912 /* createRequestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = createRequestView.xib; path = "Initial Screens/createRequestView.xib"; sourceTree = "<group>"; };
-		2452706E24BF8D02005BC912 /* checkRequestStatusOpenDJ.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusOpenDJ.xib; sourceTree = "<group>"; };
-		2452707024BF8D10005BC912 /* checkRequestStatusOpenDJ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = checkRequestStatusOpenDJ.swift; path = "Initial Screens/checkRequestStatusOpenDJ.swift"; sourceTree = "<group>"; };
-		2452707224BFAD32005BC912 /* checkRequestStatusAcceptedGroup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusAcceptedGroup.xib; sourceTree = "<group>"; };
-		2452707424BFAD46005BC912 /* checkRequestStatusAcceptedGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = checkRequestStatusAcceptedGroup.swift; path = "Initial Screens/checkRequestStatusAcceptedGroup.swift"; sourceTree = "<group>"; };
-		2452707624BFAE4F005BC912 /* checkRequestStatusAcceptedDJ.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusAcceptedDJ.xib; sourceTree = "<group>"; };
-		2452707824BFAE64005BC912 /* checkRequestStatusAcceptedDJ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = checkRequestStatusAcceptedDJ.swift; path = "Initial Screens/checkRequestStatusAcceptedDJ.swift"; sourceTree = "<group>"; };
 		24593EE224A98292002C2729 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Downloads/mapbox-ios-sdk-5/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
-		24593EE624B2B600002C2729 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileViewController.swift; sourceTree = "<group>"; };
-		24593EE824B3B629002C2729 /* GroupExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupExploreViewController.swift; sourceTree = "<group>"; };
-		24593EEC24B5031B002C2729 /* createEventView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = createEventView.xib; path = "Initial Screens/createEventView.xib"; sourceTree = "<group>"; };
-		24593EEE24B50344002C2729 /* createEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = createEventView.swift; path = "Initial Screens/createEventView.swift"; sourceTree = "<group>"; };
-		24593EF024B51984002C2729 /* DJProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJProfileViewController.swift; sourceTree = "<group>"; };
-		24593EF224B51D11002C2729 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
-		245FEEFF24940319003267CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		245FEF0124940365003267CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		245FEF0324940381003267CE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		245FEF0524941ABB003267CE /* DJorGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DJorGroupViewController.swift; path = "../New Group/DJorGroupViewController.swift"; sourceTree = "<group>"; };
-		245FEF0B249C19D5003267CE /* SocializerSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocializerSignUpViewController.swift; sourceTree = "<group>"; };
-		245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocializerProfilePictureViewController.swift; sourceTree = "<group>"; };
-		245FEF25249C7566003267CE /* CollectDJProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectDJProfilePicViewController.swift; sourceTree = "<group>"; };
-		245FEF27249C759B003267CE /* CollectDJPlayingFeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectDJPlayingFeeViewController.swift; sourceTree = "<group>"; };
-		245FEF29249C7608003267CE /* CollectDJGenresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectDJGenresViewController.swift; sourceTree = "<group>"; };
-		245FEF2B249C7625003267CE /* CollectDJLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectDJLinkViewController.swift; sourceTree = "<group>"; };
-		245FEF2D249C76E4003267CE /* CollectDJEquipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectDJEquipmentViewController.swift; sourceTree = "<group>"; };
-		249275F8249FDD610048C54A /* CollectGroupPlayingFeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectGroupPlayingFeeViewController.swift; sourceTree = "<group>"; };
-		249275FA249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectGroupEquipmentViewController.swift; sourceTree = "<group>"; };
-		249275FC24A03C080048C54A /* CollectGroupProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectGroupProfilePicViewController.swift; sourceTree = "<group>"; };
-		249275FE24A041590048C54A /* GroupFinalNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFinalNotesViewController.swift; sourceTree = "<group>"; };
-		2492760024A130A90048C54A /* DJFinalNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJFinalNotesViewController.swift; sourceTree = "<group>"; };
-		2492760224A1346A0048C54A /* SocializerFinalNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocializerFinalNotesViewController.swift; sourceTree = "<group>"; };
-		2492760424A138110048C54A /* Vendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
-		2492760624A13FD10048C54A /* VendorSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorSignUpViewController.swift; sourceTree = "<group>"; };
-		2492760824A14C0D0048C54A /* VendorPlayingFeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorPlayingFeeViewController.swift; sourceTree = "<group>"; };
-		2492760A24A1776C0048C54A /* CollectVendorEquipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectVendorEquipmentViewController.swift; sourceTree = "<group>"; };
-		2492760C24A179BE0048C54A /* CollectVendorProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectVendorProfilePicViewController.swift; sourceTree = "<group>"; };
-		2492760E24A17B810048C54A /* VendorFinalNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorFinalNotesViewController.swift; sourceTree = "<group>"; };
-		2492761024A299770048C54A /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
-		2492761224A2A25C0048C54A /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
-		24D6EF0524B648FF0075A665 /* EditDJProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDJProfileViewController.swift; sourceTree = "<group>"; };
-		24D6EF0724B659DA0075A665 /* EditGroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGroupProfileViewController.swift; sourceTree = "<group>"; };
-		24D6EF0924BA5F550075A665 /* DJProfileForGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJProfileForGroupViewController.swift; sourceTree = "<group>"; };
-		24D6EF1524BCFEF50075A665 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		24D6EF1724BD03BA0075A665 /* RequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
 		572733D997C660A83A8E95A5 /* Pods-Booking-BookingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking-BookingUITests.debug.xcconfig"; path = "Target Support Files/Pods-Booking-BookingUITests/Pods-Booking-BookingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5809FB3C41A3EEC35105BBA8 /* Pods-Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.debug.xcconfig"; path = "Target Support Files/Pods-Booking/Pods-Booking.debug.xcconfig"; sourceTree = "<group>"; };
-		5D0FBCD024A6ADF00011F8D9 /* GroupCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCalendarViewController.swift; sourceTree = "<group>"; };
-		5D12207B249957C2006D2517 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		5D12207D249957CB006D2517 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		5D63BD2624B4CA3D0022A2C0 /* ExplorePageSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePageSearchResultCell.swift; sourceTree = "<group>"; };
-		5D66E48C24A3497200BD36DF /* InviteContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteContactsViewController.swift; sourceTree = "<group>"; };
-		5D66E48E24A34BF400BD36DF /* InviteContactsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteContactsCell.swift; sourceTree = "<group>"; };
-		5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSignUpViewController.swift; sourceTree = "<group>"; };
-		5DA31BE724919B4B00C18F55 /* DJSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJSignupViewController.swift; sourceTree = "<group>"; };
-		5DB17EB1249F639900237276 /* OptionToSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionToSelect.swift; sourceTree = "<group>"; };
-		5DDF6B342491585000B76C14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5DDF6B3724915BFF00B76C14 /* DJ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJ.swift; sourceTree = "<group>"; };
-		5DDF6B3924915C0E00B76C14 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		5DE698DD248DB92600301B39 /* Booking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booking.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DE698E0248DB92600301B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5DE698E2248DB92600301B39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5DE698E7248DB92600301B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5DE698E9248DB92F00301B39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5DE698EC248DB92F00301B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5DE698EE248DB92F00301B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DE698F3248DB93000301B39 /* BookingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE698F7248DB93000301B39 /* BookingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTests.swift; sourceTree = "<group>"; };
 		5DE698F9248DB93000301B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -197,6 +122,84 @@
 		7D6F94111F73D9926B1F0069 /* Pods-BookingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookingTests.debug.xcconfig"; path = "Target Support Files/Pods-BookingTests/Pods-BookingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC6EE0B597BABDFEB215D9AC /* Pods-Booking-BookingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking-BookingUITests.release.xcconfig"; path = "Target Support Files/Pods-Booking-BookingUITests/Pods-Booking-BookingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C56D6B79E1497CC26A269A1C /* Pods_Booking_BookingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booking_BookingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4C9DA224C1E56D00EF33E6 /* EventSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSelectionCell.swift; sourceTree = "<group>"; };
+		CD4C9DA424C1E5C500EF33E6 /* EventSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventSelectionCell.xib; sourceTree = "<group>"; };
+		CD9D3B3824C1C32A00A3D85D /* GroupProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupProfileViewController.swift; sourceTree = "<group>"; };
+		CD9D3B3924C1C32A00A3D85D /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
+		CD9D3B3A24C1C32A00A3D85D /* checkRequestStatusOpen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusOpen.xib; sourceTree = "<group>"; };
+		CD9D3B3B24C1C32A00A3D85D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD9D3B3C24C1C32A00A3D85D /* checkRequestStatusDeclined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkRequestStatusDeclined.swift; sourceTree = "<group>"; };
+		CD9D3B3D24C1C32A00A3D85D /* CollectDJGenresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectDJGenresViewController.swift; sourceTree = "<group>"; };
+		CD9D3B3E24C1C32A00A3D85D /* CollectDJProfilePicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectDJProfilePicViewController.swift; sourceTree = "<group>"; };
+		CD9D3B3F24C1C32A00A3D85D /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		CD9D3B4024C1C32A00A3D85D /* SocializerProfilePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocializerProfilePictureViewController.swift; sourceTree = "<group>"; };
+		CD9D3B4124C1C32A00A3D85D /* CollectDJEquipmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectDJEquipmentViewController.swift; sourceTree = "<group>"; };
+		CD9D3B4224C1C32A00A3D85D /* DJorGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJorGroupViewController.swift; sourceTree = "<group>"; };
+		CD9D3B4324C1C32A00A3D85D /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		CD9D3B4424C1C32A00A3D85D /* DJInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJInitialViewController.swift; sourceTree = "<group>"; };
+		CD9D3B4524C1C32A00A3D85D /* VendorInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorInitialViewController.swift; sourceTree = "<group>"; };
+		CD9D3B4624C1C32A00A3D85D /* socializerMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = socializerMapViewController.swift; sourceTree = "<group>"; };
+		CD9D3B4724C1C32A00A3D85D /* checkRequestStatusAcceptedGroup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusAcceptedGroup.xib; sourceTree = "<group>"; };
+		CD9D3B4824C1C32A00A3D85D /* CollectDJPlayingFeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectDJPlayingFeeViewController.swift; sourceTree = "<group>"; };
+		CD9D3B4924C1C32A00A3D85D /* createRequestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = createRequestView.xib; sourceTree = "<group>"; };
+		CD9D3B4A24C1C32A00A3D85D /* checkRequestStatusDeclined.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusDeclined.xib; sourceTree = "<group>"; };
+		CD9D3B4B24C1C32A00A3D85D /* SocializerInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocializerInitialViewController.swift; sourceTree = "<group>"; };
+		CD9D3B4C24C1C32A00A3D85D /* checkRequestStatusCounter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusCounter.xib; sourceTree = "<group>"; };
+		CD9D3B4D24C1C32A00A3D85D /* InitialScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScreen.swift; sourceTree = "<group>"; };
+		CD9D3B4E24C1C32A00A3D85D /* CollectDJLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectDJLinkViewController.swift; sourceTree = "<group>"; };
+		CD9D3B4F24C1C32A00A3D85D /* checkRequestStatusAcceptedGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkRequestStatusAcceptedGroup.swift; sourceTree = "<group>"; };
+		CD9D3B5024C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkRequestStatusAcceptedDJ.swift; sourceTree = "<group>"; };
+		CD9D3B5124C1C32A00A3D85D /* createEventView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = createEventView.xib; sourceTree = "<group>"; };
+		CD9D3B5224C1C32A00A3D85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD9D3B5324C1C32A00A3D85D /* GroupSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSignUpViewController.swift; sourceTree = "<group>"; };
+		CD9D3B5424C1C32A00A3D85D /* DJ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJ.swift; sourceTree = "<group>"; };
+		CD9D3B5524C1C32A00A3D85D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CD9D3B5724C1C32A00A3D85D /* showRequestStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showRequestStatus.swift; sourceTree = "<group>"; };
+		CD9D3B5824C1C32A00A3D85D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CD9D3B5924C1C32A00A3D85D /* checkRequestStatusCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkRequestStatusCounter.swift; sourceTree = "<group>"; };
+		CD9D3B5A24C1C32A00A3D85D /* EditGroupProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGroupProfileViewController.swift; sourceTree = "<group>"; };
+		CD9D3B5B24C1C32A00A3D85D /* InviteContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteContactsViewController.swift; sourceTree = "<group>"; };
+		CD9D3B5C24C1C32A00A3D85D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CD9D3B5D24C1C32A00A3D85D /* createEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createEventView.swift; sourceTree = "<group>"; };
+		CD9D3B5E24C1C32A00A3D85D /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		CD9D3B5F24C1C32A00A3D85D /* InviteContactsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteContactsCell.swift; sourceTree = "<group>"; };
+		CD9D3B6024C1C32A00A3D85D /* DJProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJProfileViewController.swift; sourceTree = "<group>"; };
+		CD9D3B6124C1C32A00A3D85D /* createRequestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createRequestView.swift; sourceTree = "<group>"; };
+		CD9D3B6224C1C32A00A3D85D /* CollectGroupProfilePicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectGroupProfilePicViewController.swift; sourceTree = "<group>"; };
+		CD9D3B6324C1C32A00A3D85D /* ExplorePageSearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplorePageSearchResultCell.swift; sourceTree = "<group>"; };
+		CD9D3B6424C1C32A00A3D85D /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		CD9D3B6524C1C32A00A3D85D /* DJFinalNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJFinalNotesViewController.swift; sourceTree = "<group>"; };
+		CD9D3B6624C1C32A00A3D85D /* RequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
+		CD9D3B6724C1C32A00A3D85D /* checkRequestStatusOpen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkRequestStatusOpen.swift; sourceTree = "<group>"; };
+		CD9D3B6824C1C32A00A3D85D /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		CD9D3B6924C1C32A00A3D85D /* SocializerFinalNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocializerFinalNotesViewController.swift; sourceTree = "<group>"; };
+		CD9D3B6A24C1C32A00A3D85D /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		CD9D3B6B24C1C32A00A3D85D /* CollectGroupEquipmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectGroupEquipmentViewController.swift; sourceTree = "<group>"; };
+		CD9D3B6C24C1C32A00A3D85D /* CollectGroupPlayingFeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectGroupPlayingFeeViewController.swift; sourceTree = "<group>"; };
+		CD9D3B6D24C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusAcceptedDJ.xib; sourceTree = "<group>"; };
+		CD9D3B6E24C1C32A00A3D85D /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		CD9D3B6F24C1C32A00A3D85D /* checkRequestStatusOpenDJ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkRequestStatusOpenDJ.swift; sourceTree = "<group>"; };
+		CD9D3B7024C1C32A00A3D85D /* GroupInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupInitialViewController.swift; sourceTree = "<group>"; };
+		CD9D3B7124C1C32A00A3D85D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CD9D3B7224C1C32A00A3D85D /* GroupCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCalendarViewController.swift; sourceTree = "<group>"; };
+		CD9D3B7324C1C32A00A3D85D /* CollectVendorEquipmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectVendorEquipmentViewController.swift; sourceTree = "<group>"; };
+		CD9D3B7424C1C32A00A3D85D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD9D3B7524C1C32A00A3D85D /* GroupFinalNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupFinalNotesViewController.swift; sourceTree = "<group>"; };
+		CD9D3B7624C1C32A00A3D85D /* checkRequestStatusOpenDJ.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusOpenDJ.xib; sourceTree = "<group>"; };
+		CD9D3B7724C1C32A00A3D85D /* VendorPlayingFeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorPlayingFeeViewController.swift; sourceTree = "<group>"; };
+		CD9D3B7824C1C32A00A3D85D /* VendorFinalNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorFinalNotesViewController.swift; sourceTree = "<group>"; };
+		CD9D3B7924C1C32A00A3D85D /* SideMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMain.storyboard; sourceTree = "<group>"; };
+		CD9D3B7A24C1C32A00A3D85D /* VendorSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSignUpViewController.swift; sourceTree = "<group>"; };
+		CD9D3B7B24C1C32A00A3D85D /* CollectVendorProfilePicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectVendorProfilePicViewController.swift; sourceTree = "<group>"; };
+		CD9D3B7C24C1C32A00A3D85D /* EditDJProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDJProfileViewController.swift; sourceTree = "<group>"; };
+		CD9D3B7D24C1C32A00A3D85D /* OptionToSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionToSelect.swift; sourceTree = "<group>"; };
+		CD9D3B7E24C1C32A00A3D85D /* DJSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJSignupViewController.swift; sourceTree = "<group>"; };
+		CD9D3B7F24C1C32A00A3D85D /* DJProfileForGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJProfileForGroupViewController.swift; sourceTree = "<group>"; };
+		CD9D3B8024C1C32A00A3D85D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD9D3B8124C1C32A00A3D85D /* GroupExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupExploreViewController.swift; sourceTree = "<group>"; };
+		CD9D3B8224C1C32A00A3D85D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CD9D3B8324C1C32A00A3D85D /* SocializerSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocializerSignUpViewController.swift; sourceTree = "<group>"; };
+		CD9D3BD024C1C72F00A3D85D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DDC233B0C24127F7B6B854A9 /* Pods-Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.release.xcconfig"; path = "Target Support Files/Pods-Booking/Pods-Booking.release.xcconfig"; sourceTree = "<group>"; };
 		ED699F371A2993D3B76D66E0 /* Pods_Booking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0AB35EA62B198B81F46002 /* Pods-BookingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookingTests.release.xcconfig"; path = "Target Support Files/Pods-BookingTests/Pods-BookingTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,22 +233,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2417129B24A5274700F950B6 /* Initial Screens */ = {
-			isa = PBXGroup;
-			children = (
-				2417129924A4424400F950B6 /* InitialScreen.swift */,
-				5DFDCED524C0A9AD00AADD95 /* Socializer */,
-				5DFDCED424C0A9A000AADD95 /* Vendor */,
-				5DFDCED324C0A98E00AADD95 /* DJ */,
-				5DFDCED224C0A98400AADD95 /* Group */,
-				5D63BD2624B4CA3D0022A2C0 /* ExplorePageSearchResultCell.swift */,
-				24593EF224B51D11002C2729 /* EventCell.swift */,
-				24D6EF1724BD03BA0075A665 /* RequestCell.swift */,
-				2452705C24BE2BB7005BC912 /* showRequestStatus.swift */,
-			);
-			path = "Initial Screens";
-			sourceTree = "<group>";
-		};
 		276E0694E602ED4CA9F78C95 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,107 +246,87 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		5D66E49124A3786E00BD36DF /* Signup And Login */ = {
-			isa = PBXGroup;
-			children = (
-				5D66E49524A378FD00BD36DF /* Vendor Screens */,
-				5D66E49424A378CC00BD36DF /* Group Screens */,
-				5D66E49324A378B400BD36DF /* DJ Screens */,
-				5D66E49224A378A200BD36DF /* Socializer Screens */,
-				245FEEFF24940319003267CE /* HomeViewController.swift */,
-				245FEF0124940365003267CE /* LoginViewController.swift */,
-				245FEF0324940381003267CE /* StartViewController.swift */,
-				245FEF0524941ABB003267CE /* DJorGroupViewController.swift */,
-				2492761024A299770048C54A /* AlertView.xib */,
-				2492761224A2A25C0048C54A /* AlertView.swift */,
-				24593EEC24B5031B002C2729 /* createEventView.xib */,
-				2452706C24BE5B4F005BC912 /* createRequestView.xib */,
-				2452705824BD5DCF005BC912 /* checkRequestStatusOpen.xib */,
-				2452706E24BF8D02005BC912 /* checkRequestStatusOpenDJ.xib */,
-				2452707224BFAD32005BC912 /* checkRequestStatusAcceptedGroup.xib */,
-				2452707624BFAE4F005BC912 /* checkRequestStatusAcceptedDJ.xib */,
-				2452705E24BE3791005BC912 /* checkRequestStatusDeclined.xib */,
-				2452706424BE3846005BC912 /* checkRequestStatusCounter.xib */,
-				24593EEE24B50344002C2729 /* createEventView.swift */,
-				2452706A24BE5B26005BC912 /* createRequestView.swift */,
-				2452705A24BD5DE0005BC912 /* checkRequestStatusOpen.swift */,
-				2452707024BF8D10005BC912 /* checkRequestStatusOpenDJ.swift */,
-				2452706024BE37AA005BC912 /* checkRequestStatusDeclined.swift */,
-				2452707424BFAD46005BC912 /* checkRequestStatusAcceptedGroup.swift */,
-				2452707824BFAE64005BC912 /* checkRequestStatusAcceptedDJ.swift */,
-				2452706224BE3837005BC912 /* checkRequestStatusCounter.swift */,
-				5DB17EB1249F639900237276 /* OptionToSelect.swift */,
-				5D66E48C24A3497200BD36DF /* InviteContactsViewController.swift */,
-				5D66E48E24A34BF400BD36DF /* InviteContactsCell.swift */,
-			);
-			path = "Signup And Login";
-			sourceTree = "<group>";
-		};
-		5D66E49224A378A200BD36DF /* Socializer Screens */ = {
-			isa = PBXGroup;
-			children = (
-				245FEF0B249C19D5003267CE /* SocializerSignUpViewController.swift */,
-				245FEF11249C63FC003267CE /* SocializerProfilePictureViewController.swift */,
-				2492760224A1346A0048C54A /* SocializerFinalNotesViewController.swift */,
-			);
-			path = "Socializer Screens";
-			sourceTree = "<group>";
-		};
-		5D66E49324A378B400BD36DF /* DJ Screens */ = {
-			isa = PBXGroup;
-			children = (
-				5DA31BE724919B4B00C18F55 /* DJSignupViewController.swift */,
-				245FEF27249C759B003267CE /* CollectDJPlayingFeeViewController.swift */,
-				245FEF2D249C76E4003267CE /* CollectDJEquipmentViewController.swift */,
-				245FEF29249C7608003267CE /* CollectDJGenresViewController.swift */,
-				245FEF2B249C7625003267CE /* CollectDJLinkViewController.swift */,
-				245FEF25249C7566003267CE /* CollectDJProfilePicViewController.swift */,
-				2492760024A130A90048C54A /* DJFinalNotesViewController.swift */,
-			);
-			path = "DJ Screens";
-			sourceTree = "<group>";
-		};
-		5D66E49424A378CC00BD36DF /* Group Screens */ = {
-			isa = PBXGroup;
-			children = (
-				5D87BD8524949D1800F4CA6C /* GroupSignUpViewController.swift */,
-				249275F8249FDD610048C54A /* CollectGroupPlayingFeeViewController.swift */,
-				249275FA249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift */,
-				249275FC24A03C080048C54A /* CollectGroupProfilePicViewController.swift */,
-				249275FE24A041590048C54A /* GroupFinalNotesViewController.swift */,
-			);
-			path = "Group Screens";
-			sourceTree = "<group>";
-		};
-		5D66E49524A378FD00BD36DF /* Vendor Screens */ = {
-			isa = PBXGroup;
-			children = (
-				2492760624A13FD10048C54A /* VendorSignUpViewController.swift */,
-				2492760824A14C0D0048C54A /* VendorPlayingFeeViewController.swift */,
-				2492760A24A1776C0048C54A /* CollectVendorEquipmentViewController.swift */,
-				2492760C24A179BE0048C54A /* CollectVendorProfilePicViewController.swift */,
-				2492760E24A17B810048C54A /* VendorFinalNotesViewController.swift */,
-			);
-			path = "Vendor Screens";
-			sourceTree = "<group>";
-		};
-		5DDF6B3624915BDF00B76C14 /* Database Objects */ = {
-			isa = PBXGroup;
-			children = (
-				5DDF6B3724915BFF00B76C14 /* DJ.swift */,
-				5DDF6B3924915C0E00B76C14 /* Group.swift */,
-				2492760424A138110048C54A /* Vendor.swift */,
-				5D12207B249957C2006D2517 /* Event.swift */,
-				24D6EF1524BCFEF50075A665 /* Request.swift */,
-				5D12207D249957CB006D2517 /* User.swift */,
-			);
-			path = "Database Objects";
-			sourceTree = "<group>";
-		};
 		5DE698D4248DB92600301B39 = {
 			isa = PBXGroup;
 			children = (
-				5DE698DF248DB92600301B39 /* Booking */,
+				CD4C9DA424C1E5C500EF33E6 /* EventSelectionCell.xib */,
+				CD4C9DA224C1E56D00EF33E6 /* EventSelectionCell.swift */,
+				CD9D3BD024C1C72F00A3D85D /* GoogleService-Info.plist */,
+				CD9D3B5C24C1C32A00A3D85D /* Main.storyboard */,
+				CD9D3B6A24C1C32A00A3D85D /* AlertView.swift */,
+				CD9D3B6424C1C32A00A3D85D /* AlertView.xib */,
+				CD9D3B7424C1C32A00A3D85D /* AppDelegate.swift */,
+				CD9D3B5224C1C32A00A3D85D /* Assets.xcassets */,
+				CD9D3B5024C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.swift */,
+				CD9D3B6D24C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.xib */,
+				CD9D3B4F24C1C32A00A3D85D /* checkRequestStatusAcceptedGroup.swift */,
+				CD9D3B4724C1C32A00A3D85D /* checkRequestStatusAcceptedGroup.xib */,
+				CD9D3B5924C1C32A00A3D85D /* checkRequestStatusCounter.swift */,
+				CD9D3B4C24C1C32A00A3D85D /* checkRequestStatusCounter.xib */,
+				CD9D3B3C24C1C32A00A3D85D /* checkRequestStatusDeclined.swift */,
+				CD9D3B4A24C1C32A00A3D85D /* checkRequestStatusDeclined.xib */,
+				CD9D3B6724C1C32A00A3D85D /* checkRequestStatusOpen.swift */,
+				CD9D3B3A24C1C32A00A3D85D /* checkRequestStatusOpen.xib */,
+				CD9D3B6F24C1C32A00A3D85D /* checkRequestStatusOpenDJ.swift */,
+				CD9D3B7624C1C32A00A3D85D /* checkRequestStatusOpenDJ.xib */,
+				CD9D3B4124C1C32A00A3D85D /* CollectDJEquipmentViewController.swift */,
+				CD9D3B3D24C1C32A00A3D85D /* CollectDJGenresViewController.swift */,
+				CD9D3B4E24C1C32A00A3D85D /* CollectDJLinkViewController.swift */,
+				CD9D3B4824C1C32A00A3D85D /* CollectDJPlayingFeeViewController.swift */,
+				CD9D3B3E24C1C32A00A3D85D /* CollectDJProfilePicViewController.swift */,
+				CD9D3B6B24C1C32A00A3D85D /* CollectGroupEquipmentViewController.swift */,
+				CD9D3B6C24C1C32A00A3D85D /* CollectGroupPlayingFeeViewController.swift */,
+				CD9D3B6224C1C32A00A3D85D /* CollectGroupProfilePicViewController.swift */,
+				CD9D3B7324C1C32A00A3D85D /* CollectVendorEquipmentViewController.swift */,
+				CD9D3B7B24C1C32A00A3D85D /* CollectVendorProfilePicViewController.swift */,
+				CD9D3B5D24C1C32A00A3D85D /* createEventView.swift */,
+				CD9D3B5124C1C32A00A3D85D /* createEventView.xib */,
+				CD9D3B6124C1C32A00A3D85D /* createRequestView.swift */,
+				CD9D3B4924C1C32A00A3D85D /* createRequestView.xib */,
+				CD9D3B5424C1C32A00A3D85D /* DJ.swift */,
+				CD9D3B6524C1C32A00A3D85D /* DJFinalNotesViewController.swift */,
+				CD9D3B4424C1C32A00A3D85D /* DJInitialViewController.swift */,
+				CD9D3B4224C1C32A00A3D85D /* DJorGroupViewController.swift */,
+				CD9D3B7F24C1C32A00A3D85D /* DJProfileForGroupViewController.swift */,
+				CD9D3B6024C1C32A00A3D85D /* DJProfileViewController.swift */,
+				CD9D3B7E24C1C32A00A3D85D /* DJSignupViewController.swift */,
+				CD9D3B7C24C1C32A00A3D85D /* EditDJProfileViewController.swift */,
+				CD9D3B5A24C1C32A00A3D85D /* EditGroupProfileViewController.swift */,
+				CD9D3B4324C1C32A00A3D85D /* Event.swift */,
+				CD9D3B3F24C1C32A00A3D85D /* EventCell.swift */,
+				CD9D3B6324C1C32A00A3D85D /* ExplorePageSearchResultCell.swift */,
+				CD9D3B6E24C1C32A00A3D85D /* Group.swift */,
+				CD9D3B7224C1C32A00A3D85D /* GroupCalendarViewController.swift */,
+				CD9D3B8124C1C32A00A3D85D /* GroupExploreViewController.swift */,
+				CD9D3B7524C1C32A00A3D85D /* GroupFinalNotesViewController.swift */,
+				CD9D3B7024C1C32A00A3D85D /* GroupInitialViewController.swift */,
+				CD9D3B3824C1C32A00A3D85D /* GroupProfileViewController.swift */,
+				CD9D3B5324C1C32A00A3D85D /* GroupSignUpViewController.swift */,
+				CD9D3B5824C1C32A00A3D85D /* HomeViewController.swift */,
+				CD9D3B8024C1C32A00A3D85D /* Info.plist */,
+				CD9D3B4D24C1C32A00A3D85D /* InitialScreen.swift */,
+				CD9D3B5F24C1C32A00A3D85D /* InviteContactsCell.swift */,
+				CD9D3B5B24C1C32A00A3D85D /* InviteContactsViewController.swift */,
+				CD9D3B3B24C1C32A00A3D85D /* LaunchScreen.storyboard */,
+				CD9D3B7124C1C32A00A3D85D /* LoginViewController.swift */,
+				CD9D3B7D24C1C32A00A3D85D /* OptionToSelect.swift */,
+				CD9D3B6824C1C32A00A3D85D /* Request.swift */,
+				CD9D3B6624C1C32A00A3D85D /* RequestCell.swift */,
+				CD9D3B8224C1C32A00A3D85D /* SceneDelegate.swift */,
+				CD9D3B5724C1C32A00A3D85D /* showRequestStatus.swift */,
+				CD9D3B7924C1C32A00A3D85D /* SideMain.storyboard */,
+				CD9D3B6924C1C32A00A3D85D /* SocializerFinalNotesViewController.swift */,
+				CD9D3B4B24C1C32A00A3D85D /* SocializerInitialViewController.swift */,
+				CD9D3B4624C1C32A00A3D85D /* socializerMapViewController.swift */,
+				CD9D3B4024C1C32A00A3D85D /* SocializerProfilePictureViewController.swift */,
+				CD9D3B8324C1C32A00A3D85D /* SocializerSignUpViewController.swift */,
+				CD9D3B5E24C1C32A00A3D85D /* StartViewController.swift */,
+				CD9D3B5524C1C32A00A3D85D /* User.swift */,
+				CD9D3B3924C1C32A00A3D85D /* Vendor.swift */,
+				CD9D3B7824C1C32A00A3D85D /* VendorFinalNotesViewController.swift */,
+				CD9D3B4524C1C32A00A3D85D /* VendorInitialViewController.swift */,
+				CD9D3B7724C1C32A00A3D85D /* VendorPlayingFeeViewController.swift */,
+				CD9D3B7A24C1C32A00A3D85D /* VendorSignUpViewController.swift */,
 				5DE698F6248DB93000301B39 /* BookingTests */,
 				5DE69901248DB93000301B39 /* BookingUITests */,
 				5DE698DE248DB92600301B39 /* Products */,
@@ -378,28 +345,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5DE698DF248DB92600301B39 /* Booking */ = {
-			isa = PBXGroup;
-			children = (
-				5DE698E0248DB92600301B39 /* AppDelegate.swift */,
-				2447CCA924A91EF6007163DB /* socializerMapViewController.swift */,
-				5DE698E2248DB92600301B39 /* SceneDelegate.swift */,
-				5DE698EB248DB92F00301B39 /* LaunchScreen.storyboard */,
-				2417129724A43FA000F950B6 /* SideMain.storyboard */,
-				24593EF024B51984002C2729 /* DJProfileViewController.swift */,
-				5DE698E6248DB92600301B39 /* Main.storyboard */,
-				24D6EF0524B648FF0075A665 /* EditDJProfileViewController.swift */,
-				24D6EF0924BA5F550075A665 /* DJProfileForGroupViewController.swift */,
-				5DDF6B3624915BDF00B76C14 /* Database Objects */,
-				2417129B24A5274700F950B6 /* Initial Screens */,
-				5D66E49124A3786E00BD36DF /* Signup And Login */,
-				5DE698E9248DB92F00301B39 /* Assets.xcassets */,
-				5DE698EE248DB92F00301B39 /* Info.plist */,
-				5DDF6B342491585000B76C14 /* GoogleService-Info.plist */,
-			);
-			path = Booking;
-			sourceTree = "<group>";
-		};
 		5DE698F6248DB93000301B39 /* BookingTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,42 +361,6 @@
 				5DE69904248DB93000301B39 /* Info.plist */,
 			);
 			path = BookingUITests;
-			sourceTree = "<group>";
-		};
-		5DFDCED224C0A98400AADD95 /* Group */ = {
-			isa = PBXGroup;
-			children = (
-				2417129C24A5275900F950B6 /* GroupInitialViewController.swift */,
-				5D0FBCD024A6ADF00011F8D9 /* GroupCalendarViewController.swift */,
-				24593EE624B2B600002C2729 /* GroupProfileViewController.swift */,
-				24D6EF0724B659DA0075A665 /* EditGroupProfileViewController.swift */,
-				24593EE824B3B629002C2729 /* GroupExploreViewController.swift */,
-			);
-			path = Group;
-			sourceTree = "<group>";
-		};
-		5DFDCED324C0A98E00AADD95 /* DJ */ = {
-			isa = PBXGroup;
-			children = (
-				241712A224A52EBC00F950B6 /* DJInitialViewController.swift */,
-			);
-			path = DJ;
-			sourceTree = "<group>";
-		};
-		5DFDCED424C0A9A000AADD95 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				2417129E24A5279D00F950B6 /* VendorInitialViewController.swift */,
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
-		5DFDCED524C0A9AD00AADD95 /* Socializer */ = {
-			isa = PBXGroup;
-			children = (
-				241712A024A527D900F950B6 /* SocializerInitialViewController.swift */,
-			);
-			path = Socializer;
 			sourceTree = "<group>";
 		};
 		B24CFCB92A93F99EADF8A967 /* Frameworks */ = {
@@ -576,20 +485,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2452706F24BF8D02005BC912 /* checkRequestStatusOpenDJ.xib in Resources */,
-				2452706D24BE5B4F005BC912 /* createRequestView.xib in Resources */,
-				2452705F24BE3791005BC912 /* checkRequestStatusDeclined.xib in Resources */,
-				5DE698ED248DB92F00301B39 /* LaunchScreen.storyboard in Resources */,
-				5DDF6B352491585000B76C14 /* GoogleService-Info.plist in Resources */,
-				2452706524BE3846005BC912 /* checkRequestStatusCounter.xib in Resources */,
-				2452705924BD5DCF005BC912 /* checkRequestStatusOpen.xib in Resources */,
-				2452707324BFAD32005BC912 /* checkRequestStatusAcceptedGroup.xib in Resources */,
-				2417129824A43FA000F950B6 /* SideMain.storyboard in Resources */,
-				2492761124A299770048C54A /* AlertView.xib in Resources */,
-				2452707724BFAE4F005BC912 /* checkRequestStatusAcceptedDJ.xib in Resources */,
-				5DE698EA248DB92F00301B39 /* Assets.xcassets in Resources */,
-				24593EED24B5031B002C2729 /* createEventView.xib in Resources */,
-				5DE698E8248DB92600301B39 /* Main.storyboard in Resources */,
+				CD9D3BDC24C1CA6C00A3D85D /* createRequestView.xib in Resources */,
+				CD9D3BD824C1CA5D00A3D85D /* checkRequestStatusOpen.xib in Resources */,
+				CD9D3BD124C1C72F00A3D85D /* GoogleService-Info.plist in Resources */,
+				CD9D3BD624C1CA5300A3D85D /* checkRequestStatusCounter.xib in Resources */,
+				CD9D3BD724C1CA5900A3D85D /* checkRequestStatusDeclined.xib in Resources */,
+				CD9D3BD424C1CA4200A3D85D /* AlertView.xib in Resources */,
+				CD9D3BD224C1C92C00A3D85D /* Main.storyboard in Resources */,
+				CD9D3BDE24C1CA7F00A3D85D /* SideMain.storyboard in Resources */,
+				CD9D3BD924C1CA6000A3D85D /* checkRequestStatusOpenDJ.xib in Resources */,
+				CD9D3BD524C1CA4D00A3D85D /* checkRequestStatusAcceptedGroup.xib in Resources */,
+				CD9D3BDD24C1CA7B00A3D85D /* LaunchScreen.storyboard in Resources */,
+				CD9D3BD324C1CA3A00A3D85D /* checkRequestStatusAcceptedDJ.xib in Resources */,
+				CD9D3BDB24C1CA6700A3D85D /* createEventView.xib in Resources */,
+				CD4C9DA524C1E5C500EF33E6 /* EventSelectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,67 +660,68 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2492760524A138110048C54A /* Vendor.swift in Sources */,
-				24D6EF1624BCFEF50075A665 /* Request.swift in Sources */,
-				2417129F24A5279D00F950B6 /* VendorInitialViewController.swift in Sources */,
-				245FEF2C249C7625003267CE /* CollectDJLinkViewController.swift in Sources */,
-				245FEF0224940365003267CE /* LoginViewController.swift in Sources */,
-				24593EE924B3B629002C2729 /* GroupExploreViewController.swift in Sources */,
-				245FEF26249C7566003267CE /* CollectDJProfilePicViewController.swift in Sources */,
-				5D66E48F24A34BF400BD36DF /* InviteContactsCell.swift in Sources */,
-				24593EEF24B50344002C2729 /* createEventView.swift in Sources */,
-				24D6EF0824B659DA0075A665 /* EditGroupProfileViewController.swift in Sources */,
-				5DA31BE824919B4B00C18F55 /* DJSignupViewController.swift in Sources */,
-				24D6EF1824BD03BA0075A665 /* RequestCell.swift in Sources */,
-				2492760D24A179BE0048C54A /* CollectVendorProfilePicViewController.swift in Sources */,
-				249275FD24A03C080048C54A /* CollectGroupProfilePicViewController.swift in Sources */,
-				249275FB249FF9EC0048C54A /* CollectGroupEquipmentViewController.swift in Sources */,
-				5D63BD2724B4CA3D0022A2C0 /* ExplorePageSearchResultCell.swift in Sources */,
-				5DB17EB2249F639900237276 /* OptionToSelect.swift in Sources */,
-				245FEF0624941ABB003267CE /* DJorGroupViewController.swift in Sources */,
-				5D0FBCD124A6ADF00011F8D9 /* GroupCalendarViewController.swift in Sources */,
-				5DDF6B3824915BFF00B76C14 /* DJ.swift in Sources */,
-				5D12207C249957C2006D2517 /* Event.swift in Sources */,
-				249275F9249FDD610048C54A /* CollectGroupPlayingFeeViewController.swift in Sources */,
-				245FEF2E249C76E4003267CE /* CollectDJEquipmentViewController.swift in Sources */,
-				241712A124A527D900F950B6 /* SocializerInitialViewController.swift in Sources */,
-				24D6EF0624B648FF0075A665 /* EditDJProfileViewController.swift in Sources */,
-				2452707524BFAD46005BC912 /* checkRequestStatusAcceptedGroup.swift in Sources */,
-				5D87BD8624949D1800F4CA6C /* GroupSignUpViewController.swift in Sources */,
-				245FEF12249C63FD003267CE /* SocializerProfilePictureViewController.swift in Sources */,
-				245FEF0024940319003267CE /* HomeViewController.swift in Sources */,
-				245FEF0424940381003267CE /* StartViewController.swift in Sources */,
-				2417129D24A5275900F950B6 /* GroupInitialViewController.swift in Sources */,
-				245FEF0C249C19D5003267CE /* SocializerSignUpViewController.swift in Sources */,
-				241712A324A52EBC00F950B6 /* DJInitialViewController.swift in Sources */,
-				24593EF324B51D11002C2729 /* EventCell.swift in Sources */,
-				2492760124A130AA0048C54A /* DJFinalNotesViewController.swift in Sources */,
-				2452705D24BE2BB8005BC912 /* showRequestStatus.swift in Sources */,
-				2492760724A13FD10048C54A /* VendorSignUpViewController.swift in Sources */,
-				2452706324BE3837005BC912 /* checkRequestStatusCounter.swift in Sources */,
-				249275FF24A041590048C54A /* GroupFinalNotesViewController.swift in Sources */,
-				2452706B24BE5B26005BC912 /* createRequestView.swift in Sources */,
-				5D12207E249957CB006D2517 /* User.swift in Sources */,
-				2417129A24A4424400F950B6 /* InitialScreen.swift in Sources */,
-				2447CCAA24A91EF6007163DB /* socializerMapViewController.swift in Sources */,
-				2492760324A1346B0048C54A /* SocializerFinalNotesViewController.swift in Sources */,
-				5D66E48D24A3497200BD36DF /* InviteContactsViewController.swift in Sources */,
-				24593EF124B51984002C2729 /* DJProfileViewController.swift in Sources */,
-				2452707924BFAE64005BC912 /* checkRequestStatusAcceptedDJ.swift in Sources */,
-				245FEF2A249C7608003267CE /* CollectDJGenresViewController.swift in Sources */,
-				2452706124BE37AA005BC912 /* checkRequestStatusDeclined.swift in Sources */,
-				5DE698E1248DB92600301B39 /* AppDelegate.swift in Sources */,
-				2492760F24A17B810048C54A /* VendorFinalNotesViewController.swift in Sources */,
-				24D6EF0A24BA5F550075A665 /* DJProfileForGroupViewController.swift in Sources */,
-				2452705B24BD5DE0005BC912 /* checkRequestStatusOpen.swift in Sources */,
-				5DDF6B3A24915C0E00B76C14 /* Group.swift in Sources */,
-				2492760B24A1776C0048C54A /* CollectVendorEquipmentViewController.swift in Sources */,
-				5DE698E3248DB92600301B39 /* SceneDelegate.swift in Sources */,
-				24593EE724B2B600002C2729 /* GroupProfileViewController.swift in Sources */,
-				2492760924A14C0D0048C54A /* VendorPlayingFeeViewController.swift in Sources */,
-				2452707124BF8D10005BC912 /* checkRequestStatusOpenDJ.swift in Sources */,
-				245FEF28249C759B003267CE /* CollectDJPlayingFeeViewController.swift in Sources */,
-				2492761324A2A25D0048C54A /* AlertView.swift in Sources */,
+				CD9D3BBF24C1C32A00A3D85D /* CollectVendorEquipmentViewController.swift in Sources */,
+				CD9D3B8424C1C32A00A3D85D /* GroupProfileViewController.swift in Sources */,
+				CD9D3BB224C1C32A00A3D85D /* RequestCell.swift in Sources */,
+				CD9D3B9B24C1C32A00A3D85D /* checkRequestStatusAcceptedGroup.swift in Sources */,
+				CD9D3BB124C1C32A00A3D85D /* DJFinalNotesViewController.swift in Sources */,
+				CD9D3BBB24C1C32A00A3D85D /* checkRequestStatusOpenDJ.swift in Sources */,
+				CD9D3BBA24C1C32A00A3D85D /* Group.swift in Sources */,
+				CD9D3BAA24C1C32A00A3D85D /* StartViewController.swift in Sources */,
+				CD9D3BC724C1C32A00A3D85D /* CollectVendorProfilePicViewController.swift in Sources */,
+				CD9D3BB624C1C32A00A3D85D /* AlertView.swift in Sources */,
+				CD9D3B8E24C1C32A00A3D85D /* DJorGroupViewController.swift in Sources */,
+				CD9D3B8924C1C32A00A3D85D /* CollectDJGenresViewController.swift in Sources */,
+				CD9D3BC024C1C32A00A3D85D /* AppDelegate.swift in Sources */,
+				CD9D3BC624C1C32A00A3D85D /* VendorSignUpViewController.swift in Sources */,
+				CD9D3BAB24C1C32A00A3D85D /* InviteContactsCell.swift in Sources */,
+				CD9D3B9F24C1C32A00A3D85D /* GroupSignUpViewController.swift in Sources */,
+				CD9D3BA924C1C32A00A3D85D /* createEventView.swift in Sources */,
+				CD9D3BB324C1C32A00A3D85D /* checkRequestStatusOpen.swift in Sources */,
+				CD9D3BCB24C1C32A00A3D85D /* DJProfileForGroupViewController.swift in Sources */,
+				CD9D3BBE24C1C32A00A3D85D /* GroupCalendarViewController.swift in Sources */,
+				CD9D3B9024C1C32A00A3D85D /* DJInitialViewController.swift in Sources */,
+				CD9D3B9724C1C32A00A3D85D /* SocializerInitialViewController.swift in Sources */,
+				CD9D3BAD24C1C32A00A3D85D /* createRequestView.swift in Sources */,
+				CD9D3BCF24C1C32A00A3D85D /* SocializerSignUpViewController.swift in Sources */,
+				CD9D3B8C24C1C32A00A3D85D /* SocializerProfilePictureViewController.swift in Sources */,
+				CD9D3BA024C1C32A00A3D85D /* DJ.swift in Sources */,
+				CD9D3BAF24C1C32A00A3D85D /* ExplorePageSearchResultCell.swift in Sources */,
+				CD9D3BA724C1C32A00A3D85D /* InviteContactsViewController.swift in Sources */,
+				CD9D3B9424C1C32A00A3D85D /* CollectDJPlayingFeeViewController.swift in Sources */,
+				CD9D3BA524C1C32A00A3D85D /* checkRequestStatusCounter.swift in Sources */,
+				CD9D3BAC24C1C32A00A3D85D /* DJProfileViewController.swift in Sources */,
+				CD9D3BCA24C1C32A00A3D85D /* DJSignupViewController.swift in Sources */,
+				CD9D3BA124C1C32A00A3D85D /* User.swift in Sources */,
+				CD9D3BA424C1C32A00A3D85D /* HomeViewController.swift in Sources */,
+				CD9D3BBD24C1C32A00A3D85D /* LoginViewController.swift in Sources */,
+				CD9D3BA324C1C32A00A3D85D /* showRequestStatus.swift in Sources */,
+				CD9D3BCE24C1C32A00A3D85D /* SceneDelegate.swift in Sources */,
+				CD9D3BC424C1C32A00A3D85D /* VendorFinalNotesViewController.swift in Sources */,
+				CD9D3B8F24C1C32A00A3D85D /* Event.swift in Sources */,
+				CD9D3BB724C1C32A00A3D85D /* CollectGroupEquipmentViewController.swift in Sources */,
+				CD9D3B9A24C1C32A00A3D85D /* CollectDJLinkViewController.swift in Sources */,
+				CD9D3B9C24C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.swift in Sources */,
+				CD9D3B9924C1C32A00A3D85D /* InitialScreen.swift in Sources */,
+				CD9D3B8824C1C32A00A3D85D /* checkRequestStatusDeclined.swift in Sources */,
+				CD9D3BB824C1C32A00A3D85D /* CollectGroupPlayingFeeViewController.swift in Sources */,
+				CD4C9DA324C1E56D00EF33E6 /* EventSelectionCell.swift in Sources */,
+				CD9D3B8D24C1C32A00A3D85D /* CollectDJEquipmentViewController.swift in Sources */,
+				CD9D3BA624C1C32A00A3D85D /* EditGroupProfileViewController.swift in Sources */,
+				CD9D3BC924C1C32A00A3D85D /* OptionToSelect.swift in Sources */,
+				CD9D3BB424C1C32A00A3D85D /* Request.swift in Sources */,
+				CD9D3B9224C1C32A00A3D85D /* socializerMapViewController.swift in Sources */,
+				CD9D3BAE24C1C32A00A3D85D /* CollectGroupProfilePicViewController.swift in Sources */,
+				CD9D3BC324C1C32A00A3D85D /* VendorPlayingFeeViewController.swift in Sources */,
+				CD9D3BC124C1C32A00A3D85D /* GroupFinalNotesViewController.swift in Sources */,
+				CD9D3B8524C1C32A00A3D85D /* Vendor.swift in Sources */,
+				CD9D3BBC24C1C32A00A3D85D /* GroupInitialViewController.swift in Sources */,
+				CD9D3B9124C1C32A00A3D85D /* VendorInitialViewController.swift in Sources */,
+				CD9D3BB524C1C32A00A3D85D /* SocializerFinalNotesViewController.swift in Sources */,
+				CD9D3BCD24C1C32A00A3D85D /* GroupExploreViewController.swift in Sources */,
+				CD9D3BC824C1C32A00A3D85D /* EditDJProfileViewController.swift in Sources */,
+				CD9D3B8B24C1C32A00A3D85D /* EventCell.swift in Sources */,
+				CD9D3B8A24C1C32A00A3D85D /* CollectDJProfilePicViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -845,25 +755,6 @@
 			targetProxy = 5DE698FF248DB93000301B39 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5DE698E6248DB92600301B39 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5DE698E7248DB92600301B39 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5DE698EB248DB92F00301B39 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5DE698EC248DB92F00301B39 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5DE69905248DB93000301B39 /* Debug */ = {
@@ -986,8 +877,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT82RN8NHM;
-				INFOPLIST_FILE = Booking/Info.plist;
+				DEVELOPMENT_TEAM = WX3XJ3QFX3;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1005,8 +896,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT82RN8NHM;
-				INFOPLIST_FILE = Booking/Info.plist;
+				DEVELOPMENT_TEAM = WX3XJ3QFX3;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

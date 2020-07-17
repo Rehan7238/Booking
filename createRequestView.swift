@@ -12,22 +12,29 @@
  import FirebaseDatabase
  import FSCalendar
  
- class createRequestView: UIViewController {
+ class createRequestView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var doneButton: UIButton! = UIButton()
     @IBOutlet weak var DJNameLabel: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var playingFeeLabel: UILabel!
-    @IBOutlet weak var counterOfferTextField: UITextField!
+    @IBOutlet weak var eventListTable: UITableView!
     
     var group: Group?
     var dj: DJ?
     var parentView: DJProfileForGroupViewController?
     var DJUID: String?
+    var eventIDs: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // load in the DJ
+        
+        eventListTable.delegate = self
+        eventListTable.dataSource = self
+        eventListTable.register(UINib(nibName: "EventSelectionCell", bundle: nil), forCellReuseIdentifier: "EventSelectionCell")
+
+        
         if let DJuid = self.DJUID {
             _ = DJ.fromID(id: DJuid).done { loadedDJ in
                 self.dj = loadedDJ
@@ -38,9 +45,52 @@
         // load in current user
         if let groupuid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: groupuid).done { loadedGroup in
-                self.group = loadedGroup
+                if let group = loadedGroup {
+                    self.group = group
+                    self.refreshData()
+                }
             }
         }
+    }
+    
+    func refreshData() {
+        let db = Firestore.firestore()
+
+        db.collection("Events").whereField("hostID", isEqualTo: self.group?.id ?? "").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    self.eventIDs.append(document.documentID)
+                }
+                self.eventListTable.reloadData()
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        
+        if let selectedChatCell = tableView.cellForRow(at: indexPath) as? EventSelectionCell {
+            if selectedChatCell.checkMarkIsHidden {
+                selectedChatCell.setCheckMarkVisibility(visible: true)
+            } else {
+                selectedChatCell.setCheckMarkVisibility(visible: false)
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return eventIDs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventSelectionCell", for: indexPath) as! EventSelectionCell
+
+        cell.setup(eventUID: eventIDs[indexPath.row])
+
+        return cell
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {

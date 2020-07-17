@@ -697,8 +697,8 @@
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60% Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cG-iE-txu">
-                                                    <rect key="frame" x="10" y="87.5" width="69" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cG-iE-txu">
+                                                    <rect key="frame" x="10" y="87.5" width="0.0" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="D85-8I-upn"/>
                                                     </constraints>
@@ -740,6 +740,7 @@
                                             <outlet property="feeLabel" destination="2lt-Qw-ovh" id="FXX-qs-pdt"/>
                                             <outlet property="locationLabel" destination="sag-gV-Ws0" id="rJS-ZA-qaO"/>
                                             <outlet property="nameLabel" destination="eg0-UH-Fxn" id="8u7-zX-QCM"/>
+                                            <outlet property="percentMatchLabel" destination="4cG-iE-txu" id="aSQ-uK-O1U"/>
                                             <outlet property="profilePic" destination="8om-af-0g8" id="6BC-zJ-Cpw"/>
                                             <outlet property="requestButton" destination="3dV-W8-Rhc" id="e0c-Yr-OPF"/>
                                         </connections>

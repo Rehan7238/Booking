@@ -45,13 +45,15 @@
             
             if let uid = Auth.auth().currentUser?.uid {
                 _ = Group.fromID(id: uid).done { loadedGroup in
-                    self.group = loadedGroup
-                    event.setHostID(loadedGroup!.id)
-                    event.setHostName(loadedGroup!.name)
-                    event.setSchool(loadedGroup!.school)
-                    
-                    self.parentView?.refreshData(selectedDate)
-                    self.dismiss(animated: true, completion: nil)                    
+                    if let loadedGroup = loadedGroup {
+                        self.group = loadedGroup
+                        event.setHostID(loadedGroup.id)
+                        event.setHostName(loadedGroup.name)
+                        event.setSchool(loadedGroup.school)
+                        
+                        self.parentView?.refreshData(selectedDate)
+                        self.dismiss(animated: true, completion: nil)
+                    }
                 }
             }
         }

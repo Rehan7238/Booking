@@ -38,7 +38,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LdD-3E-qZU" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="43.5" y="84" width="225" height="39"/>
+                                <rect key="frame" x="140" y="84" width="32" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -66,7 +66,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGW-cH-Q3t" customClass="FSCalendar">
-                                <rect key="frame" x="41" y="143" width="240" height="202"/>
+                                <rect key="frame" x="41" y="138" width="240" height="207"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
@@ -81,10 +81,11 @@
                             <constraint firstAttribute="trailing" secondItem="npE-O3-rnA" secondAttribute="trailing" constant="10" id="Fsw-7A-Vk2"/>
                             <constraint firstAttribute="bottom" secondItem="xxa-Fw-DWz" secondAttribute="bottom" id="LpH-B5-0Wo"/>
                             <constraint firstAttribute="height" constant="400" id="U1p-L1-E6z"/>
-                            <constraint firstItem="LdD-3E-qZU" firstAttribute="centerX" secondItem="voW-cc-kuk" secondAttribute="centerX" id="WQQ-I2-sln"/>
                             <constraint firstItem="XlO-df-2Xy" firstAttribute="top" secondItem="voW-cc-kuk" secondAttribute="top" constant="43" id="ate-sJ-HuW"/>
                             <constraint firstItem="LdD-3E-qZU" firstAttribute="top" secondItem="XlO-df-2Xy" secondAttribute="bottom" constant="20" id="cru-fl-SyD"/>
+                            <constraint firstItem="LdD-3E-qZU" firstAttribute="leading" secondItem="voW-cc-kuk" secondAttribute="leading" constant="20" id="eNJ-d1-nHI"/>
                             <constraint firstAttribute="trailing" secondItem="EGW-cH-Q3t" secondAttribute="trailing" constant="31" id="leN-rb-7rR"/>
+                            <constraint firstAttribute="trailing" secondItem="LdD-3E-qZU" secondAttribute="trailing" constant="20" id="rNx-zj-rCw"/>
                             <constraint firstItem="xxa-Fw-DWz" firstAttribute="top" secondItem="EGW-cH-Q3t" secondAttribute="bottom" constant="20" id="sg9-Ou-L5A"/>
                             <constraint firstItem="npE-O3-rnA" firstAttribute="top" secondItem="voW-cc-kuk" secondAttribute="top" constant="10" id="u9z-PZ-ttC"/>
                         </constraints>

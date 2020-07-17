@@ -43,7 +43,7 @@ class DJProfileForGroupViewController: UIViewController {
                 self.dj = loadedDJ
                 self.djName.text = self.dj?.name
                 self.locationLabel.text = self.dj?.locality
-                if let profilePic = self.dj?.profilePic {
+                if let profilePic = self.dj?.profilePic, !profilePic.isEmpty {
                     self.profilePic.downloadImage(from: URL(string: profilePic)!)
                     var calculatedRating = 0
                     if let ratings = self.dj?.hostRating {
@@ -61,39 +61,6 @@ class DJProfileForGroupViewController: UIViewController {
                     self.playingFeeLabel.text = "$" + "\(String(describing: self.dj?.playingFee ?? 0))"
 
                 }
-            }
-        }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        profilePic.layer.cornerRadius = profilePic.frame.height / 6
-        
-        if let uid = self.DJUID {
-            _ = DJ.fromID(id: uid).done { loadedDJ in
-                self.dj = loadedDJ
-                self.djName.text = self.dj?.name
-                self.locationLabel.text = self.dj?.location
-                var calculatedRating = 0
-                if let ratings = self.dj?.hostRating {
-                    for rating in ratings {
-                        calculatedRating = calculatedRating + Int(truncating: rating)
-                    }
-                    if ratings.count == 0 {
-                        self.DJRatingNumber.text = "N/A"
-                    } else {
-                        self.DJRatingNumber.text = "\(String(describing: calculatedRating/ratings.count))"
-                    }
-                    
-                }
-                self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
-                
-                if let profilePic = self.dj?.profilePic {
-                    self.profilePic.downloadImage(from: URL(string: profilePic)!)
-                }
-                self.playingFeeLabel.text = "$" + "\(String(describing: self.dj?.playingFee ?? 0))"
-
             }
         }
     }

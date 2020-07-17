@@ -42,7 +42,7 @@ class DJProfileViewController: UIViewController, UITableViewDelegate, UITableVie
             _ = DJ.fromID(id: uid).done { loadedDJ in
                 self.dj = loadedDJ
                 self.djName.text = self.dj?.name
-                if let profilePic = self.dj?.profilePic {
+                if let profilePic = self.dj?.profilePic, !profilePic.isEmpty {
                     self.profilePic.downloadImage(from: URL(string: profilePic)!)
                     var calculatedRating = 0
                     if let ratings = self.dj?.hostRating {
@@ -57,36 +57,6 @@ class DJProfileViewController: UIViewController, UITableViewDelegate, UITableVie
                         }
                     }
                     self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
-                }
-                self.refreshData()
-            }
-        }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 6
-        
-        
-        if let uid = Auth.auth().currentUser?.uid {
-            _ = DJ.fromID(id: uid).done { loadedDJ in
-                self.dj = loadedDJ
-                self.djName.text = self.dj?.name
-                if let profilePic = self.dj?.profilePic {
-                    self.profilePic.downloadImage(from: URL(string: profilePic)!)
-                    var calculatedRating = 0
-                    if let ratings = self.dj?.hostRating {
-                        for rating in ratings {
-                            calculatedRating = calculatedRating + Int(truncating: rating)
-                        }
-                        if ratings.count == 0 {
-                            self.DJRatingNumber.text = "0.0"
-                        } else {
-                            self.DJRatingNumber.text = "\(String(describing: calculatedRating/ratings.count))"
-                        }
-                        self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
-                    }
                 }
                 self.refreshData()
             }
