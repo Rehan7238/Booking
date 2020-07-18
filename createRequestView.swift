@@ -38,8 +38,8 @@
         if let DJuid = self.DJUID {
             _ = DJ.fromID(id: DJuid).done { loadedDJ in
                 self.dj = loadedDJ
-                self.DJNameLabel.text = self.dj?.name
-                self.playingFeeLabel.text = "\(String(describing: self.dj?.playingFee ?? 0))"
+                self.DJNameLabel.text = loadedDJ?.name
+                self.playingFeeLabel.text = "\(String(describing: loadedDJ?.playingFee ?? 0))"
             }
         }
         // load in current user

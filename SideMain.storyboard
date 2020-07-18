@@ -479,13 +479,14 @@
         <!--calendar-->
         <scene sceneID="mXg-qd-AIa">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPZ-5E-mjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="ez8-47-Pej" customClass="GroupCalendarViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cce-l4-EfZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xh3-lW-tGi">
-                                <rect key="frame" x="257" y="417.5" width="90" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xh3-lW-tGi">
+                                <rect key="frame" x="257" y="450.5" width="90" height="30"/>
                                 <state key="normal" title="toggle scope"/>
                                 <connections>
                                     <action selector="toggleClicked:" destination="ez8-47-Pej" eventType="touchUpInside" id="ivG-xP-j5P"/>
@@ -497,12 +498,12 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0S-Sm-Y5y" customClass="FSCalendar">
-                                <rect key="frame" x="67" y="163.5" width="280" height="259"/>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="B0S-Sm-Y5y" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="163.5" width="414" height="292"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="tag-4x-YDq"/>
-                                    <constraint firstAttribute="height" constant="259" id="vRo-zM-JYO"/>
+                                    <constraint firstAttribute="height" constant="292" id="0hU-nF-guu"/>
+                                    <constraint firstAttribute="width" constant="414" id="dD8-AK-ePT"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
@@ -512,10 +513,10 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="eventSelectionColor">
-                                        <color key="value" red="0.0" green="0.75987694299999997" blue="0.72316758169999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.36909472110357278" green="1" blue="0.1836318305433936" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
-                                        <color key="value" red="0.0" green="0.75987694299999997" blue="0.72316758169999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.060267780607820599" green="0.45587759067357514" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleSelectionColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -529,7 +530,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UKc-ve-S1u">
-                                <rect key="frame" x="20" y="492.5" width="374" height="265.5"/>
+                                <rect key="frame" x="20" y="525.5" width="374" height="232.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCell" id="BlE-Kc-l14" customClass="EventCell" customModule="Booking" customModuleProvider="target">
@@ -555,7 +556,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="wkE-zI-nva" firstAttribute="trailing" secondItem="ING-uV-ScA" secondAttribute="trailing" id="UwB-f7-hoz"/>
                                                         <constraint firstAttribute="trailing" secondItem="ING-uV-ScA" secondAttribute="trailing" constant="20" id="nxd-AS-PQE"/>
@@ -625,7 +626,6 @@
                             <constraint firstItem="UKc-ve-S1u" firstAttribute="top" secondItem="xh3-lW-tGi" secondAttribute="bottom" constant="45" id="6Yq-to-2jt"/>
                             <constraint firstItem="lgB-5u-ai1" firstAttribute="top" secondItem="UKc-ve-S1u" secondAttribute="bottom" constant="5" id="9FD-8l-JpA"/>
                             <constraint firstItem="mgq-Iy-8tB" firstAttribute="centerX" secondItem="gaL-ep-hrp" secondAttribute="centerX" id="9bf-eQ-OCv"/>
-                            <constraint firstItem="xh3-lW-tGi" firstAttribute="trailing" secondItem="B0S-Sm-Y5y" secondAttribute="trailing" id="QG5-RG-JTE"/>
                             <constraint firstItem="gaL-ep-hrp" firstAttribute="trailing" secondItem="lgB-5u-ai1" secondAttribute="trailing" constant="30" id="TLl-w2-acP"/>
                             <constraint firstItem="B0S-Sm-Y5y" firstAttribute="centerX" secondItem="gaL-ep-hrp" secondAttribute="centerX" id="XCx-UU-Apq"/>
                             <constraint firstItem="B0S-Sm-Y5y" firstAttribute="top" secondItem="mgq-Iy-8tB" secondAttribute="bottom" constant="40" id="Yk2-Zs-bnK"/>
@@ -639,13 +639,11 @@
                     <tabBarItem key="tabBarItem" title="calendar" id="FZA-FO-9Qt"/>
                     <connections>
                         <outlet property="calendar" destination="B0S-Sm-Y5y" id="uiq-Ax-hH2"/>
-                        <outlet property="calendarHeightConstraint" destination="vRo-zM-JYO" id="mn3-L6-KrD"/>
                         <outlet property="createEventButton" destination="lgB-5u-ai1" id="piC-5p-2xP"/>
                         <outlet property="groupName" destination="mgq-Iy-8tB" id="iU6-cd-5p7"/>
                         <outlet property="tableView" destination="UKc-ve-S1u" id="eEm-Eh-zK6"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jPZ-5E-mjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1940.5797101449277" y="2476.3392857142858"/>
         </scene>
@@ -663,6 +661,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="528" id="fXN-sV-BBu"/>
                                 </constraints>
+                                <color key="separatorColor" red="0.13104308980000001" green="0.99123623699999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchResultCell" id="SIO-d4-d65" customClass="ExplorePageSearchResultCell" customModule="Booking" customModuleProvider="target">
@@ -682,19 +681,19 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg0-UH-Fxn">
                                                     <rect key="frame" x="100" y="10" width="43" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sag-gV-Ws0">
                                                     <rect key="frame" x="100" y="39" width="61" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="fee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lt-Qw-ovh">
                                                     <rect key="frame" x="100" y="87" width="43" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cG-iE-txu">
@@ -708,7 +707,7 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dV-W8-Rhc">
                                                     <rect key="frame" x="232" y="67" width="100" height="30"/>
-                                                    <color key="backgroundColor" red="0.13384999489999999" green="0.3327411388" blue="0.45594584989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.21143022146884774" green="0.30126700129533679" blue="0.24915851115247872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="9XI-gb-5zk"/>
                                                     </constraints>
@@ -717,7 +716,7 @@
                                                     </state>
                                                 </button>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="4cG-iE-txu" firstAttribute="leading" secondItem="xeb-fD-h43" secondAttribute="leading" constant="10" id="0mP-di-sFH"/>
                                                 <constraint firstItem="eg0-UH-Fxn" firstAttribute="leading" secondItem="8om-af-0g8" secondAttribute="trailing" constant="30" id="CbM-G3-3qG"/>
@@ -749,7 +748,7 @@
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YbQ-2X-hyN">
                                 <rect key="frame" x="20" y="171" width="374" height="34"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -757,7 +756,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXPLORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxW-N3-Yh7">
                                 <rect key="frame" x="150" y="85" width="114.5" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9N-I8-xH8">
@@ -775,7 +774,7 @@
                                 <state key="normal" title="Filter"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XxL-al-Ekf" firstAttribute="centerX" secondItem="bAU-4g-3Yp" secondAttribute="centerX" id="8Tw-LT-rmA"/>
                             <constraint firstItem="bAU-4g-3Yp" firstAttribute="trailing" secondItem="uiJ-dr-QiY" secondAttribute="trailing" constant="20" id="G90-BY-Wax"/>
