@@ -94,7 +94,6 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
                 eventCount += 1
             }
         }
-
         return eventCount
     }
     

@@ -25,7 +25,6 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
-    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var schoolLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileCard: UIView!
@@ -39,7 +38,8 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
         profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
         profileCard.layer.borderWidth = 1.0
         profileCard.layer.borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        profileCard.layer.cornerRadius = profilePic.layer.bounds.height / 5
+        profileCard.layer.cornerRadius = profilePic.layer.bounds.height / 9
+        profileCard.addSubview(profilePic)
 
         
         tableView.delegate = self
@@ -50,7 +50,6 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
             _ = Group.fromID(id: uid).done { loadedGroup in
                 self.group = loadedGroup
                 self.groupName.text = self.group?.name
-                self.addressLabel.text = self.group?.address
                 self.schoolLabel.text = self.group?.school
                 self.refreshData()
                 if let profilePic = self.group?.profilePic, !profilePic.isEmpty {
@@ -64,14 +63,11 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 6
-        
         
         if let uid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: uid).done { loadedGroup in
                 self.group = loadedGroup
                 self.groupName.text = self.group?.name
-                self.addressLabel.text = self.group?.address
                 self.schoolLabel.text = self.group?.school
                 self.refreshData()
                 if let profilePicURL = self.group?.profilePic, let url = URL(string: profilePicURL) {
@@ -108,6 +104,8 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
         let id = results[indexPath.row]
         cell.setup(requestID: id)
         cell.layer.cornerRadius = cell.frame.height / 3
+        cell.layer.borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        cell.layer.borderWidth = 1.0
         return cell
     }
     

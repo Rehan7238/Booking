@@ -25,6 +25,9 @@
     
     
     var request: Request?
+    var event: Event?
+    var dj: DJ?
+
     var parentView: GroupProfileViewController?
     var DJparentView: DJProfileViewController?
     var uid: String?
@@ -64,6 +67,18 @@
     @IBAction func acceptClicked(_ sender: Any) {
         request?.setStatus("accepted")
         request?.setOriginalFee(request?.counterFee ?? "0")
+        var eventID = request?.eventID
+        _ = Event.fromID(id: eventID!).done { loadedEvent in
+        self.event = loadedEvent
+            if let DJuid = Auth.auth().currentUser?.uid {
+                _ = DJ.fromID(id: DJuid).done {loadedDJ in
+                    self.dj = loadedDJ
+                    self.event?.setDJID(DJuid)
+                    self.event?.setDJBooked(true)
+                }
+            }
+            
+        }
         self.dismiss(animated: true, completion: nil)
     }
     

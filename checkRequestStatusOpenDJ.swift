@@ -25,12 +25,20 @@
     @IBOutlet weak var acceptButton: UIButton!
     
     var request: Request?
+    var event: Event?
+    var dj: DJ?
+
     var DJparentView: DJProfileViewController?
 
     var uid: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let DJuid = Auth.auth().currentUser?.uid {
+            _ = DJ.fromID(id: DJuid).done { loadedDJ in
+                self.dj = loadedDJ
+            }
+        }
         
     }
     
@@ -53,6 +61,19 @@
     
     @IBAction func clickedAccept(_ sender: Any) {
         request?.setStatus("accepted")
+        var eventID = request?.eventID
+        _ = Event.fromID(id: eventID!).done { loadedEvent in
+        self.event = loadedEvent
+            if let DJuid = Auth.auth().currentUser?.uid {
+                _ = DJ.fromID(id: DJuid).done {loadedDJ in
+                    self.dj = loadedDJ
+                    self.event?.setDJID(DJuid)
+                    self.event?.setDJBooked(true)
+                }
+            }
+            
+        }
+        
         self.dismiss(animated: true, completion: nil)
         
     }
