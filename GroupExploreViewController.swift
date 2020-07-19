@@ -56,23 +56,21 @@ class GroupExploreViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return results?.count ?? 0
+        return Int(round(Double(results?.count ?? 0) / 2.0))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultCell") as! ExplorePageSearchResultCell
-        if let id = results?[indexPath.row] {
-            cell.setup(djID: id)
+        if indexPath.row*2 < results?.count ?? 0, let id = results?[indexPath.row*2] {
+            cell.setupLeft(djID: id)
+        } else {
+            cell.hideLeft()
+        }
+        if indexPath.row*2 + 1 < results?.count ?? 0, let id = results?[indexPath.row*2 + 1] {
+            cell.setupRight(djID: id)
+        } else {
+            cell.hideRight()
         }
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedDJid = results?[indexPath.row]
-        
-        if let viewController = UIStoryboard(name: "SideMain", bundle: nil).instantiateViewController(identifier: "DJProfileForGroupViewController") as? DJProfileForGroupViewController {
-            viewController.DJUID = selectedDJid
-            self.present(viewController, animated: true, completion: nil)
-        }
-    }
+    }    
 }

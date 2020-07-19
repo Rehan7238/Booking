@@ -14,39 +14,124 @@ import CoreLocation
 
 class ExplorePageSearchResultCell: UITableViewCell {
     
-    @IBOutlet var profilePic: UIImageView!
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var locationLabel: UILabel!
-    @IBOutlet weak var feeLabel: UILabel!
-    @IBOutlet weak var requestButton: UIButton!
-    @IBOutlet weak var percentMatchLabel: UILabel!
+    @IBOutlet var profilePicLeft: UIImageView!
+    @IBOutlet var backgroundViewLeft: UIView!
+    @IBOutlet var nameLabelLeft: UILabel!
+    @IBOutlet var locationLabelLeft: UILabel!
+    @IBOutlet var feeLabelLeft: UILabel!
+    @IBOutlet var percentMatchLabelLeft: UILabel!
     
-    var dj: DJ?
+    @IBOutlet var profilePicRight: UIImageView!
+    @IBOutlet var backgroundViewRight: UIView!
+    @IBOutlet var nameLabelRight: UILabel!
+    @IBOutlet var locationLabelRight: UILabel!
+    @IBOutlet var feeLabelRight: UILabel!
+    @IBOutlet var percentMatchLabelRight: UILabel!
     
-    func setup(djID: String) {
-        profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 6
-        requestButton.layer.cornerRadius = profilePic.layer.bounds.height / 5
+    var djLeft: DJ?
+    var djRight: DJ?
 
+    func setupLeft(djID: String) {
+        profilePicLeft.layer.cornerRadius = profilePicLeft.layer.bounds.height / 2
+        profilePicLeft.layer.borderColor = UIColor.green.cgColor
+        profilePicLeft.layer.borderWidth = 1
+        profilePicLeft.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.clickedLeft(_:))))
+        
+        backgroundViewLeft.layer.cornerRadius = 10
+        backgroundViewLeft.layer.borderColor = UIColor.white.cgColor
+        backgroundViewLeft.layer.borderWidth = 1
+        backgroundViewLeft.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.clickedLeft(_:))))
+
+        
         _ = DJ.fromID(id: djID).done { loadedDJ in
-            self.dj = loadedDJ
-            self.nameLabel.text = loadedDJ?.name
-            self.locationLabel.text = loadedDJ?.location
-            self.feeLabel.text = "$" + "\(String(describing: self.dj?.playingFee ?? 0))"
+            self.djLeft = loadedDJ
+            self.nameLabelLeft.text = loadedDJ?.name
+            self.locationLabelLeft.text = loadedDJ?.location
+            self.feeLabelLeft.text = "$" + "\(String(describing: self.djLeft?.playingFee ?? 0))"
 
             if let profile = loadedDJ?.profilePic, !profile.isEmpty {
-                self.profilePic.downloadImage(from: URL(string: profile)!)
+                self.profilePicLeft.downloadImage(from: URL(string: profile)!)
             }
             if let uid = Auth.auth().currentUser?.uid {
                 _ = Group.fromID(id: uid).done { loadedGroup in
                     if let dj = loadedDJ, let group = loadedGroup {
-                        self.calculatePercentMatch(dj: dj, group: group)
+                        self.calculatePercentMatch(dj: dj, group: group, label: self.percentMatchLabelLeft)
                     }
                 }
             }
         }
     }
     
-    func calculatePercentMatch(dj: DJ, group: Group) {
+    @objc func clickedLeft(_ sender: UITapGestureRecognizer) {
+        let selectedDJid = djLeft?.id
+        
+        if let viewController = UIStoryboard(name: "SideMain", bundle: nil).instantiateViewController(identifier: "DJProfileForGroupViewController") as? DJProfileForGroupViewController {
+            viewController.DJUID = selectedDJid
+            self.superview?.parentContainerViewController()?.present(viewController, animated: true, completion: nil)
+        }
+    }
+
+    func hideLeft() {
+        profilePicLeft.isHidden = true
+        backgroundViewLeft.isHidden = true
+        nameLabelLeft.isHidden = true
+        locationLabelLeft.isHidden = true
+        feeLabelLeft.isHidden = true
+        percentMatchLabelLeft.isHidden = true
+    }
+    
+    func setupRight(djID: String) {
+        profilePicRight.layer.cornerRadius = profilePicRight.layer.bounds.height / 2
+        profilePicRight.layer.borderColor = UIColor.green.cgColor
+        profilePicRight.layer.borderWidth = 1
+        profilePicRight.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.clickedRight(_:))))
+
+        backgroundViewRight.layer.cornerRadius = 10
+        backgroundViewRight.layer.borderColor = UIColor.white.cgColor
+        backgroundViewRight.layer.borderWidth = 1
+        backgroundViewRight.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.clickedRight(_:))))
+
+        
+        _ = DJ.fromID(id: djID).done { loadedDJ in
+            self.djRight = loadedDJ
+            self.nameLabelRight.text = loadedDJ?.name
+            self.locationLabelRight.text = loadedDJ?.location
+            self.feeLabelRight.text = "$" + "\(String(describing: self.djRight?.playingFee ?? 0))"
+
+            if let profile = loadedDJ?.profilePic, !profile.isEmpty {
+                self.profilePicRight.downloadImage(from: URL(string: profile)!)
+            }
+            if let uid = Auth.auth().currentUser?.uid {
+                _ = Group.fromID(id: uid).done { loadedGroup in
+                    if let dj = loadedDJ, let group = loadedGroup {
+                        self.calculatePercentMatch(dj: dj, group: group, label: self.percentMatchLabelRight)
+                    }
+                }
+            }
+        }
+    }
+    
+    @objc func clickedRight(_ sender: UITapGestureRecognizer) {
+
+        let selectedDJid = djRight?.id
+        
+        if let viewController = UIStoryboard(name: "SideMain", bundle: nil).instantiateViewController(identifier: "DJProfileForGroupViewController") as? DJProfileForGroupViewController {
+            viewController.DJUID = selectedDJid
+            self.superview?.parentContainerViewController()?.present(viewController, animated: true, completion: nil)
+        }
+    }
+    
+    func hideRight() {
+        profilePicRight.isHidden = true
+        backgroundViewRight.isHidden = true
+        nameLabelRight.isHidden = true
+        locationLabelRight.isHidden = true
+        feeLabelRight.isHidden = true
+        percentMatchLabelRight.isHidden = true
+    }
+    
+    func calculatePercentMatch(dj: DJ, group: Group, label: UILabel) {
+        
         var totalScore: CGFloat = 0
         
         var itemCount = 0
@@ -55,7 +140,7 @@ class ExplorePageSearchResultCell: UITableViewCell {
                 itemCount += 1
             }
         }
-        let equipmentScore = CGFloat(itemCount/group.equipment.count)
+        let equipmentScore = CGFloat(itemCount)/CGFloat(group.equipment.count)
         totalScore += equipmentScore * 33.33
         
         var priceScore: CGFloat = 0
@@ -78,8 +163,6 @@ class ExplorePageSearchResultCell: UITableViewCell {
         }
         totalScore += priceScore * 33.33
         
-        
-        
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(dj.location) {
             placemarks, error in
@@ -92,10 +175,10 @@ class ExplorePageSearchResultCell: UITableViewCell {
                         if djcord.distance(to: groupcord) * 0.00062137 < 15 {
                             totalScore += 33.33
                             
-                            self.percentMatchLabel.text = "\(Int(round(totalScore)))% Match"
+                            label.text = "\(Int(round(totalScore)))%"
 
                             if totalScore >= 90 {
-                                self.percentMatchLabel.textColor = UIColor.yellow
+                                label.textColor = UIColor.yellow
                             }
                         } else {
                             let average = (djcord.distance(to: groupcord) * 0.00062137 + 15) / 2.0
@@ -105,24 +188,24 @@ class ExplorePageSearchResultCell: UITableViewCell {
                             }
                             totalScore += locationScore * 33.33
                             
-                            self.percentMatchLabel.text = "\(Int(round(totalScore)))% Match"
+                           label.text = "\(Int(round(totalScore)))%"
                             if totalScore >= 90 {
-                                self.percentMatchLabel.textColor = UIColor.yellow
+                                label.textColor = UIColor.yellow
                             }
                         }
                     } else {
-                        self.percentMatchLabel.text = "\(Int(round(totalScore)))% Match"
+                        label.text = "\(Int(round(totalScore)))%"
 
                         if totalScore >= 90 {
-                            self.percentMatchLabel.textColor = UIColor.yellow
+                            label.textColor = UIColor.yellow
                         }
                     }
                 }
             } else {
-                self.percentMatchLabel.text = "\(Int(round(totalScore)))% Match"
+                label.text = "\(Int(round(totalScore)))%"
 
                 if totalScore >= 90 {
-                    self.percentMatchLabel.textColor = UIColor.yellow
+                    label.textColor = UIColor.yellow
                 }
             }
         }
