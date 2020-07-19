@@ -25,6 +25,7 @@
     var parentView: DJProfileForGroupViewController?
     var DJUID: String?
     var eventIDs: [String] = [String]()
+    var selectedEventID: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +76,7 @@
         if let selectedChatCell = tableView.cellForRow(at: indexPath) as? EventSelectionCell {
             if selectedChatCell.checkMarkIsHidden {
                 selectedChatCell.setCheckMarkVisibility(visible: true)
+                selectedEventID = eventIDs[indexPath.row]
             } else {
                 selectedChatCell.setCheckMarkVisibility(visible: false)
             }
@@ -109,37 +111,39 @@
         request.setDate(dateFormatter.string(from: Date()))
         
         if let uid = Auth.auth().currentUser?.uid {
-            _ = Group.fromID(id: uid).done { loadedGroup in
-                if let loadedGroup = loadedGroup {
-                    self.group = loadedGroup
-                    request.setHostID(loadedGroup.id)
-                    request.setHostName(loadedGroup.name)
-                    request.setSchool(loadedGroup.school)
-                    request.setAddress(loadedGroup.address)
+            if let selectedEventID = selectedEventID {
+                request.setEventID(selectedEventID)
+                _ = Group.fromID(id: uid).done { loadedGroup in
+                    if let loadedGroup = loadedGroup {
+                        self.group = loadedGroup
+                        request.setHostID(loadedGroup.id)
+                        request.setHostName(loadedGroup.name)
+                        request.setSchool(loadedGroup.school)
+                        request.setAddress(loadedGroup.address)
+                    }
                 }
-            }
-            if let DJuid = self.DJUID {
-                _ = DJ.fromID(id: DJuid).done { loadedDJ in
-                    if let loadedDJ = loadedDJ {
-                        self.dj = loadedDJ
-                        request.setDJName(loadedDJ.name)
-                        request.setDJID(loadedDJ.id)
-                        request.setStatus("open")
-                        request.setPaymentStatus(false)
-                        if self.playingFeeLabel != nil, let text = self.playingFeeLabel.text {
-                            let offer = String(text)
-                            request.setCounterFee(offer)
-                        }
-                        else {
-                            let offer = "\(String(describing: loadedDJ.playingFee))"
-                            request.setOriginalFee(offer)
+                if let DJuid = self.DJUID {
+                    _ = DJ.fromID(id: DJuid).done { loadedDJ in
+                        if let loadedDJ = loadedDJ {
+                            self.dj = loadedDJ
+                            request.setDJName(loadedDJ.name)
+                            request.setDJID(loadedDJ.id)
+                            request.setStatus("open")
+                            request.setPaymentStatus(false)
+                            if self.playingFeeLabel != nil, let text = self.playingFeeLabel.text {
+                                let offer = String(text)
+                                request.setCounterFee(offer)
+                            }
+                            else {
+                                let offer = "\(String(describing: loadedDJ.playingFee))"
+                                request.setOriginalFee(offer)
+                            }
                         }
                     }
                 }
+                
+                self.dismiss(animated: true, completion: nil)
             }
-            
-            self.dismiss(animated: true, completion: nil)
-            
         }
     }
  }
