@@ -35,7 +35,7 @@ class DJProfileForGroupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        profilePic.layer.cornerRadius = profilePic.frame.height / 6
+        profilePic.layer.cornerRadius = profilePic.frame.height / 2
         requestButton.layer.cornerRadius = requestButton.frame.height / 5
         
         if let uid = self.DJUID {

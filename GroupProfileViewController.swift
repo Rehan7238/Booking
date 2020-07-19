@@ -28,6 +28,7 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var schoolLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var profileCard: UIView!
     
     var results: [String] = [String]()
     
@@ -35,7 +36,11 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 6
+        profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
+        profileCard.layer.borderWidth = 1.0
+        profileCard.layer.borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        profileCard.layer.cornerRadius = profilePic.layer.bounds.height / 5
+
         
         tableView.delegate = self
         tableView.dataSource = self
