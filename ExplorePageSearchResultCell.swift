@@ -31,7 +31,14 @@ class ExplorePageSearchResultCell: UITableViewCell {
     var djLeft: DJ?
     var djRight: DJ?
 
-    func setupLeft(djID: String) {
+    func setupLeft(dj: DJ) {
+        profilePicLeft.isHidden = false
+        backgroundViewLeft.isHidden = false
+        nameLabelLeft.isHidden = false
+        locationLabelLeft.isHidden = false
+        feeLabelLeft.isHidden = false
+        percentMatchLabelLeft.isHidden = false
+        
         profilePicLeft.layer.cornerRadius = profilePicLeft.layer.bounds.height / 2
         profilePicLeft.layer.borderColor = UIColor.green.cgColor
         profilePicLeft.layer.borderWidth = 1
@@ -43,20 +50,18 @@ class ExplorePageSearchResultCell: UITableViewCell {
         backgroundViewLeft.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.clickedLeft(_:))))
 
         
-        _ = DJ.fromID(id: djID).done { loadedDJ in
-            self.djLeft = loadedDJ
-            self.nameLabelLeft.text = loadedDJ?.name
-            self.locationLabelLeft.text = loadedDJ?.location
-            self.feeLabelLeft.text = "$" + "\(String(describing: self.djLeft?.playingFee ?? 0))"
+        self.djLeft = dj
+        self.nameLabelLeft.text = dj.name
+        self.locationLabelLeft.text = dj.location
+        self.feeLabelLeft.text = "$" + "\(String(describing: dj.playingFee))"
 
-            if let profile = loadedDJ?.profilePic, !profile.isEmpty {
-                self.profilePicLeft.downloadImage(from: URL(string: profile)!)
-            }
-            if let uid = Auth.auth().currentUser?.uid {
-                _ = Group.fromID(id: uid).done { loadedGroup in
-                    if let dj = loadedDJ, let group = loadedGroup {
-                        self.calculatePercentMatch(dj: dj, group: group, label: self.percentMatchLabelLeft)
-                    }
+        if !dj.profilePic.isEmpty {
+            self.profilePicLeft.downloadImage(from: URL(string: dj.profilePic)!)
+        }
+        if let uid = Auth.auth().currentUser?.uid {
+            _ = Group.fromID(id: uid).done { loadedGroup in
+                if let group = loadedGroup {
+                    self.calculatePercentMatch(dj: dj, group: group, label: self.percentMatchLabelLeft)
                 }
             }
         }
@@ -80,7 +85,14 @@ class ExplorePageSearchResultCell: UITableViewCell {
         percentMatchLabelLeft.isHidden = true
     }
     
-    func setupRight(djID: String) {
+    func setupRight(dj: DJ) {
+        profilePicRight.isHidden = false
+        backgroundViewRight.isHidden = false
+        nameLabelRight.isHidden = false
+        locationLabelRight.isHidden = false
+        feeLabelRight.isHidden = false
+        percentMatchLabelRight.isHidden = false
+        
         profilePicRight.layer.cornerRadius = profilePicRight.layer.bounds.height / 2
         profilePicRight.layer.borderColor = UIColor.green.cgColor
         profilePicRight.layer.borderWidth = 1
@@ -92,20 +104,18 @@ class ExplorePageSearchResultCell: UITableViewCell {
         backgroundViewRight.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.clickedRight(_:))))
 
         
-        _ = DJ.fromID(id: djID).done { loadedDJ in
-            self.djRight = loadedDJ
-            self.nameLabelRight.text = loadedDJ?.name
-            self.locationLabelRight.text = loadedDJ?.location
-            self.feeLabelRight.text = "$" + "\(String(describing: self.djRight?.playingFee ?? 0))"
+        self.djRight = dj
+        self.nameLabelRight.text = dj.name
+        self.locationLabelRight.text = dj.location
+        self.feeLabelRight.text = "$" + "\(String(describing: dj.playingFee))"
 
-            if let profile = loadedDJ?.profilePic, !profile.isEmpty {
-                self.profilePicRight.downloadImage(from: URL(string: profile)!)
-            }
-            if let uid = Auth.auth().currentUser?.uid {
-                _ = Group.fromID(id: uid).done { loadedGroup in
-                    if let dj = loadedDJ, let group = loadedGroup {
-                        self.calculatePercentMatch(dj: dj, group: group, label: self.percentMatchLabelRight)
-                    }
+        if !dj.profilePic.isEmpty {
+            self.profilePicRight.downloadImage(from: URL(string: dj.profilePic)!)
+        }
+        if let uid = Auth.auth().currentUser?.uid {
+            _ = Group.fromID(id: uid).done { loadedGroup in
+                if let group = loadedGroup {
+                    self.calculatePercentMatch(dj: dj, group: group, label: self.percentMatchLabelRight)
                 }
             }
         }

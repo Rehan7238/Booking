@@ -24,8 +24,8 @@ class GroupExploreViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var groupSearchButton: UIButton!
     
     var group: Group?
-    var dj: DJ?
-    var results: [DJ?]?
+    var allResults: [DJ]?
+    var filteredResults: [DJ]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,39 +40,80 @@ class GroupExploreViewController: UIViewController, UITableViewDelegate, UITable
         }
         
         let db = Firestore.firestore()
-               db.collection("DJs").getDocuments() { (querySnapshot, err) in
-                   if let err = err {
-                       print("Error getting documents: \(err)")
-                   } else {
-                       for document in querySnapshot!.documents {
-                        _ = DJ.fromID(id: document.documentID).done { loadedDJ in
-                        self.dj = loadedDJ
-                           if self.results == nil {
-                            self.results = [loadedDJ]
-                           } else {
-                               self.results?.append(loadedDJ)
-                            print (loadedDJ!.name)
-                           }
-                       }
-                       self.searchResultsTable.reloadData()
-                   }
-               }
+        db.collection("DJs").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                let dispatch = DispatchGroup()
+                for document in querySnapshot!.documents {
+                    dispatch.enter()
+                    _ = DJ.fromID(id: document.documentID).done { loadedDJ in
+                        if let dj = loadedDJ {
+                            if self.allResults == nil {
+                                self.allResults = [dj]
+                            } else {
+                                self.allResults?.append(dj)
+                            }
+                        }
+                        dispatch.leave()
+                    }
+                }
+                dispatch.notify(queue: .main) {
+                    if let allResults = self.allResults {
+                        for result in allResults {
+                            if self.filteredResults == nil {
+                                self.filteredResults = [result]
+                            } else {
+                                self.filteredResults?.append(result)
+                            }
+                        }
+                    }
+                    self.searchResultsTable.reloadData()
+                }
+            }
+        }
+    }
+    
+    @IBAction func searchBarResultTyped(_ sender: Any) {
+        if sender as? UITextField == self.searchBar {
+            print("typed!")
+            filteredResults = []
+            if let text = searchBar.text {
+                if let allResults = self.allResults {
+                    for result in allResults {
+                        if text.isEmpty {
+                            if filteredResults == nil {
+                                filteredResults = [result]
+                            } else {
+                                filteredResults?.append(result)
+                            }
+                        } else if result.name.lowercased().contains(text.lowercased()) {
+                            if filteredResults == nil {
+                                filteredResults = [result]
+                            } else {
+                                filteredResults?.append(result)
+                            }
+                        }
+                    }
+                }
+                searchResultsTable.reloadData()
+            }
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Int(round(Double(results?.count ?? 0) / 2.0))
+        return Int(round(Double(filteredResults?.count ?? 0) / 2.0))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultCell") as! ExplorePageSearchResultCell
-        if indexPath.row*2 < results?.count ?? 0, let id = results?[indexPath.row*2] {
-            cell.setupLeft(djID: id)
+        if indexPath.row*2 < filteredResults?.count ?? 0, let id = filteredResults?[indexPath.row*2] {
+            cell.setupLeft(dj: id)
         } else {
             cell.hideLeft()
         }
-        if indexPath.row*2 + 1 < results?.count ?? 0, let id = results?[indexPath.row*2 + 1] {
-            cell.setupRight(djID: id)
+        if indexPath.row*2 + 1 < filteredResults?.count ?? 0, let id = filteredResults?[indexPath.row*2 + 1] {
+            cell.setupRight(dj: id)
         } else {
             cell.hideRight()
         }
