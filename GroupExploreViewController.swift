@@ -24,7 +24,8 @@ class GroupExploreViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var groupSearchButton: UIButton!
     
     var group: Group?
-    var results: [String]?
+    var dj: DJ?
+    var results: [DJ?]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,19 +40,23 @@ class GroupExploreViewController: UIViewController, UITableViewDelegate, UITable
         }
         
         let db = Firestore.firestore()
-        db.collection("DJs").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    if self.results == nil {
-                        self.results = [document.documentID]
-                    } else {
-                        self.results?.append(document.documentID)
-                    }
-                }
-                self.searchResultsTable.reloadData()
-            }
+               db.collection("DJs").getDocuments() { (querySnapshot, err) in
+                   if let err = err {
+                       print("Error getting documents: \(err)")
+                   } else {
+                       for document in querySnapshot!.documents {
+                        _ = DJ.fromID(id: document.documentID).done { loadedDJ in
+                        self.dj = loadedDJ
+                           if self.results == nil {
+                            self.results = [loadedDJ]
+                           } else {
+                               self.results?.append(loadedDJ)
+                            print (loadedDJ!.name)
+                           }
+                       }
+                       self.searchResultsTable.reloadData()
+                   }
+               }
         }
     }
     
