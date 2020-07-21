@@ -23,6 +23,7 @@
     
 
     var request: Request?
+    var event: Event?
     var parentView: GroupProfileViewController?
     var DJparentView: DJProfileViewController?
 
@@ -38,9 +39,11 @@
         if let uid = self.uid {
             _ = Request.fromID(id: uid).done { loadedRequest in
                 self.request = loadedRequest
-                self.eventNameLabel.text = loadedRequest?.eventName
                 self.DJNameLabel.text = loadedRequest?.DJName
                 self.dateLabel.text = loadedRequest?.date
+                _ = Event.fromID(id: self.request!.eventID).done { loadedEvent in
+                self.event = loadedEvent
+                    self.eventNameLabel.text = self.event?.eventName            }
             }
         }
     }
