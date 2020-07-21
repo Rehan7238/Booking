@@ -118,6 +118,7 @@ class Request {
                 if let data = document.data() {
                     request.id = document.documentID
                     request.eventName = data["eventName"] as! String
+                    request.eventID = data["eventID"] as! String
                     request.address = data["address"] as! String
                     request.paymentStatus = data["paymentStatus"] as! Bool
                     request.DJID = data["DJID"] as! String
