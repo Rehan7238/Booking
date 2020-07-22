@@ -1480,7 +1480,6 @@
         <!--Item-->
         <scene sceneID="wzj-1u-32d">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vkq-O6-G3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="IKr-oX-9P2" customClass="StatusNotificationTableViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IEX-KR-bw1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
@@ -1568,6 +1567,7 @@
                         <outlet property="tableView" destination="uGT-xD-h18" id="PHe-JY-vbt"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vkq-O6-G3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2740.579710144928" y="1737.7232142857142"/>
         </scene>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		245576A024C7E1AB00F414DE /* PushNotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455769F24C7E1AB00F414DE /* PushNotificationSender.swift */; };
 		24825CB024C77F47003C19AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24825CAF24C77F46003C19AD /* GoogleService-Info.plist */; };
 		24825CB324C7860F003C19AD /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CB224C7860F003C19AD /* PushNotificationManager.swift */; };
 		24825CBB24C7ACE3003C19AD /* StatusNotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CBA24C7ACE3003C19AD /* StatusNotificationItem.swift */; };
@@ -114,6 +115,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2455769F24C7E1AB00F414DE /* PushNotificationSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationSender.swift; sourceTree = "<group>"; };
 		24593EE224A98292002C2729 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Downloads/mapbox-ios-sdk-5/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
 		24825CAF24C77F46003C19AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24825CB124C7840D003C19AD /* Booking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Booking.entitlements; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 		5DE698D4248DB92600301B39 = {
 			isa = PBXGroup;
 			children = (
+				2455769F24C7E1AB00F414DE /* PushNotificationSender.swift */,
 				24825CBC24C7AE7C003C19AD /* StatusNotificationStore.swift */,
 				24825CB124C7840D003C19AD /* Booking.entitlements */,
 				CD4C9DA424C1E5C500EF33E6 /* EventSelectionCell.xib */,
@@ -738,6 +741,7 @@
 				CD9D3B9224C1C32A00A3D85D /* socializerMapViewController.swift in Sources */,
 				CD9D3BAE24C1C32A00A3D85D /* CollectGroupProfilePicViewController.swift in Sources */,
 				CD9D3BC324C1C32A00A3D85D /* VendorPlayingFeeViewController.swift in Sources */,
+				245576A024C7E1AB00F414DE /* PushNotificationSender.swift in Sources */,
 				CD9D3BC124C1C32A00A3D85D /* GroupFinalNotesViewController.swift in Sources */,
 				CD9D3B8524C1C32A00A3D85D /* Vendor.swift in Sources */,
 				CD9D3BBC24C1C32A00A3D85D /* GroupInitialViewController.swift in Sources */,
