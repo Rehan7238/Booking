@@ -30,6 +30,7 @@ class InitialScreen: UIViewController {
         if let uid = Auth.auth().currentUser?.uid {
             self.uid = uid
         }
+
         
 //        if let uid = Auth.auth().currentUser?.uid {
 //               _ = Group.fromID(id: uid).done { loadedGroup in
@@ -143,7 +144,6 @@ class InitialScreen: UIViewController {
                 self.isGroup = true
                 self.group = group
                 resolver.fulfill(true)
-                //self.loadDJInfo()
             } else {
                 resolver.fulfill(false)
             }

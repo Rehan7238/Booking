@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 import PromiseKit
 import GooglePlaces
-
+import FirebaseFirestore
 
 class Group {
     
@@ -31,6 +31,7 @@ class Group {
     var profilePic: String = ""
     var favoriteDJs: [String] = []
     var notifications: [String] = []
+    var tokenNotifications: String = ""
 
     
     func setName(_ newName: String) {
@@ -106,6 +107,10 @@ class Group {
            self.notifications = newName
            updateValue(fieldName: "notifications", newValue: newName)
        }
+    func setTokenNotifications(_ newName: String) {
+        self.tokenNotifications = newName
+        updateValue(fieldName: "tokenNotifications", newValue: newName)
+    }
     
     private func updateValue(fieldName: String, newValue: Any) {
         let db = Firestore.firestore()
@@ -138,6 +143,8 @@ class Group {
                     group.schoolLongitude = data["schoolLongitude"] as! String
                     group.favoriteDJs = data["favoriteDJs"] as! [String]
                     group.notifications = data["notifications"] as! [String]
+                    group.tokenNotifications = data["tokenNotifications"] as! String
+
 
                 }
                 resolver.fulfill(group)
@@ -173,7 +180,9 @@ class Group {
             "schoolLatitude" : newGroup.schoolLatitude,
             "schoolLongitude" : newGroup.schoolLongitude,
             "favoriteDJs" : newGroup.favoriteDJs,
-            "notifications" : newGroup.notifications
+            "notifications" : newGroup.notifications,
+            "tokenNotifications" : newGroup.tokenNotifications
+
 
         ])
         

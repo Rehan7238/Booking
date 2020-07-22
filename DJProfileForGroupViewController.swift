@@ -72,13 +72,18 @@ class DJProfileForGroupViewController: UIViewController {
            }
 
 
-    @IBAction func createEventClicked(_ sender: Any) {
+    @IBAction func createRequestClicked(_ sender: Any) {
 
         if let createRequestVC = Bundle.main.loadNibNamed("createRequestView", owner: nil, options: nil)?.first as? createRequestView {
             createRequestVC.DJUID = DJUID
             createRequestVC.parentView = self
             self.present(createRequestVC, animated: true, completion: nil)
         }
+        
+        let sender = PushNotificationSender()
+        sender.sendPushNotification(to: "token", title: "You Just Request a DJ!", body: "WOOOOOOO")
+
+        
     }
     
     
