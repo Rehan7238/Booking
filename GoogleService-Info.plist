@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>826952722980-0gae8m8h2jm3dg3qiqcod041ovg1t3aj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.826952722980-0gae8m8h2jm3dg3qiqcod041ovg1t3aj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBf-hgwmbHvdT5RZyKqe7PBwoXk5IZoOUA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>826952722980</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Rehan.Booking</string>
+	<key>PROJECT_ID</key>
+	<string>djbooking-f3a55</string>
+	<key>STORAGE_BUCKET</key>
+	<string>djbooking-f3a55.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:826952722980:ios:6920c2725dbf48461846b1</string>
+	<key>DATABASE_URL</key>
+	<string>https://djbooking-f3a55.firebaseio.com</string>
+</dict>
+</plist>
