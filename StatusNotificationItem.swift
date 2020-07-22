@@ -90,8 +90,6 @@ class StatusNotificationItem {
             "DJID": newStatusNotificationItems.DJID,
             "hostID": newStatusNotificationItems.hostID,
             "requestID": newStatusNotificationItems.hostID,
-
-
         ])
         
         return newStatusNotificationItems

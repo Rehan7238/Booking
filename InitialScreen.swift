@@ -57,6 +57,7 @@ class InitialScreen: UIViewController {
         })
     }
     
+    
     func checkType() {
         _ = self.checkDJ().done { isDJ in
             if isDJ {
@@ -92,6 +93,13 @@ class InitialScreen: UIViewController {
             if dj != nil {
                 self.isGroup = false
                 self.dj = dj
+                dj?.setTokenForNotifications(AppDelegate.userToken)
+                print ("we set the dj token to ", AppDelegate.userToken)
+                
+                let pushManager = PushNotificationManager(userID: dj!.id)
+                pushManager.registerForPushNotifications()
+
+
                 resolver.fulfill(true)
             } else {
                 resolver.fulfill(false)
@@ -143,6 +151,13 @@ class InitialScreen: UIViewController {
             if group != nil {
                 self.isGroup = true
                 self.group = group
+                group?.setTokenNotifications(AppDelegate.userToken)
+                print ("we set the group token to " , AppDelegate.userToken)
+                
+                let pushManager = PushNotificationManager(userID: group!.id)
+                pushManager.registerForPushNotifications()
+
+
                 resolver.fulfill(true)
             } else {
                 resolver.fulfill(false)

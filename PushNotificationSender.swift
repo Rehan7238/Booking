@@ -15,14 +15,15 @@ class PushNotificationSender {
         let url = NSURL(string: urlString)!
         let paramString: [String : Any] = ["to" : token,
                                            "notification" : ["title" : title, "body" : body],
-                                           "data" : ["user" : "test_id"]
+                                           "data" : ["user" : "test_id"],
+                                            
         ]
 
         let request = NSMutableURLRequest(url: url as URL)
         request.httpMethod = "POST"
         request.httpBody = try? JSONSerialization.data(withJSONObject:paramString, options: [.prettyPrinted])
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("key=AAAApGSLQJc:APA91bG-ibWUznAImUmsdmJG6NsZVXy8KgGazESfVwSRXx3xT9Zw060Jdp6wOlB7konATcugJX2Oje1PaELf3HplGf1SsQE-QiAw0Gl4VnPCfwzT0woK3P_RzT3ehGSFbgafJUw-RYG3", forHTTPHeaderField: "AAAAwIo5KiQ:APA91bGbt1eAv-VkyEaSPFvu-TLJgqHjmmGTZFGDXVwV_IaxNKFuS1v1DiTYnX7dUAWqRTG80otk7KTJJPyYxNUZq2aCOCjYgfTwFCYKAqJGDunsEWy7EXuCBdyGFVI_-qtXd7OhvhKo")
+        request.setValue("key=AAAAwIo5KiQ:APA91bGbt1eAv-VkyEaSPFvu-TLJgqHjmmGTZFGDXVwV_IaxNKFuS1v1DiTYnX7dUAWqRTG80otk7KTJJPyYxNUZq2aCOCjYgfTwFCYKAqJGDunsEWy7EXuCBdyGFVI_-qtXd7OhvhKo", forHTTPHeaderField: "Authorization")
 
         let task =  URLSession.shared.dataTask(with: request as URLRequest)  { (data, response, error) in
             do {

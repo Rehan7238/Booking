@@ -13,6 +13,7 @@ import GooglePlaces
 import MapKit
 import IQKeyboardManagerSwift
 import UserNotifications
+import FirebaseInstanceID
 
 
 @UIApplicationMain
@@ -20,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var group: Group?
+    static var userToken: String = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
@@ -106,6 +108,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) {
       let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
       let token = tokenParts.joined()
+        print ("\(token)")
+        AppDelegate.userToken = ("\(token)")
       print("Device Token: \(token)")
     }
 

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		245576A024C7E1AB00F414DE /* PushNotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455769F24C7E1AB00F414DE /* PushNotificationSender.swift */; };
-		245576A224C7EB0000F414DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 245576A124C7EB0000F414DE /* GoogleService-Info.plist */; };
 		245576A424C7F50200F414DE /* StatusNotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245576A324C7F50200F414DE /* StatusNotificationItem.swift */; };
+		245576A624C8ED2000F414DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 245576A524C8ED1F00F414DE /* GoogleService-Info.plist */; };
 		24825CB324C7860F003C19AD /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CB224C7860F003C19AD /* PushNotificationManager.swift */; };
 		24825CBB24C7ACE3003C19AD /* StatusNotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CBA24C7ACE3003C19AD /* StatusNotificationItem.swift */; };
 		24825CC124C7B46B003C19AD /* StatusNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CC024C7B46A003C19AD /* StatusNotificationTableViewController.swift */; };
@@ -114,8 +114,8 @@
 
 /* Begin PBXFileReference section */
 		2455769F24C7E1AB00F414DE /* PushNotificationSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationSender.swift; sourceTree = "<group>"; };
-		245576A124C7EB0000F414DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		245576A324C7F50200F414DE /* StatusNotificationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusNotificationItem.swift; sourceTree = "<group>"; };
+		245576A524C8ED1F00F414DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24593EE224A98292002C2729 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Downloads/mapbox-ios-sdk-5/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
 		24825CB124C7840D003C19AD /* Booking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Booking.entitlements; sourceTree = "<group>"; };
 		24825CB224C7860F003C19AD /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 				24825CB124C7840D003C19AD /* Booking.entitlements */,
 				CD4C9DA424C1E5C500EF33E6 /* EventSelectionCell.xib */,
 				CD4C9DA224C1E56D00EF33E6 /* EventSelectionCell.swift */,
-				245576A124C7EB0000F414DE /* GoogleService-Info.plist */,
+				245576A524C8ED1F00F414DE /* GoogleService-Info.plist */,
 				CD9D3B5C24C1C32A00A3D85D /* Main.storyboard */,
 				CD9D3B6A24C1C32A00A3D85D /* AlertView.swift */,
 				CD9D3B6424C1C32A00A3D85D /* AlertView.xib */,
@@ -515,7 +515,7 @@
 				CD9D3BD324C1CA3A00A3D85D /* checkRequestStatusAcceptedDJ.xib in Resources */,
 				CD9D3BDB24C1CA6700A3D85D /* createEventView.xib in Resources */,
 				CD4C9DA524C1E5C500EF33E6 /* EventSelectionCell.xib in Resources */,
-				245576A224C7EB0000F414DE /* GoogleService-Info.plist in Resources */,
+				245576A624C8ED2000F414DE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

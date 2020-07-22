@@ -80,9 +80,7 @@ class DJProfileForGroupViewController: UIViewController {
             self.present(createRequestVC, animated: true, completion: nil)
         }
         
-        let sender = PushNotificationSender()
-        sender.sendPushNotification(to: "token", title: "You Just Request a DJ!", body: "WOOOOOOO")
-
+        
         
     }
     

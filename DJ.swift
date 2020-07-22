@@ -29,6 +29,8 @@ class DJ {
     var profilePic: String = ""
     var upcomingEvents: [String] = []
     var univerisity: String = ""
+    var notifications: [String] = []
+    var tokenForNotifications: String = ""
     
     
     func setName(_ newName: String) {
@@ -36,10 +38,21 @@ class DJ {
         updateValue(fieldName: "name", newValue: newName)
     }
     
+    func setTokenForNotifications(_ newName: String) {
+        self.tokenForNotifications = newName
+        updateValue(fieldName: "tokenForNotifications", newValue: newName)
+    }
+    
     func setEquipment(_ newEquipment: [String]) {
         self.equipment = newEquipment
         updateValue(fieldName: "equipment", newValue: newEquipment)
     }
+    
+    func setNotifications(_ newEquipment: [String]) {
+        self.notifications = newEquipment
+        updateValue(fieldName: "notifications", newValue: newEquipment)
+    }
+    
     func setInstagramLink(_ newName: String) {
         self.instagramLink = newName
         updateValue(fieldName: "instagramLink", newValue: newName)
@@ -140,9 +153,12 @@ class DJ {
                     dj.numberOfGigs = data["numberOfGigs"] as! NSNumber
                     dj.playingFee = data["playingFee"] as! NSNumber
                     dj.playlist = data["playlist"] as! String
+                    dj.tokenForNotifications = data["tokenForNotifications"] as! String
                     dj.previousEvents = data["previousEvents"] as! [String]
                     dj.profilePic = data["profilePic"] as! String
                     dj.upcomingEvents = data["upcomingEvents"] as! [String]
+                    dj.notifications = data["notifications"] as! [String]
+
                 }
                 
                 resolver.fulfill(dj)
@@ -176,7 +192,10 @@ class DJ {
             "previousEvents": newDJ.previousEvents,
             "profilePic": newDJ.profilePic,
             "upcomingEvents": newDJ.upcomingEvents,
-            "instagramLink": newDJ.instagramLink
+            "instagramLink": newDJ.instagramLink,
+            "tokenForNotifications": newDJ.tokenForNotifications,
+            "notifications": newDJ.notifications
+
         ])
         
         return newDJ

@@ -102,6 +102,10 @@
     @IBAction func onClick(_ sender: Any) {
         let identifier = UUID()
         let request = Request.createNew(withID: "\(String(describing: identifier ))")
+        
+        let identifier2 = UUID()
+        let notificationItem = StatusNotificationItem.createNew(withID: "\(String(describing: identifier2 ))")
+        
         let dateFormatter: DateFormatter = {
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy/MM/dd"
@@ -120,6 +124,11 @@
                         request.setHostName(loadedGroup.name)
                         request.setSchool(loadedGroup.school)
                         request.setAddress(loadedGroup.address)
+
+                        
+                        notificationItem.setHostID(loadedGroup.id)
+                        notificationItem.setRequestName(request.id)
+                        
                     }
                 }
                 if let DJuid = self.DJUID {
@@ -138,6 +147,33 @@
                                 let offer = "\(String(describing: loadedDJ.playingFee))"
                                 request.setOriginalFee(offer)
                             }
+                            //send notification
+                            //need to get the fcm key from the database 
+                            let db = Firestore.firestore()
+                            db.collection("userTokensForNotifs").getDocuments() {
+                                (querySnapshot, err) in
+                                if let err = err {
+                                    print("Error getting documents: \(err)")
+                                } else {
+                                    for document in querySnapshot!.documents {
+                                        if document.documentID == loadedDJ.id {
+                                            let sender = PushNotificationSender()
+                                            sender.sendPushNotification(to: document.data()["fcmToken"]as! String, title: "You've Got a New Request!", body: "check the app")
+                                        
+                                        }
+                                    
+                                    }
+                                }
+                            }
+                            let sender = PushNotificationSender()
+                                           print ("DJJJJJ TOKEN for real" ,loadedDJ.tokenForNotifications)
+                                           sender.sendPushNotification(to: loadedDJ.tokenForNotifications, title: "You've Got a New Request!", body: "check the app")
+                            
+                            var notificationList = loadedDJ.notifications
+                                           notificationList.append(notificationItem.id)
+                                           loadedDJ.setNotifications(notificationList)
+                                           notificationItem.setDJID(loadedDJ.id)
+                                           notificationItem.setStatusName("Request")
                         }
                     }
                 }

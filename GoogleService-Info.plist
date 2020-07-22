@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>826952722980-0gae8m8h2jm3dg3qiqcod041ovg1t3aj.apps.googleusercontent.com</string>
+	<string>826952722980-3q36teq07ces7vsjaq4a8su1123f6d86.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.826952722980-0gae8m8h2jm3dg3qiqcod041ovg1t3aj</string>
+	<string>com.googleusercontent.apps.826952722980-3q36teq07ces7vsjaq4a8su1123f6d86</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBf-hgwmbHvdT5RZyKqe7PBwoXk5IZoOUA</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>Rehan.Booking</string>
+	<string>com.booking.xoxo</string>
 	<key>PROJECT_ID</key>
 	<string>djbooking-f3a55</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:826952722980:ios:6920c2725dbf48461846b1</string>
+	<string>1:826952722980:ios:bd14eaa3ab3f96491846b1</string>
 	<key>DATABASE_URL</key>
 	<string>https://djbooking-f3a55.firebaseio.com</string>
 </dict>
