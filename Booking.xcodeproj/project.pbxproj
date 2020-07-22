@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		245576A024C7E1AB00F414DE /* PushNotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455769F24C7E1AB00F414DE /* PushNotificationSender.swift */; };
 		245576A224C7EB0000F414DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 245576A124C7EB0000F414DE /* GoogleService-Info.plist */; };
+		245576A424C7F50200F414DE /* StatusNotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245576A324C7F50200F414DE /* StatusNotificationItem.swift */; };
 		24825CB324C7860F003C19AD /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CB224C7860F003C19AD /* PushNotificationManager.swift */; };
 		24825CBB24C7ACE3003C19AD /* StatusNotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CBA24C7ACE3003C19AD /* StatusNotificationItem.swift */; };
-		24825CBD24C7AE7C003C19AD /* StatusNotificationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CBC24C7AE7C003C19AD /* StatusNotificationStore.swift */; };
-		24825CBF24C7B3B7003C19AD /* StatusNotificationItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CBE24C7B3B7003C19AD /* StatusNotificationItemCell.swift */; };
 		24825CC124C7B46B003C19AD /* StatusNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CC024C7B46A003C19AD /* StatusNotificationTableViewController.swift */; };
-		24825CC324C7B60C003C19AD /* SafariPageThing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CC224C7B60B003C19AD /* SafariPageThing.swift */; };
 		2F86396BB586F46C97CFEF8E /* Pods_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1A24D4CC0398587A1539D8 /* Pods_BookingTests.framework */; };
 		43DB8D5CF7CD7F5ABEDA8F31 /* Pods_Booking_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D6B79E1497CC26A269A1C /* Pods_Booking_BookingUITests.framework */; };
 		479DF79D35D0A425F450CCDF /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED699F371A2993D3B76D66E0 /* Pods_Booking.framework */; };
@@ -117,14 +115,12 @@
 /* Begin PBXFileReference section */
 		2455769F24C7E1AB00F414DE /* PushNotificationSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationSender.swift; sourceTree = "<group>"; };
 		245576A124C7EB0000F414DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		245576A324C7F50200F414DE /* StatusNotificationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusNotificationItem.swift; sourceTree = "<group>"; };
 		24593EE224A98292002C2729 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Downloads/mapbox-ios-sdk-5/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
 		24825CB124C7840D003C19AD /* Booking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Booking.entitlements; sourceTree = "<group>"; };
 		24825CB224C7860F003C19AD /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
 		24825CBA24C7ACE3003C19AD /* StatusNotificationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNotificationItem.swift; sourceTree = "<group>"; };
-		24825CBC24C7AE7C003C19AD /* StatusNotificationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNotificationStore.swift; sourceTree = "<group>"; };
-		24825CBE24C7B3B7003C19AD /* StatusNotificationItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNotificationItemCell.swift; sourceTree = "<group>"; };
 		24825CC024C7B46A003C19AD /* StatusNotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNotificationTableViewController.swift; sourceTree = "<group>"; };
-		24825CC224C7B60B003C19AD /* SafariPageThing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariPageThing.swift; sourceTree = "<group>"; };
 		572733D997C660A83A8E95A5 /* Pods-Booking-BookingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking-BookingUITests.debug.xcconfig"; path = "Target Support Files/Pods-Booking-BookingUITests/Pods-Booking-BookingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5809FB3C41A3EEC35105BBA8 /* Pods-Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.debug.xcconfig"; path = "Target Support Files/Pods-Booking/Pods-Booking.debug.xcconfig"; sourceTree = "<group>"; };
 		5DE698DD248DB92600301B39 /* Booking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booking.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,7 +261,6 @@
 			isa = PBXGroup;
 			children = (
 				2455769F24C7E1AB00F414DE /* PushNotificationSender.swift */,
-				24825CBC24C7AE7C003C19AD /* StatusNotificationStore.swift */,
 				24825CB124C7840D003C19AD /* Booking.entitlements */,
 				CD4C9DA424C1E5C500EF33E6 /* EventSelectionCell.xib */,
 				CD4C9DA224C1E56D00EF33E6 /* EventSelectionCell.swift */,
@@ -277,7 +272,6 @@
 				CD9D3B7424C1C32A00A3D85D /* AppDelegate.swift */,
 				CD9D3B5224C1C32A00A3D85D /* Assets.xcassets */,
 				CD9D3B5024C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.swift */,
-				24825CBE24C7B3B7003C19AD /* StatusNotificationItemCell.swift */,
 				CD9D3B6D24C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.xib */,
 				CD9D3B4F24C1C32A00A3D85D /* checkRequestStatusAcceptedGroup.swift */,
 				CD9D3B4724C1C32A00A3D85D /* checkRequestStatusAcceptedGroup.xib */,
@@ -314,6 +308,7 @@
 				CD9D3B7C24C1C32A00A3D85D /* EditDJProfileViewController.swift */,
 				CD9D3B5A24C1C32A00A3D85D /* EditGroupProfileViewController.swift */,
 				CD9D3B4324C1C32A00A3D85D /* Event.swift */,
+				245576A324C7F50200F414DE /* StatusNotificationItem.swift */,
 				CD9D3B3F24C1C32A00A3D85D /* EventCell.swift */,
 				CD9D3B6324C1C32A00A3D85D /* ExplorePageSearchResultCell.swift */,
 				CD9D3B6E24C1C32A00A3D85D /* Group.swift */,
@@ -337,7 +332,6 @@
 				CD9D3B5724C1C32A00A3D85D /* showRequestStatus.swift */,
 				CD9D3B7924C1C32A00A3D85D /* SideMain.storyboard */,
 				24825CC024C7B46A003C19AD /* StatusNotificationTableViewController.swift */,
-				24825CC224C7B60B003C19AD /* SafariPageThing.swift */,
 				CD9D3B6924C1C32A00A3D85D /* SocializerFinalNotesViewController.swift */,
 				CD9D3B4B24C1C32A00A3D85D /* SocializerInitialViewController.swift */,
 				CD9D3B4624C1C32A00A3D85D /* socializerMapViewController.swift */,
@@ -688,7 +682,6 @@
 				CD9D3BB224C1C32A00A3D85D /* RequestCell.swift in Sources */,
 				CD9D3B9B24C1C32A00A3D85D /* checkRequestStatusAcceptedGroup.swift in Sources */,
 				CD9D3BB124C1C32A00A3D85D /* DJFinalNotesViewController.swift in Sources */,
-				24825CC324C7B60C003C19AD /* SafariPageThing.swift in Sources */,
 				CD9D3BBB24C1C32A00A3D85D /* checkRequestStatusOpenDJ.swift in Sources */,
 				CD9D3BBA24C1C32A00A3D85D /* Group.swift in Sources */,
 				CD9D3BAA24C1C32A00A3D85D /* StartViewController.swift in Sources */,
@@ -717,6 +710,7 @@
 				CD9D3BAC24C1C32A00A3D85D /* DJProfileViewController.swift in Sources */,
 				CD9D3BCA24C1C32A00A3D85D /* DJSignupViewController.swift in Sources */,
 				CD9D3BA124C1C32A00A3D85D /* User.swift in Sources */,
+				245576A424C7F50200F414DE /* StatusNotificationItem.swift in Sources */,
 				CD9D3BA424C1C32A00A3D85D /* HomeViewController.swift in Sources */,
 				CD9D3BBD24C1C32A00A3D85D /* LoginViewController.swift in Sources */,
 				CD9D3BA324C1C32A00A3D85D /* showRequestStatus.swift in Sources */,
@@ -728,13 +722,11 @@
 				CD9D3B9C24C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.swift in Sources */,
 				24825CB324C7860F003C19AD /* PushNotificationManager.swift in Sources */,
 				CD9D3B9924C1C32A00A3D85D /* InitialScreen.swift in Sources */,
-				24825CBF24C7B3B7003C19AD /* StatusNotificationItemCell.swift in Sources */,
 				CD9D3B8824C1C32A00A3D85D /* checkRequestStatusDeclined.swift in Sources */,
 				CD9D3BB824C1C32A00A3D85D /* CollectGroupPlayingFeeViewController.swift in Sources */,
 				CD4C9DA324C1E56D00EF33E6 /* EventSelectionCell.swift in Sources */,
 				CD9D3B8D24C1C32A00A3D85D /* CollectDJEquipmentViewController.swift in Sources */,
 				CD9D3BA624C1C32A00A3D85D /* EditGroupProfileViewController.swift in Sources */,
-				24825CBD24C7AE7C003C19AD /* StatusNotificationStore.swift in Sources */,
 				24825CBB24C7ACE3003C19AD /* StatusNotificationItem.swift in Sources */,
 				CD9D3BC924C1C32A00A3D85D /* OptionToSelect.swift in Sources */,
 				CD9D3BB424C1C32A00A3D85D /* Request.swift in Sources */,

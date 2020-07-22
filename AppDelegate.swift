@@ -45,17 +45,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = attributedPlaceholder
         
         registerForPushNotifications()
-        
+
         // Check if launched from notification
         let notificationOption = launchOptions?[.remoteNotification]
 
           // 1
         if let notification = notificationOption as? [String: AnyObject],
           let aps = notification["aps"] as? [String: AnyObject] {
-          
+
           // 2
-          StatusNotificationItem.makeNewsItem(aps)
-          
+          //StatusNotificationItem.makeNewsItem(aps)
+
           // 3
           (window?.rootViewController as? UITabBarController)?.selectedIndex = 1
         }
@@ -124,7 +124,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         completionHandler(.failed)
         return
       }
-      StatusNotificationItem.makeNewsItem(aps)
+      //StatusNotificationItem.makeNewsItem(aps)
     }
 
 }

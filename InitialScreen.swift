@@ -26,14 +26,23 @@ class InitialScreen: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
         if let uid = Auth.auth().currentUser?.uid {
-               _ = Group.fromID(id: uid).done { loadedGroup in
-                   self.group = loadedGroup
+            self.uid = uid
+        }
+        
+//        if let uid = Auth.auth().currentUser?.uid {
+//               _ = Group.fromID(id: uid).done { loadedGroup in
+//                   self.group = loadedGroup
+//                if loadedGroup != nil {
 //                   let pushManager = PushNotificationManager(userID: loadedGroup?.id ?? "")
 //                       pushManager.registerForPushNotifications()
-               }
+//                } else {
+//                    print ("not existing")
+//                }
+            
         }
-    }
+    
     
     override func viewDidAppear (_ animated: Bool) {
         titleLabel.isHidden = false
