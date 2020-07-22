@@ -30,6 +30,8 @@ class Group {
     var previousEvents: [String] = []
     var profilePic: String = ""
     var favoriteDJs: [String] = []
+    var notifications: [String] = []
+
     
     func setName(_ newName: String) {
         self.name = newName
@@ -100,6 +102,11 @@ class Group {
         updateValue(fieldName: "profilePic", newValue: newProfilePic)
     }
     
+    func setNotifications(_ newName: [String]) {
+           self.notifications = newName
+           updateValue(fieldName: "notifications", newValue: newName)
+       }
+    
     private func updateValue(fieldName: String, newValue: Any) {
         let db = Firestore.firestore()
         let group = db.collection("Group").document(id)
@@ -129,9 +136,8 @@ class Group {
                     group.profilePic = data["profilePic"] as! String
                     group.schoolLatitude = data["schoolLatitude"] as! String
                     group.schoolLongitude = data["schoolLongitude"] as! String
-                    
                     group.favoriteDJs = data["favoriteDJs"] as! [String]
-
+                    group.notifications = data["notifications"] as! [String]
 
                 }
                 resolver.fulfill(group)
@@ -166,7 +172,9 @@ class Group {
             "profilePic": newGroup.profilePic,
             "schoolLatitude" : newGroup.schoolLatitude,
             "schoolLongitude" : newGroup.schoolLongitude,
-            "favoriteDJs" : newGroup.favoriteDJs
+            "favoriteDJs" : newGroup.favoriteDJs,
+            "notifications" : newGroup.notifications
+
         ])
         
         return newGroup

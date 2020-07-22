@@ -9,6 +9,8 @@
 import Foundation
 import Firebase
 import PromiseKit
+import FirebaseStorage
+import FirebaseFirestore
 
 class Event {
     

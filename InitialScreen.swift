@@ -27,7 +27,11 @@ class InitialScreen: UIViewController {
         
         super.viewDidLoad()
         if let uid = Auth.auth().currentUser?.uid {
-            self.uid = uid
+               _ = Group.fromID(id: uid).done { loadedGroup in
+                   self.group = loadedGroup
+                   let pushManager = PushNotificationManager(userID: loadedGroup?.id ?? "")
+                       pushManager.registerForPushNotifications()
+               }
         }
     }
     

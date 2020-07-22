@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24825CB024C77F47003C19AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24825CAF24C77F46003C19AD /* GoogleService-Info.plist */; };
+		24825CB324C7860F003C19AD /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CB224C7860F003C19AD /* PushNotificationManager.swift */; };
+		24825CBB24C7ACE3003C19AD /* StatusNotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CBA24C7ACE3003C19AD /* StatusNotificationItem.swift */; };
+		24825CBD24C7AE7C003C19AD /* StatusNotificationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CBC24C7AE7C003C19AD /* StatusNotificationStore.swift */; };
+		24825CBF24C7B3B7003C19AD /* StatusNotificationItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CBE24C7B3B7003C19AD /* StatusNotificationItemCell.swift */; };
+		24825CC124C7B46B003C19AD /* StatusNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CC024C7B46A003C19AD /* StatusNotificationTableViewController.swift */; };
+		24825CC324C7B60C003C19AD /* SafariPageThing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CC224C7B60B003C19AD /* SafariPageThing.swift */; };
 		2F86396BB586F46C97CFEF8E /* Pods_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1A24D4CC0398587A1539D8 /* Pods_BookingTests.framework */; };
 		43DB8D5CF7CD7F5ABEDA8F31 /* Pods_Booking_BookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D6B79E1497CC26A269A1C /* Pods_Booking_BookingUITests.framework */; };
 		479DF79D35D0A425F450CCDF /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED699F371A2993D3B76D66E0 /* Pods_Booking.framework */; };
@@ -75,7 +82,6 @@
 		CD9D3BCD24C1C32A00A3D85D /* GroupExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B8124C1C32A00A3D85D /* GroupExploreViewController.swift */; };
 		CD9D3BCE24C1C32A00A3D85D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B8224C1C32A00A3D85D /* SceneDelegate.swift */; };
 		CD9D3BCF24C1C32A00A3D85D /* SocializerSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B8324C1C32A00A3D85D /* SocializerSignUpViewController.swift */; };
-		CD9D3BD124C1C72F00A3D85D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3BD024C1C72F00A3D85D /* GoogleService-Info.plist */; };
 		CD9D3BD224C1C92C00A3D85D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B5C24C1C32A00A3D85D /* Main.storyboard */; };
 		CD9D3BD324C1CA3A00A3D85D /* checkRequestStatusAcceptedDJ.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B6D24C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.xib */; };
 		CD9D3BD424C1CA4200A3D85D /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B6424C1C32A00A3D85D /* AlertView.xib */; };
@@ -109,6 +115,14 @@
 
 /* Begin PBXFileReference section */
 		24593EE224A98292002C2729 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Downloads/mapbox-ios-sdk-5/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
+		24825CAF24C77F46003C19AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		24825CB124C7840D003C19AD /* Booking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Booking.entitlements; sourceTree = "<group>"; };
+		24825CB224C7860F003C19AD /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
+		24825CBA24C7ACE3003C19AD /* StatusNotificationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNotificationItem.swift; sourceTree = "<group>"; };
+		24825CBC24C7AE7C003C19AD /* StatusNotificationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNotificationStore.swift; sourceTree = "<group>"; };
+		24825CBE24C7B3B7003C19AD /* StatusNotificationItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNotificationItemCell.swift; sourceTree = "<group>"; };
+		24825CC024C7B46A003C19AD /* StatusNotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNotificationTableViewController.swift; sourceTree = "<group>"; };
+		24825CC224C7B60B003C19AD /* SafariPageThing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariPageThing.swift; sourceTree = "<group>"; };
 		572733D997C660A83A8E95A5 /* Pods-Booking-BookingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking-BookingUITests.debug.xcconfig"; path = "Target Support Files/Pods-Booking-BookingUITests/Pods-Booking-BookingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5809FB3C41A3EEC35105BBA8 /* Pods-Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.debug.xcconfig"; path = "Target Support Files/Pods-Booking/Pods-Booking.debug.xcconfig"; sourceTree = "<group>"; };
 		5DE698DD248DB92600301B39 /* Booking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booking.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,7 +213,6 @@
 		CD9D3B8124C1C32A00A3D85D /* GroupExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupExploreViewController.swift; sourceTree = "<group>"; };
 		CD9D3B8224C1C32A00A3D85D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CD9D3B8324C1C32A00A3D85D /* SocializerSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocializerSignUpViewController.swift; sourceTree = "<group>"; };
-		CD9D3BD024C1C72F00A3D85D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DDC233B0C24127F7B6B854A9 /* Pods-Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.release.xcconfig"; path = "Target Support Files/Pods-Booking/Pods-Booking.release.xcconfig"; sourceTree = "<group>"; };
 		ED699F371A2993D3B76D66E0 /* Pods_Booking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0AB35EA62B198B81F46002 /* Pods-BookingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookingTests.release.xcconfig"; path = "Target Support Files/Pods-BookingTests/Pods-BookingTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -249,15 +262,19 @@
 		5DE698D4248DB92600301B39 = {
 			isa = PBXGroup;
 			children = (
+				24825CBC24C7AE7C003C19AD /* StatusNotificationStore.swift */,
+				24825CB124C7840D003C19AD /* Booking.entitlements */,
 				CD4C9DA424C1E5C500EF33E6 /* EventSelectionCell.xib */,
 				CD4C9DA224C1E56D00EF33E6 /* EventSelectionCell.swift */,
-				CD9D3BD024C1C72F00A3D85D /* GoogleService-Info.plist */,
 				CD9D3B5C24C1C32A00A3D85D /* Main.storyboard */,
+				24825CAF24C77F46003C19AD /* GoogleService-Info.plist */,
 				CD9D3B6A24C1C32A00A3D85D /* AlertView.swift */,
 				CD9D3B6424C1C32A00A3D85D /* AlertView.xib */,
+				24825CB224C7860F003C19AD /* PushNotificationManager.swift */,
 				CD9D3B7424C1C32A00A3D85D /* AppDelegate.swift */,
 				CD9D3B5224C1C32A00A3D85D /* Assets.xcassets */,
 				CD9D3B5024C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.swift */,
+				24825CBE24C7B3B7003C19AD /* StatusNotificationItemCell.swift */,
 				CD9D3B6D24C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.xib */,
 				CD9D3B4F24C1C32A00A3D85D /* checkRequestStatusAcceptedGroup.swift */,
 				CD9D3B4724C1C32A00A3D85D /* checkRequestStatusAcceptedGroup.xib */,
@@ -265,6 +282,7 @@
 				CD9D3B4C24C1C32A00A3D85D /* checkRequestStatusCounter.xib */,
 				CD9D3B3C24C1C32A00A3D85D /* checkRequestStatusDeclined.swift */,
 				CD9D3B4A24C1C32A00A3D85D /* checkRequestStatusDeclined.xib */,
+				24825CBA24C7ACE3003C19AD /* StatusNotificationItem.swift */,
 				CD9D3B6724C1C32A00A3D85D /* checkRequestStatusOpen.swift */,
 				CD9D3B3A24C1C32A00A3D85D /* checkRequestStatusOpen.xib */,
 				CD9D3B6F24C1C32A00A3D85D /* checkRequestStatusOpenDJ.swift */,
@@ -315,6 +333,8 @@
 				CD9D3B8224C1C32A00A3D85D /* SceneDelegate.swift */,
 				CD9D3B5724C1C32A00A3D85D /* showRequestStatus.swift */,
 				CD9D3B7924C1C32A00A3D85D /* SideMain.storyboard */,
+				24825CC024C7B46A003C19AD /* StatusNotificationTableViewController.swift */,
+				24825CC224C7B60B003C19AD /* SafariPageThing.swift */,
 				CD9D3B6924C1C32A00A3D85D /* SocializerFinalNotesViewController.swift */,
 				CD9D3B4B24C1C32A00A3D85D /* SocializerInitialViewController.swift */,
 				CD9D3B4624C1C32A00A3D85D /* socializerMapViewController.swift */,
@@ -487,7 +507,6 @@
 			files = (
 				CD9D3BDC24C1CA6C00A3D85D /* createRequestView.xib in Resources */,
 				CD9D3BD824C1CA5D00A3D85D /* checkRequestStatusOpen.xib in Resources */,
-				CD9D3BD124C1C72F00A3D85D /* GoogleService-Info.plist in Resources */,
 				CD9D3BD624C1CA5300A3D85D /* checkRequestStatusCounter.xib in Resources */,
 				CD9D3BD724C1CA5900A3D85D /* checkRequestStatusDeclined.xib in Resources */,
 				CD9D3BD424C1CA4200A3D85D /* AlertView.xib in Resources */,
@@ -499,6 +518,7 @@
 				CD9D3BD324C1CA3A00A3D85D /* checkRequestStatusAcceptedDJ.xib in Resources */,
 				CD9D3BDB24C1CA6700A3D85D /* createEventView.xib in Resources */,
 				CD4C9DA524C1E5C500EF33E6 /* EventSelectionCell.xib in Resources */,
+				24825CB024C77F47003C19AD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +685,7 @@
 				CD9D3BB224C1C32A00A3D85D /* RequestCell.swift in Sources */,
 				CD9D3B9B24C1C32A00A3D85D /* checkRequestStatusAcceptedGroup.swift in Sources */,
 				CD9D3BB124C1C32A00A3D85D /* DJFinalNotesViewController.swift in Sources */,
+				24825CC324C7B60C003C19AD /* SafariPageThing.swift in Sources */,
 				CD9D3BBB24C1C32A00A3D85D /* checkRequestStatusOpenDJ.swift in Sources */,
 				CD9D3BBA24C1C32A00A3D85D /* Group.swift in Sources */,
 				CD9D3BAA24C1C32A00A3D85D /* StartViewController.swift in Sources */,
@@ -702,12 +723,16 @@
 				CD9D3BB724C1C32A00A3D85D /* CollectGroupEquipmentViewController.swift in Sources */,
 				CD9D3B9A24C1C32A00A3D85D /* CollectDJLinkViewController.swift in Sources */,
 				CD9D3B9C24C1C32A00A3D85D /* checkRequestStatusAcceptedDJ.swift in Sources */,
+				24825CB324C7860F003C19AD /* PushNotificationManager.swift in Sources */,
 				CD9D3B9924C1C32A00A3D85D /* InitialScreen.swift in Sources */,
+				24825CBF24C7B3B7003C19AD /* StatusNotificationItemCell.swift in Sources */,
 				CD9D3B8824C1C32A00A3D85D /* checkRequestStatusDeclined.swift in Sources */,
 				CD9D3BB824C1C32A00A3D85D /* CollectGroupPlayingFeeViewController.swift in Sources */,
 				CD4C9DA324C1E56D00EF33E6 /* EventSelectionCell.swift in Sources */,
 				CD9D3B8D24C1C32A00A3D85D /* CollectDJEquipmentViewController.swift in Sources */,
 				CD9D3BA624C1C32A00A3D85D /* EditGroupProfileViewController.swift in Sources */,
+				24825CBD24C7AE7C003C19AD /* StatusNotificationStore.swift in Sources */,
+				24825CBB24C7ACE3003C19AD /* StatusNotificationItem.swift in Sources */,
 				CD9D3BC924C1C32A00A3D85D /* OptionToSelect.swift in Sources */,
 				CD9D3BB424C1C32A00A3D85D /* Request.swift in Sources */,
 				CD9D3B9224C1C32A00A3D85D /* socializerMapViewController.swift in Sources */,
@@ -720,6 +745,7 @@
 				CD9D3BB524C1C32A00A3D85D /* SocializerFinalNotesViewController.swift in Sources */,
 				CD9D3BCD24C1C32A00A3D85D /* GroupExploreViewController.swift in Sources */,
 				CD9D3BC824C1C32A00A3D85D /* EditDJProfileViewController.swift in Sources */,
+				24825CC124C7B46B003C19AD /* StatusNotificationTableViewController.swift in Sources */,
 				CD9D3B8B24C1C32A00A3D85D /* EventCell.swift in Sources */,
 				CD9D3B8A24C1C32A00A3D85D /* CollectDJProfilePicViewController.swift in Sources */,
 			);
@@ -876,6 +902,7 @@
 			baseConfigurationReference = 5809FB3C41A3EEC35105BBA8 /* Pods-Booking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Booking.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BT82RN8NHM;
 				INFOPLIST_FILE = Info.plist;
@@ -883,7 +910,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xoxo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.booking.xoxo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -895,6 +922,7 @@
 			baseConfigurationReference = DDC233B0C24127F7B6B854A9 /* Pods-Booking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Booking.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BT82RN8NHM;
 				INFOPLIST_FILE = Info.plist;
@@ -902,7 +930,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xoxo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.booking.xoxo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

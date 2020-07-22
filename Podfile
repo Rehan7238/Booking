@@ -11,6 +11,9 @@ target 'Booking' do
   pod 'PromiseKit'
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Database'
+  #pod 'Firebase/AdMob'
+  pod 'Firebase/Messaging'
+  pod 'FirebaseInstanceID', '4.4.0'
 
   # Pods for authentication
   pod 'Firebase/Core'
