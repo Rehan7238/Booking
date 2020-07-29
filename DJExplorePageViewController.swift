@@ -1,8 +1,8 @@
 //
-//  GroupExploreViewController.swift
+//  DJExplorePageViewController.swift
 //  Booking
 //
-//  Created by Eimara Mirza on 7/6/20.
+//  Created by Eimara Mirza on 7/28/20.
 //  Copyright © 2020 Rehan. All rights reserved.
 //
 
@@ -12,13 +12,15 @@ import FSCalendar
 import FirebaseAuth
 import Firebase
 import FirebaseDatabase
-import FirebaseFirestore
 
-class GroupExploreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DJExplorePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //Mark: Properties
+    
     @IBOutlet weak var filterButton: UIButton!
+    
     @IBOutlet weak var searchBar: UITextField!
+    
     @IBOutlet weak var searchResultsTable: UITableView!
     
     @IBOutlet weak var DJSearchButton: UIButton!
@@ -119,5 +121,6 @@ class GroupExploreViewController: UIViewController, UITableViewDelegate, UITable
             cell.hideRight()
         }
         return cell
-    }    
+    }
 }
+
