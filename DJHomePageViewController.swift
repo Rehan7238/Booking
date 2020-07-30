@@ -1,8 +1,8 @@
 //
-//  GroupCalendarViewController.swift
+//  DJHomePageViewController.swift
 //  Booking
 //
-//  Created by Rehan Chaudhry on 6/26/20.
+//  Created by Eimara Mirza on 7/30/20.
 //  Copyright © 2020 Rehan. All rights reserved.
 //
 
@@ -15,15 +15,13 @@ import FirebaseDatabase
 import FirebaseFirestore
 
 
-class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource {
+class DJHomePageViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var createEventButton: UIButton!
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
     
-    var group: Group?
+    var dj: DJ?
     var event: Event?
     var results: [String] = [String]()
     var allResults: [String] = [String]()
@@ -37,9 +35,6 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createEventButton.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-        createEventButton.layer.borderWidth = 1.0
-
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -49,8 +44,8 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         calendar.allowsMultipleSelection = false
         
         if let uid = Auth.auth().currentUser?.uid {
-            _ = Group.fromID(id: uid).done { loadedGroup in
-                self.group = loadedGroup                
+            _ = DJ.fromID(id: uid).done { loadedDJ in
+                self.dj = loadedDJ
                 self.refreshData(Date())
             }
         }
@@ -65,7 +60,7 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     func refreshData(_ date: Date) {
         let db = Firestore.firestore()
 
-        db.collection("Events").whereField("school", isEqualTo: group?.school ?? "").getDocuments() { (querySnapshot, err) in
+        db.collection("Events").whereField("DJID", isEqualTo: dj?.id ?? "").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -109,11 +104,11 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         cell.layer.cornerRadius = cell.frame.height / 3
         _ = Event.fromID(id: id).done { loadedEvent in
         self.event = loadedEvent
-            if self.event?.hostID == self.group?.id {
+            if self.event?.DJID == self.dj?.id {
                 cell.layer.borderColor = #colorLiteral(red: 1, green: 0.1633785235, blue: 0.9432822805, alpha: 1)
                 cell.layer.borderWidth = 1.0
             }
-            else if self.event?.hostID != self.group?.id {
+            else if self.event?.DJID != self.dj?.id {
                 cell.layer.borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
                 cell.layer.borderWidth = 1.0
             }
@@ -126,13 +121,6 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
             self.calendar.setScope(.week, animated: true)
         } else {
             self.calendar.setScope(.month, animated: true)
-        }
-    }
-    
-    @IBAction func createEventClicked(_ sender: Any) {
-        if let createEventVC = Bundle.main.loadNibNamed("createEventView", owner: nil, options: nil)?.first as? createEventView {
-            createEventVC.parentView = self
-            self.present(createEventVC, animated: true, completion: nil)
         }
     }
     

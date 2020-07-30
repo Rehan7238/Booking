@@ -12,6 +12,7 @@
 		245576A624C8ED2000F414DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 245576A524C8ED1F00F414DE /* GoogleService-Info.plist */; };
 		245576A824D108F000F414DE /* DJExplorePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245576A724D108F000F414DE /* DJExplorePageViewController.swift */; };
 		245576AA24D25BD200F414DE /* StatusNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245576A924D25BD200F414DE /* StatusNotificationCell.swift */; };
+		245576AC24D344CD00F414DE /* DJHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245576AB24D344CD00F414DE /* DJHomePageViewController.swift */; };
 		24825CB324C7860F003C19AD /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CB224C7860F003C19AD /* PushNotificationManager.swift */; };
 		24825CBB24C7ACE3003C19AD /* StatusNotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CBA24C7ACE3003C19AD /* StatusNotificationItem.swift */; };
 		24825CC124C7B46B003C19AD /* StatusNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24825CC024C7B46A003C19AD /* StatusNotificationTableViewController.swift */; };
@@ -120,6 +121,7 @@
 		245576A524C8ED1F00F414DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		245576A724D108F000F414DE /* DJExplorePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJExplorePageViewController.swift; sourceTree = "<group>"; };
 		245576A924D25BD200F414DE /* StatusNotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusNotificationCell.swift; sourceTree = "<group>"; };
+		245576AB24D344CD00F414DE /* DJHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJHomePageViewController.swift; sourceTree = "<group>"; };
 		24593EE224A98292002C2729 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Downloads/mapbox-ios-sdk-5/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
 		24825CB124C7840D003C19AD /* Booking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Booking.entitlements; sourceTree = "<group>"; };
 		24825CB224C7860F003C19AD /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				CD9D3B8224C1C32A00A3D85D /* SceneDelegate.swift */,
 				CD9D3B5724C1C32A00A3D85D /* showRequestStatus.swift */,
 				CD9D3B7924C1C32A00A3D85D /* SideMain.storyboard */,
+				245576AB24D344CD00F414DE /* DJHomePageViewController.swift */,
 				24825CC024C7B46A003C19AD /* StatusNotificationTableViewController.swift */,
 				CD9D3B6924C1C32A00A3D85D /* SocializerFinalNotesViewController.swift */,
 				CD9D3B4B24C1C32A00A3D85D /* SocializerInitialViewController.swift */,
@@ -745,6 +748,7 @@
 				CD9D3BC124C1C32A00A3D85D /* GroupFinalNotesViewController.swift in Sources */,
 				CD9D3B8524C1C32A00A3D85D /* Vendor.swift in Sources */,
 				CD9D3BBC24C1C32A00A3D85D /* GroupInitialViewController.swift in Sources */,
+				245576AC24D344CD00F414DE /* DJHomePageViewController.swift in Sources */,
 				CD9D3B9124C1C32A00A3D85D /* VendorInitialViewController.swift in Sources */,
 				CD9D3BB524C1C32A00A3D85D /* SocializerFinalNotesViewController.swift in Sources */,
 				CD9D3BCD24C1C32A00A3D85D /* GroupExploreViewController.swift in Sources */,

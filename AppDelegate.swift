@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         GMSPlacesClient.provideAPIKey("AIzaSyCsmSQw5se9JjsrQ6XI6tcsOOG1UNxzvqY")
+        
+
                 
         // Customize the UI of GMSAutocompleteViewController
         // Set some colors (colorLiteral is convenient)
