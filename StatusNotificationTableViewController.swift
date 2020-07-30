@@ -64,7 +64,7 @@ class StatusNotificationTableViewController: UIViewController, UITableViewDelega
         
         func refreshData() {
             let db = Firestore.firestore()
-            db.collection("Requests").whereField("hostID", isEqualTo: group?.id ?? "").getDocuments() { (querySnapshot, err) in
+            db.collection("StatusNotificationItem").whereField("hostID", isEqualTo: group?.id ?? "").getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
@@ -82,9 +82,9 @@ class StatusNotificationTableViewController: UIViewController, UITableViewDelega
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "RequestCell") as! RequestCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "StatusNotificationCell") as! StatusNotificationCell
             let id = results[indexPath.row]
-            cell.setup(requestID: id)
+            cell.setup(statusNotificationItemID: id)
             cell.layer.cornerRadius = cell.frame.height / 3
             cell.layer.borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
             cell.layer.borderWidth = 1.0
