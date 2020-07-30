@@ -21,6 +21,7 @@
 		479DF79D35D0A425F450CCDF /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED699F371A2993D3B76D66E0 /* Pods_Booking.framework */; };
 		5DE698F8248DB93000301B39 /* BookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE698F7248DB93000301B39 /* BookingTests.swift */; };
 		5DE69903248DB93000301B39 /* BookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE69902248DB93000301B39 /* BookingUITests.swift */; };
+		CD2D2F4924D35B9300430B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B5224C1C32A00A3D85D /* Assets.xcassets */; };
 		CD4C9DA324C1E56D00EF33E6 /* EventSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4C9DA224C1E56D00EF33E6 /* EventSelectionCell.swift */; };
 		CD4C9DA524C1E5C500EF33E6 /* EventSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4C9DA424C1E5C500EF33E6 /* EventSelectionCell.xib */; };
 		CD9D3B8424C1C32A00A3D85D /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B3824C1C32A00A3D85D /* GroupProfileViewController.swift */; };
@@ -515,6 +516,7 @@
 				CD9D3BD824C1CA5D00A3D85D /* checkRequestStatusOpen.xib in Resources */,
 				CD9D3BD624C1CA5300A3D85D /* checkRequestStatusCounter.xib in Resources */,
 				CD9D3BD724C1CA5900A3D85D /* checkRequestStatusDeclined.xib in Resources */,
+				CD2D2F4924D35B9300430B8C /* Assets.xcassets in Resources */,
 				CD9D3BD424C1CA4200A3D85D /* AlertView.xib in Resources */,
 				CD9D3BD224C1C92C00A3D85D /* Main.storyboard in Resources */,
 				CD9D3BDE24C1CA7F00A3D85D /* SideMain.storyboard in Resources */,
