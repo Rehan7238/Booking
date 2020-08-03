@@ -97,6 +97,8 @@
 		CD9D3BDC24C1CA6C00A3D85D /* createRequestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B4924C1C32A00A3D85D /* createRequestView.xib */; };
 		CD9D3BDD24C1CA7B00A3D85D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B3B24C1C32A00A3D85D /* LaunchScreen.storyboard */; };
 		CD9D3BDE24C1CA7F00A3D85D /* SideMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B7924C1C32A00A3D85D /* SideMain.storyboard */; };
+		CDEF2FB424D80ADB00C34A90 /* GroupScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEF2FB324D80ADB00C34A90 /* GroupScrollView.swift */; };
+		CDEF2FB624D8181C00C34A90 /* DJScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEF2FB524D8181C00C34A90 /* DJScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +220,8 @@
 		CD9D3B8124C1C32A00A3D85D /* GroupExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupExploreViewController.swift; sourceTree = "<group>"; };
 		CD9D3B8224C1C32A00A3D85D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CD9D3B8324C1C32A00A3D85D /* SocializerSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocializerSignUpViewController.swift; sourceTree = "<group>"; };
+		CDEF2FB324D80ADB00C34A90 /* GroupScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupScrollView.swift; sourceTree = "<group>"; };
+		CDEF2FB524D8181C00C34A90 /* DJScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJScrollView.swift; sourceTree = "<group>"; };
 		DDC233B0C24127F7B6B854A9 /* Pods-Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.release.xcconfig"; path = "Target Support Files/Pods-Booking/Pods-Booking.release.xcconfig"; sourceTree = "<group>"; };
 		ED699F371A2993D3B76D66E0 /* Pods_Booking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0AB35EA62B198B81F46002 /* Pods-BookingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookingTests.release.xcconfig"; path = "Target Support Files/Pods-BookingTests/Pods-BookingTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -267,6 +271,8 @@
 		5DE698D4248DB92600301B39 = {
 			isa = PBXGroup;
 			children = (
+				CDEF2FB524D8181C00C34A90 /* DJScrollView.swift */,
+				CDEF2FB324D80ADB00C34A90 /* GroupScrollView.swift */,
 				2455769F24C7E1AB00F414DE /* PushNotificationSender.swift */,
 				24825CB124C7840D003C19AD /* Booking.entitlements */,
 				CD4C9DA424C1E5C500EF33E6 /* EventSelectionCell.xib */,
@@ -713,6 +719,7 @@
 				CD9D3B9724C1C32A00A3D85D /* SocializerInitialViewController.swift in Sources */,
 				CD9D3BAD24C1C32A00A3D85D /* createRequestView.swift in Sources */,
 				CD9D3BCF24C1C32A00A3D85D /* SocializerSignUpViewController.swift in Sources */,
+				CDEF2FB424D80ADB00C34A90 /* GroupScrollView.swift in Sources */,
 				CD9D3B8C24C1C32A00A3D85D /* SocializerProfilePictureViewController.swift in Sources */,
 				CD9D3BA024C1C32A00A3D85D /* DJ.swift in Sources */,
 				CD9D3BAF24C1C32A00A3D85D /* ExplorePageSearchResultCell.swift in Sources */,
@@ -740,6 +747,7 @@
 				CD4C9DA324C1E56D00EF33E6 /* EventSelectionCell.swift in Sources */,
 				CD9D3B8D24C1C32A00A3D85D /* CollectDJEquipmentViewController.swift in Sources */,
 				CD9D3BA624C1C32A00A3D85D /* EditGroupProfileViewController.swift in Sources */,
+				CDEF2FB624D8181C00C34A90 /* DJScrollView.swift in Sources */,
 				24825CBB24C7ACE3003C19AD /* StatusNotificationItem.swift in Sources */,
 				CD9D3BC924C1C32A00A3D85D /* OptionToSelect.swift in Sources */,
 				CD9D3BB424C1C32A00A3D85D /* Request.swift in Sources */,

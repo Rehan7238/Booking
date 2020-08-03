@@ -36,19 +36,111 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="titleLabel" destination="VbY-Ig-BiP" id="eTn-2C-iDh"/>
-                        <segue destination="XDp-PT-xUM" kind="presentation" identifier="toDJ" modalPresentationStyle="fullScreen" id="paI-Yi-JRz"/>
-                        <segue destination="LWL-hE-Jb6" kind="presentation" identifier="toGroup" modalPresentationStyle="fullScreen" id="XvX-xJ-b1T"/>
                         <segue destination="TRY-li-gBh" kind="presentation" identifier="toVendor" modalPresentationStyle="fullScreen" id="D0Q-5R-9G5"/>
                         <segue destination="BpP-QR-QMN" kind="presentation" identifier="toSocializer" modalPresentationStyle="fullScreen" id="ri6-pw-Xwz"/>
+                        <segue destination="RQw-sz-4c5" kind="presentation" identifier="toGroup" modalPresentationStyle="fullScreen" id="7Ee-ws-DAp"/>
+                        <segue destination="a3G-RO-23e" kind="presentation" identifier="toDJ" modalPresentationStyle="fullScreen" id="8dk-Ut-C0B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Xk-3K-FCs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2679.7101449275365" y="890.625"/>
         </scene>
+        <!--Group Scroll View-->
+        <scene sceneID="G5x-UF-X5D">
+            <objects>
+                <viewController id="RQw-sz-4c5" customClass="GroupScrollView" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uI0-Ac-j1m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4O-QG-1JX">
+                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd5-w8-kz6">
+                                        <rect key="frame" x="67" y="34" width="32" height="32"/>
+                                        <state key="normal" image="person.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="profileButtonPressed:" destination="RQw-sz-4c5" eventType="touchUpInside" id="SQ6-Xx-bMd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZX-ua-exY">
+                                        <rect key="frame" x="149.5" y="34" width="32" height="32"/>
+                                        <state key="normal" image="calendar" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="calendarButtonPressed:" destination="RQw-sz-4c5" eventType="touchUpInside" id="yUk-eY-NCh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuS-Oh-Vrb">
+                                        <rect key="frame" x="232.5" y="34" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="8D3-rt-9Z6"/>
+                                            <constraint firstAttribute="width" constant="32" id="yST-rx-kvc"/>
+                                        </constraints>
+                                        <state key="normal" image="magnifyingglass" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="exploreButtonPressed:" destination="RQw-sz-4c5" eventType="touchUpInside" id="yIZ-5A-r4f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efD-RJ-Oef">
+                                        <rect key="frame" x="315" y="34" width="32" height="32"/>
+                                        <state key="normal" image="bell.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="notificationButtonPressed:" destination="RQw-sz-4c5" eventType="touchUpInside" id="44s-JP-CS4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cd5-w8-kz6" firstAttribute="centerX" secondItem="I4O-QG-1JX" secondAttribute="centerX" multiplier="0.4" id="1Qi-6Q-EiH"/>
+                                    <constraint firstItem="vuS-Oh-Vrb" firstAttribute="centerX" secondItem="I4O-QG-1JX" secondAttribute="centerX" multiplier="1.2" id="2Oz-UR-6LE"/>
+                                    <constraint firstItem="cd5-w8-kz6" firstAttribute="centerY" secondItem="I4O-QG-1JX" secondAttribute="centerY" id="8m8-og-Owd"/>
+                                    <constraint firstItem="4ZX-ua-exY" firstAttribute="centerY" secondItem="I4O-QG-1JX" secondAttribute="centerY" id="A5g-qX-LQV"/>
+                                    <constraint firstItem="vuS-Oh-Vrb" firstAttribute="centerY" secondItem="I4O-QG-1JX" secondAttribute="centerY" id="GHa-VC-MG7"/>
+                                    <constraint firstItem="efD-RJ-Oef" firstAttribute="width" secondItem="vuS-Oh-Vrb" secondAttribute="width" id="UIw-4t-NKi"/>
+                                    <constraint firstItem="4ZX-ua-exY" firstAttribute="height" secondItem="vuS-Oh-Vrb" secondAttribute="height" id="XKW-go-qKN"/>
+                                    <constraint firstItem="4ZX-ua-exY" firstAttribute="centerX" secondItem="I4O-QG-1JX" secondAttribute="centerX" multiplier="0.8" id="XRg-4s-vML"/>
+                                    <constraint firstItem="efD-RJ-Oef" firstAttribute="centerY" secondItem="I4O-QG-1JX" secondAttribute="centerY" id="YYU-xM-j5d"/>
+                                    <constraint firstItem="cd5-w8-kz6" firstAttribute="width" secondItem="vuS-Oh-Vrb" secondAttribute="width" id="a0n-Ix-MAT"/>
+                                    <constraint firstItem="4ZX-ua-exY" firstAttribute="width" secondItem="vuS-Oh-Vrb" secondAttribute="width" id="bRi-eq-8UM"/>
+                                    <constraint firstItem="efD-RJ-Oef" firstAttribute="centerX" secondItem="I4O-QG-1JX" secondAttribute="centerX" multiplier="1.6" id="lqr-wh-BVw"/>
+                                    <constraint firstAttribute="height" constant="100" id="n8m-WZ-vmW"/>
+                                    <constraint firstItem="efD-RJ-Oef" firstAttribute="height" secondItem="vuS-Oh-Vrb" secondAttribute="height" id="s1K-46-Myd"/>
+                                    <constraint firstItem="cd5-w8-kz6" firstAttribute="height" secondItem="vuS-Oh-Vrb" secondAttribute="height" id="vSo-Qt-Xzp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="I4O-QG-1JX" firstAttribute="leading" secondItem="aaB-rj-G8I" secondAttribute="leading" id="V5w-w3-bua"/>
+                            <constraint firstItem="aaB-rj-G8I" firstAttribute="trailing" secondItem="I4O-QG-1JX" secondAttribute="trailing" id="cPU-oc-e33"/>
+                            <constraint firstAttribute="bottom" secondItem="I4O-QG-1JX" secondAttribute="bottom" id="uYo-cc-BBc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aaB-rj-G8I"/>
+                    </view>
+                    <connections>
+                        <outlet property="calendarButton" destination="4ZX-ua-exY" id="ClS-te-OR8"/>
+                        <outlet property="exploreButton" destination="vuS-Oh-Vrb" id="nJV-nj-Ln7"/>
+                        <outlet property="notificationButton" destination="efD-RJ-Oef" id="xXP-fI-wcd"/>
+                        <outlet property="profileButton" destination="cd5-w8-kz6" id="Sa6-2C-vIG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x13-Rg-csd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897" y="1718"/>
+        </scene>
         <!--Item-->
         <scene sceneID="u7S-eQ-qfP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anJ-sF-Fan" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="WfV-Zh-Wox" customClass="SocializerInitialViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="crT-sx-9b2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -67,13 +159,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="KFQ-wk-UBc"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="anJ-sF-Fan" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6657" y="2478"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="Vqa-ah-VLM">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u97-CZ-bpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="VIQ-c0-0Kp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6fc-hw-u0v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -83,7 +175,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="kVg-LJ-ahQ"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u97-CZ-bpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7467" y="2478"/>
         </scene>
@@ -145,6 +236,7 @@
         <!--Item-->
         <scene sceneID="rjB-wQ-aek">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGb-ss-TA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="EMd-kP-dDZ" customClass="VendorInitialViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Bp-Ak-cFk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -163,13 +255,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="3ed-b3-1qb"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fGb-ss-TA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3914" y="2478"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="LDy-ZM-5Jh">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BuX-Pn-5c3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="4Bv-Cw-dPl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pUA-5q-guh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -179,13 +271,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="OL7-zu-rza"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BuX-Pn-5c3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5480" y="2478"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="AHL-qE-7Ff">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2E-La-PQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="D1X-xc-wcm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LuG-oi-Uio">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -195,13 +287,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="1To-bg-Xd8"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P2E-La-PQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4699" y="2478"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yJS-Go-4Ke">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="voK-e4-rO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="TRY-li-gBh" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9og-GD-B6I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -214,16 +306,15 @@
                         <segue destination="EMd-kP-dDZ" kind="relationship" relationship="viewControllers" id="Pez-9j-4Va"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="voK-e4-rO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4699" y="1738"/>
         </scene>
         <!--Group Profile View Controller-->
         <scene sceneID="gjA-fb-jiB">
             <objects>
-                <viewController id="hcb-9e-qS3" customClass="GroupProfileViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupProfileViewController" id="hcb-9e-qS3" customClass="GroupProfileViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HfD-Ru-leN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sU2-i1-FHe">
@@ -317,7 +408,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOw-eH-J4Y">
-                                <rect key="frame" x="342" y="763" width="52" height="30"/>
+                                <rect key="frame" x="342" y="722" width="52" height="30"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
                                     <action selector="logoutButtonPressed:" destination="hcb-9e-qS3" eventType="touchUpInside" id="kjT-Jc-kV4"/>
@@ -354,7 +445,7 @@
                             <constraint firstItem="sU2-i1-FHe" firstAttribute="top" secondItem="cYC-PG-9AL" secondAttribute="top" constant="30" id="Y5f-1e-t0b"/>
                             <constraint firstItem="PUh-la-p8Z" firstAttribute="leading" secondItem="cYC-PG-9AL" secondAttribute="leading" constant="20" id="bgi-k0-ssV"/>
                             <constraint firstItem="wpH-uo-bOq" firstAttribute="top" secondItem="cYC-PG-9AL" secondAttribute="top" constant="40" id="fHr-J1-97J"/>
-                            <constraint firstItem="cYC-PG-9AL" firstAttribute="bottom" secondItem="TOw-eH-J4Y" secondAttribute="bottom" constant="20" id="fMq-3B-3Vd"/>
+                            <constraint firstItem="cYC-PG-9AL" firstAttribute="bottom" secondItem="TOw-eH-J4Y" secondAttribute="bottom" constant="110" id="fMq-3B-3Vd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cYC-PG-9AL"/>
                     </view>
@@ -373,7 +464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QhF-fe-YTJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166.6666666666667" y="2477.0089285714284"/>
+            <point key="canvasLocation" x="855" y="2476"/>
         </scene>
         <!--Edit Group Profile View Controller-->
         <scene sceneID="fKt-Pc-dwA">
@@ -444,7 +535,6 @@
                     <connections>
                         <outlet property="applyChangesButton" destination="5c7-tQ-NjJ" id="PWN-xL-iET"/>
                         <outlet property="cancelButton" destination="znH-1g-C7i" id="2Li-RM-mz1"/>
-                        <outlet property="groupName" destination="Gwq-pj-aB0" id="kiS-rb-ykp"/>
                         <outlet property="groupNameTextField" destination="Gwq-pj-aB0" id="4Dc-bo-XE4"/>
                         <outlet property="profilePic" destination="PeW-Hb-tNg" id="rNj-te-h1P"/>
                         <outlet property="titleLabel" destination="o7S-rC-QSl" id="c2C-4E-knU"/>
@@ -452,7 +542,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XA6-V8-QJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166.6666666666667" y="3194.8660714285711"/>
+            <point key="canvasLocation" x="854" y="3192"/>
         </scene>
         <!--Show Request Status-->
         <scene sceneID="vuT-HO-JZy">
@@ -472,9 +562,9 @@
         <!--Group Calendar View Controller-->
         <scene sceneID="mXg-qd-AIa">
             <objects>
-                <viewController id="ez8-47-Pej" customClass="GroupCalendarViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupCalendarViewController" id="ez8-47-Pej" customClass="GroupCalendarViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cce-l4-EfZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xh3-lW-tGi">
@@ -652,18 +742,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPZ-5E-mjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1940.5797101449277" y="2476.3392857142858"/>
+            <point key="canvasLocation" x="1554" y="2478"/>
         </scene>
         <!--Group Explore View Controller-->
         <scene sceneID="qt8-RU-b7l">
             <objects>
-                <viewController id="SiI-rO-u2F" customClass="GroupExploreViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2vn-Eg-EEi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                <viewController storyboardIdentifier="GroupExploreViewController" id="SiI-rO-u2F" customClass="GroupExploreViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="2vn-Eg-EEi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="180" estimatedRowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uiJ-dr-QiY">
-                                <rect key="frame" x="20" y="255" width="374" height="528"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="180" estimatedRowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uiJ-dr-QiY">
+                                <rect key="frame" x="20" y="255" width="374" height="577"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="528" id="fXN-sV-BBu"/>
@@ -866,7 +956,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8h-Rv-G0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2679.7101449275365" y="2477.0089285714284"/>
+            <point key="canvasLocation" x="2232" y="2478"/>
         </scene>
         <!--Profile For Group View Controller-->
         <scene sceneID="uMH-EQ-n7b">
@@ -1082,28 +1172,6 @@
             </objects>
             <point key="canvasLocation" x="2675.36231884058" y="3148.6607142857142"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="W54-h9-LrY">
-            <objects>
-                <tabBarController id="LWL-hE-Jb6" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="DS0-XU-pM4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="hcb-9e-qS3" kind="relationship" relationship="viewControllers" id="3m7-0Z-yw7"/>
-                        <segue destination="ez8-47-Pej" kind="relationship" relationship="viewControllers" id="UMu-e4-SkV"/>
-                        <segue destination="SiI-rO-u2F" kind="relationship" relationship="viewControllers" id="Gs4-Jb-SsY"/>
-                        <segue destination="IKr-oX-9P2" kind="relationship" relationship="viewControllers" id="3Tp-wG-Xty"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="00F-w2-OMm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1941" y="1738"/>
-        </scene>
         <!--EditDJ Profile View Controller-->
         <scene sceneID="yvj-1a-Vdc">
             <objects>
@@ -1239,12 +1307,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ex2-4q-K0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1414.4927536231885" y="3170.7589285714284"/>
+            <point key="canvasLocation" x="-2029" y="3177"/>
         </scene>
         <!--profile-->
         <scene sceneID="wpi-dz-j8k">
             <objects>
-                <viewController id="mka-ae-cEB" customClass="DJProfileViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DJProfileViewController" id="mka-ae-cEB" customClass="DJProfileViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zbS-2N-H1e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1391,7 +1459,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qD-HI-PHf">
-                                <rect key="frame" x="332" y="763" width="52" height="30"/>
+                                <rect key="frame" x="332" y="722" width="52" height="30"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
                                     <action selector="logoutButtonPressed:" destination="mka-ae-cEB" eventType="touchUpInside" id="zAu-nr-OBI"/>
@@ -1405,7 +1473,7 @@
                             <constraint firstItem="TNR-4e-zqo" firstAttribute="leading" secondItem="uJb-zF-CN2" secondAttribute="leading" constant="63" id="EGZ-Y3-Og0"/>
                             <constraint firstItem="wq4-5a-fgm" firstAttribute="leading" secondItem="uJb-zF-CN2" secondAttribute="leading" constant="52" id="MCG-88-aWD"/>
                             <constraint firstItem="wq4-5a-fgm" firstAttribute="top" secondItem="uJb-zF-CN2" secondAttribute="top" constant="36" id="NV5-XP-gWH"/>
-                            <constraint firstItem="uJb-zF-CN2" firstAttribute="bottom" secondItem="6qD-HI-PHf" secondAttribute="bottom" constant="20" id="NVf-k4-58t"/>
+                            <constraint firstItem="uJb-zF-CN2" firstAttribute="bottom" secondItem="6qD-HI-PHf" secondAttribute="bottom" constant="110" id="NVf-k4-58t"/>
                             <constraint firstItem="fQw-sj-BZE" firstAttribute="top" secondItem="uJb-zF-CN2" secondAttribute="top" constant="347" id="ero-i6-Xfy"/>
                             <constraint firstItem="TNR-4e-zqo" firstAttribute="top" secondItem="wq4-5a-fgm" secondAttribute="bottom" constant="13" id="i9R-Jq-7t0"/>
                         </constraints>
@@ -1424,12 +1492,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVh-CW-eTL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1414.4927536231885" y="2477.0089285714284"/>
+            <point key="canvasLocation" x="-2028" y="2476"/>
         </scene>
         <!--home-->
         <scene sceneID="o5c-Tz-TUw">
             <objects>
-                <viewController id="h15-Xf-1cA" customClass="DJHomePageViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DJHomePageViewController" id="h15-Xf-1cA" customClass="DJHomePageViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MNw-AB-ahi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1548,12 +1616,103 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="keM-hL-db7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688.40579710144937" y="2477.0089285714284"/>
+            <point key="canvasLocation" x="-1307" y="2478"/>
+        </scene>
+        <!--Scroll View-->
+        <scene sceneID="8xW-LN-Dsa">
+            <objects>
+                <viewController id="a3G-RO-23e" customClass="DJScrollView" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wh0-Xh-tZf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzo-WI-YPs">
+                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2En-85-iIG">
+                                        <rect key="frame" x="67" y="34" width="32" height="32"/>
+                                        <state key="normal" image="person.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="profileButtonPressed:" destination="a3G-RO-23e" eventType="touchUpInside" id="9MK-sU-hVW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qST-qk-jIT">
+                                        <rect key="frame" x="149.5" y="34" width="32" height="32"/>
+                                        <state key="normal" image="calendar" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="calendarButtonPressed:" destination="a3G-RO-23e" eventType="touchUpInside" id="hAJ-48-PDm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycl-nc-SP5">
+                                        <rect key="frame" x="232.5" y="34" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="7FD-0E-mpb"/>
+                                            <constraint firstAttribute="width" constant="32" id="wRb-ot-nom"/>
+                                        </constraints>
+                                        <state key="normal" image="magnifyingglass" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="exploreButtonPressed:" destination="a3G-RO-23e" eventType="touchUpInside" id="VT5-LC-L6N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKu-bj-FzK">
+                                        <rect key="frame" x="315" y="34" width="32" height="32"/>
+                                        <state key="normal" image="bell.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="notificationButtonPressed:" destination="a3G-RO-23e" eventType="touchUpInside" id="47a-Mq-XXU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qST-qk-jIT" firstAttribute="centerX" secondItem="fzo-WI-YPs" secondAttribute="centerX" multiplier="0.8" id="1Ld-Qr-6Mo"/>
+                                    <constraint firstItem="2En-85-iIG" firstAttribute="centerY" secondItem="fzo-WI-YPs" secondAttribute="centerY" id="DKo-wP-0il"/>
+                                    <constraint firstItem="qST-qk-jIT" firstAttribute="height" secondItem="Ycl-nc-SP5" secondAttribute="height" id="DL7-yD-EBo"/>
+                                    <constraint firstItem="qST-qk-jIT" firstAttribute="width" secondItem="Ycl-nc-SP5" secondAttribute="width" id="EDy-xA-YWx"/>
+                                    <constraint firstItem="uKu-bj-FzK" firstAttribute="width" secondItem="Ycl-nc-SP5" secondAttribute="width" id="MBo-kl-r4e"/>
+                                    <constraint firstItem="Ycl-nc-SP5" firstAttribute="centerX" secondItem="fzo-WI-YPs" secondAttribute="centerX" multiplier="1.2" id="YUQ-vW-CwS"/>
+                                    <constraint firstItem="uKu-bj-FzK" firstAttribute="height" secondItem="Ycl-nc-SP5" secondAttribute="height" id="ZSd-Vw-JIQ"/>
+                                    <constraint firstItem="2En-85-iIG" firstAttribute="height" secondItem="Ycl-nc-SP5" secondAttribute="height" id="bxZ-mx-mIe"/>
+                                    <constraint firstItem="2En-85-iIG" firstAttribute="centerX" secondItem="fzo-WI-YPs" secondAttribute="centerX" multiplier="0.4" id="fPy-FH-pSy"/>
+                                    <constraint firstItem="qST-qk-jIT" firstAttribute="centerY" secondItem="fzo-WI-YPs" secondAttribute="centerY" id="ks2-eS-tMk"/>
+                                    <constraint firstItem="Ycl-nc-SP5" firstAttribute="centerY" secondItem="fzo-WI-YPs" secondAttribute="centerY" id="lWt-H9-x6U"/>
+                                    <constraint firstItem="uKu-bj-FzK" firstAttribute="centerY" secondItem="fzo-WI-YPs" secondAttribute="centerY" id="vDa-01-uSG"/>
+                                    <constraint firstItem="uKu-bj-FzK" firstAttribute="centerX" secondItem="fzo-WI-YPs" secondAttribute="centerX" multiplier="1.6" id="viL-5J-fVs"/>
+                                    <constraint firstAttribute="height" constant="100" id="yPP-ki-9zm"/>
+                                    <constraint firstItem="2En-85-iIG" firstAttribute="width" secondItem="Ycl-nc-SP5" secondAttribute="width" id="yPo-n1-Day"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fzo-WI-YPs" secondAttribute="bottom" id="Lwp-ai-zrq"/>
+                            <constraint firstItem="fzo-WI-YPs" firstAttribute="trailing" secondItem="HmC-7h-jYJ" secondAttribute="trailing" id="WgF-Vu-XAF"/>
+                            <constraint firstItem="fzo-WI-YPs" firstAttribute="leading" secondItem="HmC-7h-jYJ" secondAttribute="leading" id="YOW-Ti-3Bd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HmC-7h-jYJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="calendarButton" destination="qST-qk-jIT" id="K6m-JA-UFH"/>
+                        <outlet property="exploreButton" destination="Ycl-nc-SP5" id="5lK-KG-8sv"/>
+                        <outlet property="notificationButton" destination="uKu-bj-FzK" id="Cdf-kU-Mkb"/>
+                        <outlet property="profileButton" destination="2En-85-iIG" id="lrX-l0-mgf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DMc-Kh-984" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1307" y="1718"/>
         </scene>
         <!--booking-->
         <scene sceneID="c9q-xt-3C4">
             <objects>
-                <viewController id="aQ8-Pn-fwi" customClass="DJExplorePageViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DJExplorePageViewController" id="aQ8-Pn-fwi" customClass="DJExplorePageViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3sp-JU-gX7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1759,33 +1918,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asf-Xc-kzO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61" y="2478"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="FL5-Tk-hV7">
-            <objects>
-                <tabBarController id="XDp-PT-xUM" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EV1-Ux-1Aw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="aQ8-Pn-fwi" kind="relationship" relationship="viewControllers" id="UHE-Q3-uB6"/>
-                        <segue destination="h15-Xf-1cA" kind="relationship" relationship="viewControllers" id="yOG-7j-GBZ"/>
-                        <segue destination="mka-ae-cEB" kind="relationship" relationship="viewControllers" id="cWM-8I-fe2"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eje-Ed-wb0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-688" y="1738"/>
+            <point key="canvasLocation" x="-572" y="2478"/>
         </scene>
         <!--Item-->
         <scene sceneID="wzj-1u-32d">
             <objects>
-                <viewController id="IKr-oX-9P2" customClass="StatusNotificationTableViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatusNotificationTableViewController" id="IKr-oX-9P2" customClass="StatusNotificationTableViewController" customModule="Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IEX-KR-bw1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uGT-xD-h18">
@@ -1865,10 +2005,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vkq-O6-G3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2740.579710144928" y="1737.7232142857142"/>
+            <point key="canvasLocation" x="2964" y="2478"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="bookmark.fill" catalog="system" width="112" height="128"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="camera" catalog="system" width="128" height="96"/>
@@ -1876,6 +2017,7 @@
         <image name="carplay_close" width="65" height="65"/>
         <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
