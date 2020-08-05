@@ -10,23 +10,13 @@ import Foundation
 import UIKit
 
 class StatusNotificationCell: UITableViewCell {
-        
+    
     @IBOutlet var statustext: UILabel!
     @IBOutlet var picture: UIImageView!
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     var statusNotificationItem: StatusNotificationItem?
     
-    
-   override func prepareForReuse() {
+    override func prepareForReuse() {
         super.prepareForReuse()
         statustext.text = ""
     }
