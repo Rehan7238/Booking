@@ -109,7 +109,6 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
         let id = results[indexPath.row]
         cell.setup(requestID: id)
         cell.layer.cornerRadius = cell.frame.height / 3
-        cell.layer.borderWidth = 1.0
         return cell
     }
     

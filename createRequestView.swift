@@ -22,6 +22,7 @@
     
     var group: Group?
     var dj: DJ?
+    var event: Event?
     var parentView: DJProfileForGroupViewController?
     var DJUID: String?
     var eventIDs: [String] = [String]()
@@ -131,6 +132,15 @@
                         
                     }
                 }
+                
+                _ = Event.fromID(id: selectedEventID).done { loadedEvent in
+                if let loadedEvent = loadedEvent {
+                    self.event = loadedEvent
+                    request.setEventID(selectedEventID)
+                    request.setEventName(loadedEvent.eventName)
+                    }
+                }
+                    
                 if let DJuid = self.DJUID {
                     _ = DJ.fromID(id: DJuid).done { loadedDJ in
                         if let loadedDJ = loadedDJ {

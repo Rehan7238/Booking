@@ -112,17 +112,13 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         let id = results[indexPath.row]
         cell.setup(eventID: id)
         cell.layer.cornerRadius = cell.frame.height / 3
-        _ = Event.fromID(id: id).done { loadedEvent in
-        self.event = loadedEvent
-            if self.event?.hostID == self.group?.id {
-                cell.layer.borderColor = #colorLiteral(red: 1, green: 0.1633785235, blue: 0.9432822805, alpha: 1)
-                cell.layer.borderWidth = 1.0
-            }
-            else if self.event?.hostID != self.group?.id {
-                cell.layer.borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-                cell.layer.borderWidth = 1.0
-            }
-        }
+//        _ = Event.fromID(id: id).done { loadedEvent in
+//        self.event = loadedEvent
+//            if self.event?.hostID == self.group?.id {
+//            }
+//            else if self.event?.hostID != self.group?.id {
+//            }
+//        }
         return cell
     }
     
