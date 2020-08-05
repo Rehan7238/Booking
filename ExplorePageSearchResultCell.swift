@@ -40,13 +40,11 @@ class ExplorePageSearchResultCell: UITableViewCell {
         percentMatchLabelLeft.isHidden = false
         
         profilePicLeft.layer.cornerRadius = profilePicLeft.layer.bounds.height / 2
-        profilePicLeft.layer.borderColor = UIColor.green.cgColor
+        profilePicLeft.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
         profilePicLeft.layer.borderWidth = 1
         profilePicLeft.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.clickedLeft(_:))))
         
         backgroundViewLeft.layer.cornerRadius = 10
-        backgroundViewLeft.layer.borderColor = UIColor.white.cgColor
-        backgroundViewLeft.layer.borderWidth = 1
         backgroundViewLeft.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.clickedLeft(_:))))
 
         
@@ -99,8 +97,6 @@ class ExplorePageSearchResultCell: UITableViewCell {
         profilePicRight.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.clickedRight(_:))))
 
         backgroundViewRight.layer.cornerRadius = 10
-        backgroundViewRight.layer.borderColor = UIColor.white.cgColor
-        backgroundViewRight.layer.borderWidth = 1
         backgroundViewRight.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.clickedRight(_:))))
 
         
