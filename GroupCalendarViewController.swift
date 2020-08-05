@@ -59,6 +59,11 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        //BackgroundImage
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "Background")
+        backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
 
     }
     

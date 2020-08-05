@@ -30,6 +30,12 @@ class CollectGroupEquipmentViewController: UIViewController, UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //BakgroundImage
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "Background")
+        backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+        
         if let uid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: uid).done { group in
                 if group != nil {

@@ -36,10 +36,9 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         
         profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
-        profileCard.layer.borderWidth = 1.0
-        profileCard.layer.borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        profileCard.layer.cornerRadius = profilePic.layer.bounds.height / 9
-        profileCard.addSubview(profilePic)
+       profilePic.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        profilePic.layer.borderWidth = 1.0
+
 
         
         tableView.delegate = self
@@ -63,6 +62,12 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        //BackgroundImage
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "Background")
+        backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
         
         if let uid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: uid).done { loadedGroup in
@@ -104,7 +109,6 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
         let id = results[indexPath.row]
         cell.setup(requestID: id)
         cell.layer.cornerRadius = cell.frame.height / 3
-        cell.layer.borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         cell.layer.borderWidth = 1.0
         return cell
     }
