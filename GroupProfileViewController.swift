@@ -36,7 +36,7 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         
         profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
-       profilePic.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        profilePic.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
         profilePic.layer.borderWidth = 1.0
 
 
@@ -108,7 +108,6 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "RequestCell") as! RequestCell
         let id = results[indexPath.row]
         cell.setup(requestID: id)
-        cell.layer.cornerRadius = cell.frame.height / 3
         return cell
     }
     

@@ -16,6 +16,7 @@ class RequestCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var statusIcon: UIImageView!
+    @IBOutlet weak var corneredView: UIView!
     
     var request: Request?
     
@@ -29,6 +30,7 @@ class RequestCell: UITableViewCell {
     func setup(requestID: String) {
         
         //shadowView.layer.cornerRadius = 10
+        corneredView.layer.cornerRadius = corneredView.layer.frame.height / 3
         profilePic.layer.cornerRadius = profilePic.frame.width / 2
         profilePic.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
         profilePic.layer.borderWidth = 1.0
@@ -59,12 +61,5 @@ class RequestCell: UITableViewCell {
                 }
             }
         }
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        //set the values for top,left,bottom,right margins
-        let margins = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
-        contentView.frame = contentView.frame.inset(by: margins)
     }
 }
