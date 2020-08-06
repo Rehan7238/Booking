@@ -76,12 +76,8 @@ class DJProfileForGroupViewController: UIViewController {
 
         if let createRequestVC = Bundle.main.loadNibNamed("createRequestView", owner: nil, options: nil)?.first as? createRequestView {
             createRequestVC.DJUID = DJUID
-            createRequestVC.parentView = self
             self.present(createRequestVC, animated: true, completion: nil)
         }
-        
-        
-        
     }
     
     

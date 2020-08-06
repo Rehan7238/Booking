@@ -21,8 +21,6 @@
     @IBOutlet weak var eventNameLabel: UILabel!
     
     var request: Request?
-    var parentView: GroupProfileViewController?
-    var DJparentView: DJProfileViewController?
 
     var uid: String?
 

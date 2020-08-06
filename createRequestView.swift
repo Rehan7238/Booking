@@ -15,10 +15,10 @@
  class createRequestView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var doneButton: UIButton! = UIButton()
-    @IBOutlet weak var DJNameLabel: UILabel!
-    @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var playingFeeLabel: UILabel!
-    @IBOutlet weak var eventListTable: UITableView!
+    @IBOutlet var DJNameLabel: UILabel!
+    @IBOutlet var cancelButton: UIButton!
+    @IBOutlet var playingFeeLabel: UILabel!
+    @IBOutlet var eventListTable: UITableView!
     
     var group: Group?
     var dj: DJ?

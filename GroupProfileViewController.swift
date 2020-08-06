@@ -121,7 +121,6 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
             //if the status is open
             if loadedRequest?.status == "open" {
                 if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusOpen", owner: nil, options: nil)?.first as? checkRequestStatusOpen {
-                    showRequestVC.parentView = self
                     showRequestVC.setup(uid: selectedRequestid)
                     self.present(showRequestVC, animated: true, completion: nil)
                 }
@@ -129,7 +128,6 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
                 // if the status was declined
             else if loadedRequest?.status == "declined" {
                 if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusDeclined", owner: nil, options: nil)?.first as? checkRequestStatusDeclined {
-                    showRequestVC.parentView = self
                     showRequestVC.setup(uid: selectedRequestid)
                     self.present(showRequestVC, animated: true, completion: nil)
                 }
@@ -137,14 +135,12 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
                 // if the status was countered
             else if loadedRequest?.status == "countered" {
                 if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusCounter", owner: nil, options: nil)?.first as? checkRequestStatusCounter {
-                    showRequestVC.parentView = self
                     showRequestVC.setup(uid: selectedRequestid)
                     self.present(showRequestVC, animated: true, completion: nil)
                 }
             }
             else if loadedRequest?.status == "accepted" {
                 if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusAcceptedGroup", owner: nil, options: nil)?.first as? checkRequestStatusAcceptedGroup {
-                    showRequestVC.parentView = self
                     showRequestVC.setup(uid: selectedRequestid)
                     self.present(showRequestVC, animated: true, completion: nil)
                 }

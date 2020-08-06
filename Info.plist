@@ -28,7 +28,7 @@
 	<key>MGLMapboxAccessToken</key>
 	<string>sk.eyJ1IjoiZWltYXJhIiwiYSI6ImNrYnp2NW5lNDFkdGMydnFmY29lMGtpcDcifQ.TYLAn2lRW0PnzMT_VdU1FQ</string>
 	<key>NSContactsUsageDescription</key>
-	<string>To connect users with other DJ&apos;s or Socializers</string>
+	<string>To connect users with other DJ's or Socializers</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>We need your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -54,6 +54,7 @@
 	</dict>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>audio</string>
 		<string>processing</string>
 		<string>remote-notification</string>
 	</array>

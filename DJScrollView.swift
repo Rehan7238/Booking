@@ -16,6 +16,7 @@ class DJScrollView: PageboyViewController, PageboyViewControllerDataSource {
     @IBOutlet weak var calendarButton: UIButton!
     @IBOutlet weak var exploreButton: UIButton!
     @IBOutlet weak var notificationButton: UIButton!
+    @IBOutlet weak var createEventButton: UIButton!
     
     var viewControllers = [UIViewController]()
     
@@ -51,6 +52,12 @@ class DJScrollView: PageboyViewController, PageboyViewControllerDataSource {
     
     @IBAction func notificationButtonPressed(_ sender: Any) {
         self.scrollToPage(.at(index: 3), animated: true)
+    }
+    
+    @IBAction func createEventButtonPressed(_ sender: Any) {
+        if let createEventVC = Bundle.main.loadNibNamed("createEventView", owner: nil, options: nil)?.first as? createEventView {
+           self.present(createEventVC, animated: true, completion: nil)
+        }
     }
     
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
