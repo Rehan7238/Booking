@@ -37,6 +37,9 @@ class DJProfileViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        
         
         if let uid = Auth.auth().currentUser?.uid {
             _ = DJ.fromID(id: uid).done { loadedDJ in
@@ -61,6 +64,10 @@ class DJProfileViewController: UIViewController, UITableViewDelegate, UITableVie
                 self.refreshData()
             }
         }
+    }
+    
+    @objc func refresh() {
+        refreshData()
     }
     
     @IBAction func InstagramAction() {
@@ -94,6 +101,7 @@ class DJProfileViewController: UIViewController, UITableViewDelegate, UITableVie
                     self.results.append(document.documentID)
                 }
                 self.tableView.reloadData()
+                self.tableView.refreshControl?.endRefreshing()
             }
         }
     }

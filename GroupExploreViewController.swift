@@ -40,6 +40,9 @@ class GroupExploreViewController: UIViewController, UITableViewDelegate, UITable
         searchResultsTable.delegate = self
         searchResultsTable.dataSource = self
         
+        searchResultsTable.refreshControl = UIRefreshControl()
+        searchResultsTable.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        
         if let uid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: uid).done { loadedGroup in
                 self.group = loadedGroup
@@ -76,6 +79,43 @@ class GroupExploreViewController: UIViewController, UITableViewDelegate, UITable
                         }
                     }
                     self.searchResultsTable.reloadData()
+                }
+            }
+        }
+    }
+    
+    @objc func refresh() {
+        let db = Firestore.firestore()
+        db.collection("DJs").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                let dispatch = DispatchGroup()
+                for document in querySnapshot!.documents {
+                    dispatch.enter()
+                    _ = DJ.fromID(id: document.documentID).done { loadedDJ in
+                        if let dj = loadedDJ {
+                            if self.allResults == nil {
+                                self.allResults = [dj]
+                            } else {
+                                self.allResults?.append(dj)
+                            }
+                        }
+                        dispatch.leave()
+                    }
+                }
+                dispatch.notify(queue: .main) {
+                    if let allResults = self.allResults {
+                        for result in allResults {
+                            if self.filteredResults == nil {
+                                self.filteredResults = [result]
+                            } else {
+                                self.filteredResults?.append(result)
+                            }
+                        }
+                    }
+                    self.searchResultsTable.reloadData()
+                    self.searchResultsTable.refreshControl?.endRefreshing()
                 }
             }
         }

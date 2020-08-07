@@ -38,12 +38,12 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
         profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
         profilePic.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
         profilePic.layer.borderWidth = 1.0
-
-
         
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         
         if let uid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: uid).done { loadedGroup in
@@ -58,6 +58,10 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
                 
             }
         }
+    }
+    
+    @objc func refresh() {
+        refreshData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -96,6 +100,7 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
                     self.results.append(document.documentID)
                 }
                 self.tableView.reloadData()
+                self.tableView.refreshControl?.endRefreshing()
             }
         }
     }

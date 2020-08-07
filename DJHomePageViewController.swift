@@ -37,7 +37,7 @@ class DJHomePageViewController: UIViewController, FSCalendarDelegate, FSCalendar
         
         tableView.delegate = self
         tableView.dataSource = self
-        
+
         calendar.delegate = self
         calendar.dataSource = self
         calendar.scope = .month
@@ -53,10 +53,9 @@ class DJHomePageViewController: UIViewController, FSCalendarDelegate, FSCalendar
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-
     }
     
+
     func refreshData(_ date: Date) {
         let db = Firestore.firestore()
 
