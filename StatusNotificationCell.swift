@@ -12,7 +12,7 @@ import UIKit
 class StatusNotificationCell: UITableViewCell {
     
     @IBOutlet var statustext: UILabel!
-    @IBOutlet var picture: UIImageView!
+    //@IBOutlet var picture: UIImageView!
     
     var statusNotificationItem: StatusNotificationItem?
     
