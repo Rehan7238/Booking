@@ -113,6 +113,9 @@
             return formatter
         }()
         
+        var GroupName = ""
+        var payment = ""
+        var eventName = ""
         request.setDate(dateFormatter.string(from: Date()))
         
         if let uid = Auth.auth().currentUser?.uid {
@@ -121,12 +124,11 @@
                 _ = Group.fromID(id: uid).done { loadedGroup in
                     if let loadedGroup = loadedGroup {
                         self.group = loadedGroup
+                        GroupName = loadedGroup.name ?? ""
                         request.setHostID(loadedGroup.id)
                         request.setHostName(loadedGroup.name)
                         request.setSchool(loadedGroup.school)
                         request.setAddress(loadedGroup.address)
-
-                        
                         notificationItem.setHostID(loadedGroup.id)
                         notificationItem.setRequestName(request.id)
                         
@@ -138,6 +140,7 @@
                     self.event = loadedEvent
                     request.setEventID(selectedEventID)
                     request.setEventName(loadedEvent.eventName)
+                    eventName = request.eventName
                     }
                 }
                     
@@ -168,22 +171,19 @@
                                     for document in querySnapshot!.documents {
                                         if document.documentID == loadedDJ.id {
                                             let sender = PushNotificationSender()
-                                            sender.sendPushNotification(to: document.data()["fcmToken"]as! String, title: "You've Got a New Request!", body: "check the app")
+                                            sender.sendPushNotification(to: document.data()["fcmToken"]as! String, title: "(\(GroupName)sent you a request for their \(eventName)!", body: "check the app")
                                         
                                         }
                                     
                                     }
                                 }
                             }
-                            let sender = PushNotificationSender()
-                                           print ("DJJJJJ TOKEN for real" ,loadedDJ.tokenForNotifications)
-                                           sender.sendPushNotification(to: loadedDJ.tokenForNotifications, title: "You've Got a New Request!", body: "check the app")
                             
                             var notificationList = loadedDJ.notifications
                                            notificationList.append(notificationItem.id)
                                            loadedDJ.setNotifications(notificationList)
                                            notificationItem.setDJID(loadedDJ.id)
-                                           notificationItem.setStatusName("Request")
+                                           notificationItem.setStatusName("(\(GroupName)sent you a request for their \(eventName)!")
                         }
                     }
                 }

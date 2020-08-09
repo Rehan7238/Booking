@@ -27,6 +27,8 @@
     var request: Request?
     var event: Event?
     var dj: DJ?
+    var group: Group?
+    var DJName = ""
 
     var DJparentView: DJProfileViewController?
 
@@ -35,8 +37,10 @@
     override func viewDidLoad() {
         super.viewDidLoad()
         if let DJuid = Auth.auth().currentUser?.uid {
-            _ = DJ.fromID(id: DJuid).done { loadedDJ in
+            _ = DJ.fromID(id: DJuid).done { [self] loadedDJ in
                 self.dj = loadedDJ
+                self.DJName = loadedDJ?.name ?? ""
+                
             }
         }
         
@@ -61,14 +65,53 @@
     
     @IBAction func clickedAccept(_ sender: Any) {
         request?.setStatus("accepted")
+        
+        // notification item
+        let identifier2 = UUID()
+        let notificationItem = StatusNotificationItem.createNew(withID: "\(String(describing: identifier2 ))")
+        ///
+        
         var eventID = request?.eventID
+        var DJName = ""
+        var eventName = ""
         _ = Event.fromID(id: eventID!).done { loadedEvent in
         self.event = loadedEvent
             if let DJuid = Auth.auth().currentUser?.uid {
-                _ = DJ.fromID(id: DJuid).done {loadedDJ in
+                _ = DJ.fromID(id: DJuid).done { [self]loadedDJ in
                     self.dj = loadedDJ
+                    DJName = loadedDJ?.name ?? ""
+                    eventName = self.event?.eventName ?? ""
                     self.event?.setDJID(DJuid)
                     self.event?.setDJBooked(true)
+                    notificationItem.setDJID(DJuid)
+                    notificationItem.setRequestName(self.request!.id)
+                }
+            }
+            _ = Group.fromID(id: loadedEvent!.hostID).done {loadedGroup in
+                if let loadedGroup = loadedGroup {
+                    self.group = loadedGroup
+                    notificationItem.setHostID(loadedGroup.id)
+                    notificationItem.setRequestName(self.request!.id)
+                    
+                    let db = Firestore.firestore()
+                    db.collection("userTokensForNotifs").getDocuments() {
+                        (querySnapshot, err) in
+                        if let err = err {
+                            print("Error getting documents: \(err)")
+                        } else {
+                            for document in querySnapshot!.documents {
+                                if document.documentID == loadedGroup.id {
+                                    let sender = PushNotificationSender()
+                                    sender.sendPushNotification(to: document.data()["fcmToken"]as! String, title: "\(DJName)accepted your request for \(eventName)!", body: "check the app")
+                                }
+                            }
+                        }
+                    }
+                    var notificationList = loadedGroup.notifications
+                                   notificationList.append(notificationItem.id)
+                    loadedGroup.setNotifications(notificationList)
+                                   notificationItem.setDJID(loadedGroup.id)
+                                   notificationItem.setStatusName("\(DJName) accepted your request for\(eventName)!")
                 }
             }
             
@@ -80,6 +123,57 @@
     
     @IBAction func clickedDecline(_ sender: Any) {
         request?.setStatus("declined")
+        
+        // notification item
+        let identifier2 = UUID()
+        let notificationItem = StatusNotificationItem.createNew(withID: "\(String(describing: identifier2 ))")
+        ///
+        
+        var eventID = request?.eventID
+        var DJName = ""
+        var eventName = ""
+        _ = Event.fromID(id: eventID!).done { loadedEvent in
+        self.event = loadedEvent
+            if let DJuid = Auth.auth().currentUser?.uid {
+                _ = DJ.fromID(id: DJuid).done { [self]loadedDJ in
+                    self.dj = loadedDJ
+                    DJName = loadedDJ?.name ?? ""
+                    eventName = self.event?.eventName ?? ""
+                    notificationItem.setDJID(DJuid)
+                    notificationItem.setRequestName(self.request!.id)
+                }
+            }
+            _ = Group.fromID(id: loadedEvent!.hostID).done {loadedGroup in
+                if let loadedGroup = loadedGroup {
+                    self.group = loadedGroup
+                    notificationItem.setHostID(loadedGroup.id)
+                    notificationItem.setRequestName(self.request!.id)
+                    
+                    let db = Firestore.firestore()
+                    db.collection("userTokensForNotifs").getDocuments() {
+                        (querySnapshot, err) in
+                        if let err = err {
+                            print("Error getting documents: \(err)")
+                        } else {
+                            for document in querySnapshot!.documents {
+                                if document.documentID == loadedGroup.id {
+                                    let sender = PushNotificationSender()
+                                    sender.sendPushNotification(to: document.data()["fcmToken"]as! String, title: "\(DJName)declined your request for \(eventName).", body: "check the app")
+                                }
+                            }
+                        }
+                    }
+                    var notificationList = loadedGroup.notifications
+                                   notificationList.append(notificationItem.id)
+                    loadedGroup.setNotifications(notificationList)
+                                   notificationItem.setDJID(loadedGroup.id)
+                                   notificationItem.setStatusName("\(DJName) declined your request for\(eventName).")
+                }
+            }
+            
+        }
+        
+        
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -87,6 +181,56 @@
         request?.setStatus("countered")
         request?.setCounterFee(counterFeeTextField.text!)
         request?.setCounteringParty("DJ")
+        
+        // notification item
+        let identifier2 = UUID()
+        let notificationItem = StatusNotificationItem.createNew(withID: "\(String(describing: identifier2 ))")
+        ///
+        
+        var eventID = request?.eventID
+        var DJName = ""
+        var eventName = ""
+        _ = Event.fromID(id: eventID!).done { loadedEvent in
+        self.event = loadedEvent
+            if let DJuid = Auth.auth().currentUser?.uid {
+                _ = DJ.fromID(id: DJuid).done { [self]loadedDJ in
+                    self.dj = loadedDJ
+                    DJName = loadedDJ?.name ?? ""
+                    eventName = self.event?.eventName ?? ""
+                    notificationItem.setDJID(DJuid)
+                    notificationItem.setRequestName(self.request!.id)
+                }
+            }
+            _ = Group.fromID(id: loadedEvent!.hostID).done {loadedGroup in
+                if let loadedGroup = loadedGroup {
+                    self.group = loadedGroup
+                    notificationItem.setHostID(loadedGroup.id)
+                    notificationItem.setRequestName(self.request!.id)
+                    
+                    let db = Firestore.firestore()
+                    db.collection("userTokensForNotifs").getDocuments() { [self]
+                        (querySnapshot, err) in
+                        if let err = err {
+                            print("Error getting documents: \(err)")
+                        } else {
+                            for document in querySnapshot!.documents {
+                                if document.documentID == loadedGroup.id {
+                                    let sender = PushNotificationSender()
+                                    sender.sendPushNotification(to: document.data()["fcmToken"]as! String, title: "\(DJName)countered your request for \(self.counterFeeTextField.text!).", body: "check the app")
+                                }
+                            }
+                        }
+                    }
+                    var notificationList = loadedGroup.notifications
+                                   notificationList.append(notificationItem.id)
+                    loadedGroup.setNotifications(notificationList)
+                                   notificationItem.setDJID(loadedGroup.id)
+                    notificationItem.setStatusName("(\(DJName) accepted your request for\(self.counterFeeTextField.text!).")
+                }
+            }
+            
+        }
+        
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -94,3 +238,4 @@
         self.dismiss(animated: true, completion: nil)
     }
  }
+ 
