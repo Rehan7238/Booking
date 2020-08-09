@@ -2063,22 +2063,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uGT-xD-h18">
-                                <rect key="frame" x="20" y="371" width="374" height="265.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="265.5" id="Olo-fq-qVB"/>
-                                    <constraint firstAttribute="width" constant="374" id="cqZ-cO-VWj"/>
+                                    <constraint firstAttribute="height" constant="852" id="AGy-fW-xUX"/>
+                                    <constraint firstAttribute="width" constant="414" id="Cb3-K3-Og1"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatusNotificationCell" rowHeight="76" id="3a5-12-ec3" customClass="StatusNotificationCell" customModule="Booking" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="76"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatusNotificationCell" rowHeight="84" id="3a5-12-ec3" customClass="StatusNotificationCell" customModule="Booking" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3a5-12-ec3" id="L2h-RM-mEW">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="76"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpV-Xx-fut">
-                                                    <rect key="frame" x="44" y="27.5" width="86" height="21"/>
+                                                    <rect key="frame" x="44" y="31.5" width="86" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -2101,8 +2101,8 @@
                         <viewLayoutGuide key="safeArea" id="Umm-Aj-OFQ"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="uGT-xD-h18" firstAttribute="top" secondItem="Umm-Aj-OFQ" secondAttribute="top" id="CAP-lb-iBm"/>
                             <constraint firstItem="uGT-xD-h18" firstAttribute="centerX" secondItem="Umm-Aj-OFQ" secondAttribute="centerX" id="HdB-vP-d70"/>
-                            <constraint firstItem="uGT-xD-h18" firstAttribute="top" secondItem="Umm-Aj-OFQ" secondAttribute="top" constant="327" id="y0k-PU-TDi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="4b0-eI-fyX"/>
