@@ -91,9 +91,9 @@ class StatusNotificationTableViewController: UIViewController, UITableViewDelega
             let cell = tableView.dequeueReusableCell(withIdentifier: "StatusNotificationCell") as! StatusNotificationCell
             let id = results[indexPath.row]
             cell.setup(statusNotificationItemID: id)
-            cell.layer.cornerRadius = cell.frame.height / 3
-            cell.layer.borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-            cell.layer.borderWidth = 1.0
+            //cell.layer.cornerRadius = cell.frame.height / 3
+            //cell.layer.borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+            //cell.layer.borderWidth = 1.0
             return cell
         }
         

@@ -28,6 +28,7 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var schoolLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileCard: UIView!
+    @IBOutlet weak var lineImage: UIImageView!
     
     var results: [String] = [String]()
     
