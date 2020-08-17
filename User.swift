@@ -10,6 +10,7 @@ import Foundation
 import Firebase
 import PromiseKit
 import MapKit
+import FirebaseFirestore
 
 class User {
     

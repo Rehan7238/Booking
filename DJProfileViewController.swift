@@ -12,6 +12,8 @@ import FSCalendar
 import FirebaseAuth
 import Firebase
 import FirebaseStorage
+import FirebaseFirestore
+
 
 class DJProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     

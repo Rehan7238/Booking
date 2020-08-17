@@ -12,6 +12,7 @@ import FSCalendar
 import FirebaseAuth
 import Firebase
 import FirebaseStorage
+import FirebaseFirestore
 import GooglePlaces
 
 class GroupProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -27,8 +28,9 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var schoolLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var profileCard: UIView!
     @IBOutlet weak var lineImage: UIImageView!
+    @IBOutlet weak var headerIcon: UIImageView!
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     var results: [String] = [String]()
     

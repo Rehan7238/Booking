@@ -18,11 +18,11 @@ class GroupExploreViewController: UIViewController, UITableViewDelegate, UITable
     
     //Mark: Properties
     @IBOutlet weak var filterButton: UIButton!
+    @IBOutlet weak var notificationsButton: UIButton!
     @IBOutlet weak var searchBar: UITextField!
     @IBOutlet weak var searchResultsTable: UITableView!
+    @IBOutlet weak var headerIcon: UIImageView!
     
-    @IBOutlet weak var DJSearchButton: UIButton!
-    @IBOutlet weak var groupSearchButton: UIButton!
     
     var group: Group?
     var allResults: [DJ]?
@@ -165,5 +165,10 @@ class GroupExploreViewController: UIViewController, UITableViewDelegate, UITable
             cell.hideRight()
         }
         return cell
-    }    
+    }
+    
+    @IBAction func clickedNotifications(_ sender: Any) {
+        // go to notifications page
+    }
+    
 }

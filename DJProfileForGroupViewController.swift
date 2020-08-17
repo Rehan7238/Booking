@@ -35,6 +35,12 @@ class DJProfileForGroupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //BackgroundImage
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "Background")
+        backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+        
         profilePic.layer.cornerRadius = profilePic.frame.height / 2
         requestButton.layer.cornerRadius = requestButton.frame.height / 5
         

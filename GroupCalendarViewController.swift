@@ -22,7 +22,9 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var createEventButton: UIButton!
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var lineImage: UIImageView!
+    @IBOutlet weak var searchBar: UITextField!
+    @IBOutlet weak var headerIcon: UIImageView!
+    @IBOutlet weak var notificationsButton: UIButton!
     
     var group: Group?
     var event: Event?

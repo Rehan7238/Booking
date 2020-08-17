@@ -29,7 +29,8 @@ class StatusNotificationTableViewController: UIViewController, UITableViewDelega
         var request: Request?
         
         @IBOutlet weak var tableView: UITableView!
-        
+    @IBOutlet weak var headerIcon: UIImageView!
+    
         var results: [String] = [String]()
         
         

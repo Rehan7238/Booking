@@ -9,6 +9,9 @@
 import Foundation
 import Firebase
 import PromiseKit
+import FirebaseFirestore
+
+
 
 class Vendor {
     

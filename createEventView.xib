@@ -9,9 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertView" customModule="xoxo" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertView" customModule="Booking" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <viewController id="IZS-9L-hyJ" customClass="createEventView" customModule="xoxo" customModuleProvider="target">
+        <viewController id="IZS-9L-hyJ" customClass="createEventView" customModule="Booking" customModuleProvider="target">
             <view key="view" contentMode="scaleToFill" id="KzZ-nS-dK1">
                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LdD-3E-qZU" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="20" y="84" width="272" height="39"/>
+                                <rect key="frame" x="20" y="84" width="272" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -123,7 +123,7 @@
     </objects>
     <designables>
         <designable name="LdD-3E-qZU">
-            <size key="intrinsicContentSize" width="272" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="103" height="34"/>
         </designable>
     </designables>
     <resources>

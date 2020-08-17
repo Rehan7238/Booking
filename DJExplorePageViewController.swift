@@ -11,6 +11,7 @@ import UIKit
 import FSCalendar
 import FirebaseAuth
 import Firebase
+import FirebaseFirestore
 import FirebaseDatabase
 
 class DJExplorePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
