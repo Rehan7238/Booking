@@ -16,6 +16,7 @@
  
  class createRequestView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet var doneButton: UIButton! = UIButton()
     @IBOutlet var DJNameLabel: UILabel!
     @IBOutlet var cancelButton: UIButton!
@@ -33,19 +34,11 @@
     override func viewDidLoad() {
         super.viewDidLoad()
         // load in the DJ
-        
+        backgroundView.layer.cornerRadius = 10
         eventListTable.delegate = self
         eventListTable.dataSource = self
         eventListTable.register(UINib(nibName: "EventSelectionCell", bundle: nil), forCellReuseIdentifier: "EventSelectionCell")
 
-        
-        if let DJuid = self.DJUID {
-            _ = DJ.fromID(id: DJuid).done { loadedDJ in
-                self.dj = loadedDJ
-                self.DJNameLabel.text = loadedDJ?.name
-                self.playingFeeLabel.text = "\(String(describing: loadedDJ?.playingFee ?? 0))"
-            }
-        }
         // load in current user
         if let groupuid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: groupuid).done { loadedGroup in
@@ -54,6 +47,15 @@
                     self.refreshData()
                 }
             }
+        }
+    }
+    
+    func setup(djID: String) {
+        _ = DJ.fromID(id: djID).done { loadedDJ in
+            self.DJUID = djID
+            self.dj = loadedDJ
+            self.DJNameLabel.text = loadedDJ?.name
+            self.playingFeeLabel.text = "\(String(describing: loadedDJ?.playingFee ?? 0))"
         }
     }
     

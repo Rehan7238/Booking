@@ -68,7 +68,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxa-Fw-DWz">
-                                <rect key="frame" x="-22" y="401" width="312" height="64"/>
+                                <rect key="frame" x="0.0" y="401" width="312" height="64"/>
                                 <color key="backgroundColor" red="0.16198575500000001" green="0.2341003716" blue="0.3048199117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="312" id="HDR-tM-avh"/>
@@ -94,7 +94,7 @@
                             <constraint firstItem="EGW-cH-Q3t" firstAttribute="centerX" secondItem="voW-cc-kuk" secondAttribute="centerX" id="fz9-1n-8F4"/>
                             <constraint firstAttribute="trailing" secondItem="EGW-cH-Q3t" secondAttribute="trailing" constant="36" id="n5s-HZ-wzO"/>
                             <constraint firstAttribute="trailing" secondItem="LdD-3E-qZU" secondAttribute="trailing" constant="20" id="rNx-zj-rCw"/>
-                            <constraint firstItem="xxa-Fw-DWz" firstAttribute="leading" secondItem="voW-cc-kuk" secondAttribute="leading" constant="-22" id="tAy-nv-UpH"/>
+                            <constraint firstItem="xxa-Fw-DWz" firstAttribute="leading" secondItem="voW-cc-kuk" secondAttribute="leading" id="tAy-nv-UpH"/>
                             <constraint firstItem="npE-O3-rnA" firstAttribute="top" secondItem="voW-cc-kuk" secondAttribute="top" constant="10" id="u9z-PZ-ttC"/>
                             <constraint firstItem="EGW-cH-Q3t" firstAttribute="centerY" secondItem="voW-cc-kuk" secondAttribute="centerY" id="wYk-Bf-v8r"/>
                             <constraint firstItem="xxa-Fw-DWz" firstAttribute="top" secondItem="EGW-cH-Q3t" secondAttribute="bottom" constant="78" id="zV6-zq-BSQ"/>
@@ -121,11 +121,6 @@
             <point key="canvasLocation" x="36.231884057971016" y="44.866071428571423"/>
         </viewController>
     </objects>
-    <designables>
-        <designable name="LdD-3E-qZU">
-            <size key="intrinsicContentSize" width="103" height="34"/>
-        </designable>
-    </designables>
     <resources>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>

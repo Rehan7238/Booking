@@ -28,6 +28,7 @@ class DJProfileForGroupViewController: UIViewController {
     @IBOutlet weak var playingFeeLabel: UILabel!
     @IBOutlet weak var DJRatingNumber: UILabel!
     @IBOutlet weak var numberOfGigsNumber: UILabel!
+    @IBOutlet weak var playlistLinkButton: UIButton!
     var dj: DJ?
     var group: Group?
     var DJUID: String?
@@ -49,6 +50,11 @@ class DJProfileForGroupViewController: UIViewController {
                 self.dj = loadedDJ
                 self.djName.text = self.dj?.name
                 self.locationLabel.text = self.dj?.locality
+                if let playlistLink = self.dj?.playlist, !playlistLink.isEmpty {
+                    self.playlistLinkButton.setTitle(playlistLink, for: .normal)
+                } else {
+                    self.playlistLinkButton.setTitle("", for: .normal)
+                }
                 if let profilePic = self.dj?.profilePic, !profilePic.isEmpty {
                     self.profilePic.downloadImage(from: URL(string: profilePic)!)
                     var calculatedRating = 0
@@ -71,6 +77,13 @@ class DJProfileForGroupViewController: UIViewController {
         }
     }
     
+    @IBAction func playlistLinkClicked(_ sender: Any) {
+        if let playlistLink = self.dj?.playlist, !playlistLink.isEmpty {
+            guard let url = URL(string: playlistLink) else { return }
+            UIApplication.shared.open(url)
+        }
+    }
+    
     @IBAction func favoriteButtonClicked(_ sender: Any) {
         var favDJs = group?.favoriteDJs
         favDJs?.append("\(String(describing: DJUID))")
@@ -81,8 +94,10 @@ class DJProfileForGroupViewController: UIViewController {
     @IBAction func createRequestClicked(_ sender: Any) {
 
         if let createRequestVC = Bundle.main.loadNibNamed("createRequestView", owner: nil, options: nil)?.first as? createRequestView {
-            createRequestVC.DJUID = DJUID
-            self.present(createRequestVC, animated: true, completion: nil)
+            if let DJUID = self.DJUID {
+                createRequestVC.setup(djID: DJUID)
+                self.present(createRequestVC, animated: true, completion: nil)
+            }
         }
     }
     
