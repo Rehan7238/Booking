@@ -29,6 +29,7 @@ class Group {
     var lowerPrice: NSNumber = 0.0
     var previousEvents: [String] = []
     var profilePic: String = ""
+    var headerImage: String = ""
     var favoriteDJs: [String] = []
     var notifications: [String] = []
     var tokenNotifications: String = ""
@@ -103,6 +104,11 @@ class Group {
         updateValue(fieldName: "profilePic", newValue: newProfilePic)
     }
     
+    func setHeaderImage(_ newHeaderImage: String) {
+        self.headerImage = newHeaderImage
+        updateValue(fieldName: "headerImage", newValue: newHeaderImage)
+    }
+    
     func setNotifications(_ newName: [String]) {
            self.notifications = newName
            updateValue(fieldName: "notifications", newValue: newName)
@@ -139,6 +145,7 @@ class Group {
                     group.lowerPrice = data["lowerPrice"] as! NSNumber
                     group.previousEvents = data["previousEvents"] as! [String]
                     group.profilePic = data["profilePic"] as! String
+                    group.headerImage = data["headerImage"] as! String
                     group.schoolLatitude = data["schoolLatitude"] as! String
                     group.schoolLongitude = data["schoolLongitude"] as! String
                     group.favoriteDJs = data["favoriteDJs"] as! [String]
@@ -177,6 +184,7 @@ class Group {
             "lowerPrice": newGroup.lowerPrice,
             "previousEvents": newGroup.previousEvents,
             "profilePic": newGroup.profilePic,
+            "headerImage": newGroup.headerImage,
             "schoolLatitude" : newGroup.schoolLatitude,
             "schoolLongitude" : newGroup.schoolLongitude,
             "favoriteDJs" : newGroup.favoriteDJs,

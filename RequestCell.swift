@@ -33,8 +33,8 @@ class RequestCell: UITableViewCell {
         //shadowView.layer.cornerRadius = 10
         //corneredView.layer.cornerRadius = corneredView.layer.frame.height / 5
         profilePic.layer.cornerRadius = profilePic.frame.width / 2
-        profilePic.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-        profilePic.layer.borderWidth = 1.0
+        //profilePic.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        //profilePic.layer.borderWidth = 1.0
         makePaymentLabel.isHidden = !makePaymentLabel.isHidden
 
 

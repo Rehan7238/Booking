@@ -71,8 +71,7 @@ class CollectGroupProfilePicViewController: UIViewController, UIImagePickerContr
         profilePic.layer.borderWidth = 0;
         profilePic.addGestureRecognizer(tapGesture)
         profilePic.isUserInteractionEnabled = true
-        
-        
+ 
     }
     
     @objc func handleSelectProfile () {

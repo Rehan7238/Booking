@@ -15,8 +15,10 @@ class EventCell: UITableViewCell {
     @IBOutlet weak var groupNameLabel: UILabel!
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var djLabel: UILabel!
     var event: Event?
+    var group: Group?
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -28,7 +30,7 @@ class EventCell: UITableViewCell {
     
     func setup(eventID: String) {
         
-        shadowView.layer.cornerRadius = 10
+        //shadowView.layer.cornerRadius = 10
 
         _ = Event.fromID(id: eventID).done { loadedEvent in
             self.event = loadedEvent
@@ -42,6 +44,17 @@ class EventCell: UITableViewCell {
             } else {
                 self.djLabel.text = "DJ Not Booked"
             }
+            print ("MADE IT HERE")
+            let groupID = loadedEvent?.hostID
+            print ("HOST ID", loadedEvent?.hostID)
+            _ = Group.fromID(id: groupID!).done { loadedGroup in
+                self.group = loadedGroup
+                if let profilePic = self.group?.profilePic, !profilePic.isEmpty {
+                    self.profilePic.downloadImage(from: URL(string: profilePic)!)
+                    
+                }
+            }
+            
         }
     }
 }

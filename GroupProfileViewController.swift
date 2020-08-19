@@ -15,12 +15,13 @@ import FirebaseStorage
 import FirebaseFirestore
 import GooglePlaces
 
-class GroupProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class GroupProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     //Mark: Properties
     
     var group: Group?
     var request: Request?
+    var uid: String = ""
     
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
@@ -28,16 +29,17 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var schoolLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var lineImage: UIImageView!
     @IBOutlet weak var headerIcon: UIImageView!
-    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var headerImage: UIImageView!
     
     var results: [String] = [String]()
-    
+    var selectedImage: UIImage?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        confirmButton.isHidden = true
         profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
         profilePic.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
         profilePic.layer.borderWidth = 1.0
@@ -58,9 +60,27 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
                     self.profilePic.downloadImage(from: URL(string: profilePic)!)
                     
                 }
-                
+                if let headerImage = self.group?.headerImage, !headerImage.isEmpty {
+                    self.headerImage.downloadImage(from: URL(string: headerImage)!)
+                }
+                else {
+                    self.headerImage.image = UIImage(named: "chooseImageTwo")
+                }
             }
         }
+        //edit the header picture
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(GroupProfileViewController.handleSelectProfile))
+        headerImage.clipsToBounds = true;
+        headerImage.layer.borderWidth = 0;
+        headerImage.addGestureRecognizer(tapGesture)
+        headerImage.isUserInteractionEnabled = true
+    }
+    
+    @objc func handleSelectProfile () {
+        let pickerController = UIImagePickerController()
+        present(pickerController, animated: true, completion: nil)
+        pickerController.delegate = self
+        confirmButton.isHidden = false
     }
     
     @objc func refresh() {
@@ -84,9 +104,13 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
                 self.refreshData()
                 if let profilePicURL = self.group?.profilePic, let url = URL(string: profilePicURL) {
                     self.profilePic.downloadImage(from: url)
-                    
                 }
-                
+                if let headerImage = self.group?.headerImage, !headerImage.isEmpty {
+                    self.headerImage.downloadImage(from: URL(string: headerImage)!)
+                }
+                else {
+                    self.headerImage.image = UIImage(named: "chooseImageTwo")
+                }
             }
         }
     }
@@ -163,6 +187,36 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
         }
         self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func pressedConfirm(_sender: Any){
+        if let uid = Auth.auth().currentUser?.uid {
+            self.uid = uid
+        }
+        
+        let storageRef = Storage.storage().reference(forURL:"gs://djbooking-f3a55.appspot.com").child("header_image").child(uid)
+        
+        if let profileImg = self.selectedImage ,let imageData = profileImg.jpegData(compressionQuality: 0.1){
+            print ("MADE IT INTO THE IF STATEMENT")
+            
+            let uploadTask = storageRef.putData(imageData, metadata: nil) { (metadata, error) in
+                guard let metadata = metadata else {
+                    // Uh-oh, an error occurred!
+                    return
+                }
+                // You can also access to download URL after upload.
+                storageRef.downloadURL { (url, error) in
+                    guard let downloadURL = url else {
+                        // Uh-oh, an error occurred!
+                        return
+                    }
+                    //let pathString = downloadURL.path // String
+                    self.group?.setHeaderImage(downloadURL.absoluteString)
+                    print("woooo", self.group?.headerImage)
+                }
+            }
+        }
+        confirmButton.isHidden = true
+    }
 }
 
 extension UIImageView {
@@ -180,5 +234,17 @@ extension UIImageView {
                 self.image = UIImage(data: data)
             }
         }
+    }
+}
+
+extension GroupProfileViewController {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerOriginalImage")] as? UIImage {
+            selectedImage = image
+            headerImage.image = image
+            
+        }
+        dismiss(animated: true, completion: nil)
     }
 }

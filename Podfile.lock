@@ -380,6 +380,7 @@ PODS:
     - Solar (~> 2.1)
   - MapboxNavigationNative (6.2.1)
   - MapboxSpeech (0.3.0)
+  - MBCircularProgressBar (0.3.5)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
@@ -416,6 +417,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - Mapbox-iOS-SDK
   - MapboxNavigation
+  - MBCircularProgressBar
   - Pageboy (~> 3.6)
   - PromiseKit
   - SkyFloatingLabelTextField (~> 3.0)
@@ -455,6 +457,7 @@ SPEC REPOS:
     - MapboxNavigation
     - MapboxNavigationNative
     - MapboxSpeech
+    - MBCircularProgressBar
     - nanopb
     - Pageboy
     - Polyline
@@ -499,6 +502,7 @@ SPEC CHECKSUMS:
   MapboxNavigation: 42bae50b0381dce317c85884ba0de38fc68a4814
   MapboxNavigationNative: 11dc22140f4698d3f26989f2b6379dc81ef0d4c1
   MapboxSpeech: 403415e932e084cf290b9d55c49ab7ea210b9595
+  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   Pageboy: 29a2d474ad99404b4d77f325e0ab6d705930a4fb
   Polyline: 0e9890790292741c8186201a536b6bb6a78d02dd
@@ -509,6 +513,6 @@ SPEC CHECKSUMS:
   Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
   Turf: c6bdf62d6a70c647874f295dd1cf4eefc0c3e9e6
 
-PODFILE CHECKSUM: 1114fbb62f39fd0415845f387bbc949f0145c8ce
+PODFILE CHECKSUM: 0abd462ef8b2c81d85a40de970f475d2996250be
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

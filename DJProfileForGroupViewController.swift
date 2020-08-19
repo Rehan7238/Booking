@@ -13,6 +13,7 @@ import SkyFloatingLabelTextField;
 import GooglePlaces
 import PromiseKit
 import Firebase
+import MBCircularProgressBar
 
 
 class DJProfileForGroupViewController: UIViewController {
@@ -26,15 +27,24 @@ class DJProfileForGroupViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var playingFeeLabel: UILabel!
-    @IBOutlet weak var DJRatingNumber: UILabel!
     @IBOutlet weak var numberOfGigsNumber: UILabel!
     @IBOutlet weak var playlistLinkButton: UIButton!
+    @IBOutlet weak var matchProgressBar: MBCircularProgressBarView!
+    @IBOutlet weak var ratingProgressBar: MBCircularProgressBarView!
+    @IBOutlet weak var dependabilityBar: MBCircularProgressBarView!
+    
+    
     var dj: DJ?
     var group: Group?
     var DJUID: String?
+    var DJrating = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.matchProgressBar.value = 0
+        self.ratingProgressBar.value = 0
+        self.dependabilityBar.value = 0
         
         //BackgroundImage
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
@@ -46,10 +56,11 @@ class DJProfileForGroupViewController: UIViewController {
         requestButton.layer.cornerRadius = requestButton.frame.height / 5
         
         if let uid = self.DJUID {
-            _ = DJ.fromID(id: uid).done { loadedDJ in
+            _ = DJ.fromID(id: uid).done { [self] loadedDJ in
                 self.dj = loadedDJ
                 self.djName.text = self.dj?.name
-                self.locationLabel.text = self.dj?.locality
+                self.locationLabel.text = self.dj?.location
+                self.numberOfGigsNumber.text = "0"
                 if let playlistLink = self.dj?.playlist, !playlistLink.isEmpty {
                     self.playlistLinkButton.setTitle(playlistLink, for: .normal)
                 } else {
@@ -61,17 +72,11 @@ class DJProfileForGroupViewController: UIViewController {
                     if let ratings = self.dj?.hostRating {
                         for rating in ratings {
                             calculatedRating = calculatedRating + Int(truncating: rating)
+                            self.DJrating = calculatedRating
                         }
-                        if ratings.count == 0 {
-                            self.DJRatingNumber.text = "N/A"
-                        } else {
-                            self.DJRatingNumber.text = "\(String(describing: calculatedRating/ratings.count))"
-                        }
-                        
                     }
                     self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
                     self.playingFeeLabel.text = "$" + "\(String(describing: self.dj?.playingFee ?? 0))"
-
                 }
             }
         }
@@ -81,6 +86,13 @@ class DJProfileForGroupViewController: UIViewController {
         if let playlistLink = self.dj?.playlist, !playlistLink.isEmpty {
             guard let url = URL(string: playlistLink) else { return }
             UIApplication.shared.open(url)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 10.0) {
+            self.matchProgressBar.value = 20
+            self.ratingProgressBar.value = CGFloat(self.DJrating)
         }
     }
     

@@ -32,6 +32,9 @@ target 'Booking' do
 
   # Calendar
   pod 'FSCalendar'
+  
+  # circle progress bar
+  pod 'MBCircularProgressBar'
 
 
   target 'BookingTests' do
