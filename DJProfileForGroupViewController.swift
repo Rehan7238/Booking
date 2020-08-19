@@ -32,6 +32,7 @@ class DJProfileForGroupViewController: UIViewController {
     @IBOutlet weak var matchProgressBar: MBCircularProgressBarView!
     @IBOutlet weak var ratingProgressBar: MBCircularProgressBarView!
     @IBOutlet weak var dependabilityBar: MBCircularProgressBarView!
+    @IBOutlet weak var profileCard: UIView!
     
     
     var dj: DJ?
@@ -54,6 +55,7 @@ class DJProfileForGroupViewController: UIViewController {
         
         profilePic.layer.cornerRadius = profilePic.frame.height / 2
         requestButton.layer.cornerRadius = requestButton.frame.height / 5
+        profileCard.layer.cornerRadius = profileCard.frame.height / 9
         
         if let uid = self.DJUID {
             _ = DJ.fromID(id: uid).done { [self] loadedDJ in
