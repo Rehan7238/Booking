@@ -146,11 +146,11 @@ class DJExplorePageViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Int(round(Double(filteredResults?.count ?? 0) / 2.0))
+        return 0//Int(round(Double(filteredResults?.count ?? 0) / 2.0))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultCell") as! ExplorePageSearchResultCell
+        /*let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultCell") as! ExplorePageSearchResultCell
         if indexPath.row*2 < filteredResults?.count ?? 0, let id = filteredResults?[indexPath.row*2] {
             cell.setupLeft(dj: id)
         } else {
@@ -160,8 +160,8 @@ class DJExplorePageViewController: UIViewController, UITableViewDelegate, UITabl
             cell.setupRight(dj: id)
         } else {
             cell.hideRight()
-        }
-        return cell
+        }*/
+        return UITableViewCell()
     }
 }
 

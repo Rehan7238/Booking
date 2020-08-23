@@ -45,6 +45,7 @@ class DJProfileForGroupViewController: UIViewController,FSCalendarDelegate, FSCa
     var DJrating = 0
     var results: [String] = [String]()
     var allResults: [String] = [String]()
+    var percentMatch: Int = 0
     
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -76,28 +77,39 @@ class DJProfileForGroupViewController: UIViewController,FSCalendarDelegate, FSCa
         requestButton.layer.cornerRadius = requestButton.frame.height / 5
         profileCard.layer.cornerRadius = profileCard.frame.height / 9
         
-        if let uid = self.DJUID {
-            _ = DJ.fromID(id: uid).done { [self] loadedDJ in
-                self.dj = loadedDJ
-                self.djName.text = self.dj?.name
-                self.locationLabel.text = self.dj?.location
-                self.numberOfGigsNumber.text = "0"
-                if let playlistLink = self.dj?.playlist, !playlistLink.isEmpty {
-                    self.playlistLinkButton.setTitle(playlistLink, for: .normal)
-                } else {
-                    self.playlistLinkButton.setTitle("", for: .normal)
-                }
-                if let profilePic = self.dj?.profilePic, !profilePic.isEmpty {
-                    self.profilePic.downloadImage(from: URL(string: profilePic)!)
-                    var calculatedRating = 0
-                    if let ratings = self.dj?.hostRating {
-                        for rating in ratings {
-                            calculatedRating = calculatedRating + Int(truncating: rating)
-                            self.DJrating = calculatedRating
+        if let currentUid = Auth.auth().currentUser?.uid {
+            _ = Group.fromID(id: currentUid).done { loadedGroup in
+                self.group = loadedGroup
+                
+                if let uid = self.DJUID {
+                    _ = DJ.fromID(id: uid).done { [self] loadedDJ in
+                        self.dj = loadedDJ
+                        self.djName.text = self.dj?.name
+                        self.locationLabel.text = self.dj?.location
+                        self.numberOfGigsNumber.text = "0"
+                        if let playlistLink = self.dj?.playlist, !playlistLink.isEmpty {
+                            self.playlistLinkButton.setTitle(playlistLink, for: .normal)
+                        } else {
+                            self.playlistLinkButton.setTitle("", for: .normal)
                         }
+                        if let profilePic = self.dj?.profilePic, !profilePic.isEmpty {
+                            self.profilePic.downloadImage(from: URL(string: profilePic)!)
+                            var calculatedRating = 0
+                            if let ratings = self.dj?.hostRating {
+                                for rating in ratings {
+                                    calculatedRating = calculatedRating + Int(truncating: rating)
+                                    self.DJrating = calculatedRating
+                                }
+                            }
+                            self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
+                            self.playingFeeLabel.text = "$" + "\(String(describing: self.dj?.playingFee ?? 0))"
+                        }
+                        
+                        if let loadedDJ = loadedDJ, let loadedGroup = loadedGroup {
+                            self.calculatePercentMatch(dj: loadedDJ, group: loadedGroup)
+                        }
+
                     }
-                    self.numberOfGigsNumber.text = "\(String(describing: self.dj?.numberOfGigs ?? 0))"
-                    self.playingFeeLabel.text = "$" + "\(String(describing: self.dj?.playingFee ?? 0))"
                 }
             }
         }
@@ -110,11 +122,15 @@ class DJProfileForGroupViewController: UIViewController,FSCalendarDelegate, FSCa
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 10.0) {
-            self.matchProgressBar.value = 20
-            self.ratingProgressBar.value = CGFloat(self.DJrating)
+    func updateChartAnimations() {
+        UIView.animate(withDuration: 1.0) {
+            self.matchProgressBar.value = CGFloat(self.percentMatch)
+            self.ratingProgressBar.value = CGFloat(Double(self.DJrating) / 5.0 * 100.0)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        updateChartAnimations()
     }
     
     @IBAction func favoriteButtonClicked(_ sender: Any) {
@@ -223,5 +239,75 @@ class DJProfileForGroupViewController: UIViewController,FSCalendarDelegate, FSCa
         print("\(self.dateFormatter.string(from: calendar.currentPage))")
     }
     
+    func calculatePercentMatch(dj: DJ, group: Group) {
+        
+        var totalScore: CGFloat = 0
+        
+        var itemCount = 0
+        for item in group.equipment {
+            if dj.equipment.contains(item) {
+                itemCount += 1
+            }
+        }
+        let equipmentScore = CGFloat(itemCount)/CGFloat(group.equipment.count)
+        totalScore += equipmentScore * 33.33
+        
+        var priceScore: CGFloat = 0
+        if dj.playingFee.doubleValue >= group.lowerPrice.doubleValue && dj.playingFee.doubleValue <= group.higherPrice.doubleValue {
+            priceScore = 1.00
+        } else {
+            if abs(dj.playingFee.doubleValue - group.lowerPrice.doubleValue) < abs(dj.playingFee.doubleValue - group.higherPrice.doubleValue) {
+                let average: Double = (dj.playingFee.doubleValue + group.lowerPrice.doubleValue) / 2.0
+                priceScore = 1 - CGFloat(abs(dj.playingFee.doubleValue - group.lowerPrice.doubleValue) / average)
+                if priceScore < 0 {
+                    priceScore = 0
+                }
+            } else {
+                let average = (dj.playingFee.doubleValue + group.higherPrice.doubleValue) / 2.0
+                priceScore = 1 - CGFloat(abs(dj.playingFee.doubleValue - group.higherPrice.doubleValue) / average)
+                if priceScore < 0 {
+                    priceScore = 0
+                }
+            }
+        }
+        totalScore += priceScore * 33.33
+        
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(dj.location) {
+            placemarks, error in
+            let placemark = placemarks?.first
+            if let djcord = placemark?.location?.coordinate {
+                geocoder.geocodeAddressString(group.address) {
+                    placemarks, error in
+                    let placemark = placemarks?.first
+                    if let groupcord = placemark?.location?.coordinate {
+                        if djcord.distance(to: groupcord) * 0.00062137 < 15 {
+                            totalScore += 33.33
+                            
+                            self.percentMatch = Int(round(totalScore))
+                            self.updateChartAnimations()
+
+                        } else {
+                            let average = (djcord.distance(to: groupcord) * 0.00062137 + 15) / 2.0
+                            var locationScore = 1 - CGFloat(abs(djcord.distance(to: groupcord) * 0.00062137 - 15) / average)
+                            if locationScore < 0 {
+                                locationScore = 0
+                            }
+                            totalScore += locationScore * 33.33
+                            
+                            self.percentMatch = Int(round(totalScore))
+                            self.updateChartAnimations()
+                        }
+                    } else {
+                        self.percentMatch = Int(round(totalScore))
+                        self.updateChartAnimations()
+                    }
+                }
+            } else {
+                self.percentMatch = Int(round(totalScore))
+                self.updateChartAnimations()
+            }
+        }
+    }
 }
 

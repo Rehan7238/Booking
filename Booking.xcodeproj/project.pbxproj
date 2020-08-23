@@ -24,6 +24,9 @@
 		CD2D2F4924D35B9300430B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9D3B5224C1C32A00A3D85D /* Assets.xcassets */; };
 		CD4C9DA324C1E56D00EF33E6 /* EventSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4C9DA224C1E56D00EF33E6 /* EventSelectionCell.swift */; };
 		CD4C9DA524C1E5C500EF33E6 /* EventSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4C9DA424C1E5C500EF33E6 /* EventSelectionCell.xib */; };
+		CD8C31DF24F19B4D00ACD823 /* ExplorePageSearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8C31DE24F19B4D00ACD823 /* ExplorePageSearchResultCell.xib */; };
+		CD8C31E124F19DE000ACD823 /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8C31E024F19DE000ACD823 /* MapboxMobileEvents.framework */; };
+		CD8C31E324F19DE000ACD823 /* MapboxNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8C31E224F19DE000ACD823 /* MapboxNavigation.framework */; };
 		CD9D3B8424C1C32A00A3D85D /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B3824C1C32A00A3D85D /* GroupProfileViewController.swift */; };
 		CD9D3B8524C1C32A00A3D85D /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B3924C1C32A00A3D85D /* Vendor.swift */; };
 		CD9D3B8824C1C32A00A3D85D /* checkRequestStatusDeclined.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D3B3C24C1C32A00A3D85D /* checkRequestStatusDeclined.swift */; };
@@ -145,6 +148,9 @@
 		C56D6B79E1497CC26A269A1C /* Pods_Booking_BookingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booking_BookingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4C9DA224C1E56D00EF33E6 /* EventSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSelectionCell.swift; sourceTree = "<group>"; };
 		CD4C9DA424C1E5C500EF33E6 /* EventSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventSelectionCell.xib; sourceTree = "<group>"; };
+		CD8C31DE24F19B4D00ACD823 /* ExplorePageSearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExplorePageSearchResultCell.xib; sourceTree = "<group>"; };
+		CD8C31E024F19DE000ACD823 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MapboxMobileEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD8C31E224F19DE000ACD823 /* MapboxNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MapboxNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9D3B3824C1C32A00A3D85D /* GroupProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupProfileViewController.swift; sourceTree = "<group>"; };
 		CD9D3B3924C1C32A00A3D85D /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
 		CD9D3B3A24C1C32A00A3D85D /* checkRequestStatusOpen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = checkRequestStatusOpen.xib; sourceTree = "<group>"; };
@@ -232,6 +238,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8C31E124F19DE000ACD823 /* MapboxMobileEvents.framework in Frameworks */,
+				CD8C31E324F19DE000ACD823 /* MapboxNavigation.framework in Frameworks */,
 				479DF79D35D0A425F450CCDF /* Pods_Booking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +279,7 @@
 		5DE698D4248DB92600301B39 = {
 			isa = PBXGroup;
 			children = (
+				CD8C31DE24F19B4D00ACD823 /* ExplorePageSearchResultCell.xib */,
 				CDEF2FB524D8181C00C34A90 /* DJScrollView.swift */,
 				CDEF2FB324D80ADB00C34A90 /* GroupScrollView.swift */,
 				2455769F24C7E1AB00F414DE /* PushNotificationSender.swift */,
@@ -399,6 +408,8 @@
 		B24CFCB92A93F99EADF8A967 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD8C31E024F19DE000ACD823 /* MapboxMobileEvents.framework */,
+				CD8C31E224F19DE000ACD823 /* MapboxNavigation.framework */,
 				24593EE224A98292002C2729 /* Mapbox.framework */,
 				ED699F371A2993D3B76D66E0 /* Pods_Booking.framework */,
 				C56D6B79E1497CC26A269A1C /* Pods_Booking_BookingUITests.framework */,
@@ -519,6 +530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD9D3BDC24C1CA6C00A3D85D /* createRequestView.xib in Resources */,
+				CD8C31DF24F19B4D00ACD823 /* ExplorePageSearchResultCell.xib in Resources */,
 				CD9D3BD824C1CA5D00A3D85D /* checkRequestStatusOpen.xib in Resources */,
 				CD9D3BD624C1CA5300A3D85D /* checkRequestStatusCounter.xib in Resources */,
 				CD9D3BD724C1CA5900A3D85D /* checkRequestStatusDeclined.xib in Resources */,
@@ -922,13 +934,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Booking.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT82RN8NHM;
+				DEVELOPMENT_TEAM = WX3XJ3QFX3;
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.booking.xoxo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.booking.xoxoo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -942,13 +954,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Booking.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT82RN8NHM;
+				DEVELOPMENT_TEAM = WX3XJ3QFX3;
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.booking.xoxo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.booking.xoxoo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

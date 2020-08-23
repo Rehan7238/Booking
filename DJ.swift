@@ -12,7 +12,7 @@ import PromiseKit
 import FirebaseFirestore
 
 
-class DJ {
+class DJ: Equatable {
     
     var id: String = ""
     var name: String = "Name"
@@ -125,6 +125,17 @@ class DJ {
         updateValue(fieldName: "upcomingEvents", newValue: newUpcomingEvents)
     }
     
+    func getRating() -> Double {
+        var sum = 0.00
+        for rating in hostRating {
+            sum += Double(truncating: rating)
+        }
+        if hostRating.count == 0 {
+            return 0.00
+        }
+        return sum / Double(hostRating.count)
+    }
+    
     private func updateValue(fieldName: String, newValue: Any) {
         let db = Firestore.firestore()
         let dj = db.collection("DJs").document(id)
@@ -201,5 +212,9 @@ class DJ {
         ])
         
         return newDJ
+    }
+    
+    static func ==(lhs: DJ, rhs: DJ) -> Bool {
+        return lhs.id == rhs.id
     }
 }

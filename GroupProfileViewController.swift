@@ -35,7 +35,6 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     
     var results: [String] = [String]()
     var selectedImage: UIImage?
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

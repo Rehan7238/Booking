@@ -15,6 +15,8 @@ target 'Booking' do
   pod 'Firebase/Messaging'
   pod 'FirebaseInstanceID', '4.4.0'
   pod 'Pageboy', '~> 3.6'
+  pod 'EHHorizontalSelectionView'
+  pod 'MapboxMobileEvents'
 
   # Pods for authentication
   pod 'Firebase/Core'

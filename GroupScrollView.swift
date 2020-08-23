@@ -15,8 +15,6 @@ class GroupScrollView: PageboyViewController, PageboyViewControllerDataSource {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var calendarButton: UIButton!
     @IBOutlet weak var exploreButton: UIButton!
-    @IBOutlet weak var notificationButton: UIButton!
-    @IBOutlet weak var createEventButton: UIButton!
     
     var viewControllers = [UIViewController]()
     
@@ -27,12 +25,10 @@ class GroupScrollView: PageboyViewController, PageboyViewControllerDataSource {
         let profileVC: GroupProfileViewController = storyboard.instantiateViewController(withIdentifier: "GroupProfileViewController") as! GroupProfileViewController
         let calendarVC: GroupCalendarViewController = storyboard.instantiateViewController(withIdentifier: "GroupCalendarViewController") as! GroupCalendarViewController
         let exploreVC: GroupExploreViewController = storyboard.instantiateViewController(withIdentifier: "GroupExploreViewController") as! GroupExploreViewController
-        let notificationsVC: StatusNotificationTableViewController = storyboard.instantiateViewController(withIdentifier: "StatusNotificationTableViewController") as! StatusNotificationTableViewController
 
         viewControllers.append(profileVC)
         viewControllers.append(calendarVC)
         viewControllers.append(exploreVC)
-        viewControllers.append(notificationsVC)
 
         self.dataSource = self
         self.reloadData()
@@ -48,16 +44,6 @@ class GroupScrollView: PageboyViewController, PageboyViewControllerDataSource {
     
     @IBAction func exploreButtonPressed(_ sender: Any) {
         self.scrollToPage(.at(index: 2), animated: true)
-    }
-    
-    @IBAction func notificationButtonPressed(_ sender: Any) {
-        self.scrollToPage(.at(index: 3), animated: true)
-    }
-    
-    @IBAction func createEventButtonPressed(_ sender: Any) {
-        if let createEventVC = Bundle.main.loadNibNamed("createEventView", owner: nil, options: nil)?.first as? createEventView {
-            self.present(createEventVC, animated: true, completion: nil)
-         }
     }
     
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
