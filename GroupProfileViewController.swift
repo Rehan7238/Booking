@@ -23,29 +23,29 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     var request: Request?
     var uid: String = ""
     
+    
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var groupName: UILabel!
-    @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var schoolLabel: UILabel!
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerIcon: UIImageView!
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var headerImage: UIImageView!
-    
+   
     var results: [String] = [String]()
     var selectedImage: UIImage?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         confirmButton.isHidden = true
-        profilePic.layer.cornerRadius = profilePic.layer.bounds.height / 2
-        profilePic.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-        profilePic.layer.borderWidth = 1.0
-        
+
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.isScrollEnabled = false
+
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         
@@ -55,10 +55,7 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
                 self.groupName.text = self.group?.name
                 self.schoolLabel.text = self.group?.school
                 self.refreshData()
-                if let profilePic = self.group?.profilePic, !profilePic.isEmpty {
-                    self.profilePic.downloadImage(from: URL(string: profilePic)!)
-                    
-                }
+              
                 if let headerImage = self.group?.headerImage, !headerImage.isEmpty {
                     self.headerImage.downloadImage(from: URL(string: headerImage)!)
                 }
@@ -89,21 +86,13 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        //BackgroundImage
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "Background")
-        backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
-        
         if let uid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: uid).done { loadedGroup in
                 self.group = loadedGroup
                 self.groupName.text = self.group?.name
                 self.schoolLabel.text = self.group?.school
                 self.refreshData()
-                if let profilePicURL = self.group?.profilePic, let url = URL(string: profilePicURL) {
-                    self.profilePic.downloadImage(from: url)
-                }
+
                 if let headerImage = self.group?.headerImage, !headerImage.isEmpty {
                     self.headerImage.downloadImage(from: URL(string: headerImage)!)
                 }
@@ -117,7 +106,8 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
     func refreshData() {
         let db = Firestore.firestore()
         
-        db.collection("Requests").whereField("hostID", isEqualTo: group?.id ?? "").getDocuments() { (querySnapshot, err) in
+        db.collection("Requests").whereField("hostID", isEqualTo: group?.id ?? "").getDocuments()
+         { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {

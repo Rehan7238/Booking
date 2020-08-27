@@ -36,12 +36,6 @@ class GroupExploreViewController: UIViewController, EHHorizontalSelectionViewPro
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //BackgroundImage
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "Background")
-        backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
-        
         trendingDJsView.delegate = self
         inyourCityView.delegate = self
         budgetDJView.delegate = self
@@ -190,18 +184,26 @@ class GroupExploreViewController: UIViewController, EHHorizontalSelectionViewPro
         case trendingDJsView:
             if let djID = trendingResults?[indexPath.row] {
                 cell.setup(dj: djID)
+                cell.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+                cell.layer.borderWidth = 0.5
             }
         case inyourCityView:
             if let djID = inyourCityResults?[indexPath.row] {
                 cell.setup(dj: djID)
+                cell.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+                cell.layer.borderWidth = 0.5
             }
         case budgetDJView:
             if let djID = budgetResults?[indexPath.row] {
                 cell.setup(dj: djID)
+                cell.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+                cell.layer.borderWidth = 0.5
             }
         default:
             if let djID = filteredResults?[indexPath.row] {
                 cell.setup(dj: djID)
+                cell.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+                cell.layer.borderWidth = 0.5
             }
         }
         

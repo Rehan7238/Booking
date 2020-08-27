@@ -25,6 +25,7 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     @IBOutlet weak var searchBar: UITextField!
     @IBOutlet weak var headerIcon: UIImageView!
     @IBOutlet weak var notificationsButton: UIButton!
+    @IBOutlet weak var noEventsLabel: UILabel!
     
     var group: Group?
     var event: Event?
@@ -46,10 +47,17 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         tableView.delegate = self
         tableView.dataSource = self
         
+       
+
+        
         calendar.delegate = self
         calendar.dataSource = self
         calendar.scope = .month
         calendar.allowsMultipleSelection = false
+        
+        searchBar.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        searchBar.layer.borderWidth = 0.5
+       
         
         if let uid = Auth.auth().currentUser?.uid {
             _ = Group.fromID(id: uid).done { loadedGroup in
@@ -62,12 +70,6 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        //BackgroundImage
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "Background")
-        backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
-
     }
     
     func refreshData(_ date: Date) {
@@ -107,6 +109,13 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if results.count == 0 {
+            print ("THERE ARE NO EVENTS")
+            noEventsLabel.isHidden = false
+        }
+        else{
+            noEventsLabel.isHidden = true
+        }
         return results.count
     }
     
@@ -114,14 +123,8 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell") as! EventCell
         let id = results[indexPath.row]
         cell.setup(eventID: id)
-        cell.layer.cornerRadius = cell.frame.height / 3
-//        _ = Event.fromID(id: id).done { loadedEvent in
-//        self.event = loadedEvent
-//            if self.event?.hostID == self.group?.id {
-//            }
-//            else if self.event?.hostID != self.group?.id {
-//            }
-//        }
+        cell.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        cell.layer.borderWidth = 0.5
         return cell
     }
     
