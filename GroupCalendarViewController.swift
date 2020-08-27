@@ -47,16 +47,15 @@ class GroupCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         tableView.delegate = self
         tableView.dataSource = self
         
-       
-
-        
         calendar.delegate = self
         calendar.dataSource = self
         calendar.scope = .month
         calendar.allowsMultipleSelection = false
         
-        searchBar.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
-        searchBar.layer.borderWidth = 0.5
+        searchBar.layer.shadowColor = UIColor.black.cgColor
+        searchBar.layer.shadowOpacity = 0.6
+        searchBar.layer.shadowOffset = CGSize(width: 0, height: 2)
+        searchBar.layer.shadowRadius = 2
        
         
         if let uid = Auth.auth().currentUser?.uid {

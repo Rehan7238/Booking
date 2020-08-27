@@ -37,7 +37,7 @@ class ExplorePageSearchResultCell: EHHorizontalLineViewCell {
         self.feeLabel.text = "$" + "\(String(describing: dj.playingFee))"
         self.ratingLabel.text = "\(dj.getRating())"
         
-        backgroundCustomView.layer.shadowColor = UIColor.white.cgColor
+        backgroundCustomView.layer.shadowColor = UIColor.black.cgColor
         backgroundCustomView.layer.shadowOpacity = 0.7
         backgroundCustomView.layer.shadowOffset = CGSize(width: 0, height: 4)
         backgroundCustomView.layer.shadowRadius = 4

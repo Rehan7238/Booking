@@ -39,6 +39,11 @@ class GroupExploreViewController: UIViewController, EHHorizontalSelectionViewPro
         trendingDJsView.delegate = self
         inyourCityView.delegate = self
         budgetDJView.delegate = self
+        
+        searchBar.layer.shadowColor = UIColor.black.cgColor
+        searchBar.layer.shadowOpacity = 0.6
+        searchBar.layer.shadowOffset = CGSize(width: 0, height: 2)
+        searchBar.layer.shadowRadius = 2
 
         trendingDJsView.registerCellNib(UINib(nibName: "ExplorePageSearchResultCell", bundle: nil), with: ExplorePageSearchResultCell.self, reuseIdentifier: "ExplorePageSearchResultCell")
         inyourCityView.registerCellNib(UINib(nibName: "ExplorePageSearchResultCell", bundle: nil), with: ExplorePageSearchResultCell.self, reuseIdentifier: "ExplorePageSearchResultCell")
@@ -180,30 +185,24 @@ class GroupExploreViewController: UIViewController, EHHorizontalSelectionViewPro
     func selectionView(_ selectionView: EHHorizontalSelectionView, cellForItemAt indexPath: IndexPath) -> EHHorizontalViewCell? {
         let cell = selectionView.dequeueReusableCell(withReuseIdentifier: "ExplorePageSearchResultCell", for: indexPath) as! ExplorePageSearchResultCell
         
+        //
+        
         switch selectionView {
         case trendingDJsView:
             if let djID = trendingResults?[indexPath.row] {
                 cell.setup(dj: djID)
-                cell.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
-                cell.layer.borderWidth = 0.5
             }
         case inyourCityView:
             if let djID = inyourCityResults?[indexPath.row] {
                 cell.setup(dj: djID)
-                cell.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
-                cell.layer.borderWidth = 0.5
             }
         case budgetDJView:
             if let djID = budgetResults?[indexPath.row] {
                 cell.setup(dj: djID)
-                cell.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
-                cell.layer.borderWidth = 0.5
             }
         default:
             if let djID = filteredResults?[indexPath.row] {
                 cell.setup(dj: djID)
-                cell.layer.borderColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
-                cell.layer.borderWidth = 0.5
             }
         }
         
