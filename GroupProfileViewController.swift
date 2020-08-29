@@ -44,7 +44,7 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.isScrollEnabled = false
+        //tableView.isScrollEnabled = false
 
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
@@ -132,43 +132,43 @@ class GroupProfileViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedRequestid = results[indexPath.row]
-        print (selectedRequestid)
-        // show different view controllers based on different cases
-        _ = Request.fromID(id: selectedRequestid).done { loadedRequest in
-            self.request = loadedRequest
-            
-            //if the status is open
-            if loadedRequest?.status == "open" {
-                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusOpen", owner: nil, options: nil)?.first as? checkRequestStatusOpen {
-                    showRequestVC.setup(uid: selectedRequestid)
-                    self.present(showRequestVC, animated: true, completion: nil)
-                }
-            }
-                // if the status was declined
-            else if loadedRequest?.status == "declined" {
-                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusDeclined", owner: nil, options: nil)?.first as? checkRequestStatusDeclined {
-                    showRequestVC.setup(uid: selectedRequestid)
-                    self.present(showRequestVC, animated: true, completion: nil)
-                }
-            }
-                // if the status was countered
-            else if loadedRequest?.status == "countered" {
-                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusCounter", owner: nil, options: nil)?.first as? checkRequestStatusCounter {
-                    showRequestVC.setup(uid: selectedRequestid)
-                    self.present(showRequestVC, animated: true, completion: nil)
-                }
-            }
-            else if loadedRequest?.status == "accepted" {
-                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusAcceptedGroup", owner: nil, options: nil)?.first as? checkRequestStatusAcceptedGroup {
-                    showRequestVC.setup(uid: selectedRequestid)
-                    self.present(showRequestVC, animated: true, completion: nil)
-                }
-            }
-        }
-    }
-    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let selectedRequestid = results[indexPath.row]
+//        print (selectedRequestid)
+//        // show different view controllers based on different cases
+//        _ = Request.fromID(id: selectedRequestid).done { loadedRequest in
+//            self.request = loadedRequest
+//            
+//            //if the status is open
+//            if loadedRequest?.status == "open" {
+//                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusOpen", owner: nil, options: nil)?.first as? checkRequestStatusOpen {
+//                    showRequestVC.setup(uid: selectedRequestid)
+//                    self.present(showRequestVC, animated: true, completion: nil)
+//                }
+//            }
+//                // if the status was declined
+//            else if loadedRequest?.status == "declined" {
+//                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusDeclined", owner: nil, options: nil)?.first as? checkRequestStatusDeclined {
+//                    showRequestVC.setup(uid: selectedRequestid)
+//                    self.present(showRequestVC, animated: true, completion: nil)
+//                }
+//            }
+//                // if the status was countered
+//            else if loadedRequest?.status == "countered" {
+//                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusCounter", owner: nil, options: nil)?.first as? checkRequestStatusCounter {
+//                    showRequestVC.setup(uid: selectedRequestid)
+//                    self.present(showRequestVC, animated: true, completion: nil)
+//                }
+//            }
+//            else if loadedRequest?.status == "accepted" {
+//                if let showRequestVC = Bundle.main.loadNibNamed("checkRequestStatusAcceptedGroup", owner: nil, options: nil)?.first as? checkRequestStatusAcceptedGroup {
+//                    showRequestVC.setup(uid: selectedRequestid)
+//                    self.present(showRequestVC, animated: true, completion: nil)
+//                }
+//            }
+//        }
+//    }
+//    
     @IBAction func logoutButtonPressed(_ sender: Any) {
         do { try Auth.auth().signOut() }
         catch {

@@ -53,14 +53,6 @@ class CollectGroupProfilePicViewController: UIViewController, UIImagePickerContr
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //BakgroundImage
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "Background")
-        backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
-    
-        
         guard let uid = Auth.auth().currentUser?.uid else { return}
         _ = Group.fromID(id: uid).done { groupThatItLoaded in
             self.group = groupThatItLoaded

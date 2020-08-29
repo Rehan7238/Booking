@@ -20,11 +20,7 @@ class StartViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "/Users/Eimara/Documents/Booking/Booking/Background.png")!)
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "Background")
-        backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
+
     }
     
     override func viewDidAppear(_ animated: Bool){
